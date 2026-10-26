@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071c1a">
+
+    <title>قصة إبراهيم عليه السلام | الموسوعة الإسلامية</title>
+
+    <style>
+        :root {
+            --background: #071c1a;
+            --surface: #102c28;
+            --surface-light: #173a34;
+            --gold: #e5c477;
+            --gold-light: #f6e5b5;
+            --text: #f6f4ed;
+            --muted: #c4d1ca;
+            --border: rgba(229, 196, 119, 0.22);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 2;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .topbar {
+            background: #091f1c;
+            border-bottom: 1px solid var(--border);
+            padding: 16px 6%;
+        }
+
+        .nav {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .back-link {
+            color: var(--muted);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 7px 15px;
+        }
+
+        .back-link:hover {
+            color: var(--gold);
+            background: var(--surface);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 75px 20px;
+            background:
+                radial-gradient(
+                    ellipse at top,
+                    rgba(38, 117, 101, 0.4),
+                    transparent 70%
+                ),
+                linear-gradient(135deg, #102f29, #071c1a);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--gold);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 4px 18px;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            color: var(--gold-light);
+            font-size: clamp(32px, 6vw, 50px);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: auto;
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 11px 22px;
+            border-radius: 11px;
+            font-weight: bold;
+            transition: 0.25s;
+        }
+
+        .button-primary {
+            background: var(--gold);
+            color: #172720;
+        }
+
+        .button-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            border: 1px solid var(--border);
+            color: var(--gold-light);
+        }
+
+        .button-secondary:hover {
+            background: var(--surface-light);
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 92%;
+            margin: 35px auto 65px;
+        }
+
+        .intro {
+            background: var(--surface-light);
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .intro h2 {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            color: var(--muted);
+        }
+
+        .section-title {
+            color: var(--gold-light);
+            font-size: 27px;
+            margin: 40px 0 20px;
+            padding-right: 14px;
+            border-right: 4px solid var(--gold);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            padding: 24px;
+        }
+
+        .card h3 {
+            color: var(--gold);
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        .number {
+            display: inline-flex;
+            width: 38px;
+            height: 38px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 11px;
+            background: rgba(229, 196, 119, 0.12);
+            color: var(--gold);
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .verse {
+            background: rgba(229, 196, 119, 0.07);
+            border-right: 4px solid var(--gold);
+            border-radius: 12px;
+            padding: 18px;
+            margin-top: 15px;
+            color: var(--gold-light);
+            font-size: 17px;
+        }
+
+        .reference {
+            display: block;
+            color: var(--gold);
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .notice {
+            background: rgba(38, 117, 101, 0.12);
+            border: 1px solid rgba(38, 117, 101, 0.4);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 20px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .lessons {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .lesson {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            color: var(--muted);
+        }
+
+        .lesson strong {
+            color: var(--gold);
+        }
+
+        .video-card {
+            margin-top: 30px;
+            padding: 28px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            text-align: center;
+        }
+
+        .video-card h2 {
+            color: var(--gold-light);
+            margin-bottom: 10px;
+        }
+
+        .video-card p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .sources {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+
+        .sources li {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 15px 20px;
+            color: var(--muted);
+        }
+
+        .sources strong {
+            color: var(--gold);
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        @media (max-width: 650px) {
+            .grid,
+            .lessons {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 55px 18px;
+            }
+
+            .card,
+            .intro,
+            .video-card {
+                padding: 19px;
+            }
+
+            .section-title {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <nav class="nav">
+
+            <a href="../index.html" class="logo">
+                ✦ الموسوعة الإسلامية
+            </a>
+
+            <a href="prophets.html" class="back-link">
+                ← العودة إلى الأنبياء
+            </a>
+
+        </nav>
+    </header>
+
+    <section class="hero">
+
+        <span class="eyebrow">قصص الأنبياء</span>
+
+        <h1>قصة إبراهيم عليه السلام</h1>
+
+        <p>
+            خليل الرحمن وأبو الأنبياء، الذي دعا قومه إلى توحيد الله،
+            وحاورهم بالحجة، وثبت على الإيمان رغم الابتلاءات العظيمة.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#story" class="button button-primary">
+                اقرأ القصة ↓
+            </a>
+
+            <a href="#video" class="button button-secondary">
+                🎬 شاهد القصة
+            </a>
+
+        </div>
+
+    </section>
+
+    <main class="container">
+
+        <section class="intro">
+
+            <h2>من هو إبراهيم عليه السلام؟</h2>
+
+            <p>
+                إبراهيم عليه السلام نبي كريم من أولي العزم من الرسل،
+                اصطفاه الله وجعله إمامًا للناس وخليلًا له.
+                عُرف بثباته على التوحيد، ودعوته قومه إلى عبادة الله
+                وحده، وابتلاءاته العظيمة التي أظهر فيها صدق الإيمان
+                وكمال التسليم لأمر الله.
+            </p>
+
+        </section>
+
+        <section id="story">
+
+            <h2 class="section-title">📖 أحداث قصة إبراهيم عليه السلام</h2>
+
+            <div class="grid">
+
+                <article class="card">
+
+                    <span class="number">١</span>
+
+                    <h3>دعوة أبيه وقومه</h3>
+
+                    <p>
+                        دعا إبراهيم عليه السلام أباه إلى ترك عبادة
+                        الأصنام وعبادة الله وحده، وخاطبه بلطف،
+                        وبيّن له أن الأصنام لا تسمع ولا تنفع ولا تضر.
+                    </p>
+
+                    <div class="verse">
+                        ﴿إِذْ قَالَ لِأَبِيهِ يَا أَبَتِ لِمَ
+                        تَعْبُدُ مَا لَا يَسْمَعُ وَلَا يُبْصِرُ
+                        وَلَا يُغْنِي عَنْكَ شَيْئًا﴾
+
+                        <span class="reference">
+                            سورة مريم، الآية 42
+                        </span>
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <span class="number">٢</span>
+
+                    <h3>تحطيم الأصنام</h3>
+
+                    <p>
+                        بيّن إبراهيم عليه السلام لقومه بطلان عبادة
+                        الأصنام، وحين خرج قومه ترك أصنامهم وحطمها،
+                        ليظهر لهم عجزها عن الدفاع عن نفسها.
+                    </p>
+
+                    <div class="verse">
+                        ﴿فَجَعَلَهُمْ جُذَاذًا إِلَّا كَبِيرًا
+                        لَهُمْ لَعَلَّهُمْ إِلَيْهِ يَرْجِعُونَ﴾
+
+                        <span class="reference">
+                            سورة الأنبياء، الآية 58
+                        </span>
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <span class="number">٣</span>
+
+                    <h3>مواجهة الملك بالحجة</h3>
+
+                    <p>
+                        حاجّ إبراهيم عليه السلام الملك الذي جادله
+                        في ربه، فبيّن له أن الله يأتي بالشمس من
+                        المشرق، وتحداه أن يأتي بها من المغرب،
+                        فعجز عن الرد.
+                    </p>
+
+                    <div class="verse">
+                        ﴿فَإِنَّ اللَّهَ يَأْتِي بِالشَّمْسِ
+                        مِنَ الْمَشْرِقِ فَأْتِ بِهَا مِنَ الْمَغْرِبِ﴾
+
+                        <span class="reference">
+                            سورة البقرة، الآية 258
+                        </span>
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <span class="number">٤</span>
+
+                    <h3>إلقاؤه في النار</h3>
+
+                    <p>
+                        قرر قوم إبراهيم عليه السلام إحراقه بعد
+                        أن عجزوا عن إبطال حجته، فأمر الله النار
+                        أن تكون بردًا وسلامًا عليه، فنجّاه الله.
+                    </p>
+
+                    <div class="verse">
+                        ﴿قُلْنَا يَا نَارُ كُونِي بَرْدًا
+                        وَسَلَامًا عَلَىٰ إِبْرَاهِيمَ﴾
+
+                        <span class="reference">
+                            سورة الأنبياء، الآية 69
+                        </span>
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <span class="number">٥</span>
+
+                    <h3>الهجرة في سبيل الله</h3>
+
+                    <p>
+                        هاجر إبراهيم عليه السلام في سبيل الله،
+                        مفارقًا قومه وما كانوا عليه من الشرك،
+                        متوجهًا إلى حيث أمره الله.
+                    </p>
+
+                    <div class="verse">
+                        ﴿إِنِّي مُهَاجِرٌ إِلَىٰ رَبِّي
+                        إِنَّهُ هُوَ الْعَزِيزُ الْحَكِيمُ﴾
+
+                        <span class="reference">
+                            سورة العنكبوت، الآية 26
+                        </span>
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <span class="number">٦</span>
+
+                    <h3>البشارة بإسحاق</h3>
+
+                    <p>
+                        بشّرت الملائكة إبراهيم عليه السلام وزوجه
+                        بإسحاق، ثم يعقوب من بعد إسحاق، وكانت
+                        البشارة رحمة من الله وفضلًا عظيمًا.
+                    </p>
+
+                    <div class="verse">
+                        ﴿فَبَشَّرْنَاهَا بِإِسْحَاقَ
+                        وَمِنْ وَرَاءِ إِسْحَاقَ يَعْقُوبَ﴾
+
+                        <span class="reference">
+                            سورة هود، الآية 71
+                        </span>
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <span class="number">٧</span>
+
+                    <h3>بناء الكعبة مع إسماعيل</h3>
+
+                    <p>
+                        رفع إبراهيم عليه السلام وإسماعيل قواعد
+                        البيت الحرام، ودعوا الله أن يتقبل منهما
+                        عملهما، وأن يجعلهما من المسلمين له.
+                    </p>
+
+                    <div class="verse">
+                        ﴿وَإِذْ يَرْفَعُ إِبْرَاهِيمُ الْقَوَاعِدَ
+                        مِنَ الْبَيْتِ وَإِسْمَاعِيلُ رَبَّنَا
+                        تَقَبَّلْ مِنَّا﴾
+
+                        <span class="reference">
+                            سورة البقرة، الآية 127
+                        </span>
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <span class="number">٨</span>
+
+                    <h3>الابتلاء والتسليم لأمر الله</h3>
+
+                    <p>
+                        ابتلى الله إبراهيم عليه السلام بأوامر عظيمة،
+                        فكان مثالًا في الطاعة والتسليم. ومن ذلك
+                        رؤياه التي فهم منها الأمر بذبح ابنه،
+                        فاستسلما لأمر الله، وفداه الله بذبح عظيم.
+                    </p>
+
+                    <div class="verse">
+                        ﴿قَدْ صَدَّقْتَ الرُّؤْيَا إِنَّا كَذَٰلِكَ
+                        نَجْزِي الْمُحْسِنِينَ﴾
+
+                        <span class="reference">
+                            سورة الصافات، الآية 105
+                        </span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="lessons">
+
+            <h2 class="section-title">💡 الدروس المستفادة</h2>
+
+            <div class="lessons">
+
+                <div class="lesson">
+                    <strong>١. التوحيد:</strong>
+                    عبادة الله وحده أساس دعوة إبراهيم عليه السلام.
+                </div>
+
+                <div class="lesson">
+                    <strong>٢. الحوار بالحجة:</strong>
+                    واجه إبراهيم الباطل بالحكمة والبرهان.
+                </div>
+
+                <div class="lesson">
+                    <strong>٣. الثبات على الحق:</strong>
+                    لم يتراجع إبراهيم رغم تهديد قومه له.
+                </div>
+
+                <div class="lesson">
+                    <strong>٤. التوكل على الله:</strong>
+                    الله هو الحافظ والناصر لعباده المؤمنين.
+                </div>
+
+                <div class="lesson">
+                    <strong>٥. طاعة الله:</strong>
+                    أظهر إبراهيم وأهل بيته كمال التسليم لأمر الله.
+                </div>
+
+                <div class="lesson">
+                    <strong>٦. الدعاء:</strong>
+                    دعاء إبراهيم يعلمنا أهمية سؤال الله القبول والهداية.
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="video" class="video-card">
+
+            <h2>🎬 شاهد قصة إبراهيم عليه السلام</h2>
+
+            <p>
+                اضغط على الزر للبحث عن قصة إبراهيم عليه السلام
+                على يوتيوب.
+            </p>
+
+            <a
+                class="button button-primary"
+                href="https://www.youtube.com/results?search_query=قصة+إبراهيم+عليه+السلام+نبيل+العوضي"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                ▶ البحث عن قصة إبراهيم على يوتيوب
+
+            </a>
+
+            <div class="notice">
+                هذا الزر يفتح نتائج البحث على يوتيوب، وليس فيديو محددًا.
+                اختر المقطع المناسب وتحقق من محتواه.
+            </div>
+
+        </section>
+
+        <section id="sources">
+
+            <h2 class="section-title">📚 المصادر القرآنية</h2>
+
+            <ul class="sources">
+
+                <li>
+                    <strong>سورة مريم، الآيات 41–50:</strong>
+                    دعوة إبراهيم لأبيه وحواره معه.
+                </li>
+
+                <li>
+                    <strong>سورة الأنبياء، الآيات 51–70:</strong>
+                    محاجّة إبراهيم لقومه وتحطيم الأصنام ونجاته من النار.
+                </li>
+
+                <li>
+                    <strong>سورة البقرة، الآية 258:</strong>
+                    حوار إبراهيم مع الملك.
+                </li>
+
+                <li>
+                    <strong>سورة الصافات، الآيات 99–111:</strong>
+                    رؤيا إبراهيم والابتلاء والفداء.
+                </li>
+
+                <li>
+                    <strong>سورة البقرة، الآيات 125–129:</strong>
+                    بناء البيت الحرام ودعاء إبراهيم وإسماعيل.
+                </li>
+
+                <li>
+                    <strong>سورة هود، الآيات 69–73:</strong>
+                    بشارة إبراهيم وزوجه بإسحاق ويعقوب.
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            <span>✦ الموسوعة الإسلامية</span>
+            — قصص الأنبياء والدروس المستفادة
+        </p>
+
+        <p>اللهم علّمنا ما ينفعنا وانفعنا بما علّمتنا.</p>
+    </footer>
+
+</body>
+</html>

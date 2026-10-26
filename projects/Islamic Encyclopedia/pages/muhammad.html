@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="السيرة النبوية الشريفة، حياة النبي محمد ﷺ من مولده ونشأته إلى نزول الوحي والهجرة والغزوات وفتح مكة ووفاته، مع الدروس والمصادر والفيديوهات التعليمية.">
+
+    <meta name="theme-color" content="#071b15">
+
+    <title>السيرة النبوية الشريفة | موسوعة الأنبياء</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #06150f;
+            --bg-light: #0a2118;
+            --panel: #102a20;
+            --panel-light: #153629;
+            --gold: #d9b86c;
+            --gold-light: #f0d99a;
+            --green: #276b4c;
+            --text: #f5f1e6;
+            --muted: #c5d4c9;
+            --border: rgba(217, 184, 108, 0.25);
+            --shadow: 0 15px 40px rgba(0, 0, 0, 0.20);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background:
+                radial-gradient(ellipse at top, #153d2b 0%, transparent 45%),
+                var(--bg);
+            color: var(--text);
+            line-height: 2;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input {
+            font: inherit;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        /* شريط التنقل */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(6, 21, 15, 0.94);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--gold-light);
+            font-size: 19px;
+            font-weight: 900;
+        }
+
+        .logo-icon {
+            width: 43px;
+            height: 43px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--gold);
+            border-radius: 14px;
+            background: linear-gradient(135deg, #183c29, #0b2117);
+            font-size: 22px;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            border: 1px solid var(--border);
+            color: var(--gold-light);
+            padding: 7px 16px;
+            border-radius: 30px;
+            transition: 0.25s;
+            font-size: 13px;
+        }
+
+        .nav-button:hover {
+            background: var(--gold);
+            color: var(--bg);
+        }
+
+        /* القسم الرئيسي */
+
+        .hero {
+            position: relative;
+            padding: 95px 20px 75px;
+            text-align: center;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border);
+            background:
+                radial-gradient(ellipse at center, rgba(39, 107, 76, 0.35), transparent 65%);
+        }
+
+        .hero::before,
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            border: 1px solid rgba(217, 184, 108, 0.10);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::before {
+            top: -140px;
+            right: -100px;
+        }
+
+        .hero::after {
+            bottom: -170px;
+            left: -90px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid var(--border);
+            background: rgba(16, 42, 32, 0.7);
+            color: var(--gold-light);
+            padding: 7px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            color: var(--gold-light);
+            font-size: clamp(38px, 7vw, 76px);
+            line-height: 1.4;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .hero-description {
+            max-width: 760px;
+            margin: auto;
+            color: var(--muted);
+            font-size: clamp(15px, 2vw, 19px);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 10px 22px;
+            color: var(--gold-light);
+            border: 1px solid var(--gold);
+            border-radius: 30px;
+            background: rgba(7, 27, 21, 0.5);
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .primary-button,
+        .secondary-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-weight: 800;
+            transition: 0.25s;
+        }
+
+        .primary-button {
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            color: #102016;
+        }
+
+        .secondary-button {
+            border: 1px solid var(--border);
+            color: var(--gold-light);
+        }
+
+        .primary-button:hover,
+        .secondary-button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* العناوين */
+
+        .section-heading {
+            margin-bottom: 25px;
+        }
+
+        .section-heading .small-title {
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .section-heading h2 {
+            color: var(--gold-light);
+            font-size: clamp(24px, 3vw, 34px);
+            line-height: 1.6;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            margin-top: 7px;
+            font-size: 14px;
+        }
+
+        /* المحتويات */
+
+        .toc-section {
+            margin-top: 45px;
+        }
+
+        .toc-box {
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            background:
+                linear-gradient(135deg, rgba(21, 54, 41, 0.95), rgba(10, 33, 24, 0.96));
+            box-shadow: var(--shadow);
+        }
+
+        .toc-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 22px;
+        }
+
+        .toc-top h2 {
+            color: var(--gold-light);
+            font-size: 25px;
+        }
+
+        .toc-count {
+            color: var(--gold-light);
+            background: rgba(217, 184, 108, 0.10);
+            border: 1px solid var(--border);
+            padding: 5px 13px;
+            border-radius: 30px;
+            font-size: 12px;
+        }
+
+        .toc-search {
+            width: 100%;
+            background: #071b15;
+            border: 1px solid #345542;
+            border-radius: 12px;
+            padding: 13px 16px;
+            color: var(--text);
+            outline: none;
+            margin-bottom: 22px;
+        }
+
+        .toc-search:focus {
+            border-color: var(--gold);
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .toc-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 13px 14px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(7, 27, 21, 0.48);
+            border-radius: 13px;
+            transition: 0.25s;
+            min-width: 0;
+        }
+
+        .toc-link:hover {
+            border-color: var(--gold);
+            background: rgba(217, 184, 108, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .toc-number {
+            flex-shrink: 0;
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            border-radius: 10px;
+            background: #183d2b;
+            color: var(--gold-light);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .toc-link span:last-child {
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .toc-link.hidden {
+            display: none;
+        }
+
+        /* البطاقات */
+
+        .content-section {
+            margin-top: 65px;
+        }
+
+        .info-card {
+            background: linear-gradient(145deg, #102a20, #0c241a);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: clamp(22px, 4vw, 36px);
+            margin-bottom: 22px;
+            box-shadow: var(--shadow);
+            scroll-margin-top: 100px;
+        }
+
+        .card-heading {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card-icon {
+            flex-shrink: 0;
+            width: 49px;
+            height: 49px;
+            display: grid;
+            place-items: center;
+            background: rgba(217, 184, 108, 0.10);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            font-size: 23px;
+        }
+
+        .card-heading h2 {
+            color: var(--gold-light);
+            font-size: clamp(21px, 3vw, 28px);
+            line-height: 1.7;
+        }
+
+        .card-heading p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .info-card p {
+            color: #e0e9e1;
+            margin-bottom: 15px;
+        }
+
+        .info-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .verse {
+            margin: 24px 0;
+            padding: 23px;
+            text-align: center;
+            color: var(--gold-light);
+            background: #081d14;
+            border: 1px solid rgba(217, 184, 108, 0.16);
+            border-right: 4px solid var(--gold);
+            border-radius: 15px;
+            font-size: clamp(17px, 2.5vw, 22px);
+            line-height: 2.1;
+        }
+
+        .verse small {
+            display: block;
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 12px;
+        }
+
+        .note-box {
+            background: rgba(217, 184, 108, 0.08);
+            border-right: 4px solid var(--gold);
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .note-box strong {
+            display: block;
+            color: var(--gold-light);
+            margin-bottom: 6px;
+        }
+
+        .note-box p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* بطاقة التعريف */
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 22px;
+        }
+
+        .profile-item {
+            padding: 19px;
+            border: 1px solid rgba(217, 184, 108, 0.16);
+            background: rgba(7, 27, 21, 0.52);
+            border-radius: 15px;
+        }
+
+        .profile-item .label {
+            color: var(--gold);
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        .profile-item .value {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--text);
+        }
+
+        /* الخط الزمني */
+
+        .timeline {
+            position: relative;
+            border-right: 2px solid var(--gold);
+            margin: 28px 8px 10px 0;
+            padding-right: 28px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 28px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            right: -36px;
+            top: 11px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--gold-light);
+            box-shadow: 0 0 0 5px rgba(217, 184, 108, 0.12);
+        }
+
+        .timeline-date {
+            display: inline-block;
+            color: var(--gold-light);
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item h3 {
+            color: #f0d99a;
+            font-size: 19px;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* بطاقات المراحل */
+
+        .stage-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 22px;
+        }
+
+        .stage-card {
+            padding: 23px;
+            border-radius: 17px;
+            border: 1px solid var(--border);
+            background: rgba(7, 27, 21, 0.55);
+            transition: 0.25s;
+        }
+
+        .stage-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--gold);
+        }
+
+        .stage-card .stage-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .stage-card h3 {
+            color: var(--gold-light);
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .stage-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .stage-card a {
+            display: inline-block;
+            color: var(--gold-light);
+            font-size: 13px;
+            margin-top: 8px;
+            font-weight: 800;
+        }
+
+        .stage-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* الأخلاق والدروس */
+
+        .lesson-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 22px;
+        }
+
+        .lesson-card {
+            background: #0a2118;
+            border: 1px solid rgba(217, 184, 108, 0.15);
+            border-radius: 14px;
+            padding: 19px;
+        }
+
+        .lesson-card h3 {
+            color: var(--gold-light);
+            font-size: 16px;
+            margin-bottom: 7px;
+        }
+
+        .lesson-card p {
+            font-size: 14px;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        /* الفيديوهات */
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 22px;
+        }
+
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background: #0a2118;
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            transition: 0.25s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--gold);
+        }
+
+        .video-cover {
+            min-height: 115px;
+            display: grid;
+            place-items: center;
+            background:
+                radial-gradient(circle at center, #24543c, #0a2118 75%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .play-icon {
+            width: 54px;
+            height: 54px;
+            display: grid;
+            place-items: center;
+            background: var(--gold);
+            color: #071b15;
+            border-radius: 50%;
+            font-size: 21px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .video-info {
+            padding: 18px;
+        }
+
+        .video-info h3 {
+            color: var(--gold-light);
+            font-size: 17px;
+            margin-bottom: 7px;
+        }
+
+        .video-info p {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 13px;
+        }
+
+        .video-link {
+            display: inline-block;
+            color: var(--gold-light);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* المصادر */
+
+        .sources-list {
+            padding-right: 22px;
+            color: var(--muted);
+        }
+
+        .sources-list li {
+            margin-bottom: 10px;
+            padding-right: 5px;
+        }
+
+        /* العودة للأعلى */
+
+        .bottom-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .back-top {
+            display: inline-block;
+            color: var(--gold-light);
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: 0.25s;
+        }
+
+        .back-top:hover {
+            background: var(--gold);
+            color: var(--bg);
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 35px 15px;
+            text-align: center;
+            background: #06110c;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        footer .footer-title {
+            color: var(--gold-light);
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        /* زر أعلى الصفحة */
+
+        .floating-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 500;
+            width: 45px;
+            height: 45px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            background: #102a20;
+            color: var(--gold-light);
+            box-shadow: var(--shadow);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: 0.25s;
+        }
+
+        .floating-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* الجوال */
+
+        @media (max-width: 900px) {
+            .toc-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .profile-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 94%;
+            }
+
+            .nav-inner {
+                padding: 12px 0;
+                min-height: auto;
+            }
+
+            .logo {
+                font-size: 15px;
+            }
+
+            .logo-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 18px;
+            }
+
+            .nav-button {
+                padding: 6px 10px;
+                font-size: 11px;
+            }
+
+            .hero {
+                padding: 65px 15px 55px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .toc-box {
+                padding: 19px;
+            }
+
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .profile-item {
+                padding: 14px;
+            }
+
+            .stage-grid,
+            .lesson-grid,
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-card {
+                padding: 20px;
+            }
+
+            .card-heading {
+                gap: 10px;
+            }
+
+            .card-icon {
+                width: 42px;
+                height: 42px;
+                font-size: 20px;
+            }
+
+            .section-heading h2 {
+                font-size: 25px;
+            }
+
+            .floating-top {
+                bottom: 14px;
+                left: 14px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+
+    <!-- شريط التنقل -->
+    <header class="navbar">
+        <div class="container nav-inner">
+
+            <a class="logo" href="../index.html">
+                <span class="logo-icon">☪</span>
+                <span>موسوعة الأنبياء</span>
+            </a>
+
+            <div class="nav-actions">
+                <a class="nav-button" href="prophets.html">
+                    ← العودة إلى الأنبياء
+                </a>
+
+                <a class="nav-button" href="../index.html">
+                    الرئيسية
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- الواجهة الرئيسية -->
+    <section class="hero">
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                ✦ السيرة النبوية الشريفة ✦
+            </div>
+
+            <h1>محمد ﷺ</h1>
+
+            <p class="hero-description">
+                خاتم الأنبياء والمرسلين، أرسله الله رحمةً للعالمين،
+                ودعا الناس إلى عبادة الله وحده، ومكارم الأخلاق،
+                والعدل والرحمة والإحسان.
+            </p>
+
+            <div class="hero-badge">
+                اللهم صلِّ وسلم على نبينا محمد
+            </div>
+
+            <div class="hero-actions">
+                <a class="primary-button" href="#contents">
+                    اكتشف السيرة ↓
+                </a>
+
+                <a class="secondary-button" href="https://www.youtube.com/results?search_query=السيرة+النبوية+الشريفة"
+                    target="_blank" rel="noopener noreferrer">
+                    ▶ دروس السيرة
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <main class="container">
+
+        <!-- فهرس واحد فقط -->
+        <section class="toc-section" id="contents">
+
+            <div class="toc-box">
+
+                <div class="toc-top">
+                    <div>
+                        <h2>رحلة في السيرة النبوية</h2>
+                        <p style="color: var(--muted); font-size: 13px;">
+                            اختر الموضوع للانتقال إليه مباشرة.
+                        </p>
+                    </div>
+
+                    <span class="toc-count">12 موضوعًا</span>
+                </div>
+
+                <input type="search" id="tocSearch" class="toc-search" placeholder="ابحث عن موضوع في السيرة..."
+                    aria-label="ابحث في محتويات السيرة النبوية">
+
+                <nav class="toc-grid" id="tocGrid" aria-label="فهرس السيرة النبوية">
+
+                    <a class="toc-link" href="#identity">
+                        <span class="toc-number">01</span>
+                        <span>من هو النبي محمد ﷺ؟</span>
+                    </a>
+
+                    <a class="toc-link" href="#birth">
+                        <span class="toc-number">02</span>
+                        <span>المولد والنشأة</span>
+                    </a>
+
+                    <a class="toc-link" href="#youth">
+                        <span class="toc-number">03</span>
+                        <span>الشباب والأخلاق</span>
+                    </a>
+
+                    <a class="toc-link" href="#revelation">
+                        <span class="toc-number">04</span>
+                        <span>نزول الوحي</span>
+                    </a>
+
+                    <a class="toc-link" href="#daawa">
+                        <span class="toc-number">05</span>
+                        <span>الدعوة في مكة</span>
+                    </a>
+
+                    <a class="toc-link" href="#hijra">
+                        <span class="toc-number">06</span>
+                        <span>الهجرة إلى المدينة</span>
+                    </a>
+
+                    <a class="toc-link" href="#madinah">
+                        <span class="toc-number">07</span>
+                        <span>بناء المجتمع في المدينة</span>
+                    </a>
+
+                    <a class="toc-link" href="#events">
+                        <span class="toc-number">08</span>
+                        <span>أحداث وغزوات بارزة</span>
+                    </a>
+
+                    <a class="toc-link" href="#hudaybiyyah">
+                        <span class="toc-number">09</span>
+                        <span>صلح الحديبية</span>
+                    </a>
+
+                    <a class="toc-link" href="#conquest">
+                        <span class="toc-number">10</span>
+                        <span>فتح مكة</span>
+                    </a>
+
+                    <a class="toc-link" href="#character">
+                        <span class="toc-number">11</span>
+                        <span>أخلاق النبي ﷺ</span>
+                    </a>
+
+                    <a class="toc-link" href="#death">
+                        <span class="toc-number">12</span>
+                        <span>حجة الوداع والوفاة</span>
+                    </a>
+
+                </nav>
+
+            </div>
+
+        </section>
+
+        <!-- 1: التعريف -->
+        <section class="content-section" id="identity">
+
+            <div class="section-heading">
+                <div class="small-title">البداية</div>
+                <h2>من هو النبي محمد ﷺ؟</h2>
+                <p>التعريف بالنبي الخاتم ورسالته العظيمة.</p>
+            </div>
+
+            <article class="info-card">
+
+                <div class="card-heading">
+                    <div class="card-icon">🌿</div>
+
+                    <div>
+                        <h2>محمد بن عبد الله ﷺ</h2>
+                        <p>رسول الله وخاتم الأنبياء والمرسلين</p>
+                    </div>
+                </div>
+
+                <p>
+                    محمد بن عبد الله بن عبد المطلب، رسول الله وخاتم أنبيائه.
+                    أرسله الله إلى الناس كافة، وأنزل عليه القرآن الكريم
+                    هدايةً ورحمةً ونورًا.
+                </p>
+
+                <p>
+                    تقوم رسالة الإسلام على عبادة الله وحده، والإيمان به،
+                    واتباع رسوله ﷺ، والتحلي بالعدل والرحمة والصدق
+                    والإحسان إلى الخلق.
+                </p>
+
+                <div class="verse">
+                    ﴿مَّا كَانَ مُحَمَّدٌ أَبَا أَحَدٍ مِّن رِّجَالِكُمْ
+                    وَلَٰكِن رَّسُولَ اللَّهِ وَخَاتَمَ النَّبِيِّينَ
+                    وَكَانَ اللَّهُ بِكُلِّ شَيْءٍ عَلِيمًا﴾
+
+                    <small>سورة الأحزاب، الآية 40</small>
+                </div>
+
+                <div class="verse">
+                    ﴿وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِّلْعَالَمِينَ﴾
+
+                    <small>سورة الأنبياء، الآية 107</small>
+                </div>
+
+                <div class="profile-grid">
+
+                    <div class="profile-item">
+                        <div class="label">الاسم</div>
+                        <div class="value">محمد بن عبد الله</div>
+                    </div>
+
+                    <div class="profile-item">
+                        <div class="label">المكان</div>
+                        <div class="value">مكة المكرمة</div>
+                    </div>
+
+                    <div class="profile-item">
+                        <div class="label">الرسالة</div>
+                        <div class="value">الإسلام والتوحيد</div>
+                    </div>
+
+                    <div class="profile-item">
+                        <div class="label">الخاتمة</div>
+                        <div class="value">خاتم النبيين</div>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- 2: المولد والنشأة -->
+        <section class="content-section" id="birth">
+
+            <div class="section-heading">
+                <div class="small-title">المرحلة الأولى</div>
+                <h2>مولده ﷺ ونشأته</h2>
+                <p>بدايات حياة النبي ﷺ في مكة المكرمة.</p>
+            </div>
+
+            <article class="info-card">
+
+                <p>
+                    وُلد النبي محمد ﷺ في مكة المكرمة في عام الفيل.
+                    والمشهور عند أهل السيرة أنه وُلد يوم الاثنين
+                    في شهر ربيع الأول، مع اختلاف العلماء في تحديد اليوم.
+                </p>
+
+                <p>
+                    توفي والده عبد الله قبل ولادته، ثم توفيت أمه آمنة
+                    وهو صغير، فكفله جده عبد المطلب، وبعد وفاة جده
+                    تولى عمه أبو طالب رعايته.
+                </p>
+
+                <p>
+                    نشأ النبي ﷺ في مكة، وعُرف بين قومه بالصدق والأمانة،
+                    حتى اشتهر بلقب الصادق الأمين.
+                </p>
+
+                <div class="verse">
+                    ﴿أَلَمْ يَجِدْكَ يَتِيمًا فَآوَىٰ﴾
+
+                    <small>سورة الضحى، الآية 6</small>
+                </div>
+
+                <a class="primary-button" href="muhammad-birth.html">
+                    تفاصيل المولد والنشأة ↗
+                </a>
+
+            </article>
+
+        </section>
+
+        <!-- 3: الشباب -->
+        <section class="content-section" id="youth">
+
+            <div class="section-heading">
+                <div class="small-title">قبل البعثة</div>
+                <h2>شباب النبي ﷺ وأخلاقه</h2>
+                <p>الصدق والأمانة وحسن المعاملة.</p>
+            </div>
+
+            <article class="info-card">
+
+                <p>
+                    عُرف النبي ﷺ بين قومه بالصدق والأمانة،
+                    وكان الناس يثقون به. وعمل في رعي الغنم والتجارة
+                    قبل نزول الوحي.
+                </p>
+
+                <p>
+                    تزوج خديجة بنت خويلد رضي الله عنها،
+                    وكانت أول من آمن به وسانده عندما نزل عليه الوحي.
+                </p>
+
+                <div class="verse">
+                    ﴿وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ﴾
+
+                    <small>سورة القلم، الآية 4</small>
+                </div>
+
+                <div class="note-box">
+                    <strong>درس مستفاد</strong>
+                    <p>
+                        الصدق والأمانة وحسن الخلق صفات عظيمة
+                        يحتاج إليها الإنسان في حياته وتعاملاته.
+                    </p>
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- 4: نزول الوحي -->
+        <section class="content-section" id="revelation">
+
+            <div class="section-heading">
+                <div class="small-title">بداية الرسالة</div>
+                <h2>نزول الوحي وبداية النبوة</h2>
+                <p>من غار حراء بدأت مرحلة الدعوة والرسالة.</p>
+            </div>
+
+            <article class="info-card">
+
+                <p>
+                    عندما بلغ النبي ﷺ أربعين سنة، نزل عليه الوحي
+                    وهو في غار حراء، بواسطة جبريل عليه السلام.
+                    وكانت بداية الرسالة نزول أول آيات سورة العلق.
+                </p>
+
+                <div class="verse">
+                    ﴿اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ ۝
+                    خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ ۝
+                    اقْرَأْ وَرَبُّكَ الْأَكْرَمُ ۝
+                    الَّذِي عَلَّمَ بِالْقَلَمِ ۝
+                    عَلَّمَ الْإِنسَانَ مَا لَمْ يَعْلَمْ﴾
+
+                    <small>سورة العلق، الآيات 1–5</small>
+                </div>
+
+                <p>
+                    عاد النبي ﷺ إلى خديجة رضي الله عنها،
+                    فطمأنته وساندته، ثم بدأت مرحلة الدعوة إلى الله.
+                </p>
+
+                <a class="primary-button" href="muhammad-revelation.html">
+                    تفاصيل نزول الوحي ↗
+                </a>
+
+            </article>
+
+        </section>
+
+        <!-- 5: الدعوة -->
+        <section class="content-section" id="daawa">
+
+            <div class="section-heading">
+                <div class="small-title">الدعوة في مكة</div>
+                <h2>الدعوة إلى الإسلام</h2>
+                <p>التوحيد والصبر والثبات أمام التحديات.</p>
+            </div>
+
+            <article class="info-card">
+
+                <p>
+                    بدأ النبي ﷺ دعوته في مكة، فدعا الناس إلى توحيد الله
+                    وترك عبادة الأصنام، والإيمان بالآخرة،
+                    والتحلي بالأخلاق الفاضلة.
+                </p>
+
+                <p>
+                    آمن به عدد من السابقين إلى الإسلام، منهم خديجة
+                    رضي الله عنها، وأبو بكر الصديق رضي الله عنه،
+                    وعلي بن أبي طالب رضي الله عنه، وزيد بن حارثة رضي الله عنه.
+                </p>
+
+                <p>
+                    واجه المسلمون الأوائل الأذى والاضطهاد،
+                    لكن النبي ﷺ استمر في تبليغ رسالة الله،
+                    وصبر هو وأصحابه على ما واجهوه.
+                </p>
+
+                <div class="verse">
+                    ﴿فَاصْدَعْ بِمَا تُؤْمَرُ وَأَعْرِضْ عَنِ الْمُشْرِكِينَ﴾
+
+                    <small>سورة الحجر، الآية 94</small>
+                </div>
+
+                <a class="primary-button" href="muhammad-mecca.html">
+                    تفاصيل الدعوة في مكة ↗
+                </a>
+
+            </article>
+
+        </section>
+
+        <!-- 6: الهجرة -->
+        <section class="content-section" id="hijra">
+
+            <div class="section-heading">
+                <div class="small-title">بداية مرحلة جديدة</div>
+                <h2>الهجرة النبوية إلى المدينة</h2>
+                <p>حدث محوري في تاريخ الدعوة الإسلامية.</p>
+            </div>
+
+            <article class="info-card">
+
+                <p>
+                    بعد اشتداد أذى قريش للمسلمين، هاجر النبي ﷺ
+                    من مكة إلى المدينة المنورة، ورافقه أبو بكر
+                    الصديق رضي الله عنه.
+                </p>
+
+                <p>
+                    مكث النبي ﷺ وصاحبه في الغار أثناء الرحلة،
+                    ثم واصلا طريقهما إلى المدينة، حيث استقبلهم المسلمون
+                    وبدأت مرحلة جديدة في تاريخ الإسلام.
+                </p>
+
+                <div class="verse">
+                    ﴿لَا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا﴾
+
+                    <small>سورة التوبة، الآية 40</small>
+                </div>
+
+                <a class="primary-button" href="muhammad-hijra.html">
+                    تفاصيل الهجرة النبوية ↗
+                </a>
+
+            </article>
+
+        </section>
+
+        <!-- 7: المدينة -->
+        <section class="content-section" id="madinah">
+
+            <div class="section-heading">
+                <div class="small-title">بناء المجتمع</div>
+                <h2>بناء المجتمع الإسلامي في المدينة</h2>
+                <p>المسجد النبوي والأخوة والتعاون وحفظ الحقوق.</p>
+            </div>
+
+            <article class="info-card">
+
+                <p>
+                    بعد الهجرة، بنى النبي ﷺ المسجد النبوي،
+                    وآخى بين المهاجرين والأنصار، وعمل على تنظيم
+                    شؤون المجتمع وإقامة العدل.
+                </p>
+
+                <p>
+                    كما دعا إلى التعاون والتكافل وحفظ الحقوق،
+                    وعمل على بناء مجتمع يقوم على الإيمان
+                    والمسؤولية والتراحم.
+                </p>
+
+                <div class="verse">
+                    ﴿إِنَّ اللَّهَ يَأْمُرُ بِالْعَدْلِ وَالْإِحْسَانِ
+                    وَإِيتَاءِ ذِي الْقُرْبَىٰ﴾
+
+                    <small>سورة النحل، الآية 90</small>
+                </div>
+
+                <a class="primary-button" href="muhammad-madinah.html">
+                    تفاصيل بناء المجتمع في المدينة ↗
+                </a>
+
+            </article>
+
+        </section>
+
+        <!-- 8: الأحداث والغزوات -->
+        <section class="content-section" id="events">
+
+            <div class="section-heading">
+                <div class="small-title">محطات تاريخية</div>
+                <h2>أحداث وغزوات بارزة</h2>
+                <p>
+                    روابط للموضوعات التفصيلية ضمن صفحات السيرة النبوية.
+                </p>
+            </div>
+
+            <article class="info-card">
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <span class="timeline-date">السنة الثانية للهجرة</span>
+                        <h3>غزوة بدر الكبرى</h3>
+                        <p>
+                            من أبرز أحداث السيرة النبوية،
+                            ووقعت في السنة الثانية للهجرة.
+                        </p>
+                        <a class="video-link"
+                            href="https://www.youtube.com/results?search_query=غزوة+بدر+الكبرى+السيرة+النبوية"
+                            target="_blank" rel="noopener noreferrer">
+                            ▶ ابحث عن شرح غزوة بدر
+                        </a>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-date">السنة الثالثة للهجرة</span>
+                        <h3>غزوة أُحد</h3>
+                        <p>
+                            حدث مهم في السيرة، وفيه دروس عن الطاعة
+                            والصبر والثبات.
+                        </p>
+                        <a class="video-link"
+                            href="https://www.youtube.com/results?search_query=غزوة+أحد+شرح+السيرة+النبوية"
+                            target="_blank" rel="noopener noreferrer">
+                            ▶ ابحث عن شرح غزوة أُحد
+                        </a>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-date">السنة الخامسة للهجرة على المشهور</span>
+                        <h3>غزوة الخندق (الأحزاب)</h3>
+                        <p>
+                            من الأحداث التي أظهرت أهمية التعاون
+                            والأخذ بالأسباب والصبر.
+                        </p>
+                        <a class="video-link"
+                            href="https://www.youtube.com/results?search_query=غزوة+الخندق+الأحزاب+السيرة+النبوية"
+                            target="_blank" rel="noopener noreferrer">
+                            ▶ ابحث عن شرح غزوة الخندق
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="stage-grid">
+
+                    <div class="stage-card">
+                        <div class="stage-icon">⚔️</div>
+                        <h3>غزوة بدر الكبرى</h3>
+                        <p>
+                            تفاصيل الحدث وأسبابه وأبرز الدروس المستفادة.
+                        </p>
+                        <a href="muhammad-badr.html">اقرأ التفاصيل ↗</a>
+                    </div>
+
+                    <div class="stage-card">
+                        <div class="stage-icon">🌿</div>
+                        <h3>غزوة أُحد</h3>
+                        <p>
+                            التعرف على أحداث الغزوة والدروس المرتبطة بها.
+                        </p>
+                        <a href="muhammad-uhud.html">اقرأ التفاصيل ↗</a>
+                    </div>
+
+                    <div class="stage-card">
+                        <div class="stage-icon">🛡️</div>
+                        <h3>غزوة الخندق</h3>
+                        <p>
+                            أحداث الخندق وما ارتبط بها من تعاون وتخطيط.
+                        </p>
+                        <a href="muhammad-khandaq.html">اقرأ التفاصيل ↗</a>
+                    </div>
+
+                    <div class="stage-card">
+                        <div class="stage-icon">🤝</div>
+                        <h3>صلح الحديبية</h3>
+                        <p>
+                            محطة مهمة في تاريخ الدعوة الإسلامية.
+                        </p>
+                        <a href="muhammad-hudaybiyyah.html">اقرأ التفاصيل ↗</a>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- 9: الحديبية -->
+        <section class="content-section" id="hudaybiyyah">
+
+            <div class="section-heading">
+                <div class="small-title">السنة السادسة للهجرة</div>
+                <h2>صلح الحديبية</h2>
+                <p>محطة مهمة في مسيرة الدعوة الإسلامية.</p>
+            </div>
+
+            <article class="info-card">
+
+                <p>
+                    وقع صلح الحديبية في السنة السادسة للهجرة،
+                    عندما خرج النبي ﷺ وأصحابه يريدون العمرة،
+                    ثم جرت مفاوضات انتهت باتفاق بين المسلمين وقريش.
+                </p>
+
+                <p>
+                    كان للصلح أثر مهم في مسيرة الدعوة،
+                    ومهّد لأحداث لاحقة في السيرة النبوية.
+                </p>
+
+                <div class="verse">
+                    ﴿إِنَّا فَتَحْنَا لَكَ فَتْحًا مُّبِينًا﴾
+
+                    <small>سورة الفتح، الآية 1</small>
+                </div>
+
+                <a class="primary-button" href="muhammad-hudaybiyyah.html">
+                    تفاصيل صلح الحديبية ↗
+                </a>
+
+            </article>
+
+        </section>
+
+        <!-- 10: فتح مكة -->
+        <section class="content-section" id="conquest">
+
+            <div class="section-heading">
+                <div class="small-title">السنة الثامنة للهجرة</div>
+                <h2>فتح مكة</h2>
+                <p>حدث عظيم في تاريخ الإسلام.</p>
+            </div>
+
+            <article class="info-card">
+
+                <p>
+                    وقع فتح مكة في السنة الثامنة للهجرة،
+                    ودخل النبي ﷺ مكة مع المسلمين بعد سنوات من الهجرة
+                    وأحداث متعددة في تاريخ الدعوة.
+                </p>
+
+                <p>
+                    كان فتح مكة حدثًا مهمًا في تاريخ الإسلام،
+                    وأصبح من المحطات البارزة في السيرة النبوية.
+                </p>
+
+                <div class="verse">
+                    ﴿إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ ۝
+                    وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا﴾
+
+                    <small>سورة النصر، الآيتان 1–2</small>
+                </div>
+
+                <a class="primary-button" href="muhammad-conquest-makkah.html">
+                    تفاصيل فتح مكة ↗
+                </a>
+
+            </article>
+
+        </section>
+
+        <!-- 11: الأخلاق -->
+        <section class="content-section" id="character">
+
+            <div class="section-heading">
+                <div class="small-title">الاقتداء بالنبي ﷺ</div>
+                <h2>أخلاق النبي محمد ﷺ</h2>
+                <p>نماذج من الأخلاق التي دعا إليها الإسلام.</p>
+            </div>
+
+            <article class="info-card">
+
+                <p>
+                    كان النبي ﷺ قدوة في الرحمة والصدق والأمانة
+                    والتواضع والصبر والعدل، ودعا الناس إلى حسن المعاملة
+                    والإحسان إلى الآخرين.
+                </p>
+
+                <div class="verse">
+                    ﴿لَقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ
+                    لِّمَن كَانَ يَرْجُو اللَّهَ وَالْيَوْمَ الْآخِرَ
+                    وَذَكَرَ اللَّهَ كَثِيرًا﴾
+
+                    <small>سورة الأحزاب، الآية 21</small>
+                </div>
+
+                <div class="lesson-grid">
+
+                    <div class="lesson-card">
+                        <h3>🌿 الرحمة</h3>
+                        <p>
+                            الرفق بالناس والإحسان إليهم.
+                        </p>
+                    </div>
+
+                    <div class="lesson-card">
+                        <h3>🌿 الصدق والأمانة</h3>
+                        <p>
+                            الالتزام بالصدق في الأقوال والأعمال.
+                        </p>
+                    </div>
+
+                    <div class="lesson-card">
+                        <h3>🌿 التواضع</h3>
+                        <p>
+                            احترام الناس وعدم التكبر عليهم.
+                        </p>
+                    </div>
+
+                    <div class="lesson-card">
+                        <h3>🌿 الصبر</h3>
+                        <p>
+                            مواجهة الصعوبات بالصبر والثبات والاستعانة بالله.
+                        </p>
+                    </div>
+
+                    <div class="lesson-card">
+                        <h3>🌿 العدل</h3>
+                        <p>
+                            إعطاء الحقوق والإنصاف في التعامل.
+                        </p>
+                    </div>
+
+                    <div class="lesson-card">
+                        <h3>🌿 الإحسان</h3>
+                        <p>
+                            فعل الخير ومعاملة الآخرين معاملة حسنة.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- 12: حجة الوداع والوفاة -->
+        <section class="content-section" id="death">
+
+            <div class="section-heading">
+                <div class="small-title">أواخر حياته ﷺ</div>
+                <h2>حجة الوداع ووفاة النبي ﷺ</h2>
+                <p>من آخر المحطات الكبرى في السيرة النبوية.</p>
+            </div>
+
+            <article class="info-card">
+
+                <h3 style="color: var(--gold-light); margin-bottom: 12px;">
+                    حجة الوداع
+                </h3>
+
+                <p>
+                    حج النبي ﷺ حجة الوداع في السنة العاشرة للهجرة،
+                    واجتمع بالمسلمين في موسم الحج، وبيّن لهم جملة
+                    من الأحكام والوصايا المهمة.
+                </p>
+
+                <a class="primary-button" href="muhammad-farewell-pilgrimage.html">
+                    تفاصيل حجة الوداع ↗
+                </a>
+
+                <div style="height: 1px; background: var(--border); margin: 30px 0;"></div>
+
+                <h3 style="color: var(--gold-light); margin-bottom: 12px;">
+                    وفاة النبي ﷺ
+                </h3>
+
+                <p>
+                    توفي النبي محمد ﷺ في المدينة المنورة
+                    في السنة الحادية عشرة للهجرة، وكان عمره
+                    ثلاثًا وستين سنة على المشهور.
+                </p>
+
+                <p>
+                    وكان لوفاته أثر عظيم في نفوس الصحابة رضي الله عنهم،
+                    لكن رسالته بقيت، والقرآن الكريم محفوظ،
+                    والسنة النبوية تبيّن للمسلمين هدي نبيهم.
+                </p>
+
+                <div class="verse">
+                    ﴿إِنَّكَ مَيِّتٌ وَإِنَّهُم مَّيِّتُونَ﴾
+
+                    <small>سورة الزمر، الآية 30</small>
+                </div>
+
+                <a class="primary-button" href="muhammad-death.html">
+                    تفاصيل مرض النبي ﷺ ووفاته ↗
+                </a>
+
+            </article>
+
+        </section>
+
+        <!-- الدروس المستفادة -->
+        <section class="content-section" id="lessons">
+
+            <div class="section-heading">
+                <div class="small-title">خلاصة الرحلة</div>
+                <h2>الدروس المستفادة من السيرة النبوية</h2>
+                <p>قيم نستفيد منها في حياتنا اليومية.</p>
+            </div>
+
+            <article class="info-card">
+
+                <div class="lesson-grid">
+
+                    <div class="lesson-card">
+                        <h3>1. توحيد الله</h3>
+                        <p>
+                            أساس رسالة النبي ﷺ هو عبادة الله وحده.
+                        </p>
+                    </div>
+
+                    <div class="lesson-card">
+                        <h3>2. الصبر والثبات</h3>
+                        <p>
+                            طريق الحق يحتاج إلى الصبر والثبات.
+                        </p>
+                    </div>
+
+                    <div class="lesson-card">
+                        <h3>3. حسن الخلق</h3>
+                        <p>
+                            الأخلاق الطيبة من أهم ما يميز المسلم.
+                        </p>
+                    </div>
+
+                    <div class="lesson-card">
+                        <h3>4. الأخوة والتعاون</h3>
+                        <p>
+                            نتعلم أهمية التكافل والتعاون بين أفراد المجتمع.
+                        </p>
+                    </div>
+
+                    <div class="lesson-card">
+                        <h3>5. التوكل على الله</h3>
+                        <p>
+                            نأخذ بالأسباب ونعتمد على الله.
+                        </p>
+                    </div>
+
+                    <div class="lesson-card">
+                        <h3>6. الرحمة والعدل</h3>
+                        <p>
+                            نعامل الناس بالرفق والعدل والإحسان.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- قسم الفيديوهات -->
+        <section class="content-section" id="videos">
+
+            <div class="section-heading">
+                <div class="small-title">مكتبة مرئية</div>
+                <h2>شاهد وتعلّم</h2>
+                <p>
+                    اختر الموضوع للبحث عن دروس مرئية متعلقة بالسيرة النبوية.
+                </p>
+            </div>
+
+            <article class="info-card">
+
+                <div class="video-grid">
+
+                    <a class="video-card" href="https://www.youtube.com/results?search_query=السيرة+النبوية+كاملة+شرح"
+                        target="_blank" rel="noopener noreferrer">
+
+                        <div class="video-cover">
+                            <div class="play-icon">▶</div>
+                        </div>
+
+                        <div class="video-info">
+                            <h3>السيرة النبوية كاملة</h3>
+                            <p>
+                                البحث عن دروس تتناول السيرة من المولد إلى الوفاة.
+                            </p>
+                            <span class="video-link">افتح نتائج الفيديوهات ↗</span>
+                        </div>
+                    </a>
+
+                    <a class="video-card"
+                        href="https://www.youtube.com/results?search_query=نزول+الوحي+على+النبي+محمد+شرح"
+                        target="_blank" rel="noopener noreferrer">
+
+                        <div class="video-cover">
+                            <div class="play-icon">▶</div>
+                        </div>
+
+                        <div class="video-info">
+                            <h3>نزول الوحي</h3>
+                            <p>
+                                دروس عن بداية النبوة ونزول القرآن الكريم.
+                            </p>
+                            <span class="video-link">افتح نتائج الفيديوهات ↗</span>
+                        </div>
+                    </a>
+
+                    <a class="video-card"
+                        href="https://www.youtube.com/results?search_query=الهجرة+النبوية+إلى+المدينة+شرح"
+                        target="_blank" rel="noopener noreferrer">
+
+                        <div class="video-cover">
+                            <div class="play-icon">▶</div>
+                        </div>
+
+                        <div class="video-info">
+                            <h3>الهجرة النبوية</h3>
+                            <p>
+                                البحث عن شرح رحلة الهجرة وأحداثها.
+                            </p>
+                            <span class="video-link">افتح نتائج الفيديوهات ↗</span>
+                        </div>
+                    </a>
+
+                    <a class="video-card" href="https://www.youtube.com/results?search_query=غزوة+بدر+الكبرى+شرح+مفصل"
+                        target="_blank" rel="noopener noreferrer">
+
+                        <div class="video-cover">
+                            <div class="play-icon">▶</div>
+                        </div>
+
+                        <div class="video-info">
+                            <h3>غزوة بدر الكبرى</h3>
+                            <p>
+                                البحث عن دروس تاريخية حول أحداث بدر.
+                            </p>
+                            <span class="video-link">افتح نتائج الفيديوهات ↗</span>
+                        </div>
+                    </a>
+
+                    <a class="video-card"
+                        href="https://www.youtube.com/results?search_query=صلح+الحديبية+شرح+السيرة+النبوية"
+                        target="_blank" rel="noopener noreferrer">
+
+                        <div class="video-cover">
+                            <div class="play-icon">▶</div>
+                        </div>
+
+                        <div class="video-info">
+                            <h3>صلح الحديبية</h3>
+                            <p>
+                                التعرف على أحداث الصلح وأثره في الدعوة.
+                            </p>
+                            <span class="video-link">افتح نتائج الفيديوهات ↗</span>
+                        </div>
+                    </a>
+
+                    <a class="video-card" href="https://www.youtube.com/results?search_query=فتح+مكة+السيرة+النبوية+شرح"
+                        target="_blank" rel="noopener noreferrer">
+
+                        <div class="video-cover">
+                            <div class="play-icon">▶</div>
+                        </div>
+
+                        <div class="video-info">
+                            <h3>فتح مكة</h3>
+                            <p>
+                                البحث عن دروس حول فتح مكة وأحداثه.
+                            </p>
+                            <span class="video-link">افتح نتائج الفيديوهات ↗</span>
+                        </div>
+                    </a>
+
+                    <a class="video-card" href="https://www.youtube.com/results?search_query=حجة+الوداع+خطبة+الوداع+شرح"
+                        target="_blank" rel="noopener noreferrer">
+
+                        <div class="video-cover">
+                            <div class="play-icon">▶</div>
+                        </div>
+
+                        <div class="video-info">
+                            <h3>حجة الوداع</h3>
+                            <p>
+                                البحث عن دروس حول حجة الوداع وخطبة النبي ﷺ.
+                            </p>
+                            <span class="video-link">افتح نتائج الفيديوهات ↗</span>
+                        </div>
+                    </a>
+
+                    <a class="video-card"
+                        href="https://www.youtube.com/results?search_query=أخلاق+النبي+محمد+صلى+الله+عليه+وسلم"
+                        target="_blank" rel="noopener noreferrer">
+
+                        <div class="video-cover">
+                            <div class="play-icon">▶</div>
+                        </div>
+
+                        <div class="video-info">
+                            <h3>أخلاق النبي ﷺ</h3>
+                            <p>
+                                دروس عن الرحمة والصدق والتواضع وحسن المعاملة.
+                            </p>
+                            <span class="video-link">افتح نتائج الفيديوهات ↗</span>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="note-box">
+                    <strong>تنبيه حول الفيديوهات</strong>
+                    <p>
+                        هذه الروابط تفتح نتائج بحث يوتيوب؛ لم يتم اختيار
+                        فيديو محدد أو التحقق من محتوى كل نتيجة.
+                        اختر مصدرًا موثوقًا وتحقق من صحة المعلومات.
+                    </p>
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- المصادر -->
+        <section class="content-section" id="sources">
+
+            <div class="section-heading">
+                <div class="small-title">للمراجعة والتحقق</div>
+                <h2>مصادر السيرة النبوية</h2>
+                <p>مصادر يرجع إليها عند دراسة الأحداث والروايات.</p>
+            </div>
+
+            <article class="info-card">
+
+                <ul class="sources-list">
+                    <li>
+                        القرآن الكريم: الآيات المتعلقة بسيرة النبي ﷺ
+                        وأحداث الدعوة.
+                    </li>
+
+                    <li>
+                        صحيح البخاري: أبواب بدء الوحي والمغازي
+                        ومناقب النبي ﷺ.
+                    </li>
+
+                    <li>
+                        صحيح مسلم: الروايات المتعلقة بالسيرة والشمائل
+                        والأحداث النبوية.
+                    </li>
+
+                    <li>
+                        السيرة النبوية لابن هشام.
+                    </li>
+
+                    <li>
+                        زاد المعاد في هدي خير العباد لابن القيم.
+                    </li>
+
+                    <li>
+                        البداية والنهاية لابن كثير، مع مراعاة التحقق
+                        من الأسانيد والروايات عند الحاجة.
+                    </li>
+                </ul>
+
+                <div class="note-box">
+                    <strong>منهج الموسوعة</strong>
+                    <p>
+                        تُعرض المعلومات التاريخية باختصار في هذه الصفحة،
+                        وتُخصّص صفحات مستقلة للأحداث التفصيلية.
+                        وقد تختلف بعض الروايات في التواريخ والجزئيات،
+                        لذلك يُرجع إلى المصادر الأصلية عند التحقق.
+                    </p>
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- روابط ختامية -->
+        <div class="bottom-actions">
+
+            <a class="back-top" href="#contents">
+                ↑ العودة إلى الفهرس
+            </a>
+
+            <a class="back-top" href="prophets.html">
+                ← العودة إلى الأنبياء
+            </a>
+
+            <a class="back-top" href="../index.html">
+                الرئيسية
+            </a>
+
+        </div>
+
+        <p style="text-align: center; color: var(--gold-light); margin: 30px 0;">
+            اللهم صلِّ وسلم وبارك على نبينا محمد،
+            وعلى آله وصحبه أجمعين.
+        </p>
+
+    </main>
+
+    <footer>
+        <div class="footer-title">موسوعة الأنبياء</div>
+
+        <p>
+            السيرة النبوية الشريفة
+        </p>
+
+        <p style="margin-top: 8px;">
+            محتوى تعليمي للتعريف بالسيرة النبوية ومصادرها.
+        </p>
+
+        <p style="margin-top: 14px;">
+            © موسوعة الأنبياء
+        </p>
+    </footer>
+
+    <a class="floating-top" id="floatingTop" href="#top" aria-label="العودة إلى أعلى الصفحة">
+        ↑
+    </a>
+
+    <script>
+        // البحث في الفهرس
+        const tocSearch = document.getElementById("tocSearch");
+        const tocLinks = document.querySelectorAll(".toc-link");
+
+        tocSearch.addEventListener("input", function () {
+            const query = this.value.trim().toLowerCase();
+
+            tocLinks.forEach(function (link) {
+                const text = link.textContent.toLowerCase();
+
+                if (text.includes(query)) {
+                    link.classList.remove("hidden");
+                } else {
+                    link.classList.add("hidden");
+                }
+            });
+        });
+
+        // إظهار زر العودة للأعلى عند التمرير
+        const floatingTop = document.getElementById("floatingTop");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 400) {
+                floatingTop.classList.add("visible");
+            } else {
+                floatingTop.classList.remove("visible");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

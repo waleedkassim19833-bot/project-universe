@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>وليد محمد | معرض أعمالي</title>
+  <meta name="description" content="معرض أعمال وليد محمد في البرمجة وتحليل البيانات والشبكات والتصميم وصيانة الحاسوب.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ الأيقونات ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></symbol>
+    <symbol id="i-inf" viewBox="0 0 24 24"><path d="M18.178 8c5.096 0 5.096 8 0 8-5.095 0-7.133-8-12.739-8-4.585 0-4.585 8 0 8 5.606 0 7.644-8 12.74-8z"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></symbol>
+    <symbol id="i-net" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></symbol>
+    <symbol id="i-design" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2V17h6v-.3c0-.8.4-1.5 1-2A7 7 0 0 0 12 2z"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+    <symbol id="i-hand" viewBox="0 0 24 24"><path d="M11 12l4-4a2.12 2.12 0 0 1 3 3l-5 5"/><path d="M7 14l-2.5-2.5a2.12 2.12 0 0 1 3-3L10 11"/><path d="M2 12l4-4 4 3 3-3 4 4 5-1"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9h.01M9 12h.01M9 15h.01M9 18h.01"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.7 1.8L21.5 17.5l-1.8.7L19 20l-.7-1.8-1.8-.7 1.8-.7z"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">انتقل إلى المحتوى</a>
+
+<!-- ============ شريط التنقل ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Waleed Mohamed - الرئيسية">
+      <svg class="brand-mark" viewBox="0 0 48 40" aria-hidden="true">
+        <defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#2f6bff"/></linearGradient></defs>
+        <path d="M2 4l9 0 6 20 6-20 4 0 6 20 6-20 9 0-12 32-4 0-6-18-6 18-4 0z" fill="url(#bm)"/>
+      </svg>
+      <span>Waleed Mohamed</span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة" aria-expanded="false" aria-controls="navLinks">
+      <svg class="ic"><use href="#i-menu"/></svg>
+    </button>
+
+    <nav class="nav-links" id="navLinks" aria-label="القائمة الرئيسية">
+      <a href="#home" class="active">الرئيسية</a>
+      <a href="#about">من أنا</a>
+      <a href="#skills">مهاراتي</a>
+      <a href="#projects">مشاريعي</a>
+      <a href="#contact">تواصل معي</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ الرئيسية ============ -->
+<section class="hero" id="home">
+
+  <!-- شعاعات الخلفية -->
+  <div class="rays" aria-hidden="true">
+    <i class="glow g-left"></i>
+    <i class="glow g-right"></i>
+    <i class="glow g-mid"></i>
+    <i class="arc a-l1"></i><i class="arc a-l2"></i><i class="arc a-l3"></i><i class="arc a-l4"></i>
+    <i class="arc a-r1"></i><i class="arc a-r2"></i><i class="arc a-r3"></i>
+  </div>
+
+  <div class="wrap hero-grid">
+
+    <div class="hero-text">
+      <p class="pill">مرحبًا بك في معرض أعمالي <svg class="ic"><use href="#i-rocket"/></svg></p>
+      <p class="greet">أهلًا بك، أنا</p>
+      <h1>
+        <span class="h1-first">وليد</span>
+        <span class="h1-last">محمد</span>
+      </h1>
+      <p class="role">شغف بالتقنية وطموح بلا حدود.</p>
+      <p class="lead">أطوّر مهاراتي في البرمجة وتحليل البيانات والشبكات وصيانة الحاسوب والتصميم. أتعلّم كل يوم، وأحوّل ما أتعلمه إلى مشاريع وحلول عملية.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#projects"><svg class="ic"><use href="#i-arrow"/></svg> استكشف مشاريعي</a>
+        <a class="btn btn-ghost" href="#contact"><svg class="ic"><use href="#i-mail"/></svg> تواصل معي</a>
+      </div>
+      <div class="proof">
+        <span class="proof-ic"><svg class="ic"><use href="#i-sparkle"/></svg></span>
+        <div><strong>التعلّم المستمر</strong><span>خطوة جديدة نحو الاحتراف كل يوم</span></div>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <div class="ring ring-a" aria-hidden="true"></div>
+      <div class="ring ring-b" aria-hidden="true"></div>
+      <img src="waleed-circle.jpg" alt="صورة وليد محمد" width="900" height="900">
+
+      <div class="float float-top">
+        <span class="f-ic"><svg class="ic"><use href="#i-code"/></svg></span>
+        <div><strong>تطوير الويب</strong><small>Web Development</small></div>
+      </div>
+      <div class="float float-bottom">
+        <span class="f-ic"><svg class="ic"><use href="#i-trend"/></svg></span>
+        <div><strong>تحليل البيانات</strong><small>Data Analytics</small></div>
+      </div>
+    </div>
+
+    <ul class="stats">
+      <li class="stat">
+        <svg class="ic ic-cyan"><use href="#i-code"/></svg>
+        <div><strong data-count="8" data-pad="2" data-suffix="+">08+</strong><span>مجالات تقنية أتعلّمها</span></div>
+      </li>
+      <li class="stat">
+        <svg class="ic ic-cyan"><use href="#i-inf"/></svg>
+        <div><strong>∞</strong><span>طموح للتعلّم</span></div>
+      </li>
+      <li class="stat">
+        <svg class="ic ic-gold"><use href="#i-award"/></svg>
+        <div><strong data-count="100" data-suffix="%">100%</strong><span>شغف بالتطوير</span></div>
+      </li>
+      <li class="stat">
+        <svg class="ic ic-cyan"><use href="#i-trend"/></svg>
+        <div><strong>مستمر</strong><span>في بناء مهاراتي</span></div>
+      </li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- شريط المجالات -->
+<div class="wrap">
+  <ul class="strip" aria-label="مجالات العمل">
+    <li><svg class="ic"><use href="#i-zap"/></svg> تطوير الويب</li>
+    <li><svg class="ic"><use href="#i-db"/></svg> تحليل البيانات</li>
+    <li><svg class="ic"><use href="#i-net"/></svg> صيانة الحاسوب</li>
+    <li><svg class="ic"><use href="#i-design"/></svg> التصميم والإبداع</li>
+    <li><svg class="ic"><use href="#i-trend"/></svg> التسويق الاستراتيجي</li>
+  </ul>
+</div>
+
+<!-- ============ من أنا ============ -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+
+    <div class="about-text">
+      <p class="tag"><svg class="ic"><use href="#i-user"/></svg> نبذة عني</p>
+      <h2>شغف بالتقنية، وطموح بلا حدود.</h2>
+      <p>أؤمن أن المعرفة الحقيقية تظهر عندما نحوّل ما نتعلمه إلى تطبيقات ومشاريع واقعية.</p>
+      <p>لذلك أطوّر مهاراتي التقنية خطوة بخطوة، مع التركيز على الفهم والتطبيق وحل المشكلات. هدفي بناء خبرة عملية تساعدني على تقديم قيمة حقيقية في سوق العمل.</p>
+
+      <ul class="values">
+        <li>
+          <span class="v-ic"><svg class="ic"><use href="#i-bulb"/></svg></span>
+          <div><strong>أتعلّم باستمرار</strong><span>أطوّر معرفتي ومهاراتي</span></div>
+        </li>
+        <li>
+          <span class="v-ic"><svg class="ic"><use href="#i-rocket"/></svg></span>
+          <div><strong>أبني مشاريع عملية</strong><span>أحوّل المعرفة إلى تطبيق</span></div>
+        </li>
+        <li>
+          <span class="v-ic"><svg class="ic"><use href="#i-hand"/></svg></span>
+          <div><strong>أسعى للمساهمة</strong><span>أبحث عن حلول ذات قيمة</span></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="code-card" aria-hidden="true">
+      <div class="code-bar"><i></i><i></i><i></i><span>waleed.js</span></div>
+<pre dir="ltr"><span class="k">const</span> waleed = {
+  <span class="p">passion</span>: <span class="s">"Technology"</span>,
+  <span class="p">learning</span>: [<span class="s">"Web"</span>, <span class="s">"Data"</span>, <span class="s">"Networks"</span>,
+             <span class="s">"Design"</span>, <span class="s">"Hardware"</span>],
+  <span class="p">ambition</span>: <span class="k">Infinity</span>,
+  <span class="p">status</span>: <span class="s">"always improving"</span>
+};
+
+<span class="k">function</span> <span class="f">grow</span>(knowledge) {
+  <span class="k">return</span> knowledge.<span class="f">toRealProject</span>();
+}</pre>
+      <div class="code-tag"><svg class="ic"><use href="#i-sparkle"/></svg> التعلّم والتطوير المستمر</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ المهارات ============ -->
+<section class="section section-alt" id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="tag"><svg class="ic"><use href="#i-code"/></svg> المجالات التقنية</p>
+      <h2>مجالات أتعلّمها وأطوّر مهاراتي فيها</h2>
+      <p>مساحة تجمع اهتماماتي التقنية والمهنية في مكان واحد.</p>
+    </div>
+
+    <div class="skills">
+      <article class="skill-card">
+        <span class="sk-ic c1"><svg class="ic"><use href="#i-zap"/></svg></span>
+        <h3>تطوير الويب</h3>
+        <p>تصميم وبناء مواقع وصفحات إلكترونية متجاوبة مع مختلف الشاشات.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Django</span></div>
+      </article>
+
+      <article class="skill-card">
+        <span class="sk-ic c2"><svg class="ic"><use href="#i-db"/></svg></span>
+        <h3>تحليل البيانات</h3>
+        <p>تنظيف البيانات وتنظيمها وتحليلها لاستخراج معلومات تساعد على اتخاذ القرار.</p>
+        <div class="tags"><span>Excel</span><span>SQL</span><span>Power BI</span><span>Python</span></div>
+      </article>
+
+      <article class="skill-card">
+        <span class="sk-ic c3"><svg class="ic"><use href="#i-net"/></svg></span>
+        <h3>الشبكات</h3>
+        <p>بناء الشبكات وإعداد الأجهزة وفهم الاتصال والبنية التحتية.</p>
+        <div class="tags"><span>Cisco</span><span>VLAN</span><span>Packet Tracer</span></div>
+      </article>
+
+      <article class="skill-card">
+        <span class="sk-ic c4"><svg class="ic"><use href="#i-monitor"/></svg></span>
+        <h3>صيانة الحاسوب</h3>
+        <p>التعرّف على مكونات الحاسوب وتشخيص المشكلات المادية والبرمجية وحلها.</p>
+        <div class="tags"><span>Hardware</span><span>Software</span><span>Windows</span></div>
+      </article>
+
+      <article class="skill-card">
+        <span class="sk-ic c5"><svg class="ic"><use href="#i-design"/></svg></span>
+        <h3>التصميم والمونتاج</h3>
+        <p>تحويل الأفكار إلى تصاميم بصرية ومواد إبداعية وإعلانات رقمية.</p>
+        <div class="tags"><span>Graphic Design</span><span>Video Editing</span></div>
+      </article>
+
+      <article class="skill-card">
+        <span class="sk-ic c6"><svg class="ic"><use href="#i-trend"/></svg></span>
+        <h3>التسويق الاستراتيجي</h3>
+        <p>فهم السوق والمنافسين وتحليل الفرص والتحديات لدعم القرارات.</p>
+        <div class="tags"><span>SWOT</span><span>PESTEL</span><span>Marketing</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ المشاريع ============ -->
+<section class="section" id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="tag"><svg class="ic"><use href="#i-rocket"/></svg> معرض أعمالي</p>
+      <h2>مشاريعي في مختلف المجالات</h2>
+      <p>نماذج من تطبيقاتي العملية في كل مجال أتعلمه، وأضيف إليها مشاريع جديدة باستمرار.</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="تصفية المشاريع">
+      <button class="chip is-on" data-filter="all">جميع المشاريع</button>
+      <button class="chip" data-filter="web">تطوير الويب</button>
+      <button class="chip" data-filter="data">تحليل البيانات</button>
+      <button class="chip" data-filter="network">الشبكات</button>
+      <button class="chip" data-filter="design">التصميم</button>
+      <button class="chip" data-filter="other">مجالات أخرى</button>
+    </div>
+
+    <div class="projects">
+
+      <article class="project" data-cat="web">
+        <div class="thumb t1"><svg class="ic"><use href="#i-code"/></svg><span class="p-badge">تطوير الويب</span></div>
+        <div class="p-body">
+          <h3>تطوير المواقع الإلكترونية</h3>
+          <p>مواقع وصفحات ويب أطبّق فيها مهارات بناء الواجهات والتصميم المتجاوب.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <a href="#contact" class="p-link">استفسر عن المشروع <svg class="ic"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project" data-cat="data">
+        <div class="thumb t2"><svg class="ic"><use href="#i-trend"/></svg><span class="p-badge">تحليل البيانات</span></div>
+        <div class="p-body">
+          <h3>لوحات تحليل البيانات</h3>
+          <p>تنظيم البيانات وتحويلها إلى تقارير ورسوم بيانية تساعد على فهم النتائج.</p>
+          <div class="tags"><span>Excel</span><span>SQL</span><span>Power BI</span></div>
+          <a href="#contact" class="p-link">استفسر عن المشروع <svg class="ic"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project" data-cat="network">
+        <div class="thumb t3"><svg class="ic"><use href="#i-net"/></svg><span class="p-badge">الشبكات</span></div>
+        <div class="p-body">
+          <h3>تصميم الشبكات والتدريب عليها</h3>
+          <p>تطبيقات عملية لفهم أجهزة الشبكات وإعداد الاتصال بينها.</p>
+          <div class="tags"><span>Cisco</span><span>VLAN</span><span>Networking</span></div>
+          <a href="#contact" class="p-link">استفسر عن المشروع <svg class="ic"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project" data-cat="design">
+        <div class="thumb t4"><svg class="ic"><use href="#i-design"/></svg><span class="p-badge">التصميم</span></div>
+        <div class="p-body">
+          <h3>التصميم والإعلانات</h3>
+          <p>أفكار بصرية لتصميم الإعلانات والهويات والعروض الإبداعية.</p>
+          <div class="tags"><span>Design</span><span>Branding</span><span>Ads</span></div>
+          <a href="#contact" class="p-link">استفسر عن المشروع <svg class="ic"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project" data-cat="other">
+        <div class="thumb t5"><svg class="ic"><use href="#i-monitor"/></svg><span class="p-badge">الصيانة</span></div>
+        <div class="p-body">
+          <h3>صيانة الحاسوب</h3>
+          <p>التعرّف على مكونات الحاسوب وطرق التشخيص والصيانة وحل المشكلات.</p>
+          <div class="tags"><span>Hardware</span><span>Software</span></div>
+          <a href="#contact" class="p-link">استفسر عن المشروع <svg class="ic"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project" data-cat="other">
+        <div class="thumb t6"><svg class="ic"><use href="#i-building"/></svg><span class="p-badge">العقارات</span></div>
+        <div class="p-body">
+          <h3>FUTURA للتطوير العقاري</h3>
+          <p>مشروع رقمي يعرض العقارات والخدمات بصورة عصرية ومنظمة.</p>
+          <div class="tags"><span>Real Estate</span><span>Web Design</span></div>
+          <a href="#contact" class="p-link">استفسر عن المشروع <svg class="ic"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ تواصل معي ============ -->
+<section class="section contact" id="contact">
+  <div class="rays" aria-hidden="true"><i class="glow g-left"></i><i class="glow g-right"></i></div>
+  <div class="wrap contact-grid">
+
+    <div class="contact-info">
+      <h2>لنتواصل معًا</h2>
+      <p>لديك فكرة أو مشروع أو فرصة تعاون؟ راسلني وسأرد عليك في أقرب وقت.</p>
+      <ul>
+        <li><svg class="ic"><use href="#i-mail"/></svg> <a href="mailto:you@example.com">you@example.com</a></li>
+        <li><svg class="ic"><use href="#i-phone"/></svg> <a href="tel:+000000000000" dir="ltr">+000 00 000 0000</a></li>
+        <li><svg class="ic"><use href="#i-pin"/></svg> <span>المدينة، الدولة</span></li>
+      </ul>
+    </div>
+
+    <form class="form" id="contactForm" novalidate>
+      <div class="field">
+        <label for="name">الاسم</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+        <span class="err" data-for="name"></span>
+      </div>
+      <div class="field">
+        <label for="email">البريد الإلكتروني</label>
+        <input id="email" name="email" type="email" autocomplete="email" dir="ltr" required>
+        <span class="err" data-for="email"></span>
+      </div>
+      <div class="field">
+        <label for="msg">الرسالة</label>
+        <textarea id="msg" name="msg" rows="5" required></textarea>
+        <span class="err" data-for="msg"></span>
+      </div>
+      <button class="btn btn-primary" type="submit"><svg class="ic"><use href="#i-mail"/></svg> إرسال الرسالة</button>
+      <p class="form-ok" id="formOk" role="status" hidden><svg class="ic"><use href="#i-check"/></svg> تم فتح برنامج البريد لإرسال رسالتك.</p>
+    </form>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© <span id="year">2026</span> وليد محمد. جميع الحقوق محفوظة.</span>
+    <a href="#home">العودة للأعلى</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

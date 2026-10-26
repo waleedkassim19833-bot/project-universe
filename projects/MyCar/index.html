@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA | عالم السيارات الفاخرة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="intro" id="intro">
+        <h1>NOVA<span>®</span></h1>
+        <div class="loading-line"></div>
+        <p>عالم من الفخامة يبدأ هنا</p>
+    </div>
+
+    <header class="navbar">
+        <a href="#home" class="logo">NOVA<span>®</span></a>
+
+        <nav id="nav">
+            <a href="#home">الرئيسية</a>
+            <a href="#collection">السيارات</a>
+            <a href="#experience">التجربة</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+
+        <button id="languageButton">EN</button>
+        <button id="menuButton" class="menu-button">☰</button>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <img class="hero-image"
+                src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=90"
+                alt="سيارة رياضية فاخرة">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <span class="eyebrow" data-ar="تجربة السيارات الفاخرة" data-en="THE LUXURY EXPERIENCE">
+                    تجربة السيارات الفاخرة
+                </span>
+
+                <h1 data-ar="الفخامة<br>لها <em>حضور.</em>" data-en="LUXURY<br>HAS <em>PRESENCE.</em>">
+                    الفخامة<br>لها <em>حضور.</em>
+                </h1>
+
+                <p data-ar="اكتشف عالمًا يجمع بين التصميم الاستثنائي والأناقة والأداء."
+                    data-en="Discover a world of exceptional design, elegance and performance.">
+                    اكتشف عالمًا يجمع بين التصميم الاستثنائي والأناقة والأداء.
+                </p>
+
+                <a href="#collection" class="main-button">
+                    <span data-ar="اكتشف المجموعة" data-en="EXPLORE THE COLLECTION">اكتشف المجموعة</span>
+                    <span>↙</span>
+                </a>
+            </div>
+
+            <div class="hero-bottom">
+                <span>NOVA AUTOMOTIVE</span>
+                <span>01 / 04</span>
+            </div>
+        </section>
+
+        <section class="intro-section" id="experience">
+            <div class="section-label">01 — NOVA EXPERIENCE</div>
+
+            <div class="intro-grid">
+                <div>
+                    <span class="eyebrow">BEYOND EXPECTATIONS</span>
+                    <h2 data-ar="ليست مجرد<br><em>سيارة.</em>" data-en="MORE THAN<br>A <em>CAR.</em>">
+                        ليست مجرد<br><em>سيارة.</em>
+                    </h2>
+                </div>
+
+                <div>
+                    <p data-ar="كل تفصيل يصنع فرقًا. وكل رحلة تمنحك إحساسًا مختلفًا. اكتشف تجربة صُممت لعشاق السيارات الاستثنائية."
+                        data-en="Every detail makes a difference. Every journey creates a feeling. Discover an experience designed for automotive enthusiasts.">
+                        كل تفصيل يصنع فرقًا. وكل رحلة تمنحك إحساسًا مختلفًا. اكتشف تجربة صُممت لعشاق السيارات
+                        الاستثنائية.
+                    </p>
+                    <a href="#collection" class="text-link">تعرّف على السيارات ←</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="collection-section" id="collection">
+            <div class="section-label">02 — THE COLLECTION</div>
+
+            <div class="collection-heading">
+                <div>
+                    <span class="eyebrow">EXCEPTIONAL AUTOMOBILES</span>
+                    <h2 data-ar="اختر <em>شغفك.</em>" data-en="CHOOSE YOUR <em>PASSION.</em>">
+                        اختر <em>شغفك.</em>
+                    </h2>
+                </div>
+                <p>أربع شخصيات مختلفة، تجمعها الفخامة.</p>
+            </div>
+
+            <div class="filters">
+                <button class="filter active" data-filter="all">جميع السيارات</button>
+                <button class="filter" data-filter="suv">SUV</button>
+                <button class="filter" data-filter="sport">رياضية</button>
+                <button class="filter" data-filter="luxury">فاخرة</button>
+            </div>
+
+            <div class="car-grid">
+
+                <article class="car-card" data-category="suv">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=85"
+                            alt="سيارة SUV فاخرة">
+                        <span class="car-number">01</span>
+                        <button class="view-car" data-car="cullinan">↗</button>
+                    </div>
+                    <div class="car-details">
+                        <span class="car-brand">ROLLS-ROYCE</span>
+                        <h3>كولينان</h3>
+                        <p>حضور مهيب وراحة استثنائية.</p>
+                        <button class="details-button" data-car="cullinan">اكتشف السيارة <span>←</span></button>
+                    </div>
+                </article>
+
+                <article class="car-card" data-category="sport">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=85"
+                            alt="سيارة كوبيه رياضية">
+                        <span class="car-number">02</span>
+                        <button class="view-car" data-car="continental">↗</button>
+                    </div>
+                    <div class="car-details">
+                        <span class="car-brand">BENTLEY</span>
+                        <h3>كونتيننتال GT</h3>
+                        <p>أناقة رياضية وأداء مميز.</p>
+                        <button class="details-button" data-car="continental">اكتشف السيارة <span>←</span></button>
+                    </div>
+                </article>
+
+                <article class="car-card" data-category="luxury">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1200&q=85"
+                            alt="سيارة سيدان فاخرة">
+                        <span class="car-number">03</span>
+                        <button class="view-car" data-car="phantom">↗</button>
+                    </div>
+                    <div class="car-details">
+                        <span class="car-brand">ROLLS-ROYCE</span>
+                        <h3>فانتوم</h3>
+                        <p>هدوء وفخامة بتفاصيل خالدة.</p>
+                        <button class="details-button" data-car="phantom">اكتشف السيارة <span>←</span></button>
+                    </div>
+                </article>
+
+                <article class="car-card" data-category="luxury">
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1200&q=85"
+                            alt="سيارة فاخرة">
+                        <span class="car-number">04</span>
+                        <button class="view-car" data-car="flying">↗</button>
+                    </div>
+                    <div class="car-details">
+                        <span class="car-brand">BENTLEY</span>
+                        <h3>فلاينغ سبير</h3>
+                        <p>أناقة تنفيذية وأداء متوازن.</p>
+                        <button class="details-button" data-car="flying">اكتشف السيارة <span>←</span></button>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="image-note">
+                ملاحظة: الصور تمثيلية، وقد لا تطابق طراز السيارة المذكور حرفيًا.
+            </p>
+        </section>
+
+        <section class="feature-section">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=85"
+                alt="تصميم سيارة رياضية" loading="lazy">
+
+            <div class="feature-overlay"></div>
+
+            <div class="feature-content">
+                <span class="eyebrow">THE NOVA SIGNATURE</span>
+                <h2>كل رحلة لها<br><em>حكاية.</em></h2>
+                <p>استمتع بالتفاصيل، واكتشف السيارة التي تعبّر عن شخصيتك.</p>
+                <a href="#contact" class="main-button">ابدأ رحلتك ↙</a>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div>
+                <span class="eyebrow">YOUR NEXT CHAPTER</span>
+                <h2>اختيارك يبدأ<br><em>من هنا.</em></h2>
+                <p>اختر السيارة التي تهمك وسجّل بياناتك في النموذج التجريبي.</p>
+            </div>
+
+            <form id="contactForm">
+                <label>الاسم
+                    <input type="text" name="name" required>
+                </label>
+
+                <label>البريد الإلكتروني
+                    <input type="email" name="email" required>
+                </label>
+
+                <label>السيارة المفضلة
+                    <select name="car" required>
+                        <option value="">اختر السيارة</option>
+                        <option>Rolls-Royce Cullinan</option>
+                        <option>Bentley Continental GT</option>
+                        <option>Rolls-Royce Phantom</option>
+                        <option>Bentley Flying Spur</option>
+                    </select>
+                </label>
+
+                <button class="main-button" type="submit">تأكيد الاختيار ↙</button>
+                <p id="formMessage" class="form-message"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#home" class="logo">NOVA<span>®</span></a>
+        <p>الفخامة في التفاصيل.</p>
+        <a href="#home">العودة للأعلى ↑</a>
+    </footer>
+
+    <div class="car-modal" id="carModal" aria-hidden="true">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-box">
+            <button class="modal-close" id="modalClose">×</button>
+            <img id="modalImage" src="" alt="صورة السيارة">
+            <div class="modal-info">
+                <span id="modalBrand" class="eyebrow"></span>
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <button class="main-button" id="modalContact">تواصل معنا ↙</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

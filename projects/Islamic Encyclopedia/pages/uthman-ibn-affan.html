@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="سيرة عثمان بن عفان رضي الله عنه، ذو النورين وثالث الخلفاء الراشدين، وفضائله وأعماله وجمع القرآن في عهده.">
+
+    <title>عثمان بن عفان رضي الله عنه | الموسوعة الإسلامية</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        :root {
+            --green: #063c2d;
+            --green-light: #126348;
+            --gold: #d8b66a;
+            --cream: #f7f1e4;
+            --ink: #29392f;
+            --white: #fffdf8;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            line-height: 2;
+        }
+
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* الواجهة الرئيسية */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 65px 20px 75px;
+            text-align: center;
+            color: #fff8e8;
+            background:
+                radial-gradient(ellipse at 50% 0%, #197254 0%, transparent 65%),
+                linear-gradient(145deg, #031e18, #07523b 55%, #031e18);
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .hero::before {
+            content: "۞     ۞     ۞     ۞     ۞";
+            position: absolute;
+            top: 12px;
+            left: 0;
+            right: 0;
+            color: #d8b66a35;
+            font-size: 30px;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .hero-symbol {
+            width: 115px;
+            height: 115px;
+            display: grid;
+            place-items: center;
+            margin: 10px auto 22px;
+            padding: 8px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            box-shadow:
+                0 0 0 8px #d8b66a17,
+                0 0 40px #d8b66a30;
+            color: #f3d58b;
+            font-size: 24px;
+            line-height: 1.5;
+        }
+
+        .hero h1 {
+            margin: 0;
+            color: #f3d58b;
+            font-size: clamp(30px, 5vw, 52px);
+            line-height: 1.5;
+        }
+
+        .hero .blessing {
+            margin: 8px 0 18px;
+            font-size: 19px;
+        }
+
+        .hero-description {
+            max-width: 760px;
+            margin: auto;
+            font-size: 16px;
+            color: #fff8e8;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 7px 20px;
+            color: #f3d58b;
+            border: 1px solid #d8b66a90;
+            border-radius: 30px;
+            font-size: 14px;
+        }
+
+        /* تخطيط الصفحة */
+
+        .container {
+            width: min(1050px, 92%);
+            margin: 32px auto 60px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 22px;
+            padding: 9px 19px;
+            border-radius: 9px;
+            background: var(--green);
+            color: white;
+            text-decoration: none;
+            transition: background .2s;
+        }
+
+        .back-button:hover {
+            background: var(--green-light);
+        }
+
+        /* بطاقات المعلومات */
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            padding: 20px 14px;
+            text-align: center;
+            background: white;
+            border: 1px solid #e4d5ad;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px #182e2010;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: var(--green-light);
+            font-size: 18px;
+        }
+
+        .stat-card span {
+            color: #68766d;
+            font-size: 13px;
+        }
+
+        /* أقسام المحتوى */
+
+        .content-card {
+            margin: 23px 0;
+            padding: clamp(20px, 4vw, 34px);
+            background: var(--white);
+            border: 1px solid #e7ddc7;
+            border-radius: 17px;
+            box-shadow: 0 8px 25px #173b2810;
+        }
+
+        .content-card h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-bottom: 11px;
+            color: var(--green);
+            border-bottom: 2px solid #d8b66a80;
+            font-size: clamp(21px, 3vw, 27px);
+            line-height: 1.7;
+        }
+
+        .content-card h3 {
+            color: var(--green-light);
+        }
+
+        .content-card p {
+            margin: 12px 0;
+        }
+
+        .note-box {
+            margin: 20px 0;
+            padding: 17px 20px;
+            background: #e9f2e9;
+            border: 1px solid #c9dfcd;
+            border-right: 4px solid var(--green-light);
+            border-radius: 10px;
+        }
+
+        .quote-box {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f5efdf;
+            border-right: 4px solid var(--gold);
+            border-radius: 9px;
+        }
+
+        .quote-box strong {
+            color: var(--green);
+            font-size: 18px;
+        }
+
+        /* التسلسل التاريخي */
+
+        .timeline {
+            padding-right: 23px;
+            border-right: 3px solid var(--gold);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 23px 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            top: 12px;
+            right: -31px;
+            width: 13px;
+            height: 13px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            background: var(--green-light);
+        }
+
+        .timeline-item h3 {
+            margin-bottom: 5px;
+        }
+
+        /* بطاقات الفضائل */
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 15px;
+        }
+
+        .value-card {
+            padding: 20px;
+            background: #f6f1e5;
+            border-radius: 13px;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .value-card h3 {
+            margin-top: 0;
+        }
+
+        /* فيديوهات يوتيوب */
+
+        .video-intro {
+            margin-bottom: 22px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 17px;
+        }
+
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-height: 210px;
+            padding: 22px;
+            color: #fff8e8;
+            text-decoration: none;
+            background:
+                radial-gradient(circle at top left, #23775a, transparent 65%),
+                linear-gradient(145deg, #063c2d, #0d6247);
+            border: 1px solid #d8b66a;
+            border-radius: 15px;
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 26px #063c2d25;
+        }
+
+        .play-icon {
+            display: grid;
+            place-items: center;
+            width: 49px;
+            height: 49px;
+            margin-bottom: 13px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--green);
+            font-size: 21px;
+        }
+
+        .video-card h3 {
+            margin: 0 0 9px;
+            color: #f3d58b;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .video-card p {
+            margin-top: auto;
+            margin-bottom: 0;
+            color: #fff8e8;
+            font-size: 13px;
+        }
+
+        .video-warning {
+            margin-top: 20px;
+            padding: 13px 16px;
+            border-radius: 9px;
+            background: #f5efdf;
+            font-size: 13px;
+        }
+
+        /* المصادر */
+
+        .sources-list {
+            padding-right: 22px;
+        }
+
+        .sources-list li {
+            margin: 8px 0;
+        }
+
+        /* نهاية الصفحة */
+
+        .page-footer {
+            padding: 28px 15px;
+            text-align: center;
+            color: #f3dfad;
+            background: #052b20;
+            border-top: 4px solid var(--gold);
+        }
+
+        .page-footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 50px 18px 55px;
+            }
+
+            .hero-symbol {
+                width: 95px;
+                height: 95px;
+                font-size: 21px;
+            }
+
+            .content-card {
+                padding: 20px 17px;
+            }
+
+            .video-card {
+                min-height: 185px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- الواجهة الرئيسية -->
+
+    <header class="hero">
+        <div class="hero-content">
+
+            <div class="hero-symbol" aria-hidden="true">
+                ذو<br>النورين
+            </div>
+
+            <h1>عثمان بن عفان</h1>
+
+            <p class="blessing">رضي الله عنه وأرضاه</p>
+
+            <p class="hero-description">
+                ثالث الخلفاء الراشدين، وأحد العشرة المبشرين بالجنة،
+                وصاحب رسول الله ﷺ، والخليفة الذي نُسخت في عهده المصاحف
+                وأُرسلت إلى الأمصار.
+            </p>
+
+            <span class="hero-badge">
+                السيرة • الفضائل • الخلافة • المواقف
+            </span>
+
+        </div>
+    </header>
+
+    <main class="container">
+
+        <a class="back-button" href="seerah-companions.html">
+            ← العودة إلى صفحة الصحابة
+        </a>
+
+        <!-- معلومات مختصرة -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <strong>عثمان بن عفان</strong>
+                <span>اسمه ونسبه</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>أبو عبد الله</strong>
+                <span>من كناه</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>ذو النورين</strong>
+                <span>لقبه المشهور</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>الخليفة الثالث</strong>
+                <span>من الخلفاء الراشدين</span>
+            </div>
+
+        </section>
+
+        <!-- القسم الأول -->
+
+        <section class="content-card">
+            <h2>1. من هو عثمان بن عفان رضي الله عنه؟</h2>
+
+            <p>
+                هو عثمان بن عفان بن أبي العاص الأموي القرشي، من أصحاب
+                رسول الله ﷺ، ومن السابقين إلى الإسلام. عُرف بالحياء والكرم
+                والإنفاق في سبيل الله، وكان من كبار الصحابة الذين كان لهم
+                أثر مهم في تاريخ المسلمين.
+            </p>
+
+            <p>
+                تولى الخلافة بعد عمر بن الخطاب رضي الله عنه، واستمرت خلافته
+                من سنة 24 هـ إلى سنة 35 هـ.
+            </p>
+
+            <div class="note-box">
+                <strong>لماذا سُمّي ذا النورين؟</strong>
+                <p>
+                    لأنه تزوج ابنتي النبي ﷺ: رقية رضي الله عنها، ثم أم كلثوم
+                    رضي الله عنها، بعد وفاة رقية.
+                </p>
+            </div>
+        </section>
+
+        <!-- القسم الثاني -->
+
+        <section class="content-card">
+            <h2>2. إسلامه وبداياته</h2>
+
+            <p>
+                أسلم عثمان رضي الله عنه في وقت مبكر من الدعوة الإسلامية،
+                وكان من السابقين إلى الإسلام في مكة. وتذكر كتب السيرة
+                أن أبا بكر الصديق رضي الله عنه كان سببًا في إسلام عدد
+                من كبار الصحابة، ومنهم عثمان رضي الله عنه.
+            </p>
+
+            <p>
+                لم تمنعه مكانته بين قريش ولا ما واجهه المسلمون الأوائل
+                من صعوبات من الثبات على الإسلام.
+            </p>
+
+            <p>
+                وتُظهر سيرته أهمية الثبات على الحق، وتحمل الصعوبات
+                في سبيل المحافظة على الدين.
+            </p>
+        </section>
+
+        <!-- القسم الثالث -->
+
+        <section class="content-card">
+            <h2>3. الهجرة إلى الحبشة والمدينة</h2>
+
+            <p>
+                هاجر عثمان رضي الله عنه إلى الحبشة مع زوجته رقية بنت
+                رسول الله ﷺ، ثم هاجر إلى المدينة المنورة.
+            </p>
+
+            <p>
+                كانت الهجرة إلى الحبشة من الأحداث المهمة في تاريخ المسلمين
+                الأوائل؛ إذ خرج بعضهم حفاظًا على دينهم عندما اشتد عليهم
+                الأذى في مكة.
+            </p>
+
+            <div class="note-box">
+                <strong>درس من سيرته:</strong>
+                <p>
+                    قد يتطلب التمسك بالمبادئ اتخاذ قرارات صعبة والتضحية
+                    ببعض المصالح الدنيوية.
+                </p>
+            </div>
+        </section>
+
+        <!-- القسم الرابع -->
+
+        <section class="content-card">
+            <h2>4. زواجه من ابنتي النبي ﷺ</h2>
+
+            <p>
+                تزوج عثمان رضي الله عنه رقية بنت رسول الله ﷺ،
+                وهاجر معها إلى الحبشة ثم إلى المدينة.
+            </p>
+
+            <p>
+                وبعد وفاة رقية رضي الله عنها، زوّجه النبي ﷺ ابنته
+                أم كلثوم رضي الله عنها. ومن هنا اشتهر عثمان بلقب
+                «ذي النورين».
+            </p>
+
+            <p>
+                وتُعد هذه الصلة من أبرز ما يُذكر في سيرته، إلى جانب
+                حيائه وكرمه ومكانته بين الصحابة.
+            </p>
+        </section>
+
+        <!-- القسم الخامس -->
+
+        <section class="content-card">
+            <h2>5. حياؤه وفضائله</h2>
+
+            <p>
+                عُرف عثمان رضي الله عنه بالحياء، وقد ورد في صحيح مسلم
+                حديث يبين مكانته في هذا الخلق.
+            </p>
+
+            <div class="quote-box">
+                قال النبي ﷺ في عثمان رضي الله عنه:
+                <br>
+                <strong>«ألا أستحي من رجل تستحي منه الملائكة».</strong>
+                <br>
+                <small>رواه مسلم في صحيحه.</small>
+            </div>
+
+            <p>
+                وكان من فضائله أيضًا السبق إلى الإسلام، وبذل المال
+                في سبيل الله، ومكانته بين أصحاب رسول الله ﷺ.
+            </p>
+        </section>
+
+        <!-- القسم السادس -->
+
+        <section class="content-card">
+            <h2>6. كرمه وإنفاقه في سبيل الله</h2>
+
+            <p>
+                اشتهر عثمان رضي الله عنه ببذل المال في وجوه الخير،
+                ومن أشهر الأعمال المرتبطة بسيرته شراء بئر رومة
+                للمسلمين، والمساهمة في تجهيز جيش العسرة.
+            </p>
+
+            <p>
+                وقد انتفع المسلمون من هذا الإنفاق، وأصبحت هذه المواقف
+                من الأمثلة المشهورة على تسخير المال لخدمة المجتمع.
+            </p>
+
+            <div class="values-grid">
+
+                <div class="value-card">
+                    <h3>بئر رومة</h3>
+                    <p>
+                        ارتبط اسمه بشراء البئر وجعل الانتفاع بها للمسلمين،
+                        في عمل من أعمال الصدقة ونفع الناس.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <h3>تجهيز جيش العسرة</h3>
+                    <p>
+                        أسهم بماله في تجهيز جيش العسرة، وهو من أشهر
+                        مواقف إنفاقه في سبيل الله.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- القسم السابع -->
+
+        <section class="content-card">
+            <h2>7. توليه الخلافة</h2>
+
+            <p>
+                تولى عثمان رضي الله عنه الخلافة سنة 24 هـ، بعد أن اختير
+                من خلال الشورى التي جعلها عمر بن الخطاب رضي الله عنه
+                لاختيار الخليفة من بعده.
+            </p>
+
+            <p>
+                امتدت خلافته إلى سنة 35 هـ، وشهدت توسع الدولة الإسلامية
+                واستمرار الفتوحات، كما شهدت تنظيمات إدارية مهمة.
+            </p>
+
+            <p>
+                وفي أواخر خلافته وقعت اضطرابات وفتنة انتهت بحصاره
+                ثم مقتله رضي الله عنه في المدينة المنورة.
+            </p>
+        </section>
+
+        <!-- القسم الثامن -->
+
+        <section class="content-card">
+            <h2>8. جمع القرآن الكريم في عهده</h2>
+
+            <p>
+                من أبرز الأعمال المرتبطة بخلافة عثمان رضي الله عنه
+                نسخ المصاحف وإرسالها إلى عدد من الأمصار، للمحافظة
+                على وحدة المسلمين في قراءة القرآن الكريم.
+            </p>
+
+            <p>
+                اعتمد هذا العمل على الصحف التي كانت محفوظة عند حفصة
+                بنت عمر رضي الله عنها، وكُلّف زيد بن ثابت رضي الله عنه
+                مع عدد من الصحابة بكتابة المصاحف.
+            </p>
+
+            <div class="note-box">
+                <strong>ما الفرق بين جمع أبي بكر ونسخ عثمان للمصاحف؟</strong>
+                <p>
+                    جمع أبو بكر الصديق رضي الله عنه القرآن في صحف بعد وفاة
+                    النبي ﷺ، ثم نُسخت المصاحف في خلافة عثمان رضي الله عنه
+                    وأُرسلت إلى الأمصار. وهما مرحلتان مترابطتان ومختلفتان.
+                </p>
+            </div>
+        </section>
+
+        <!-- القسم التاسع -->
+
+        <section class="content-card">
+            <h2>9. أبرز محطات حياته</h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <h3>الإسلام المبكر</h3>
+                    <p>
+                        كان من السابقين إلى الإسلام في مكة.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>الهجرة إلى الحبشة</h3>
+                    <p>
+                        هاجر مع زوجته رقية رضي الله عنها حفاظًا على دينه.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>الهجرة إلى المدينة</h3>
+                    <p>
+                        انتقل إلى المدينة وعاش في المجتمع الإسلامي الذي
+                        تأسس فيها بقيادة النبي ﷺ.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>تولي الخلافة</h3>
+                    <p>
+                        تولى الخلافة سنة 24 هـ بعد اختيار الشورى.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>نسخ المصاحف</h3>
+                    <p>
+                        أُنجز في عهده نسخ المصاحف وإرسالها إلى الأمصار.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>استشهاده</h3>
+                    <p>
+                        قُتل في المدينة المنورة سنة 35 هـ خلال الفتنة
+                        التي وقعت في أواخر خلافته.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- القسم العاشر -->
+
+        <section class="content-card">
+            <h2>10. صفاته والدروس المستفادة</h2>
+
+            <div class="values-grid">
+
+                <div class="value-card">
+                    <h3>الحياء</h3>
+                    <p>
+                        خُلُق كريم وردت في فضله أحاديث صحيحة في سيرة عثمان رضي الله عنه.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <h3>الكرم</h3>
+                    <p>
+                        بذل المال والموارد لخدمة المسلمين ونفع المحتاجين.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <h3>خدمة القرآن</h3>
+                    <p>
+                        الاهتمام بحفظ القرآن ونقله والمحافظة على وحدة المسلمين فيه.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <h3>الصبر</h3>
+                    <p>
+                        تحمل المسؤولية والصعوبات في مراحل مختلفة من حياته.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- فيديوهات يوتيوب -->
+
+        <section class="content-card" id="uthman-videos">
+
+            <h2>🎬 شاهد سيرة عثمان بن عفان رضي الله عنه</h2>
+
+            <p class="video-intro">
+                اختر الموضوع الذي تريد مشاهدته. ستفتح لك نتائج البحث
+                في يوتيوب لتختار الفيديو المناسب.
+            </p>
+
+            <div class="video-grid">
+
+                <a class="video-card"
+                    href="https://www.youtube.com/results?search_query=سيرة+عثمان+بن+عفان+رضي+الله+عنه" target="_blank"
+                    rel="noopener noreferrer">
+
+                    <span class="play-icon">▶</span>
+
+                    <h3>السيرة الكاملة لعثمان بن عفان</h3>
+
+                    <p>اضغط لمشاهدة الفيديوهات ←</p>
+
+                </a>
+
+                <a class="video-card" href="https://www.youtube.com/results?search_query=قصة+ذي+النورين+عثمان+بن+عفان"
+                    target="_blank" rel="noopener noreferrer">
+
+                    <span class="play-icon">▶</span>
+
+                    <h3>لماذا لُقّب بذي النورين؟</h3>
+
+                    <p>اضغط لمشاهدة الفيديوهات ←</p>
+
+                </a>
+
+                <a class="video-card" href="https://www.youtube.com/results?search_query=عثمان+بن+عفان+جمع+القرآن+شرح"
+                    target="_blank" rel="noopener noreferrer">
+
+                    <span class="play-icon">▶</span>
+
+                    <h3>جمع القرآن الكريم في عهده</h3>
+
+                    <p>اضغط لمشاهدة الفيديوهات ←</p>
+
+                </a>
+
+                <a class="video-card" href="https://www.youtube.com/results?search_query=قصة+كرم+عثمان+بن+عفان+بئر+رومة"
+                    target="_blank" rel="noopener noreferrer">
+
+                    <span class="play-icon">▶</span>
+
+                    <h3>كرمه وبئر رومة</h3>
+
+                    <p>اضغط لمشاهدة الفيديوهات ←</p>
+
+                </a>
+
+                <a class="video-card"
+                    href="https://www.youtube.com/results?search_query=خلافة+عثمان+بن+عفان+وأحداث+الفتنة"
+                    target="_blank" rel="noopener noreferrer">
+
+                    <span class="play-icon">▶</span>
+
+                    <h3>خلافته وأحداث أواخر عهده</h3>
+
+                    <p>اضغط لمشاهدة الفيديوهات ←</p>
+
+                </a>
+
+                <a class="video-card"
+                    href="https://www.youtube.com/results?search_query=فضائل+عثمان+بن+عفان+أحاديث+صحيحة" target="_blank"
+                    rel="noopener noreferrer">
+
+                    <span class="play-icon">▶</span>
+
+                    <h3>فضائله في الأحاديث الصحيحة</h3>
+
+                    <p>اضغط لمشاهدة الفيديوهات ←</p>
+
+                </a>
+
+            </div>
+
+            <div class="video-warning">
+                <strong>تنبيه:</strong>
+                هذه روابط بحث وليست توثيقًا لقنوات أو فيديوهات بعينها.
+                عند اعتماد فيديو في الموسوعة، يُفضّل التحقق من محتواه
+                ومصادر الروايات التاريخية التي يذكرها.
+            </div>
+
+        </section>
+
+        <!-- المصادر -->
+
+        <section class="content-card">
+            <h2>11. مصادر للتوسع والتحقق</h2>
+
+            <ul class="sources-list">
+                <li>
+                    صحيح البخاري: أبواب فضائل أصحاب النبي ﷺ ومناقب عثمان رضي الله عنه.
+                </li>
+
+                <li>
+                    صحيح مسلم: كتاب فضائل الصحابة.
+                </li>
+
+                <li>
+                    سير أعلام النبلاء للإمام الذهبي.
+                </li>
+
+                <li>
+                    البداية والنهاية لابن كثير.
+                </li>
+            </ul>
+
+            <p>
+                عند إضافة أحاديث أو روايات تاريخية تفصيلية إلى الموسوعة،
+                ينبغي توثيق النص والمصدر، والتحقق من درجة صحة الرواية
+                كلما أمكن.
+            </p>
+        </section>
+
+        <a class="back-button" href="seerah-companions.html">
+            ← العودة إلى صفحة الصحابة
+        </a>
+
+    </main>
+
+    <footer class="page-footer">
+        <p>الموسوعة الإسلامية — سيرة الصحابة رضي الله عنهم</p>
+        <p>نسأل الله أن ينفع بهذا العمل، وأن يجعله خالصًا لوجهه الكريم.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b302b">
+
+    <title>قصة آدم عليه السلام | الموسوعة الإسلامية</title>
+
+    <style>
+        :root {
+            --background: #071c1a;
+            --surface: #102c28;
+            --surface-light: #173a34;
+            --gold: #e5c477;
+            --gold-light: #f6e5b5;
+            --text: #f6f4ed;
+            --muted: #c4d1ca;
+            --border: rgba(229, 196, 119, 0.22);
+            --green: #267565;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 2;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .topbar {
+            background: rgba(7, 28, 26, 0.96);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 6%;
+        }
+
+        .nav {
+            max-width: 1150px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .back-link {
+            color: var(--muted);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 6px 14px;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            background: var(--surface-light);
+            color: var(--gold);
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            padding: 85px 20px 70px;
+            background:
+                radial-gradient(ellipse at top,
+                    rgba(38, 117, 101, 0.38),
+                    transparent 65%),
+                linear-gradient(135deg, #102f29, #071c1a);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero::before {
+            content: "۞";
+            position: absolute;
+            font-size: 260px;
+            color: rgba(229, 196, 119, 0.035);
+            top: -55px;
+            right: 4%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--gold);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 4px 18px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: clamp(32px, 6vw, 52px);
+            color: var(--gold-light);
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .button {
+            display: inline-block;
+            border-radius: 12px;
+            padding: 11px 22px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button-primary {
+            background: var(--gold);
+            color: #172720;
+        }
+
+        .button-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            border: 1px solid var(--border);
+            color: var(--gold-light);
+        }
+
+        .button-secondary:hover {
+            background: var(--surface-light);
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 92%;
+            margin: 35px auto 70px;
+        }
+
+        .intro-box {
+            background: linear-gradient(135deg,
+                    var(--surface-light),
+                    var(--surface));
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 25px;
+            margin-bottom: 28px;
+        }
+
+        .intro-box h2 {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .intro-box p {
+            color: var(--muted);
+        }
+
+        .section-title {
+            font-size: 27px;
+            color: var(--gold-light);
+            margin: 40px 0 20px;
+            padding-right: 14px;
+            border-right: 4px solid var(--gold);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 25px;
+            transition: transform 0.25s, border-color 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(229, 196, 119, 0.6);
+        }
+
+        .card-number {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            background: rgba(229, 196, 119, 0.12);
+            color: var(--gold);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .card h3 {
+            color: var(--gold);
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        .full-card {
+            margin-top: 20px;
+        }
+
+        .verse {
+            background: rgba(229, 196, 119, 0.07);
+            border-right: 4px solid var(--gold);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 15px;
+            color: var(--gold-light);
+            font-size: 18px;
+        }
+
+        .verse-reference {
+            display: block;
+            color: var(--gold);
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .notice {
+            margin-top: 20px;
+            padding: 16px;
+            background: rgba(38, 117, 101, 0.12);
+            border: 1px solid rgba(38, 117, 101, 0.45);
+            border-radius: 12px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .lessons {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .lesson {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            color: var(--muted);
+        }
+
+        .lesson strong {
+            color: var(--gold);
+        }
+
+        .video-card {
+            margin-top: 25px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .video-card h2 {
+            color: var(--gold-light);
+            margin-bottom: 10px;
+        }
+
+        .video-card p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .video-frame {
+            width: 100%;
+            max-width: 850px;
+            margin: auto;
+            aspect-ratio: 16 / 9;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-frame iframe {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border: 0;
+        }
+
+        .video-fallback {
+            margin-top: 20px;
+        }
+
+        .sources-list {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+
+        .sources-list li {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 15px 20px;
+            color: var(--muted);
+        }
+
+        .sources-list strong {
+            color: var(--gold);
+        }
+
+        .footer {
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 25px 15px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .footer span {
+            color: var(--gold);
+        }
+
+        @media (max-width: 700px) {
+
+            .story-grid,
+            .lessons {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 60px 18px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .card,
+            .video-card {
+                padding: 19px;
+            }
+
+            .section-title {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <nav class="nav">
+            <a class="logo" href="../index.html">✦ الموسوعة الإسلامية</a>
+
+            <a class="back-link" href="../index.html">
+                ← العودة للرئيسية
+            </a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">قصص الأنبياء</span>
+
+            <h1>قصة آدم عليه السلام</h1>
+
+            <p>
+                أبو البشر وأول إنسان خلقه الله تعالى،
+                وفي قصته دروس عظيمة عن الطاعة والتوبة والرجوع إلى الله.
+            </p>
+
+            <div class="hero-buttons">
+                <a class="button button-primary" href="#story">
+                    ابدأ القصة ↓
+                </a>
+
+                <a class="button button-secondary" href="#video">
+                    🎬 شاهد القصة
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <section class="intro-box">
+            <h2>من هو آدم عليه السلام؟</h2>
+
+            <p>
+                آدم عليه السلام هو أبو البشر، خلقه الله تعالى وعلّمه،
+                وأمر الملائكة بالسجود له سجود تكريم بأمر الله،
+                فسجدوا إلا إبليس الذي استكبر ورفض.
+                وأسكن الله آدم وزوجه الجنة، ثم وقعت قصة الشجرة،
+                فتاب آدم إلى الله وقَبِل الله توبته.
+            </p>
+
+            <div class="notice">
+                تنبيه: نلتزم في هذه الصفحة بما ثبت في القرآن الكريم،
+                ونتجنب الجزم بالتفاصيل التي لم يثبت عليها دليل صحيح.
+            </div>
+        </section>
+
+        <section id="story">
+
+            <h2 class="section-title">📖 أحداث القصة</h2>
+
+            <div class="story-grid">
+
+                <article class="card">
+                    <span class="card-number">١</span>
+
+                    <h3>خلق آدم عليه السلام</h3>
+
+                    <p>
+                        أخبر الله الملائكة أنه جاعل في الأرض خليفة.
+                        وخلق آدم من تراب، ثم سوّاه ونفخ فيه من روحه
+                        بأمره سبحانه. وكان خلق آدم بداية خلق البشر.
+                    </p>
+
+                    <div class="verse">
+                        ﴿إِنِّي جَاعِلٌ فِي الْأَرْضِ خَلِيفَةً﴾
+                        <span class="verse-reference">
+                            سورة البقرة، الآية 30
+                        </span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">٢</span>
+
+                    <h3>تعليم آدم الأسماء</h3>
+
+                    <p>
+                        علّم الله آدم الأسماء، وأظهر فضله في العلم
+                        الذي علّمه إياه. وفي ذلك بيان لمكانة العلم
+                        وفضل ما يمنحه الله لعباده من المعرفة.
+                    </p>
+
+                    <div class="verse">
+                        ﴿وَعَلَّمَ آدَمَ الْأَسْمَاءَ كُلَّهَا﴾
+                        <span class="verse-reference">
+                            سورة البقرة، الآية 31
+                        </span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">٣</span>
+
+                    <h3>سجود الملائكة ورفض إبليس</h3>
+
+                    <p>
+                        أمر الله الملائكة بالسجود لآدم تكريمًا له،
+                        فسجدوا جميعًا إلا إبليس. رفض إبليس الأمر
+                        استكبارًا، وأظهر عصيانه لأمر الله تعالى.
+                    </p>
+
+                    <div class="verse">
+                        ﴿فَسَجَدُوا إِلَّا إِبْلِيسَ أَبَىٰ وَاسْتَكْبَرَ﴾
+                        <span class="verse-reference">
+                            سورة البقرة، الآية 34
+                        </span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">٤</span>
+
+                    <h3>السكن في الجنة</h3>
+
+                    <p>
+                        أسكن الله آدم وزوجه الجنة، وأباح لهما
+                        الأكل منها، ونهاهما عن الاقتراب من شجرة
+                        معينة. وكان ذلك اختبارًا لطاعتهما لأمر الله.
+                    </p>
+
+                    <div class="verse">
+                        ﴿وَقُلْنَا يَا آدَمُ اسْكُنْ أَنْتَ وَزَوْجُكَ
+                        الْجَنَّةَ﴾
+                        <span class="verse-reference">
+                            سورة البقرة، الآية 35
+                        </span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">٥</span>
+
+                    <h3>وسوسة الشيطان</h3>
+
+                    <p>
+                        وسوس الشيطان لآدم وزوجه، فوقعا في مخالفة
+                        النهي الذي نهاهما الله عنه. وتوضح القصة
+                        خطورة وسوسة الشيطان وضرورة الحذر منها.
+                    </p>
+
+                    <div class="verse">
+                        ﴿فَوَسْوَسَ لَهُمَا الشَّيْطَانُ﴾
+                        <span class="verse-reference">
+                            سورة الأعراف، الآية 20
+                        </span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">٦</span>
+
+                    <h3>التوبة والرجوع إلى الله</h3>
+
+                    <p>
+                        اعترف آدم وزوجه بخطئهما، ودعوا الله أن
+                        يغفر لهما ويرحمهما. فتاب الله على آدم،
+                        وفي ذلك درس عظيم في عدم اليأس من رحمة الله.
+                    </p>
+
+                    <div class="verse">
+                        ﴿رَبَّنَا ظَلَمْنَا أَنْفُسَنَا وَإِنْ لَمْ
+                        تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ
+                        مِنَ الْخَاسِرِينَ﴾
+                        <span class="verse-reference">
+                            سورة الأعراف، الآية 23
+                        </span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">٧</span>
+
+                    <h3>الهبوط إلى الأرض</h3>
+
+                    <p>
+                        أمر الله آدم وزوجه بالهبوط إلى الأرض،
+                        وجعل فيها حياة البشر وابتلاءهم. وأخبر
+                        الله بني آدم أن من اتبع هداه فلا خوف عليه
+                        ولا يحزن.
+                    </p>
+
+                    <div class="verse">
+                        ﴿فَإِمَّا يَأْتِيَنَّكُمْ مِنِّي هُدًى
+                        فَمَنِ اتَّبَعَ هُدَايَ فَلَا خَوْفٌ
+                        عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ﴾
+                        <span class="verse-reference">
+                            سورة البقرة، الآية 38
+                        </span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">٨</span>
+
+                    <h3>آدم وذريته</h3>
+
+                    <p>
+                        آدم عليه السلام هو أبو البشر، ومن ذريته
+                        انتشر الناس في الأرض. وتذكرنا قصته بأن
+                        الإنسان يحتاج إلى هداية الله، وأن عليه
+                        أن يحذر من الشيطان ويتبع طريق الحق.
+                    </p>
+
+                    <div class="verse">
+                        ﴿يَا بَنِي آدَمَ إِمَّا يَأْتِيَنَّكُمْ
+                        رُسُلٌ مِنْكُمْ يَقُصُّونَ عَلَيْكُمْ آيَاتِي﴾
+                        <span class="verse-reference">
+                            سورة الأعراف، الآية 35
+                        </span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="lessons">
+
+            <h2 class="section-title">💡 الدروس المستفادة</h2>
+
+            <div class="lessons">
+
+                <div class="lesson">
+                    <strong>١. خطر الكِبر:</strong>
+                    الاستكبار عن الحق سبب للضلال، كما حدث لإبليس.
+                </div>
+
+                <div class="lesson">
+                    <strong>٢. فضل العلم:</strong>
+                    علّم الله آدم الأسماء، وفي ذلك بيان لمكانة العلم.
+                </div>
+
+                <div class="lesson">
+                    <strong>٣. الحذر من الشيطان:</strong>
+                    وسوسة الشيطان تدعو الإنسان إلى مخالفة أمر الله.
+                </div>
+
+                <div class="lesson">
+                    <strong>٤. الاعتراف بالخطأ:</strong>
+                    على الإنسان أن يعترف بخطئه ولا يبرره.
+                </div>
+
+                <div class="lesson">
+                    <strong>٥. باب التوبة مفتوح:</strong>
+                    ينبغي للمسلم أن يتوب إلى الله ولا ييأس من رحمته.
+                </div>
+
+                <div class="lesson">
+                    <strong>٦. اتباع هدى الله:</strong>
+                    النجاة تكون بالإيمان بالله واتباع هداه.
+                </div>
+
+            </div>
+        </section>
+
+        <section id="video" class="video-card">
+
+            <h2>🎬 شاهد قصة آدم عليه السلام</h2>
+
+            <p>
+                فيديو عن بداية الخلق وقصة آدم عليه السلام
+                للشيخ نبيل العوضي.
+            </p>
+
+
+
+            <div class="video-fallback">
+                <a class="button button-primary" href="https://www.youtube.com/watch?v=Gxw0pmfZEtk" target="_blank"
+                    rel="noopener noreferrer">
+                    ▶ مشاهدة الفيديو على يوتيوب
+                </a>
+            </div>
+
+            <div class="notice">
+                إذا لم يعمل الفيديو داخل الصفحة، استخدم زر المشاهدة
+                لفتحه على يوتيوب. تشغيل الفيديو المضمّن يعتمد أيضًا
+                على إعدادات يوتيوب وطريقة تشغيل الموقع.
+            </div>
+
+        </section>
+
+        <section id="sources">
+
+            <h2 class="section-title">📚 المصادر القرآنية</h2>
+
+            <ul class="sources-list">
+
+                <li>
+                    <strong>سورة البقرة:</strong>
+                    الآيات 30–39 — خلق آدم وتعليمه وسجود الملائكة
+                    والسكن في الجنة والهبوط إلى الأرض.
+                </li>
+
+                <li>
+                    <strong>سورة الأعراف:</strong>
+                    الآيات 11–27 — سجود الملائكة ووسوسة الشيطان
+                    وقصة الشجرة والتوبة.
+                </li>
+
+                <li>
+                    <strong>سورة طه:</strong>
+                    الآيات 115–123 — عهد آدم ووسوسة الشيطان
+                    والاصطفاء والتوبة والهبوط.
+                </li>
+
+                <li>
+                    <strong>سورة الحجر:</strong>
+                    الآيات 26–44 — خلق الإنسان وامتناع إبليس عن السجود.
+                </li>
+
+                <li>
+                    <strong>سورة ص:</strong>
+                    الآيات 71–85 — خلق آدم وأمر السجود وموقف إبليس.
+                </li>
+
+            </ul>
+
+            <div class="notice">
+                هذه الصفحة تلخيص تعليمي للقصة اعتمادًا على الآيات
+                المذكورة، وليست بديلًا عن قراءة القرآن وتفسيره.
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>
+            <span>✦ الموسوعة الإسلامية</span>
+            — قصص الأنبياء والعبر المستفادة منها
+        </p>
+
+        <p>اللهم علّمنا ما ينفعنا وانفعنا بما علّمتنا.</p>
+    </footer>
+
+</body>
+
+</html>

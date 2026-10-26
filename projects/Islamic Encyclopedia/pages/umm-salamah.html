@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>أم سلمة رضي الله عنها | الموسوعة الإسلامية</title>
+
+    <style>
+        :root {
+            --green: #075c46;
+            --dark-green: #064333;
+            --gold: #c9a44c;
+            --cream: #fbf8ef;
+            --text: #26352e;
+            --muted: #66756d;
+            --border: #e7dfca;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.9;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .top-bar {
+            background: var(--dark-green);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--green), #0b7355);
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .symbol {
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 18px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 35px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        header h1 {
+            font-size: clamp(25px, 5vw, 38px);
+            margin-bottom: 12px;
+        }
+
+        header p {
+            max-width: 750px;
+            margin: auto;
+            color: #f4edda;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: 30px auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            background: var(--green);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+        }
+
+        .intro {
+            background: white;
+            border-right: 5px solid var(--gold);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: var(--green);
+            font-size: 25px;
+            margin: 35px 0 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .card h3 {
+            color: var(--green);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .timeline {
+            border-right: 3px solid var(--gold);
+            padding-right: 22px;
+        }
+
+        .event {
+            position: relative;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            border: 1px solid var(--border);
+        }
+
+        .event::before {
+            content: "";
+            position: absolute;
+            right: -30px;
+            top: 26px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: var(--gold);
+            border: 3px solid var(--cream);
+        }
+
+        .event h3 {
+            color: var(--green);
+            margin-bottom: 8px;
+        }
+
+        .note {
+            background: #f2eddb;
+            border-right: 4px solid var(--gold);
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .video-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            background: white;
+            padding: 18px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        .video-card h3 {
+            color: var(--green);
+            font-size: 17px;
+        }
+
+        .video-link {
+            display: inline-block;
+            background: #a52a2a;
+            color: white;
+            padding: 9px 15px;
+            border-radius: 7px;
+            white-space: nowrap;
+        }
+
+        .sources {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .sources ul {
+            padding-right: 22px;
+        }
+
+        .sources li {
+            margin-bottom: 9px;
+        }
+
+        footer {
+            background: var(--dark-green);
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 45px;
+        }
+
+        footer p {
+            color: #e8e2d0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 40px 15px;
+            }
+
+            .intro,
+            .card,
+            .sources {
+                padding: 18px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        الموسوعة الإسلامية | سير أمهات المؤمنين
+    </div>
+
+    <header>
+        <div class="symbol">أم</div>
+
+        <h1>أم سلمة هند بنت أبي أمية رضي الله عنها</h1>
+
+        <p>
+            أم المؤمنين، ومن السابقات إلى الإسلام والهجرة،
+            واشتهرت بالحكمة والرأي السديد.
+        </p>
+    </header>
+
+    <main class="container">
+
+        <a class="back-link" href="wives-of-prophet.html">
+            ← العودة إلى صفحة زوجات النبي ﷺ
+        </a>
+
+        <section class="intro">
+            <h2 style="color: var(--green); margin-bottom: 12px;">
+                نبذة عن أم المؤمنين أم سلمة
+            </h2>
+
+            <p>
+                أم سلمة رضي الله عنها هي هند بنت أبي أمية المخزومية،
+                إحدى زوجات النبي محمد ﷺ وأمهات المؤمنين. كانت من
+                السابقات إلى الإسلام، وهاجرت مع زوجها أبي سلمة
+                رضي الله عنه في سبيل الله.
+            </p>
+
+            <p style="margin-top: 12px;">
+                مرت بتجارب صعبة في الهجرة وفقد الزوج، ثم تزوجها
+                رسول الله ﷺ بعد وفاة أبي سلمة. وعُرفت بالحكمة
+                وحسن الرأي، ومن أشهر المواقف المرتبطة بها مشورتها
+                للنبي ﷺ يوم صلح الحديبية.
+            </p>
+        </section>
+
+        <h2 class="section-title">📌 معلومات أساسية</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>الاسم والنسب</h3>
+                <p>
+                    هند بنت أبي أمية بن المغيرة المخزومية القرشية.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>الكنية المشهورة</h3>
+                <p>
+                    أم سلمة، وهي الكنية التي عُرفت بها في كتب السيرة.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>مكانتها</h3>
+                <p>
+                    زوجة النبي ﷺ وإحدى أمهات المؤمنين.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>زوجها الأول</h3>
+                <p>
+                    أبو سلمة عبد الله بن عبد الأسد رضي الله عنه،
+                    وكان من السابقين إلى الإسلام.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>أبرز صفاتها</h3>
+                <p>
+                    الحكمة، والصبر، والثبات على الإيمان،
+                    وحسن المشورة.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>وفاتها</h3>
+                <p>
+                    توفيت رضي الله عنها بعد حياة طويلة،
+                    وتذكر كتب التراجم أنها كانت آخر أمهات المؤمنين وفاةً
+                    على قول مشهور.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">📜 محطات من حياتها</h2>
+
+        <section class="timeline">
+
+            <article class="event">
+                <h3>1. السبق إلى الإسلام</h3>
+                <p>
+                    أسلمت أم سلمة رضي الله عنها في وقت مبكر،
+                    وكانت هي وزوجها أبو سلمة من الذين تحملوا
+                    مشاق الطريق حفاظًا على دينهم.
+                </p>
+            </article>
+
+            <article class="event">
+                <h3>2. الهجرة إلى الحبشة ثم المدينة</h3>
+                <p>
+                    تذكر كتب السيرة أنها هاجرت مع زوجها إلى الحبشة،
+                    ثم عادت وهاجرت إلى المدينة المنورة.
+                    وقد واجهت في طريق الهجرة ظروفًا صعبة،
+                    لكنها ثبتت على إيمانها.
+                </p>
+            </article>
+
+            <article class="event">
+                <h3>3. وفاة أبي سلمة</h3>
+                <p>
+                    بعد وفاة زوجها أبي سلمة رضي الله عنه،
+                    صبرت على المصاب، واحتسبت أجرها عند الله.
+                    ثم تزوجها رسول الله ﷺ، فأصبحت من أمهات المؤمنين.
+                </p>
+            </article>
+
+            <article class="event">
+                <h3>4. زواجها من النبي ﷺ</h3>
+                <p>
+                    تزوجها النبي ﷺ بعد وفاة أبي سلمة،
+                    وكان في زواجه منها تكريم لها ورعاية لأسرتها.
+                    وقد عاشت في بيت النبوة وتعلمت من رسول الله ﷺ.
+                </p>
+            </article>
+
+            <article class="event">
+                <h3>5. موقفها يوم صلح الحديبية</h3>
+                <p>
+                    في صلح الحديبية، لما واجه المسلمون موقفًا صعبًا
+                    بعد الصلح، أشارت أم سلمة رضي الله عنها على النبي ﷺ
+                    أن يخرج وينحر هديه ويحلق رأسه دون أن يتكلم مع الناس.
+                    فلما رأى الصحابة فعله، قاموا بما أمرهم به.
+                </p>
+
+                <p style="margin-top: 10px;">
+                    ويُذكر هذا الموقف مثالًا على حكمتها وحسن مشورتها.
+                </p>
+            </article>
+
+            <article class="event">
+                <h3>6. رواية الحديث والعلم</h3>
+                <p>
+                    روت أم سلمة رضي الله عنها أحاديث عن رسول الله ﷺ،
+                    ونقل عنها أهل العلم روايات في العبادة والأحكام
+                    وشؤون الحياة.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">⭐ أبرز صفاتها ومواقفها</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>الحكمة</h3>
+                <p>
+                    يُعد موقفها في الحديبية من أشهر الأمثلة
+                    التي تُذكر عند الحديث عن رأيها السديد.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>الصبر والثبات</h3>
+                <p>
+                    تحملت مشاق الهجرة وفقد الزوج،
+                    وبقيت ثابتة على إيمانها.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>العلم ورواية الحديث</h3>
+                <p>
+                    أسهمت في نقل سنة النبي ﷺ،
+                    فكانت سيرتها مصدرًا مهمًا للتعلم.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>مكانة أم المؤمنين</h3>
+                <p>
+                    شرفها الله بالزواج برسوله ﷺ،
+                    وأصبحت من أمهات المؤمنين اللاتي لهن مكانتهن في الإسلام.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">💡 دروس نتعلمها من سيرتها</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>1. الصبر عند الشدائد</h3>
+                <p>
+                    نتعلم أن الصبر والاستعانة بالله يساعدان الإنسان
+                    على تجاوز المحن.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>2. التفكير قبل اتخاذ القرار</h3>
+                <p>
+                    يوضح موقف الحديبية أهمية التفكير الهادئ
+                    وتقديم المشورة المناسبة في الوقت المناسب.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>3. قيمة المشورة</h3>
+                <p>
+                    الاستماع إلى الرأي الحكيم قد يساعد على
+                    حل المشكلات وتجاوز المواقف الصعبة.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>4. الثبات على المبادئ</h3>
+                <p>
+                    تعلمنا هجرتها أن التمسك بالمبادئ قد يحتاج
+                    إلى تضحية وصبر.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">🎥 مواد مرئية للتعلم</h2>
+
+        <div class="video-card">
+            <div>
+                <h3>السيرة الكاملة لأم سلمة رضي الله عنها</h3>
+                <p>للبحث عن محاضرات تتناول حياتها ومواقفها.</p>
+            </div>
+
+            <a class="video-link"
+                href="https://www.youtube.com/results?search_query=السيرة+الكاملة+أم+سلمة+هند+بنت+أبي+أمية"
+                target="_blank" rel="noopener noreferrer">
+                مشاهدة النتائج
+            </a>
+        </div>
+
+        <div class="video-card">
+            <div>
+                <h3>موقف أم سلمة يوم صلح الحديبية</h3>
+                <p>للتعرف على قصة مشورتها للنبي ﷺ.</p>
+            </div>
+
+            <a class="video-link" href="https://www.youtube.com/results?search_query=موقف+أم+سلمة+يوم+صلح+الحديبية"
+                target="_blank" rel="noopener noreferrer">
+                مشاهدة النتائج
+            </a>
+        </div>
+
+        <div class="video-card">
+            <div>
+                <h3>أمهات المؤمنين وسيرتهن</h3>
+                <p>للتعرف على سير زوجات رسول الله ﷺ.</p>
+            </div>
+
+            <a class="video-link" href="https://www.youtube.com/results?search_query=سيرة+أمهات+المؤمنين+زوجات+النبي"
+                target="_blank" rel="noopener noreferrer">
+                مشاهدة النتائج
+            </a>
+        </div>
+
+        <div class="note">
+            <strong>تنبيه:</strong>
+            الأزرار تفتح نتائج بحث في يوتيوب، وليست روابط إلى مقاطع
+            محددة جرى التحقق منها.
+        </div>
+
+        <h2 class="section-title">📚 المصادر والمراجع</h2>
+
+        <section class="sources">
+            <ul>
+                <li>صحيح البخاري، كتاب الشروط، في قصة صلح الحديبية.</li>
+                <li>صحيح مسلم، كتاب الجهاد والسير.</li>
+                <li>سير أعلام النبلاء، للإمام الذهبي.</li>
+                <li>الإصابة في تمييز الصحابة، للحافظ ابن حجر العسقلاني.</li>
+                <li>الطبقات الكبرى، لابن سعد.</li>
+            </ul>
+
+            <p style="margin-top: 15px; color: var(--muted); font-size: 14px;">
+                ملاحظة: بعض التفاصيل والتواريخ في كتب التراجم
+                قد تختلف بين الروايات، لذا يُرجع إلى المصادر
+                عند التوسع في الدراسة.
+            </p>
+        </section>
+
+        <div style="text-align: center; margin-top: 35px;">
+            <a class="back-link" href="wives-of-prophet.html">
+                ← العودة إلى زوجات النبي ﷺ
+            </a>
+        </div>
+
+    </main>
+
+    <footer>
+        <h3>الموسوعة الإسلامية</h3>
+        <p>سير أمهات المؤمنين ومعلومات إسلامية منظمة.</p>
+        <p style="margin-top: 8px;">© الموسوعة الإسلامية</p>
+    </footer>
+
+</body>
+
+</html>

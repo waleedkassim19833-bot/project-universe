@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#061a17">
+
+    <title>قصة يوسف عليه السلام | الموسوعة الإسلامية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #061a17;
+            --gold: #e9b85c;
+            --gold-light: #ffda91;
+            --muted: #c4d2ca;
+            --border: #28765b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--bg);
+            color: #f7f1e4;
+            line-height: 1.9;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header {
+            background: #041812;
+            border-bottom: 1px solid var(--gold);
+            padding: 15px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 19px;
+            font-weight: 800;
+        }
+
+        .back-btn {
+            border: 1px solid var(--gold);
+            border-radius: 25px;
+            padding: 7px 18px;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: var(--gold);
+            color: var(--bg);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 65px 20px;
+            background:
+                radial-gradient(ellipse at top, #174c3b, transparent 70%),
+                linear-gradient(180deg, #092b23, var(--bg));
+            border-bottom: 1px solid var(--border);
+        }
+
+        .badge {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            border-radius: 25px;
+            padding: 3px 18px;
+            color: var(--gold-light);
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            color: var(--gold);
+            font-size: clamp(28px, 5vw, 43px);
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: var(--muted);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border: 1px solid var(--gold);
+            border-radius: 25px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: #172019;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .container {
+            width: min(1050px, 90%);
+            margin: 30px auto;
+        }
+
+        .section-title {
+            color: var(--gold);
+            font-size: 23px;
+            margin-bottom: 18px;
+        }
+
+        .intro,
+        .story-card,
+        .verse,
+        .lesson,
+        .video-box {
+            background: linear-gradient(135deg, #0b3027, #071f1a);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
+
+        .intro {
+            padding: 22px;
+            margin-bottom: 35px;
+        }
+
+        .intro h2 {
+            color: var(--gold-light);
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .intro p,
+        .story-card p {
+            color: var(--muted);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-bottom: 35px;
+        }
+
+        .story-card {
+            padding: 22px;
+            transition: 0.3s;
+        }
+
+        .story-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .story-card h3 {
+            color: var(--gold);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .number {
+            display: inline-flex;
+            width: 34px;
+            height: 34px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--gold);
+            margin-left: 8px;
+            color: var(--gold-light);
+        }
+
+        .verse {
+            padding: 20px;
+            margin-top: 15px;
+            text-align: center;
+            border-color: #9a7538;
+        }
+
+        .verse p {
+            color: var(--gold-light);
+            font-size: 17px;
+            line-height: 2.2;
+        }
+
+        .verse small {
+            display: block;
+            color: var(--gold);
+            margin-top: 8px;
+        }
+
+        .lessons {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-bottom: 35px;
+        }
+
+        .lesson {
+            padding: 15px;
+        }
+
+        .lesson h3 {
+            color: var(--gold);
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .lesson p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .video-box {
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .video-box h2 {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .video-box p {
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            background: #04130f;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        @media (max-width: 650px) {
+
+            .story-grid,
+            .lessons {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 12px 5%;
+            }
+
+            .hero {
+                padding: 45px 18px;
+            }
+
+            .container {
+                width: 92%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a class="logo" href="../index.html">☪ الموسوعة الإسلامية</a>
+
+        <a class="back-btn" href="prophets.html">
+            ← العودة إلى الأنبياء
+        </a>
+    </header>
+
+    <section class="hero">
+        <span class="badge">قصص الأنبياء</span>
+
+        <h1>قصة يوسف عليه السلام</h1>
+
+        <p>
+            نبي كريم ابتُلي بالفراق والظلم والسجن،
+            فصبر وتوكل على الله حتى أكرمه بالتمكين،
+            واجتمع بأهله بعد سنوات من الفراق.
+        </p>
+
+        <div class="buttons">
+            <a href="#story" class="btn btn-primary">↓ اقرأ القصة</a>
+            <a href="#video" class="btn">▶ شاهد القصة</a>
+        </div>
+    </section>
+
+    <main class="container" id="story">
+
+        <section class="intro">
+            <h2>من هو يوسف عليه السلام؟</h2>
+
+            <p>
+                يوسف عليه السلام نبي من أنبياء الله، ابن يعقوب عليه السلام.
+                قص الله علينا أخباره في سورة يوسف، وبيّن فيها كيف تحولت
+                المحن إلى أسباب للفرج والتمكين، وكيف كان يوسف عفيفًا
+                وصابرًا ومحسنًا، حتى جمعه الله بأبيه وإخوته.
+            </p>
+        </section>
+
+        <h2 class="section-title">📖 أحداث قصة يوسف عليه السلام</h2>
+
+        <section class="story-grid">
+
+            <article class="story-card">
+                <h3><span class="number">١</span> رؤيا يوسف</h3>
+
+                <p>
+                    رأى يوسف عليه السلام في صغره رؤيا عظيمة،
+                    فأخبر أباه يعقوب عليه السلام بها،
+                    فنصحه أبوه ألا يقصصها على إخوته خوفًا عليه من كيدهم.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ إِذْ قَالَ يُوسُفُ لِأَبِيهِ يَا أَبَتِ
+                        إِنِّي رَأَيْتُ أَحَدَ عَشَرَ كَوْكَبًا
+                        وَالشَّمْسَ وَالْقَمَرَ رَأَيْتُهُمْ لِي سَاجِدِينَ ﴾
+                    </p>
+                    <small>سورة يوسف، الآية 4</small>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <h3><span class="number">٢</span> إلقاؤه في البئر</h3>
+
+                <p>
+                    حسد إخوة يوسف أخاهم، فتآمروا على إبعاده عن أبيه،
+                    وألقوه في غيابة الجب. ثم جاءت قافلة فأخرجته من البئر،
+                    وذهب به المسافرون إلى مصر.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ فَلَمَّا ذَهَبُوا بِهِ وَأَجْمَعُوا أَن
+                        يَجْعَلُوهُ فِي غَيَابَتِ الْجُبِّ ﴾
+                    </p>
+                    <small>سورة يوسف، الآية 15</small>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <h3><span class="number">٣</span> الابتلاء في مصر</h3>
+
+                <p>
+                    عاش يوسف عليه السلام في مصر، ثم تعرض لابتلاء شديد
+                    حين راودته امرأة العزيز عن نفسه، فاستعصم بالله
+                    واختار الطاعة والعفة.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ قَالَ مَعَاذَ اللَّهِ إِنَّهُ رَبِّي
+                        أَحْسَنَ مَثْوَايَ إِنَّهُ لَا يُفْلِحُ الظَّالِمُونَ ﴾
+                    </p>
+                    <small>سورة يوسف، الآية 23</small>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <h3><span class="number">٤</span> السجن والصبر</h3>
+
+                <p>
+                    دخل يوسف عليه السلام السجن رغم براءته،
+                    ولم يمنعه ذلك من عبادة الله ودعوة من حوله إلى التوحيد،
+                    واستمر في الصبر والإحسان.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ قَالَ رَبِّ السِّجْنُ أَحَبُّ إِلَيَّ
+                        مِمَّا يَدْعُونَنِي إِلَيْهِ ﴾
+                    </p>
+                    <small>سورة يوسف، الآية 33</small>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <h3><span class="number">٥</span> تفسير رؤيا الملك</h3>
+
+                <p>
+                    فسّر يوسف عليه السلام رؤيا الملك، فظهر علمه
+                    وحكمته وأمانته. ثم خرج من السجن بعد أن ظهرت براءته،
+                    وتولى مسؤولية خزائن الأرض.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ قَالَ اجْعَلْنِي عَلَىٰ خَزَائِنِ الْأَرْضِ
+                        إِنِّي حَفِيظٌ عَلِيمٌ ﴾
+                    </p>
+                    <small>سورة يوسف، الآية 55</small>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <h3><span class="number">٦</span> العفو عن إخوته</h3>
+
+                <p>
+                    اجتمع يوسف عليه السلام بإخوته بعد سنوات طويلة،
+                    وتمكن منهم لكنه عفا عنهم، وأظهر خلقًا عظيمًا
+                    في التسامح والإحسان.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ قَالَ لَا تَثْرِيبَ عَلَيْكُمُ الْيَوْمَ
+                        يَغْفِرُ اللَّهُ لَكُمْ وَهُوَ أَرْحَمُ الرَّاحِمِينَ ﴾
+                    </p>
+                    <small>سورة يوسف، الآية 92</small>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <h3><span class="number">٧</span> اجتماع الأسرة</h3>
+
+                <p>
+                    تحققت رؤيا يوسف عليه السلام، واجتمع بأبيه وأهله،
+                    وأتم الله عليه نعمته بعد سنوات من الابتلاء والصبر.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ وَرَفَعَ أَبَوَيْهِ عَلَى الْعَرْشِ
+                        وَخَرُّوا لَهُ سُجَّدًا ﴾
+                    </p>
+                    <small>سورة يوسف، الآية 100</small>
+                </div>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">💡 الدروس المستفادة</h2>
+
+        <section class="lessons">
+
+            <article class="lesson">
+                <h3>١. الصبر على البلاء</h3>
+                <p>قد تمر بالإنسان محن طويلة، ويجعل الله بعدها فرجًا.</p>
+            </article>
+
+            <article class="lesson">
+                <h3>٢. العفة ومراقبة الله</h3>
+                <p>نختار طاعة الله حتى عندما نكون وحدنا.</p>
+            </article>
+
+            <article class="lesson">
+                <h3>٣. العفو عند المقدرة</h3>
+                <p>العفو من الأخلاق العظيمة، خاصة عند القدرة على الانتقام.</p>
+            </article>
+
+            <article class="lesson">
+                <h3>٤. الأمانة والكفاءة</h3>
+                <p>المسؤولية تحتاج إلى الأمانة والعلم والقدرة.</p>
+            </article>
+
+            <article class="lesson">
+                <h3>٥. عدم اليأس</h3>
+                <p>لا نفقد الأمل في رحمة الله مهما طال الابتلاء.</p>
+            </article>
+
+            <article class="lesson">
+                <h3>٦. الإحسان</h3>
+                <p>نحسن إلى الآخرين في أوقات الشدة والرخاء.</p>
+            </article>
+
+        </section>
+
+        <section class="video-box" id="video">
+            <h2>🎬 شاهد قصة يوسف عليه السلام</h2>
+
+            <p>
+                اضغط على الزر للبحث عن مقاطع تتناول قصة يوسف عليه السلام.
+            </p>
+
+            <a class="btn btn-primary" href="https://www.youtube.com/results?search_query=قصة+يوسف+عليه+السلام"
+                target="_blank" rel="noopener noreferrer">
+                ▶ البحث عن القصة في يوتيوب
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            الموسوعة الإسلامية © 2026 |
+            <span>قصص الأنبياء</span>
+        </p>
+
+        <p>المصدر الأساسي للقصة: القرآن الكريم، سورة يوسف.</p>
+    </footer>
+
+</body>
+
+</html>

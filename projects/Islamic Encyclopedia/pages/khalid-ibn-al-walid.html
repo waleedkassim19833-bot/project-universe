@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>خالد بن الوليد رضي الله عنه | الموسوعة الإسلامية</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --green: #064e3b;
+            --green-light: #087f5b;
+            --gold: #d4af37;
+            --cream: #f8f5ec;
+            --text: #26352e;
+            --muted: #65736b;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.9;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #032e24, #08634a);
+            color: white;
+            padding: 25px 7% 55px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "۞";
+            position: absolute;
+            font-size: 250px;
+            color: rgba(255, 255, 255, .04);
+            left: 3%;
+            top: -65px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid rgba(255, 255, 255, .18);
+            padding-bottom: 18px;
+        }
+
+        .brand {
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        .back-link {
+            color: white;
+            border: 1px solid rgba(255, 255, 255, .4);
+            padding: 7px 15px;
+            border-radius: 25px;
+            transition: .3s;
+        }
+
+        .back-link:hover {
+            background: var(--gold);
+            color: var(--green);
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 45px auto 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .badge {
+            display: inline-block;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 5px 17px;
+            border-radius: 25px;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            font-size: clamp(30px, 5vw, 48px);
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #e2eee8;
+            font-size: 17px;
+        }
+
+        .symbol {
+            width: 110px;
+            height: 110px;
+            margin: 25px auto 0;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 40px;
+            background: rgba(255, 255, 255, .05);
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: 35px auto 60px;
+        }
+
+        .intro {
+            background: white;
+            border-right: 5px solid var(--gold);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .04);
+            margin-bottom: 25px;
+        }
+
+        .intro h2 {
+            color: var(--green);
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            color: var(--green);
+            font-size: 25px;
+            margin: 38px 0 20px;
+            padding-right: 14px;
+            border-right: 4px solid var(--gold);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            border-radius: 13px;
+            border: 1px solid #e8e5da;
+            box-shadow: 0 5px 16px rgba(0, 0, 0, .035);
+            transition: transform .25s, box-shadow .25s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+        }
+
+        .card h3 {
+            color: var(--green-light);
+            margin-bottom: 9px;
+            font-size: 19px;
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        .timeline {
+            border-right: 3px solid var(--gold);
+            margin-right: 10px;
+            padding-right: 24px;
+        }
+
+        .timeline-item {
+            position: relative;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, .04);
+        }
+
+        .timeline-item::before {
+            content: "";
+            width: 13px;
+            height: 13px;
+            background: var(--green-light);
+            border: 3px solid var(--cream);
+            border-radius: 50%;
+            position: absolute;
+            right: -34px;
+            top: 25px;
+        }
+
+        .timeline-item h3 {
+            color: var(--green);
+            margin-bottom: 5px;
+        }
+
+        .quote {
+            background: #e8f2ec;
+            border-radius: 12px;
+            padding: 22px;
+            margin-top: 20px;
+            border-right: 4px solid var(--green-light);
+        }
+
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .video-icon {
+            font-size: 30px;
+        }
+
+        .video-link {
+            display: inline-block;
+            align-self: flex-start;
+            background: #b91c1c;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 7px;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        .video-link:hover {
+            background: #7f1d1d;
+        }
+
+        .sources {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 35px;
+        }
+
+        .sources h2 {
+            color: var(--green);
+            margin-bottom: 12px;
+        }
+
+        .sources li {
+            margin: 8px 25px 8px 0;
+        }
+
+        .note {
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            background: #032e24;
+            color: #e2eee8;
+            padding: 25px 15px;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 20px 5% 40px;
+            }
+
+            .hero-content {
+                margin-top: 30px;
+            }
+
+            .container {
+                width: 92%;
+            }
+
+            .intro,
+            .card,
+            .sources {
+                padding: 18px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <nav class="topbar">
+            <div class="brand">الموسوعة الإسلامية</div>
+
+            <a class="back-link" href="seerah-companions.html">
+                ← العودة إلى الصحابة
+            </a>
+        </nav>
+
+        <div class="hero-content">
+
+            <span class="badge">سيف الله المسلول</span>
+
+            <h1>خالد بن الوليد رضي الله عنه</h1>
+
+            <p>
+                القائد العسكري المسلم، والصحابي الذي اشتهر بالشجاعة
+                وحسن القيادة، وكان له دور بارز في الفتوحات الإسلامية.
+            </p>
+
+            <div class="symbol">⚔</div>
+
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <section class="intro">
+
+            <h2>من هو خالد بن الوليد؟</h2>
+
+            <p>
+                خالد بن الوليد بن المغيرة المخزومي القرشي رضي الله عنه
+                صحابي جليل وقائد عسكري بارز. كان قبل إسلامه من فرسان قريش،
+                ثم أسلم في السنة الثامنة للهجرة، وأصبح من المدافعين عن الإسلام.
+            </p>
+
+            <p>
+                عُرف بقدرته على التخطيط العسكري وإدارة المعارك،
+                وشارك في عدد من الأحداث المهمة في تاريخ المسلمين.
+                واشتهر بلقب «سيف الله»، وهو لقب ورد في حديث صحيح
+                في سياق أحداث غزوة مؤتة.
+            </p>
+
+        </section>
+
+        <h2 class="section-title">بطاقة تعريفية</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>الاسم الكامل</h3>
+                <p>خالد بن الوليد بن المغيرة المخزومي القرشي.</p>
+            </article>
+
+            <article class="card">
+                <h3>القبيلة</h3>
+                <p>قريش، من بني مخزوم.</p>
+            </article>
+
+            <article class="card">
+                <h3>اللقب المشهور</h3>
+                <p>سيف الله.</p>
+            </article>
+
+            <article class="card">
+                <h3>إسلامه</h3>
+                <p>أسلم في السنة الثامنة للهجرة.</p>
+            </article>
+
+            <article class="card">
+                <h3>أبرز معاركه</h3>
+                <p>مؤتة، وحنين، واليمامة، وغيرها من المعارك.</p>
+            </article>
+
+            <article class="card">
+                <h3>وفاته</h3>
+                <p>توفي في حمص سنة 21 هـ على المشهور.</p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">من معاداة الإسلام إلى نصرته</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>قبل الإسلام</h3>
+                <p>
+                    كان خالد من فرسان قريش المعروفين، وشارك في معركة أُحد
+                    قبل إسلامه، حيث كان ضمن جيش قريش.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>إسلامه</h3>
+                <p>
+                    أسلم خالد رضي الله عنه في السنة الثامنة للهجرة،
+                    ثم أصبح من قادة المسلمين في عدد من المعارك.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>توظيف الخبرة في خدمة الإسلام</h3>
+                <p>
+                    استخدم خبرته العسكرية في قيادة الجيوش الإسلامية،
+                    وأصبح اسمه مرتبطًا بالتخطيط والشجاعة في المعارك.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">محطات من حياته</h2>
+
+        <section class="timeline">
+
+            <article class="timeline-item">
+                <h3>1. إسلام خالد بن الوليد</h3>
+                <p>
+                    قدم خالد رضي الله عنه إلى النبي ﷺ وأسلم في السنة
+                    الثامنة للهجرة، وكان إسلامه تحولًا مهمًا في حياته.
+                </p>
+            </article>
+
+            <article class="timeline-item">
+                <h3>2. غزوة مؤتة</h3>
+                <p>
+                    شارك خالد رضي الله عنه في غزوة مؤتة سنة 8 هـ.
+                    وبعد استشهاد القادة الذين عيّنهم النبي ﷺ، تولى
+                    قيادة الجيش في نهاية المعركة، وأسهم في انسحاب المسلمين.
+                </p>
+            </article>
+
+            <article class="timeline-item">
+                <h3>3. لقب سيف الله</h3>
+                <p>
+                    ورد في صحيح البخاري أن النبي ﷺ أخبر عن أخذ خالد
+                    الراية، ووصفه بأنه «سيف من سيوف الله».
+                    ومن هنا اشتهر بلقب سيف الله.
+                </p>
+            </article>
+
+            <article class="timeline-item">
+                <h3>4. فتح مكة وحنين</h3>
+                <p>
+                    شارك خالد رضي الله عنه في أحداث السنة الثامنة للهجرة،
+                    ومنها فتح مكة وغزوة حنين.
+                </p>
+            </article>
+
+            <article class="timeline-item">
+                <h3>5. حروب الردة</h3>
+                <p>
+                    تولى خالد رضي الله عنه قيادة جيوش المسلمين في عدد
+                    من حروب الردة في عهد أبي بكر الصديق رضي الله عنه،
+                    ومنها معركة اليمامة.
+                </p>
+            </article>
+
+            <article class="timeline-item">
+                <h3>6. الفتوحات الإسلامية</h3>
+                <p>
+                    كان له دور مهم في الحملات العسكرية في العراق وبلاد الشام
+                    خلال عهد أبي بكر الصديق رضي الله عنه.
+                </p>
+            </article>
+
+            <article class="timeline-item">
+                <h3>7. وفاته</h3>
+                <p>
+                    توفي خالد بن الوليد رضي الله عنه في حمص سنة 21 هـ
+                    على المشهور، بعد حياة ارتبطت بالقيادة العسكرية.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">من أبرز صفاته</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>الشجاعة</h3>
+                <p>
+                    عُرف بالإقدام في المعارك، وتحمل المسؤولية
+                    في المواقف العسكرية الصعبة.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>التخطيط العسكري</h3>
+                <p>
+                    اشتهر بقدرته على قراءة ظروف المعركة،
+                    والاستفادة من حركة القوات ومواقعها.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>القيادة</h3>
+                <p>
+                    تولى قيادة الجيوش في عدد من المعارك،
+                    وارتبط اسمه بمرحلة مهمة من تاريخ المسلمين.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>التحول إلى الحق</h3>
+                <p>
+                    تعلمنا قصته أن الإنسان يستطيع مراجعة مواقفه،
+                    وتغيير طريقه عندما يتبين له الحق.
+                </p>
+            </article>
+
+        </section>
+
+        <section class="quote">
+
+            <h3>ماذا نتعلم من سيرته؟</h3>
+
+            <p>
+                نتعلم من سيرة خالد بن الوليد رضي الله عنه أهمية التخطيط،
+                وحسن إدارة الموارد، والشجاعة مع التفكير، وتحمل المسؤولية.
+                كما نتعلم أن المهارات التي يمتلكها الإنسان يمكن أن تتحول
+                إلى قوة نافعة عندما يستخدمها في الخير.
+            </p>
+
+        </section>
+
+        <h2 class="section-title">شاهد وتعلّم</h2>
+
+        <section class="cards">
+
+            <article class="card video-card">
+
+                <div class="video-icon">▶️</div>
+
+                <h3>قصة إسلام خالد بن الوليد</h3>
+
+                <p>تعرّف على رحلته إلى الإسلام.</p>
+
+                <a class="video-link" href="https://www.youtube.com/results?search_query=قصة+إسلام+خالد+بن+الوليد"
+                    target="_blank" rel="noopener noreferrer">
+                    مشاهدة نتائج الفيديوهات
+                </a>
+
+            </article>
+
+            <article class="card video-card">
+
+                <div class="video-icon">▶️</div>
+
+                <h3>خالد بن الوليد في غزوة مؤتة</h3>
+
+                <p>تعرّف على أحداث المعركة وسبب اشتهاره بلقب سيف الله.</p>
+
+                <a class="video-link"
+                    href="https://www.youtube.com/results?search_query=خالد+بن+الوليد+غزوة+مؤتة+سيف+الله"
+                    target="_blank" rel="noopener noreferrer">
+                    مشاهدة نتائج الفيديوهات
+                </a>
+
+            </article>
+
+            <article class="card video-card">
+
+                <div class="video-icon">▶️</div>
+
+                <h3>خالد بن الوليد وحروب الردة</h3>
+
+                <p>تعرّف على دوره في عهد أبي بكر الصديق رضي الله عنه.</p>
+
+                <a class="video-link"
+                    href="https://www.youtube.com/results?search_query=خالد+بن+الوليد+حروب+الردة+معركة+اليمامة"
+                    target="_blank" rel="noopener noreferrer">
+                    مشاهدة نتائج الفيديوهات
+                </a>
+
+            </article>
+
+        </section>
+
+        <section class="sources">
+
+            <h2>المصادر والمراجع</h2>
+
+            <ul>
+                <li>صحيح البخاري: كتاب المغازي، وأخبار غزوة مؤتة.</li>
+                <li>السيرة النبوية لابن هشام.</li>
+                <li>سير أعلام النبلاء، للإمام الذهبي.</li>
+                <li>الإصابة في تمييز الصحابة، للحافظ ابن حجر العسقلاني.</li>
+                <li>البداية والنهاية، للحافظ ابن كثير.</li>
+            </ul>
+
+            <p class="note">
+                ملاحظة: روابط الفيديو تفتح نتائج بحث يوتيوب، وليست روابط
+                لفيديوهات محددة تم التحقق من محتواها.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>الموسوعة الإسلامية | <span>سير الصحابة رضي الله عنهم</span></p>
+        <p>نسأل الله العلم النافع والعمل الصالح.</p>
+    </footer>
+
+</body>
+
+</html>

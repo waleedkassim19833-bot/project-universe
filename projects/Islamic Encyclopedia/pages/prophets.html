@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>قصص الأنبياء | الموسوعة الإسلامية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* إعدادات صفحة قصص الأنبياء */
+
+        .prophets-page {
+            min-height: 100vh;
+            background: #f8f6f0;
+            padding-bottom: 60px;
+        }
+
+        .prophets-hero {
+            padding: 65px 20px;
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, #073b35, #12685a);
+        }
+
+        .prophets-hero h1 {
+            font-size: clamp(28px, 5vw, 45px);
+            margin-bottom: 15px;
+        }
+
+        .prophets-hero p {
+            font-size: 17px;
+            line-height: 1.9;
+            max-width: 700px;
+            margin: auto;
+            color: #e2eee9;
+        }
+
+        .prophets-container {
+            width: min(1150px, 92%);
+            margin: 40px auto;
+        }
+
+        .prophets-search {
+            display: block;
+            width: 100%;
+            padding: 17px 20px;
+            border: 1px solid #ddd6c7;
+            border-radius: 14px;
+            font-family: inherit;
+            font-size: 16px;
+            background: white;
+            outline: none;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+        }
+
+        .prophets-search:focus {
+            border-color: #b99a55;
+            box-shadow: 0 0 0 3px #b99a5525;
+        }
+
+        .prophets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+        }
+
+        .prophet-card {
+            border: 1px solid #e7e0d1;
+            background: white;
+            border-radius: 16px;
+            padding: 25px 15px;
+            cursor: pointer;
+            font-family: inherit;
+            text-align: center;
+            transition: 0.25s;
+            color: #173d35;
+        }
+
+        .prophet-card:hover {
+            transform: translateY(-5px);
+            border-color: #b99a55;
+            box-shadow: 0 10px 25px #0000000d;
+        }
+
+        .prophet-icon {
+            width: 55px;
+            height: 55px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #edf5ef;
+            color: #12685a;
+            font-size: 25px;
+        }
+
+        .prophet-card h3 {
+            font-size: 19px;
+            margin: 0 0 8px;
+        }
+
+        .prophet-card p {
+            margin: 0;
+            font-size: 13px;
+            color: #777;
+        }
+
+        .story-panel {
+            display: none;
+            background: white;
+            border: 1px solid #e7e0d1;
+            border-radius: 18px;
+            padding: 30px;
+            margin-top: 35px;
+            line-height: 2.1;
+        }
+
+        .story-panel.active {
+            display: block;
+            animation: appear 0.3s ease;
+        }
+
+        .story-panel h2 {
+            color: #12685a;
+            margin-top: 0;
+        }
+
+        .story-panel h3 {
+            color: #8b7135;
+            margin-top: 25px;
+        }
+
+        .story-panel p {
+            color: #444;
+            font-size: 16px;
+        }
+
+        .story-note {
+            background: #f8f6f0;
+            border-right: 4px solid #b99a55;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .close-story {
+            background: #12685a;
+            color: white;
+            border: none;
+            border-radius: 9px;
+            padding: 11px 20px;
+            font-family: inherit;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 30px;
+            color: #777;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .prophets-hero {
+                padding: 45px 18px;
+            }
+
+            .prophets-container {
+                width: 94%;
+            }
+
+            .prophets-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            .prophet-card {
+                padding: 20px 10px;
+            }
+
+            .story-panel {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="prophets-page">
+
+        <!-- رأس الصفحة -->
+
+        <header class="prophets-hero">
+            <h1>🕌 قصص الأنبياء</h1>
+
+            <p>
+                تعرّف على قصص أنبياء الله ورسالاتهم،
+                وابحث عن النبي الذي تريد معرفة قصته.
+            </p>
+        </header>
+
+        <!-- قائمة الأنبياء -->
+
+        <main class="prophets-container">
+
+            <a href="../index.html" style="display:inline-block;margin-bottom:25px;color:#12685a;text-decoration:none;">
+                ← العودة إلى الصفحة الرئيسية
+            </a>
+
+            <input type="search" id="prophetSearch" class="prophets-search" placeholder="🔎 ابحث عن اسم النبي..."
+                aria-label="البحث عن نبي">
+
+            <div class="prophets-grid" id="prophetsGrid"></div>
+
+            <p class="no-results" id="noResults">
+                لم نجد نبيًا بهذا الاسم. جرّب البحث باسم آخر.
+            </p>
+
+            <!-- مكان عرض القصة -->
+
+            <section class="story-panel" id="storyPanel" aria-live="polite">
+                <h2 id="storyTitle"></h2>
+
+                <div id="storyContent"></div>
+
+                <button class="close-story" id="closeStory">
+                    إغلاق القصة
+                </button>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script>
+        /*
+          هذه قائمة أولية بأسماء الأنبياء المذكورين في القرآن.
+          القصص التفصيلية ستُضاف تدريجيًا مع توثيق مصادرها.
+        */
+
+        const prophets = [
+            {
+                name: "آدم عليه السلام",
+                order: 1,
+                summary: "أبو البشر وأول الأنبياء",
+                story: `
+                    <h3>من هو آدم عليه السلام؟</h3>
+                    <p>
+                        آدم عليه السلام هو أبو البشر، خلقه الله تعالى،
+                        وعلّمه، وأسكنه الجنة، ثم أنزله إلى الأرض لحكمة أرادها سبحانه.
+                    </p>
+
+                    <h3>ماذا نتعلم من قصته؟</h3>
+                    <p>
+                        نتعلم أهمية التوبة والرجوع إلى الله، وأن الله سبحانه
+                        يقبل توبة عباده إذا تابوا بصدق.
+                    </p>
+
+                    <p class="story-note">
+                        هذه مقدمة مختصرة، وسيُستكمل سرد القصة مع الآيات
+                        القرآنية والأحاديث الصحيحة ومراجعها.
+                    </p>
+                `
+            },
+
+            {
+                name: "إدريس عليه السلام",
+                order: 2,
+                summary: "نبي ذكره الله في القرآن",
+                story: `
+                    <h3>ذكر إدريس في القرآن</h3>
+                    <p>
+                        قال الله تعالى:
+                        ﴿وَاذْكُرْ فِي الْكِتَابِ إِدْرِيسَ إِنَّهُ كَانَ صِدِّيقًا نَبِيًّا﴾
+                        [مريم: 56].
+                    </p>
+                    <p>
+                        وصف الله إدريس عليه السلام بالصدق والنبوة،
+                        وأخبر أنه رفعه مكانًا عليًّا.
+                    </p>
+                `
+            },
+
+            {
+                name: "نوح عليه السلام",
+                order: 3,
+                summary: "دعا قومه إلى عبادة الله",
+                story: `
+                    <h3>دعوة نوح عليه السلام</h3>
+                    <p>
+                        أرسل الله نوحًا عليه السلام إلى قومه ليدعوهم إلى عبادة
+                        الله وحده وترك الشرك، فدعاهم مدة طويلة وصبر على أذاهم.
+                    </p>
+
+                    <h3>السفينة والطوفان</h3>
+                    <p>
+                        أوحى الله إليه أن يصنع السفينة، فكانت النجاة لمن آمن
+                        معه بأمر الله، وجاء الطوفان كما أخبر القرآن الكريم.
+                    </p>
+
+                    <h3>العبرة</h3>
+                    <p>
+                        الصبر في الدعوة، والثبات على الحق، وعدم اليأس من رحمة الله.
+                    </p>
+                `
+            },
+
+            {
+                name: "هود عليه السلام",
+                order: 4,
+                summary: "أُرسل إلى قوم عاد",
+                story: `
+                    <h3>هود وقوم عاد</h3>
+                    <p>
+                        أرسل الله هودًا عليه السلام إلى قوم عاد، فدعاهم
+                        إلى عبادة الله وحده، وحذّرهم من الكبر والطغيان.
+                    </p>
+                    <p>
+                        لكن كثيرًا منهم أعرضوا عن دعوته، فكانت عاقبتهم
+                        كما بيّن القرآن الكريم.
+                    </p>
+                `
+            },
+
+            {
+                name: "صالح عليه السلام",
+                order: 5,
+                summary: "أُرسل إلى قوم ثمود",
+                story: `
+                    <h3>صالح وقوم ثمود</h3>
+                    <p>
+                        دعا صالح عليه السلام قوم ثمود إلى توحيد الله،
+                        وأيّد الله نبوته بالناقة التي جعلها آية لهم.
+                    </p>
+                    <p>
+                        أمرهم ألا يمسّوا الناقة بسوء، لكن المعتدين
+                        خالفوا أمر الله، فحلّ بهم العذاب.
+                    </p>
+                `
+            },
+
+            {
+                name: "إبراهيم عليه السلام",
+                order: 6,
+                summary: "خليل الرحمن وأبو الأنبياء",
+                story: `
+                    <h3>دعوة إبراهيم عليه السلام</h3>
+                    <p>
+                        دعا إبراهيم عليه السلام قومه إلى عبادة الله وحده،
+                        وبيّن لهم بطلان عبادة الأصنام.
+                    </p>
+
+                    <h3>الابتلاء والتوكل</h3>
+                    <p>
+                        ابتلاه الله ابتلاءات عظيمة، فصبر وامتثل لأمر ربه،
+                        وجعل الله في قصته مثالًا عظيمًا للتوحيد والتوكل.
+                    </p>
+
+                    <h3>بناء الكعبة</h3>
+                    <p>
+                        رفع إبراهيم وإسماعيل عليهما السلام قواعد البيت الحرام،
+                        ودعوا الله أن يتقبل منهما.
+                    </p>
+                `
+            },
+
+            {
+                name: "لوط عليه السلام",
+                order: 7,
+                summary: "دعا قومه إلى الطاعة",
+                story: `
+                    <h3>دعوة لوط عليه السلام</h3>
+                    <p>
+                        أرسل الله لوطًا عليه السلام إلى قومه،
+                        فدعاهم إلى تقوى الله وترك الفواحش.
+                    </p>
+                    <p>
+                        أصرّ قومه على المعصية، فأنجى الله لوطًا
+                        ومن آمن معه، وأهلك المعتدين.
+                    </p>
+                `
+            },
+
+            {
+                name: "إسماعيل عليه السلام",
+                order: 8,
+                summary: "ابن إبراهيم عليه السلام",
+                story: `
+                    <h3>إسماعيل عليه السلام</h3>
+                    <p>
+                        إسماعيل عليه السلام ابن إبراهيم عليه السلام،
+                        وقد أثنى الله عليه في القرآن بالصدق والوفاء بالوعد.
+                    </p>
+                    <p>
+                        وشارك أباه إبراهيم عليه السلام في رفع قواعد الكعبة،
+                        كما جاء في القرآن الكريم.
+                    </p>
+                `
+            },
+
+            {
+                name: "إسحاق عليه السلام",
+                order: 9,
+                summary: "ابن إبراهيم عليه السلام",
+                story: `
+                    <h3>إسحاق عليه السلام</h3>
+                    <p>
+                        وهب الله لإبراهيم عليه السلام إسحاق،
+                        وجعله نبيًا من الصالحين، وبارك في ذريته.
+                    </p>
+                `
+            },
+
+            {
+                name: "يعقوب عليه السلام",
+                order: 10,
+                summary: "والد يوسف عليه السلام",
+                story: `
+                    <h3>يعقوب عليه السلام</h3>
+                    <p>
+                        يعقوب عليه السلام نبي من أنبياء الله،
+                        وهو والد يوسف عليه السلام.
+                    </p>
+                    <p>
+                        تظهر في قصته مع يوسف معنى الصبر الجميل،
+                        وحسن الظن بالله، وعدم القنوط من رحمته.
+                    </p>
+                `
+            },
+
+            {
+                name: "يوسف عليه السلام",
+                order: 11,
+                summary: "صاحب القصة الواردة في سورة يوسف",
+                story: `
+                    <h3>رؤيا يوسف</h3>
+                    <p>
+                        رأى يوسف عليه السلام رؤيا قصّها على أبيه يعقوب،
+                        وكانت بداية أحداث عظيمة وردت تفاصيلها في سورة يوسف.
+                    </p>
+
+                    <h3>الابتلاء</h3>
+                    <p>
+                        مرّ يوسف عليه السلام بابتلاءات متعددة،
+                        منها إلقاؤه في البئر، وبيعه، ودخوله السجن ظلمًا.
+                    </p>
+
+                    <h3>الفرج</h3>
+                    <p>
+                        أكرمه الله بالتمكين بعد الصبر،
+                        واجتمع بأهله، وظهر تأويل رؤياه.
+                    </p>
+
+                    <p class="story-note">
+                        المصدر الأساسي لتفاصيل القصة: سورة يوسف كاملة.
+                    </p>
+                `
+            },
+
+            {
+                name: "أيوب عليه السلام",
+                order: 12,
+                summary: "مثال للصبر والرجوع إلى الله",
+                story: `
+                    <h3>صبر أيوب عليه السلام</h3>
+                    <p>
+                        ابتلى الله أيوب عليه السلام، فصبر ولجأ إلى ربه،
+                        ودعاه أن يكشف عنه الضر.
+                    </p>
+                    <p>
+                        قال الله تعالى:
+                        ﴿أَنِّي مَسَّنِيَ الضُّرُّ وَأَنْتَ أَرْحَمُ الرَّاحِمِينَ﴾
+                        [الأنبياء: 83].
+                    </p>
+                `
+            },
+
+            {
+                name: "شعيب عليه السلام",
+                order: 13,
+                summary: "دعا قومه إلى العدل في المعاملات",
+                story: `
+                    <h3>دعوة شعيب عليه السلام</h3>
+                    <p>
+                        دعا شعيب عليه السلام قومه إلى عبادة الله،
+                        ونهاهم عن بخس الناس أشياءهم والتلاعب بالموازين.
+                    </p>
+                    <p>
+                        تعلمنا قصته أهمية الأمانة والعدل في البيع والشراء.
+                    </p>
+                `
+            },
+
+            {
+                name: "موسى عليه السلام",
+                order: 14,
+                summary: "كليم الله ورسوله إلى فرعون",
+                story: `
+                    <h3>مولد موسى عليه السلام</h3>
+                    <p>
+                        وُلد موسى عليه السلام في زمن فرعون،
+                        وأوحى الله إلى أمه أن تلقيه في اليم، فحفظه الله.
+                    </p>
+
+                    <h3>مواجهة فرعون</h3>
+                    <p>
+                        أرسله الله إلى فرعون ليدعوه إلى الحق،
+                        وأيّده بالآيات، وسانده أخوه هارون عليه السلام.
+                    </p>
+
+                    <h3>نجاة بني إسرائيل</h3>
+                    <p>
+                        شق الله البحر لموسى ومن معه، فنجّاهم وأغرق فرعون وجنوده.
+                    </p>
+                `
+            },
+
+            {
+                name: "هارون عليه السلام",
+                order: 15,
+                summary: "أخو موسى ورفيقه في الدعوة",
+                story: `
+                    <h3>هارون عليه السلام</h3>
+                    <p>
+                        دعا هارون عليه السلام مع أخيه موسى إلى عبادة الله،
+                        وكان معينًا له في تبليغ الرسالة.
+                    </p>
+                `
+            },
+
+            {
+                name: "ذو الكفل عليه السلام",
+                order: 16,
+                summary: "ذكره الله ضمن الصالحين",
+                story: `
+                    <h3>ذو الكفل عليه السلام</h3>
+                    <p>
+                        ذكر الله ذا الكفل في القرآن ضمن الصابرين والأخيار.
+                        ولا تتوافر تفاصيل ثابتة كثيرة عن قصته؛ لذلك لا ننسب إليه
+                        أحداثًا غير موثقة.
+                    </p>
+                `
+            },
+
+            {
+                name: "داود عليه السلام",
+                order: 17,
+                summary: "نبي آتاه الله الزبور",
+                story: `
+                    <h3>داود عليه السلام</h3>
+                    <p>
+                        آتى الله داود عليه السلام الزبور،
+                        وعلّمه، وجعله نبيًا وملكًا.
+                    </p>
+                    <p>
+                        وذكر القرآن عدله وحكمته وتسبيح الجبال والطير معه.
+                    </p>
+                `
+            },
+
+            {
+                name: "سليمان عليه السلام",
+                order: 18,
+                summary: "نبي وملك آتاه الله ملكًا عظيمًا",
+                story: `
+                    <h3>ملك سليمان عليه السلام</h3>
+                    <p>
+                        آتى الله سليمان عليه السلام ملكًا عظيمًا،
+                        وعلّمه منطق الطير، وسخّر له أمورًا بإذنه سبحانه.
+                    </p>
+
+                    <h3>قصة الهدهد وملكة سبأ</h3>
+                    <p>
+                        ورد في القرآن خبر الهدهد وملكة سبأ،
+                        وكيف دعاها سليمان عليه السلام إلى عبادة الله وحده.
+                    </p>
+                `
+            },
+
+            {
+                name: "إلياس عليه السلام",
+                order: 19,
+                summary: "دعا قومه إلى توحيد الله",
+                story: `
+                    <h3>إلياس عليه السلام</h3>
+                    <p>
+                        دعا إلياس عليه السلام قومه إلى عبادة الله،
+                        ونهاهم عن عبادة ما لا ينفعهم ولا يضرهم.
+                    </p>
+                `
+            },
+
+            {
+                name: "اليسع عليه السلام",
+                order: 20,
+                summary: "من أنبياء الله الصالحين",
+                story: `
+                    <h3>اليسع عليه السلام</h3>
+                    <p>
+                        ذكر الله اليسع عليه السلام في القرآن
+                        ضمن الأخيار والفضلاء من عباده.
+                    </p>
+                `
+            },
+
+            {
+                name: "يونس عليه السلام",
+                order: 21,
+                summary: "صاحب دعاء ذي النون",
+                story: `
+                    <h3>يونس عليه السلام</h3>
+                    <p>
+                        ذهب يونس عليه السلام مغاضبًا، فكان من أمره
+                        ما ذكره القرآن في قصة ذي النون.
+                    </p>
+
+                    <h3>الدعاء في الظلمات</h3>
+                    <p>
+                        قال الله تعالى:
+                        ﴿لَا إِلَٰهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ﴾
+                        [الأنبياء: 87].
+                    </p>
+                    <p>
+                        فاستجاب الله له ونجّاه من الغم.
+                    </p>
+                `
+            },
+
+            {
+                name: "زكريا عليه السلام",
+                order: 22,
+                summary: "دعا الله أن يرزقه ذرية طيبة",
+                story: `
+                    <h3>دعاء زكريا عليه السلام</h3>
+                    <p>
+                        دعا زكريا عليه السلام ربه أن يهب له ذرية طيبة،
+                        رغم تقدمه في السن.
+                    </p>
+                    <p>
+                        فبشّره الله بيحيى عليه السلام،
+                        وفي قصته درس في الدعاء وحسن الرجاء بالله.
+                    </p>
+                `
+            },
+
+            {
+                name: "يحيى عليه السلام",
+                order: 23,
+                summary: "نبي آتاه الله الحكمة منذ صغره",
+                story: `
+                    <h3>يحيى عليه السلام</h3>
+                    <p>
+                        وهب الله يحيى لزكريا عليهما السلام،
+                        وآتاه الحكم صبيًا، ووصفه بالبر والتقوى.
+                    </p>
+                `
+            },
+
+            {
+                name: "عيسى عليه السلام",
+                order: 24,
+                summary: "رسول الله وكلمته ألقاها إلى مريم",
+                story: `
+                    <h3>ميلاد عيسى عليه السلام</h3>
+                    <p>
+                        خلق الله عيسى عليه السلام من أم بلا أب،
+                        وكانت ولادته آية عظيمة من آيات الله.
+                    </p>
+
+                    <h3>رسالته</h3>
+                    <p>
+                        أرسله الله إلى بني إسرائيل،
+                        وأيّده بالمعجزات بإذن الله.
+                    </p>
+
+                    <h3>مكانته في الإسلام</h3>
+                    <p>
+                        عيسى عليه السلام عبد الله ورسوله،
+                        ونؤمن به نبيًا كريمًا من أولي العزم من الرسل.
+                    </p>
+                `
+            },
+
+            {
+                name: "محمد ﷺ",
+                order: 25,
+                summary: "خاتم الأنبياء والمرسلين",
+                story: `
+                    <h3>مولد النبي محمد ﷺ</h3>
+                    <p>
+                        وُلد النبي محمد ﷺ في مكة،
+                        ونشأ معروفًا بالصدق والأمانة.
+                    </p>
+
+                    <h3>نزول الوحي</h3>
+                    <p>
+                        أنزل الله عليه القرآن، وبدأ يدعو الناس
+                        إلى توحيد الله وترك الشرك.
+                    </p>
+
+                    <h3>الهجرة وبناء المجتمع</h3>
+                    <p>
+                        هاجر النبي ﷺ إلى المدينة،
+                        وأقام مجتمعًا قائمًا على الإيمان والعدل والأخوة.
+                    </p>
+
+                    <h3>خاتم الأنبياء</h3>
+                    <p>
+                        محمد ﷺ خاتم النبيين، ورسالته للناس كافة.
+                        ويمكن قراءة سيرته بتفصيل أكبر في قسم السيرة النبوية.
+                    </p>
+                `
+            }
+        ];
+
+        const grid = document.getElementById("prophetsGrid");
+        const search = document.getElementById("prophetSearch");
+        const noResults = document.getElementById("noResults");
+
+        const storyPanel = document.getElementById("storyPanel");
+        const storyTitle = document.getElementById("storyTitle");
+        const storyContent = document.getElementById("storyContent");
+        const closeStory = document.getElementById("closeStory");
+
+        // إنشاء بطاقات الأنبياء تلقائيًا
+
+        function renderProphets(list) {
+            grid.innerHTML = "";
+
+            list.forEach(function (prophet) {
+                const card = document.createElement("button");
+
+                card.type = "button";
+                card.className = "prophet-card";
+
+                card.innerHTML = `
+                    <div class="prophet-icon">☪</div>
+                    <h3>${prophet.name}</h3>
+                    <p>${prophet.summary}</p>
+                `;
+
+                card.addEventListener("click", function () {
+
+                    // فتح قصة آدم عليه السلام
+                    if (prophet.name === "آدم عليه السلام") {
+                        window.location.href = "adam.html";
+                        return;
+                    }
+
+                    // فتح قصة موسى عليه السلام
+                    if (prophet.name === "موسى عليه السلام") {
+                        window.location.href = "moses.html";
+                        return;
+                    }
+                    // فتح قصة إدريس عليه السلام
+                    if (prophet.name === "إدريس عليه السلام") {
+                        window.location.href = "idris.html";
+                        return;
+                    }
+                    // فتح قصة نوح عليه السلام
+                    if (prophet.name === "نوح عليه السلام") {
+                        window.location.href = "noah.html";
+                        return;
+                    }
+                    // فتح قصة هود عليه السلام
+                    if (prophet.name === "هود عليه السلام") {
+                        window.location.href = "hud.html";
+                        return;
+                    }
+                    if (prophet.name === "هود عليه السلام") {
+                        window.location.href = "hud.html";
+                        return;
+                    }
+                    // قصة إبراهيم عليه السلام
+                    if (prophet.name === "إبراهيم عليه السلام") {
+                        window.location.href = "ibrahim.html";
+                        return;
+                    }
+                    // قصة صالح عليه السلام
+                    if (prophet.name === "صالح عليه السلام") {
+                        window.location.href = "saleh.html";
+                        return;
+                    }
+                    // قصة لوط عليه السلام
+                    if (prophet.name === "لوط عليه السلام") {
+                        window.location.href = "lot.html";
+                        return;
+                    }
+                    // قصة إسماعيل عليه السلام
+                    if (prophet.name === "إسماعيل عليه السلام") {
+                        window.location.href = "Ismael.html";
+                        return;
+                    }
+                    // قصة إسحاق عليه السلام
+                    if (prophet.name === "إسحاق عليه السلام") {
+                        window.location.href = "ishaq.html";
+                        return;
+                    }
+                    // قصة يعقوب عليه السلام
+                    if (prophet.name === "يعقوب عليه السلام") {
+                        window.location.href = "yaqub.html";
+                        return;
+                    }
+                    // قصة يوسف عليه السلام
+                    if (prophet.name === "يوسف عليه السلام") {
+                        window.location.href = "yusuf.html";
+                        return;
+                    }
+                    // قصة أيوب عليه السلام
+                    if (prophet.name === "أيوب عليه السلام") {
+                        window.location.href = "ayub.html";
+                        return;
+                    }
+                    // قصة شعيب عليه السلام
+                    if (prophet.name === "شعيب عليه السلام") {
+                        window.location.href = "shuaib.html";
+                        return;
+                    }
+                    // قصة هارون عليه السلام
+                    if (prophet.name === "هارون عليه السلام") {
+                        window.location.href = "harun.html";
+                        return;
+                    }
+                    // صفحة ذي الكفل عليه السلام
+                    if (prophet.name === "ذو الكفل عليه السلام") {
+                        window.location.href = "dhulkifl.html";
+                        return;
+                    }
+                    // قصة داود عليه السلام
+                    if (prophet.name === "داود عليه السلام") {
+                        window.location.href = "dawood.html";
+                        return;
+                    }
+                    // قصة سليمان عليه السلام
+                    if (prophet.name === "سليمان عليه السلام") {
+                        window.location.href = "suleiman.html";
+                        return;
+                    }
+                    // قصة إلياس عليه السلام
+                    if (prophet.name === "إلياس عليه السلام") {
+                        window.location.href = "ilyas.html";
+                        return;
+                    }
+                    // قصة اليسع عليه السلام
+                    if (prophet.name === "اليسع عليه السلام") {
+                        window.location.href = "alyasa.html";
+                        return;
+                    }
+                    // قصة يونس عليه السلام
+                    if (prophet.name === "يونس عليه السلام") {
+                        window.location.href = "yunus.html";
+                        return;
+                    }
+                    // قصة زكريا عليه السلام
+                    if (prophet.name === "زكريا عليه السلام") {
+                        window.location.href = "zakariya.html";
+                        return;
+                    }
+                    // قصة يحيى عليه السلام
+                    if (prophet.name === "يحيى عليه السلام") {
+                        window.location.href = "yahya.html";
+                        return;
+                    }
+                    // قصة عيسى عليه السلام
+                    if (prophet.name === "عيسى عليه السلام") {
+                        window.location.href = "isa.html";
+                        return;
+                    }
+                    // السيرة النبوية الشريفة
+                    if (prophet.name === "محمد ﷺ") {
+                        window.location.href = "muhammad.html";
+                        return;
+                    }
+
+                    // عرض قصص بقية الأنبياء بالطريقة الحالية
+                    showStory(prophet);
+                });
+
+                grid.appendChild(card);
+            });
+
+            noResults.style.display = list.length === 0 ? "block" : "none";
+        }
+
+        // عرض قصة النبي المختار
+
+        function showStory(prophet) {
+            storyTitle.textContent = prophet.name;
+            storyContent.innerHTML = prophet.story;
+
+            storyPanel.classList.add("active");
+
+            storyPanel.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+
+        // البحث عن الأنبياء
+
+        search.addEventListener("input", function () {
+            const query = search.value.trim();
+
+            const filtered = prophets.filter(function (prophet) {
+                return (
+                    prophet.name.includes(query) ||
+                    prophet.summary.includes(query)
+                );
+            });
+
+            renderProphets(filtered);
+        });
+
+        // إغلاق القصة
+
+        closeStory.addEventListener("click", function () {
+            storyPanel.classList.remove("active");
+        });
+
+        // عرض جميع الأنبياء عند فتح الصفحة
+
+        renderProphets(prophets);
+    </script>
+
+</body>
+
+</html>

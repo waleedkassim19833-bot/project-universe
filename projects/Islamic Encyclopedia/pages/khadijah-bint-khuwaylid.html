@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>خديجة بنت خويلد رضي الله عنها | الموسوعة الإسلامية</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --green: #064e3b;
+            --green-light: #087f5b;
+            --gold: #d4af37;
+            --cream: #f8f5ec;
+            --text: #26352e;
+            --muted: #65736b;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.9;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #032e24, #08634a);
+            color: white;
+            padding: 25px 7% 55px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "۞";
+            position: absolute;
+            font-size: 250px;
+            color: rgba(255, 255, 255, .04);
+            left: 3%;
+            top: -65px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid rgba(255, 255, 255, .18);
+            padding-bottom: 18px;
+        }
+
+        .brand {
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        .back-link {
+            color: white;
+            border: 1px solid rgba(255, 255, 255, .4);
+            padding: 7px 15px;
+            border-radius: 25px;
+            transition: .3s;
+        }
+
+        .back-link:hover {
+            background: var(--gold);
+            color: var(--green);
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 45px auto 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .badge {
+            display: inline-block;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 5px 17px;
+            border-radius: 25px;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            font-size: clamp(30px, 5vw, 48px);
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #e2eee8;
+            font-size: 17px;
+        }
+
+        .symbol {
+            width: 110px;
+            height: 110px;
+            margin: 25px auto 0;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 40px;
+            background: rgba(255, 255, 255, .05);
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: 35px auto 60px;
+        }
+
+        .intro {
+            background: white;
+            border-right: 5px solid var(--gold);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .04);
+            margin-bottom: 25px;
+        }
+
+        .intro h2 {
+            color: var(--green);
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            color: var(--green);
+            font-size: 25px;
+            margin: 38px 0 20px;
+            padding-right: 14px;
+            border-right: 4px solid var(--gold);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            border-radius: 13px;
+            border: 1px solid #e8e5da;
+            box-shadow: 0 5px 16px rgba(0, 0, 0, .035);
+            transition: transform .25s, box-shadow .25s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+        }
+
+        .card h3 {
+            color: var(--green-light);
+            margin-bottom: 9px;
+            font-size: 19px;
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        .timeline {
+            border-right: 3px solid var(--gold);
+            margin-right: 10px;
+            padding-right: 24px;
+        }
+
+        .timeline-item {
+            position: relative;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, .04);
+        }
+
+        .timeline-item::before {
+            content: "";
+            width: 13px;
+            height: 13px;
+            background: var(--green-light);
+            border: 3px solid var(--cream);
+            border-radius: 50%;
+            position: absolute;
+            right: -34px;
+            top: 25px;
+        }
+
+        .timeline-item h3 {
+            color: var(--green);
+            margin-bottom: 5px;
+        }
+
+        .quote {
+            background: #e8f2ec;
+            border-radius: 12px;
+            padding: 22px;
+            margin-top: 20px;
+            border-right: 4px solid var(--green-light);
+        }
+
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .video-icon {
+            font-size: 30px;
+        }
+
+        .video-link {
+            display: inline-block;
+            align-self: flex-start;
+            background: #b91c1c;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 7px;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        .video-link:hover {
+            background: #7f1d1d;
+        }
+
+        .sources {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 35px;
+        }
+
+        .sources h2 {
+            color: var(--green);
+            margin-bottom: 12px;
+        }
+
+        .sources li {
+            margin: 8px 25px 8px 0;
+        }
+
+        .note {
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            background: #032e24;
+            color: #e2eee8;
+            padding: 25px 15px;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 20px 5% 40px;
+            }
+
+            .hero-content {
+                margin-top: 30px;
+            }
+
+            .container {
+                width: 92%;
+            }
+
+            .intro,
+            .card,
+            .sources {
+                padding: 18px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <nav class="topbar">
+            <div class="brand">الموسوعة الإسلامية</div>
+
+            <a class="back-link" href="wives-of-prophet.html">
+                ← العودة إلى أمهات المؤمنين
+            </a>
+        </nav>
+
+        <div class="hero-content">
+
+            <span class="badge">أم المؤمنين رضي الله عنها</span>
+
+            <h1>خديجة بنت خويلد رضي الله عنها</h1>
+
+            <p>
+                أول زوجات النبي ﷺ، وأول من آمن به،
+                وصاحبة المواقف العظيمة في بداية الدعوة الإسلامية.
+            </p>
+
+            <div class="symbol">۞</div>
+
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <section class="intro">
+
+            <h2>من هي خديجة بنت خويلد؟</h2>
+
+            <p>
+                خديجة بنت خويلد بن أسد القرشية رضي الله عنها هي أول زوجات
+                النبي محمد ﷺ، وأول من آمن برسالته عندما نزل عليه الوحي.
+                كانت معروفة بالعقل والحكمة وحسن الخلق، وكان لها مكانة
+                عظيمة في حياة النبي ﷺ.
+            </p>
+
+            <p>
+                وقفت إلى جانب النبي ﷺ في بداية الدعوة، وساندته عندما
+                واجه الخوف والتحديات بعد نزول الوحي. وكانت مثالًا
+                في الوفاء والإيمان والتضحية.
+            </p>
+
+        </section>
+
+        <h2 class="section-title">بطاقة تعريفية</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>الاسم الكامل</h3>
+                <p>خديجة بنت خويلد بن أسد القرشية.</p>
+            </article>
+
+            <article class="card">
+                <h3>اللقب</h3>
+                <p>أم المؤمنين رضي الله عنها.</p>
+            </article>
+
+            <article class="card">
+                <h3>الزوج</h3>
+                <p>النبي محمد ﷺ.</p>
+            </article>
+
+            <article class="card">
+                <h3>مكانتها في الإسلام</h3>
+                <p>أول زوجات النبي ﷺ وأول من آمن به.</p>
+            </article>
+
+            <article class="card">
+                <h3>أبناؤها من النبي ﷺ</h3>
+                <p>
+                    القاسم وعبد الله، وزينب ورقية وأم كلثوم وفاطمة
+                    رضي الله عنهم، على المشهور في كتب السيرة.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>وفاتها</h3>
+                <p>توفيت في مكة قبل الهجرة، في العام الذي اشتهر باسم عام الحزن.</p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">خديجة وبداية الوحي</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>نزول الوحي</h3>
+                <p>
+                    عندما نزل الوحي على النبي ﷺ في غار حراء،
+                    عاد إلى خديجة رضي الله عنها وهو يشعر بعظم ما حدث.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>المساندة والطمأنينة</h3>
+                <p>
+                    طمأنته خديجة رضي الله عنها وذكّرته بمحاسن أخلاقه،
+                    وأن الله لا يضيّع من يصل رحمه ويعين المحتاج ويكرم الضيف.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>الإيمان برسالته</h3>
+                <p>
+                    كانت أول من آمن بالنبي ﷺ، وساندته في بداية دعوته
+                    حين كان المسلمون الأوائل قلة.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">محطات من حياتها</h2>
+
+        <section class="timeline">
+
+            <article class="timeline-item">
+                <h3>1. حياتها قبل الإسلام</h3>
+                <p>
+                    عُرفت خديجة رضي الله عنها في مكة بحسن السمعة
+                    والتعامل، وكانت صاحبة تجارة.
+                </p>
+            </article>
+
+            <article class="timeline-item">
+                <h3>2. زواجها من النبي ﷺ</h3>
+                <p>
+                    تزوجت النبي محمدًا ﷺ قبل البعثة، وعاشت معه حياة
+                    اتسمت بالوفاء والمودة، وكانت أول زوجاته.
+                </p>
+            </article>
+
+            <article class="timeline-item">
+                <h3>3. أول من آمن به</h3>
+                <p>
+                    عندما نزل الوحي على النبي ﷺ، صدقته خديجة رضي الله عنها،
+                    ووقفت إلى جانبه منذ بداية الرسالة.
+                </p>
+            </article>
+
+            <article class="timeline-item">
+                <h3>4. دعم الدعوة الإسلامية</h3>
+                <p>
+                    ساندت النبي ﷺ في السنوات الأولى من الدعوة،
+                    وتحملت معه الصعوبات التي واجهها المسلمون في مكة.
+                </p>
+            </article>
+
+            <article class="timeline-item">
+                <h3>5. عام الحزن</h3>
+                <p>
+                    توفيت خديجة رضي الله عنها قبل الهجرة، في العام نفسه
+                    الذي توفي فيه أبو طالب على المشهور، ولذلك عُرف
+                    ذلك العام بعام الحزن.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">من فضائلها</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>البشارة بالجنة</h3>
+                <p>
+                    بشّرها جبريل عليه السلام ببيت في الجنة،
+                    كما ورد في الصحيحين.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>مكانتها عند النبي ﷺ</h3>
+                <p>
+                    ظل النبي ﷺ يذكر خديجة رضي الله عنها بالخير،
+                    ويكرم صديقاتها وفاءً لها.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>السبق إلى الإيمان</h3>
+                <p>
+                    كانت أول من صدّق النبي ﷺ وآمن برسالته،
+                    ووقفت معه منذ اللحظات الأولى لنزول الوحي.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>التضحية والدعم</h3>
+                <p>
+                    ساندت الدعوة الإسلامية في بدايتها،
+                    وكانت مصدر طمأنينة ودعم للنبي ﷺ.
+                </p>
+            </article>
+
+        </section>
+
+        <section class="quote">
+
+            <h3>ماذا نتعلم من سيرتها؟</h3>
+
+            <p>
+                نتعلم من سيرة خديجة رضي الله عنها الوفاء،
+                وحسن المعاملة، والثبات عند الشدائد، ومساندة أهل الحق،
+                واستخدام المال والقدرات في أعمال الخير.
+            </p>
+
+        </section>
+
+        <h2 class="section-title">شاهد وتعلّم</h2>
+
+        <section class="cards">
+
+            <article class="card video-card">
+                <div class="video-icon">▶️</div>
+
+                <h3>سيرة خديجة بنت خويلد</h3>
+
+                <p>تعرّف على حياتها ومكانتها في الإسلام.</p>
+
+                <a class="video-link"
+                    href="https://www.youtube.com/results?search_query=سيرة+خديجة+بنت+خويلد+رضي+الله+عنها"
+                    target="_blank" rel="noopener noreferrer">
+                    مشاهدة نتائج الفيديوهات
+                </a>
+            </article>
+
+            <article class="card video-card">
+                <div class="video-icon">▶️</div>
+
+                <h3>قصة نزول الوحي وموقف خديجة</h3>
+
+                <p>تعرّف على مساندتها للنبي ﷺ في بداية الرسالة.</p>
+
+                <a class="video-link"
+                    href="https://www.youtube.com/results?search_query=قصة+نزول+الوحي+وموقف+خديجة+رضي+الله+عنها"
+                    target="_blank" rel="noopener noreferrer">
+                    مشاهدة نتائج الفيديوهات
+                </a>
+            </article>
+
+            <article class="card video-card">
+                <div class="video-icon">▶️</div>
+
+                <h3>فضائل أم المؤمنين خديجة</h3>
+
+                <p>تعرّف على الأحاديث الصحيحة الواردة في فضلها.</p>
+
+                <a class="video-link"
+                    href="https://www.youtube.com/results?search_query=فضائل+خديجة+بنت+خويلد+أحاديث+صحيحة"
+                    target="_blank" rel="noopener noreferrer">
+                    مشاهدة نتائج الفيديوهات
+                </a>
+            </article>
+
+        </section>
+
+        <section class="sources">
+
+            <h2>المصادر والمراجع</h2>
+
+            <ul>
+                <li>صحيح البخاري: بدء الوحي وفضائل خديجة رضي الله عنها.</li>
+                <li>صحيح مسلم: فضائل الصحابة رضي الله عنهم.</li>
+                <li>السيرة النبوية لابن هشام.</li>
+                <li>سير أعلام النبلاء، للإمام الذهبي.</li>
+                <li>الإصابة في تمييز الصحابة، للحافظ ابن حجر العسقلاني.</li>
+            </ul>
+
+            <p class="note">
+                ملاحظة: روابط الفيديو تفتح نتائج بحث يوتيوب، وليست روابط
+                لفيديوهات محددة تم التحقق من محتواها.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>الموسوعة الإسلامية | <span>أمهات المؤمنين رضي الله عنهن</span></p>
+        <p>نسأل الله العلم النافع والعمل الصالح.</p>
+    </footer>
+
+</body>
+
+</html>

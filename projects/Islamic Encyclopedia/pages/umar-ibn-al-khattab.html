@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="سيرة عمر بن الخطاب رضي الله عنه، ثاني الخلفاء الراشدين، وقصته وإسلامه وخلافته وفضائله.">
+    <title>عمر بن الخطاب رضي الله عنه | الموسوعة الإسلامية</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        :root {
+            --green: #063c2d;
+            --green-light: #0d6247;
+            --gold: #d8b66a;
+            --cream: #f7f1e4;
+            --ink: #23352d;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--cream);
+            color: var(--ink);
+            font-family: Tahoma, Arial, sans-serif;
+            line-height: 2;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .umar-hero {
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            padding: 65px 20px 75px;
+            color: #fff8e8;
+            background:
+                radial-gradient(ellipse at top, #197254 0%, transparent 65%),
+                linear-gradient(145deg, #031e18, #07523b 55%, #031e18);
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .umar-hero::before {
+            content: "۞  ۞  ۞  ۞  ۞  ۞  ۞  ۞  ۞";
+            position: absolute;
+            inset: 15px 0 auto;
+            color: #d8b66a35;
+            font-size: 32px;
+            letter-spacing: 12px;
+            pointer-events: none;
+        }
+
+        .hero-symbol {
+            width: 112px;
+            height: 112px;
+            display: grid;
+            place-items: center;
+            margin: 12px auto 20px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            box-shadow: 0 0 0 8px #d8b66a17, 0 0 40px #d8b66a30;
+            color: var(--gold);
+            font-size: 54px;
+        }
+
+        .umar-hero h1 {
+            margin: 0;
+            font-size: clamp(30px, 6vw, 52px);
+            color: #f3d58b;
+        }
+
+        .umar-hero p {
+            max-width: 720px;
+            margin: 12px auto;
+            font-size: 17px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 6px 18px;
+            border: 1px solid #d8b66a80;
+            border-radius: 30px;
+            color: #f3d58b;
+        }
+
+        .page-wrap {
+            width: min(1050px, 92%);
+            margin: 32px auto 60px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 17px;
+            background: var(--green);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+            margin-bottom: 30px;
+        }
+
+        .summary-card {
+            padding: 18px;
+            text-align: center;
+            background: white;
+            border: 1px solid #e4d5ad;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px #182e2010;
+        }
+
+        .summary-card strong {
+            display: block;
+            color: var(--green-light);
+            font-size: 19px;
+        }
+
+        .summary-card span {
+            font-size: 14px;
+            color: #66756a;
+        }
+
+        .content-card {
+            margin: 22px 0;
+            padding: clamp(20px, 4vw, 34px);
+            background: #fffdf8;
+            border: 1px solid #e7ddc7;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px #173b2810;
+        }
+
+        .content-card h2 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            color: var(--green);
+            border-bottom: 2px solid #d8b66a70;
+            font-size: 25px;
+        }
+
+        .content-card p {
+            margin: 12px 0;
+        }
+
+        .quote-box {
+            padding: 20px;
+            margin: 20px 0;
+            border-right: 4px solid var(--gold);
+            background: #f5efdf;
+            border-radius: 8px;
+        }
+
+        .note {
+            padding: 15px 18px;
+            background: #e9f2e9;
+            border-radius: 10px;
+            border: 1px solid #c9dfcd;
+        }
+
+        .timeline {
+            border-right: 3px solid var(--gold);
+            padding-right: 22px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            right: -30px;
+            top: 12px;
+            width: 12px;
+            height: 12px;
+            background: var(--green-light);
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+        }
+
+        .timeline-item h3 {
+            margin-bottom: 5px;
+            color: var(--green-light);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+        }
+
+        .value-card {
+            padding: 17px;
+            background: #f6f1e5;
+            border-radius: 12px;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .value-card h3 {
+            margin-top: 0;
+            color: var(--green);
+        }
+
+        .page-footer {
+            text-align: center;
+            padding: 28px 15px;
+            background: #052b20;
+            color: #f3dfad;
+        }
+
+        @media (max-width: 600px) {
+            .umar-hero {
+                padding-top: 50px;
+            }
+
+            .content-card h2 {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="umar-hero">
+        <div class="hero-symbol" aria-hidden="true">ع</div>
+        <h1>عمر بن الخطاب</h1>
+        <p>رضي الله عنه وأرضاه</p>
+        <p>
+            ثاني الخلفاء الراشدين، وأحد العشرة المبشرين بالجنة،
+            وصاحب رسول الله ﷺ، ومن أعلام العدل والقوة في تاريخ الإسلام.
+        </p>
+        <span class="hero-label">سيرة • مواقف • خلافة • فضائل</span>
+    </header>
+
+    <main class="page-wrap">
+
+        <a class="back-link" href="seerah-companions.html">← العودة إلى صفحة الصحابة</a>
+
+        <section class="summary-grid">
+            <div class="summary-card">
+                <strong>عمر بن الخطاب</strong>
+                <span>اسمه ونسبه</span>
+            </div>
+            <div class="summary-card">
+                <strong>أبو حفص</strong>
+                <span>كنيته</span>
+            </div>
+            <div class="summary-card">
+                <strong>الفاروق</strong>
+                <span>لقبه المشهور</span>
+            </div>
+            <div class="summary-card">
+                <strong>الخليفة الثاني</strong>
+                <span>في عهد الخلافة الراشدة</span>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>1. من هو عمر بن الخطاب رضي الله عنه؟</h2>
+            <p>
+                هو عمر بن الخطاب بن نفيل القرشي العدوي، من كبار أصحاب النبي محمد ﷺ،
+                ومن السابقين البارزين في خدمة الإسلام بعد إسلامه.
+            </p>
+            <p>
+                عُرف بالقوة في الحق، والحزم في إدارة شؤون المسلمين، والحرص على العدل
+                ومحاسبة النفس. وكان من أقرب أصحاب النبي ﷺ إليه، ثم تولى الخلافة
+                بعد وفاة أبي بكر الصديق رضي الله عنه.
+            </p>
+            <div class="note">
+                <strong>معلومة مهمة:</strong>
+                عمر رضي الله عنه أحد العشرة الذين بُشّروا بالجنة في الحديث المشهور،
+                وهو ثاني الخلفاء الراشدين.
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>2. إسلام عمر بن الخطاب</h2>
+            <p>
+                كان عمر رضي الله عنه قبل إسلامه من رجال قريش المعروفين بالقوة،
+                ثم شرح الله صدره للإسلام، فصار من أعظم المدافعين عن الدين.
+            </p>
+            <p>
+                تذكر كتب السيرة أخبارًا متعددة عن قصة إسلامه، وتختلف الروايات
+                في بعض تفاصيلها؛ لذلك ينبغي التمييز بين أصل إسلامه الثابت
+                والتفاصيل التي تختلف أسانيدها.
+            </p>
+            <p>
+                كان لإسلامه أثر مهم في تاريخ المسلمين، إذ ازداد المسلمون قوة
+                وثباتًا، وأصبح عمر من المدافعين عن النبي ﷺ وعن الدعوة الإسلامية.
+            </p>
+        </section>
+
+        <section class="content-card">
+            <h2>3. علاقته بالنبي ﷺ</h2>
+            <p>
+                كان عمر رضي الله عنه صاحبًا للنبي ﷺ، وشهد معه أحداثًا مهمة
+                في تاريخ الإسلام، وعُرف بموافقاته في بعض المسائل التي نزل فيها
+                القرآن الكريم.
+            </p>
+            <p>
+                وكان النبي ﷺ يقدّر مكانته، وقد وردت أحاديث صحيحة في فضله
+                وبيان منزلته بين الصحابة.
+            </p>
+            <div class="quote-box">
+                من فضائل عمر رضي الله عنه ما رواه البخاري ومسلم عن النبي ﷺ:
+                <br>
+                <strong>«إن الله جعل الحق على لسان عمر وقلبه».</strong>
+                <br>
+                <small>ورد الحديث في جامع الترمذي بألفاظ متقاربة، وتُراجع ألفاظ الروايات وأحكامها في مصادر
+                    الحديث.</small>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>4. توليه الخلافة</h2>
+            <p>
+                تولى عمر بن الخطاب رضي الله عنه الخلافة بعد وفاة أبي بكر الصديق
+                رضي الله عنه سنة 13 هـ، واستمرت خلافته حتى استشهاده سنة 23 هـ.
+            </p>
+            <p>
+                شهد عصره توسعًا كبيرًا للدولة الإسلامية، ونُظمت خلاله جوانب متعددة
+                من الإدارة والقضاء وشؤون بيت المال، مع الحرص على متابعة أحوال
+                الرعية ومحاسبة الولاة.
+            </p>
+            <div class="note">
+                لم تكن الخلافة عنده مجرد منصب؛ بل مسؤولية عن حقوق الناس
+                وأموالهم وأمنهم، وهي من أبرز المعاني المرتبطة بسيرته.
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>5. أبرز محطات حياته</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>إسلامه</h3>
+                    <p>دخل الإسلام وأصبح من المدافعين عنه، بعد أن كان من معارضي الدعوة.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>الهجرة والحياة في المدينة</h3>
+                    <p>عاش مع النبي ﷺ وشارك في أحداث مهمة من تاريخ المجتمع الإسلامي.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>خلافة أبي بكر الصديق</h3>
+                    <p>كان من كبار مستشاري أبي بكر رضي الله عنه، وأسهم في شؤون الدولة.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>الخلافة الراشدة</h3>
+                    <p>تولى الخلافة سنة 13 هـ، واشتهر في عهده تنظيم شؤون الدولة والقضاء.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>وفاته</h3>
+                    <p>توفي شهيدًا سنة 23 هـ بعد أن طُعن أثناء صلاة الفجر.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>6. صفاته ومواقفه</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>العدل</h3>
+                    <p>الحرص على إعطاء الحقوق وعدم تفضيل أصحاب النفوذ على غيرهم.</p>
+                </div>
+                <div class="value-card">
+                    <h3>الحزم</h3>
+                    <p>اتخاذ القرارات ومتابعة تنفيذها في شؤون الدولة والمجتمع.</p>
+                </div>
+                <div class="value-card">
+                    <h3>التواضع</h3>
+                    <p>عدم اعتبار المنصب سببًا للتكبر، والنظر إلى الخلافة باعتبارها أمانة.</p>
+                </div>
+                <div class="value-card">
+                    <h3>المسؤولية</h3>
+                    <p>الاهتمام بأحوال المسلمين، ومتابعة الولاة والقضاة وشؤون الرعية.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>7. وفاة عمر بن الخطاب رضي الله عنه</h2>
+            <p>
+                طُعن عمر رضي الله عنه أثناء صلاة الفجر، ثم توفي متأثرًا بجراحه
+                سنة 23 هـ. وقبل وفاته جعل أمر اختيار الخليفة من بعده إلى مجلس
+                من كبار الصحابة، فكانت خلافة عثمان بن عفان رضي الله عنه بعد ذلك.
+            </p>
+            <p>
+                دُفن بجوار النبي ﷺ وأبي بكر الصديق رضي الله عنهما في حجرة
+                أم المؤمنين عائشة رضي الله عنها.
+            </p>
+        </section>
+
+        <section class="content-card">
+            <h2>8. ماذا نتعلم من سيرته؟</h2>
+            <ul>
+                <li>العدل أساس مهم في إدارة شؤون الن<section class="content-card" id="umar-videos">
+                        <h2>🎬 فيديوهات عمر بن الخطاب رضي الله عنه</h2>
+
+                        <div class="video-grid">
+                            <a class="video-card" href="https://www.youtube.com/results?search_query=سيرة+عمر+بن+الخطاب"
+                                target="_blank" rel="noopener noreferrer">
+                                <span>▶</span>
+                                <h3>السيرة الكاملة لعمر بن الخطاب</h3>
+                                <p>اضغط لمشاهدة الفيديوهات على يوتيوب</p>
+                            </a>
+
+                            <a class="video-card"
+                                href="https://www.youtube.com/results?search_query=قصة+إسلام+عمر+بن+الخطاب"
+                                target="_blank" rel="noopener noreferrer">
+                                <span>▶</span>
+                                <h3>قصة إسلام عمر بن الخطاب</h3>
+                                <p>اضغط لمشاهدة الفيديوهات على يوتيوب</p>
+                            </a>
+
+                            <a class="video-card"
+                                href="https://www.youtube.com/results?search_query=عدل+عمر+بن+الخطاب+ومواقفه"
+                                target="_blank" rel="noopener noreferrer">
+                                <span>▶</span>
+                                <h3>مواقفه وعدله</h3>
+                                <p>اضغط لمشاهدة الفيديوهات على يوتيوب</p>
+                            </a>
+                        </div>
+                    </section>
+
+                    <style>
+                        .video-grid {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                            gap: 18px;
+                            margin-top: 20px;
+                        }
+
+                        .video-card {
+                            display: block;
+                            padding: 22px;
+                            background: linear-gradient(145deg, #063c2d, #126348);
+                            color: #fff8e8;
+                            border: 1px solid #d8b66a;
+                            border-radius: 14px;
+                            text-decoration: none;
+                            transition: transform .2s;
+                        }
+
+                        .video-card:hover {
+                            transform: translateY(-4px);
+                        }
+
+                        .video-card>span {
+                            display: grid;
+                            place-items: center;
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 50%;
+                            background: #d8b66a;
+                            color: #063c2d;
+                            font-size: 20px;
+                        }
+
+                        .video-card h3 {
+                            color: #f3d58b;
+                        }
+
+                        .video-card p {
+                            font-size: 14px;
+                        }
+                    </style>اس.
+                </li>
+                <li>القوة الحقيقية تكون في نصرة الحق والالتزام به.</li>
+                <li>المسؤولية أمانة، وليست وسيلة للتفاخر.</li>
+                <li>ينبغي التثبت من الروايات قبل نسبتها إلى الصحابة.</li>
+                <li>تُدرس سيرة الصحابة بالرجوع إلى القرآن والسنة والمصادر التاريخية الموثوقة.</li>
+            </ul>
+        </section>
+
+        <section class="content-card">
+            <h2>مصادر للتوسع والتحقق</h2>
+            <ul>
+                <li>صحيح البخاري: أبواب فضائل أصحاب النبي ﷺ ومناقب عمر بن الخطاب.</li>
+                <li>صحيح مسلم: كتاب فضائل الصحابة.</li>
+                <li>سير أعلام النبلاء للذهبي.</li>
+                <li>البداية والنهاية لابن كثير.</li>
+            </ul>
+            <p>
+                عند إضافة أحاديث أو روايات تفصيلية إلى الموسوعة، يجب توثيق نص الرواية
+                ومصدرها ودرجة صحتها كلما أمكن.
+            </p>
+        </section>
+
+        <a class="back-link" href="seerah-companions.html">← العودة إلى صفحة الصحابة</a>
+
+    </main>
+
+    <footer class="page-footer">
+        <p>الموسوعة الإسلامية — سيرة الصحابة رضي الله عنهم</p>
+        <p>نسأل الله أن ينفع بهذا العمل، وأن يجعله خالصًا لوجهه الكريم.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#061a17">
+
+    <title>قصة شعيب عليه السلام | الموسوعة الإسلامية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #061a17;
+            --gold: #e9b85c;
+            --gold-light: #ffda91;
+            --muted: #c4d2ca;
+            --border: #28765b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--bg);
+            color: #f7f1e4;
+            line-height: 1.9;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header {
+            background: #041812;
+            border-bottom: 1px solid var(--gold);
+            padding: 15px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 19px;
+            font-weight: 800;
+        }
+
+        .back-btn {
+            border: 1px solid var(--gold);
+            border-radius: 25px;
+            padding: 7px 18px;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: var(--gold);
+            color: var(--bg);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 65px 20px;
+            background:
+                radial-gradient(ellipse at top, #174c3b, transparent 70%),
+                linear-gradient(180deg, #092b23, var(--bg));
+            border-bottom: 1px solid var(--border);
+        }
+
+        .badge {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            border-radius: 25px;
+            padding: 3px 18px;
+            color: var(--gold-light);
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            color: var(--gold);
+            font-size: clamp(28px, 5vw, 43px);
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: var(--muted);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border: 1px solid var(--gold);
+            border-radius: 25px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: #172019;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .container {
+            width: min(1050px, 90%);
+            margin: 30px auto;
+        }
+
+        .section-title {
+            color: var(--gold);
+            font-size: 23px;
+            margin-bottom: 18px;
+        }
+
+        .intro,
+        .story-card,
+        .verse,
+        .lesson,
+        .video-box {
+            background: linear-gradient(135deg, #0b3027, #071f1a);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
+
+        .intro {
+            padding: 22px;
+            margin-bottom: 35px;
+        }
+
+        .intro h2 {
+            color: var(--gold-light);
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .intro p,
+        .story-card p {
+            color: var(--muted);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-bottom: 35px;
+        }
+
+        .story-card {
+            padding: 22px;
+            transition: 0.3s;
+        }
+
+        .story-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .story-card h3 {
+            color: var(--gold);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .number {
+            display: inline-flex;
+            width: 34px;
+            height: 34px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--gold);
+            margin-left: 8px;
+            color: var(--gold-light);
+        }
+
+        .verse {
+            padding: 20px;
+            margin-top: 15px;
+            text-align: center;
+            border-color: #9a7538;
+        }
+
+        .verse p {
+            color: var(--gold-light);
+            font-size: 17px;
+            line-height: 2.2;
+        }
+
+        .verse small {
+            display: block;
+            color: var(--gold);
+            margin-top: 8px;
+        }
+
+        .lessons {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-bottom: 35px;
+        }
+
+        .lesson {
+            padding: 15px;
+        }
+
+        .lesson h3 {
+            color: var(--gold);
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .lesson p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .video-box {
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .video-box h2 {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .video-box p {
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            background: #04130f;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        @media (max-width: 650px) {
+            .story-grid,
+            .lessons {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 12px 5%;
+            }
+
+            .hero {
+                padding: 45px 18px;
+            }
+
+            .container {
+                width: 92%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a class="logo" href="../index.html">☪ الموسوعة الإسلامية</a>
+
+    <a class="back-btn" href="prophets.html">
+        ← العودة إلى الأنبياء
+    </a>
+</header>
+
+<section class="hero">
+    <span class="badge">قصص الأنبياء</span>
+
+    <h1>قصة شعيب عليه السلام</h1>
+
+    <p>
+        نبي كريم دعا قومه إلى عبادة الله وحده،
+        والعدل في الميزان، وإعطاء الناس حقوقهم،
+        وعدم الإفساد في الأرض.
+    </p>
+
+    <div class="buttons">
+        <a href="#story" class="btn btn-primary">↓ اقرأ القصة</a>
+        <a href="#video" class="btn">▶ شاهد القصة</a>
+    </div>
+</section>
+
+<main class="container" id="story">
+
+    <section class="intro">
+        <h2>من هو شعيب عليه السلام؟</h2>
+
+        <p>
+            شعيب عليه السلام نبي أرسله الله إلى أهل مدين،
+            فدعاهم إلى توحيد الله، ونهاهم عن التطفيف في الكيل والميزان،
+            وعن بخس الناس أشياءهم والإفساد في الأرض.
+            لكن كثيرًا منهم كذبوه وأصروا على مخالفة دعوته.
+        </p>
+    </section>
+
+    <h2 class="section-title">📖 أحداث قصة شعيب عليه السلام</h2>
+
+    <section class="story-grid">
+
+        <article class="story-card">
+            <h3><span class="number">١</span> دعوة أهل مدين</h3>
+
+            <p>
+                بدأ شعيب عليه السلام دعوته بدعوة قومه إلى عبادة الله
+                وحده، وذكّرهم بأن الله هو الذي خلقهم ورزقهم،
+                وأن عليهم طاعته واتباع رسوله.
+            </p>
+
+            <div class="verse">
+                <p>
+                    ﴿ وَإِلَىٰ مَدْيَنَ أَخَاهُمْ شُعَيْبًا
+                    قَالَ يَا قَوْمِ اعْبُدُوا اللَّهَ مَا لَكُم
+                    مِّنْ إِلَٰهٍ غَيْرُهُ ﴾
+                </p>
+                <small>سورة الأعراف، الآية 85</small>
+            </div>
+        </article>
+
+        <article class="story-card">
+            <h3><span class="number">٢</span> النهي عن الغش</h3>
+
+            <p>
+                كان شعيب عليه السلام ينصح قومه بألا ينقصوا
+                المكيال والميزان، وأن يعطوا الناس حقوقهم كاملة،
+                وألا يستغلوا الآخرين في البيع والشراء.
+            </p>
+
+            <div class="verse">
+                <p>
+                    ﴿ فَأَوْفُوا الْكَيْلَ وَالْمِيزَانَ
+                    وَلَا تَبْخَسُوا النَّاسَ أَشْيَاءَهُمْ ﴾
+                </p>
+                <small>سورة هود، الآية 85</small>
+            </div>
+        </article>
+
+        <article class="story-card">
+            <h3><span class="number">٣</span> النهي عن الفساد</h3>
+
+            <p>
+                حذّر شعيب عليه السلام قومه من الإفساد في الأرض،
+                وبيّن لهم أن الإصلاح والعدل خير لهم
+                من الظلم والغش والاعتداء على حقوق الناس.
+            </p>
+
+            <div class="verse">
+                <p>
+                    ﴿ وَلَا تُفْسِدُوا فِي الْأَرْضِ
+                    بَعْدَ إِصْلَاحِهَا ﴾
+                </p>
+                <small>سورة الأعراف، الآية 85</small>
+            </div>
+        </article>
+
+        <article class="story-card">
+            <h3><span class="number">٤</span> تكذيب القوم</h3>
+
+            <p>
+                لم يستجب كثير من أهل مدين لدعوة شعيب عليه السلام،
+                بل كذبوه وهددوه، وأصروا على ما كانوا عليه
+                من المخالفات والظلم.
+            </p>
+
+            <div class="verse">
+                <p>
+                    ﴿ قَالَ الْمَلَأُ الَّذِينَ اسْتَكْبَرُوا
+                    مِن قَوْمِهِ لَنُخْرِجَنَّكَ يَا شُعَيْبُ
+                    وَالَّذِينَ آمَنُوا مَعَكَ مِن قَرْيَتِنَا ﴾
+                </p>
+                <small>سورة الأعراف، الآية 88</small>
+            </div>
+        </article>
+
+        <article class="story-card">
+            <h3><span class="number">٥</span> الثبات على الحق</h3>
+
+            <p>
+                استمر شعيب عليه السلام في بيان الحق لقومه،
+                وأوضح لهم أنه لا يريد إلا الإصلاح بقدر استطاعته،
+                وأن توفيقه بيد الله وحده.
+            </p>
+
+            <div class="verse">
+                <p>
+                    ﴿ إِنْ أُرِيدُ إِلَّا الْإِصْلَاحَ
+                    مَا اسْتَطَعْتُ وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ ﴾
+                </p>
+                <small>سورة هود، الآية 88</small>
+            </div>
+        </article>
+
+        <article class="story-card">
+            <h3><span class="number">٦</span> نجاة المؤمنين</h3>
+
+            <p>
+                لما أصر المكذبون على موقفهم، جاء أمر الله،
+                فنجّى شعيبًا والذين آمنوا معه برحمته،
+                وأخذ الذين ظلموا العذاب.
+            </p>
+
+            <div class="verse">
+                <p>
+                    ﴿ وَلَمَّا جَاءَ أَمْرُنَا نَجَّيْنَا شُعَيْبًا
+                    وَالَّذِينَ آمَنُوا مَعَهُ بِرَحْمَةٍ مِّنَّا ﴾
+                </p>
+                <small>سورة هود، الآية 94</small>
+            </div>
+        </article>
+
+    </section>
+
+    <h2 class="section-title">💡 الدروس المستفادة</h2>
+
+    <section class="lessons">
+
+        <article class="lesson">
+            <h3>١. توحيد الله</h3>
+            <p>أصل دعوة الأنبياء هو عبادة الله وحده.</p>
+        </article>
+
+        <article class="lesson">
+            <h3>٢. الأمانة في التجارة</h3>
+            <p>يجب إعطاء الناس حقوقهم وعدم الغش في البيع والشراء.</p>
+        </article>
+
+        <article class="lesson">
+            <h3>٣. العدل</h3>
+            <p>العدل أساس التعامل الصحيح بين الناس.</p>
+        </article>
+
+        <article class="lesson">
+            <h3>٤. الإصلاح</h3>
+            <p>نسعى للإصلاح ونبتعد عن الفساد والظلم.</p>
+        </article>
+
+        <article class="lesson">
+            <h3>٥. الصبر في الدعوة</h3>
+            <p>نتمسك بالحق ونصبر على الصعوبات بحكمة.</p>
+        </article>
+
+        <article class="lesson">
+            <h3>٦. التوكل على الله</h3>
+            <p>نبذل أسباب الخير ونسأل الله التوفيق والسداد.</p>
+        </article>
+
+    </section>
+
+    <section class="video-box" id="video">
+        <h2>🎬 شاهد قصة شعيب عليه السلام</h2>
+
+        <p>
+            اضغط للبحث عن مقاطع تتناول قصة شعيب عليه السلام.
+        </p>
+
+        <a
+            class="btn btn-primary"
+            href="https://www.youtube.com/results?search_query=قصة+شعيب+عليه+السلام"
+            target="_blank"
+            rel="noopener noreferrer">
+            ▶ البحث عن القصة في يوتيوب
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        الموسوعة الإسلامية © 2026 |
+        <span>قصص الأنبياء</span>
+    </p>
+
+    <p>المصدر الأساسي للقصة: القرآن الكريم.</p>
+</footer>
+
+</body>
+</html>

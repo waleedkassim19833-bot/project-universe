@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#061a17">
+
+    <title>قصة داود عليه السلام | الموسوعة الإسلامية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #061a17;
+            --gold: #e9b85c;
+            --gold-light: #ffda91;
+            --muted: #c4d2ca;
+            --border: #28765b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--bg);
+            color: #f7f1e4;
+            line-height: 1.9;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header {
+            background: #041812;
+            border-bottom: 1px solid var(--gold);
+            padding: 15px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 19px;
+            font-weight: 800;
+        }
+
+        .back-btn {
+            border: 1px solid var(--gold);
+            border-radius: 25px;
+            padding: 7px 18px;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: var(--gold);
+            color: var(--bg);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 65px 20px;
+            background:
+                radial-gradient(ellipse at top, #174c3b, transparent 70%),
+                linear-gradient(180deg, #092b23, var(--bg));
+            border-bottom: 1px solid var(--border);
+        }
+
+        .badge {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            border-radius: 25px;
+            padding: 3px 18px;
+            color: var(--gold-light);
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            color: var(--gold);
+            font-size: clamp(28px, 5vw, 43px);
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: var(--muted);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border: 1px solid var(--gold);
+            border-radius: 25px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: #172019;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .container {
+            width: min(1050px, 90%);
+            margin: 30px auto;
+        }
+
+        .section-title {
+            color: var(--gold);
+            font-size: 23px;
+            margin-bottom: 18px;
+        }
+
+        .intro,
+        .story-card,
+        .verse,
+        .lesson,
+        .video-box {
+            background: linear-gradient(135deg, #0b3027, #071f1a);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
+
+        .intro {
+            padding: 22px;
+            margin-bottom: 35px;
+        }
+
+        .intro h2 {
+            color: var(--gold-light);
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .intro p,
+        .story-card p {
+            color: var(--muted);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-bottom: 35px;
+        }
+
+        .story-card {
+            padding: 22px;
+            transition: 0.3s;
+        }
+
+        .story-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .story-card h3 {
+            color: var(--gold);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .number {
+            display: inline-flex;
+            width: 34px;
+            height: 34px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--gold);
+            margin-left: 8px;
+            color: var(--gold-light);
+        }
+
+        .verse {
+            padding: 20px;
+            margin-top: 15px;
+            text-align: center;
+            border-color: #9a7538;
+        }
+
+        .verse p {
+            color: var(--gold-light);
+            font-size: 17px;
+            line-height: 2.2;
+        }
+
+        .verse small {
+            display: block;
+            color: var(--gold);
+            margin-top: 8px;
+        }
+
+        .lessons {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-bottom: 35px;
+        }
+
+        .lesson {
+            padding: 15px;
+        }
+
+        .lesson h3 {
+            color: var(--gold);
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .lesson p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .video-box {
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .video-box h2 {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .video-box p {
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            background: #04130f;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        @media (max-width: 650px) {
+
+            .story-grid,
+            .lessons {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 12px 5%;
+            }
+
+            .hero {
+                padding: 45px 18px;
+            }
+
+            .container {
+                width: 92%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a class="logo" href="../index.html">☪ الموسوعة الإسلامية</a>
+        <a class="back-btn" href="prophets.html">← العودة إلى الأنبياء</a>
+    </header>
+
+    <section class="hero">
+        <span class="badge">قصص الأنبياء</span>
+
+        <h1>قصة داود عليه السلام</h1>
+
+        <p>
+            نبي كريم وملك صالح، آتاه الله الحكمة والملك،
+            وأنزل عليه الزبور، وعلّمه مما يشاء.
+        </p>
+
+        <div class="buttons">
+            <a href="#story" class="btn btn-primary">↓ اقرأ القصة</a>
+            <a href="#video" class="btn">▶ شاهد القصة</a>
+        </div>
+    </section>
+
+    <main class="container" id="story">
+
+        <section class="intro">
+            <h2>من هو داود عليه السلام؟</h2>
+
+            <p>
+                داود عليه السلام نبي من أنبياء الله وملك من ملوك بني إسرائيل.
+                آتاه الله الزبور والحكمة، وسخّر معه الجبال والطير
+                يسبّحن، وألان له الحديد ليصنع الدروع.
+                وقد أمره الله بالعدل بين الناس، فكان مثالًا في العبادة
+                والحكم بالحق.
+            </p>
+        </section>
+
+        <h2 class="section-title">📖 أحداث من حياة داود عليه السلام</h2>
+
+        <section class="story-grid">
+
+            <article class="story-card">
+                <h3><span class="number">١</span> قتل جالوت</h3>
+
+                <p>
+                    كان داود عليه السلام من جنود طالوت،
+                    فقتل جالوت بإذن الله، ثم آتاه الله الملك والحكمة
+                    وعلّمه مما يشاء.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ وَقَتَلَ دَاوُودُ جَالُوتَ وَآتَاهُ اللَّهُ
+                        الْمُلْكَ وَالْحِكْمَةَ وَعَلَّمَهُ مِمَّا يَشَاءُ ﴾
+                    </p>
+                    <small>سورة البقرة، الآية 251</small>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <h3><span class="number">٢</span> الزبور</h3>
+
+                <p>
+                    أنزل الله على داود عليه السلام الزبور،
+                    وكان كتابًا من عند الله، وأثنى القرآن عليه
+                    ضمن الأنبياء الذين اصطفاهم الله.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ وَآتَيْنَا دَاوُودَ زَبُورًا ﴾
+                    </p>
+                    <small>سورة الإسراء، الآية 55</small>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <h3><span class="number">٣</span> تسبيح الجبال والطير</h3>
+
+                <p>
+                    من نعم الله على داود عليه السلام أن سخّر معه
+                    الجبال والطير يسبّحن بحمد الله، وكان ذلك
+                    من آيات قدرة الله وفضله عليه.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ إِنَّا سَخَّرْنَا الْجِبَالَ مَعَهُ
+                        يُسَبِّحْنَ بِالْعَشِيِّ وَالْإِشْرَاقِ ۝
+                        وَالطَّيْرَ مَحْشُورَةً كُلٌّ لَّهُ أَوَّابٌ ﴾
+                    </p>
+                    <small>سورة ص، الآيتان 18–19</small>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <h3><span class="number">٤</span> صناعة الدروع</h3>
+
+                <p>
+                    علّم الله داود عليه السلام صناعة الدروع
+                    من الحديد، لتكون وسيلة للحماية في القتال،
+                    وأمره أن يقدّر حلقاتها بإحكام.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ وَأَلَنَّا لَهُ الْحَدِيدَ ۝
+                        أَنِ اعْمَلْ سَابِغَاتٍ وَقَدِّرْ فِي السَّرْدِ ﴾
+                    </p>
+                    <small>سورة سبأ، الآيتان 10–11</small>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <h3><span class="number">٥</span> الحكم بالعدل</h3>
+
+                <p>
+                    أمر الله داود عليه السلام أن يحكم بين الناس بالحق،
+                    وألا يتبع الهوى، لأن الحكم مسؤولية عظيمة
+                    تتطلب العدل والإنصاف.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ يَا دَاوُودُ إِنَّا جَعَلْنَاكَ خَلِيفَةً
+                        فِي الْأَرْضِ فَاحْكُم بَيْنَ النَّاسِ بِالْحَقِّ
+                        وَلَا تَتَّبِعِ الْهَوَىٰ ﴾
+                    </p>
+                    <small>سورة ص، الآية 26</small>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <h3><span class="number">٦</span> العبادة والإنابة</h3>
+
+                <p>
+                    أثنى الله على داود عليه السلام ووصفه بأنه
+                    أوّاب، أي كثير الرجوع إلى الله، وفي ذلك تذكير
+                    بفضل العبادة والتوبة والإنابة.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ وَاذْكُرْ عَبْدَنَا دَاوُودَ ذَا الْأَيْدِ
+                        إِنَّهُ أَوَّابٌ ﴾
+                    </p>
+                    <small>سورة ص، الآية 17</small>
+                </div>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">💡 الدروس المستفادة</h2>
+
+        <section class="lessons">
+
+            <article class="lesson">
+                <h3>١. الشجاعة</h3>
+                <p>نواجه الصعوبات مع التوكل على الله والأخذ بالأسباب.</p>
+            </article>
+
+            <article class="lesson">
+                <h3>٢. العدل</h3>
+                <p>يجب الحكم بالحق وعدم ظلم الآخرين.</p>
+            </article>
+
+            <article class="lesson">
+                <h3>٣. الإتقان في العمل</h3>
+                <p>نتعلم من صناعة الدروع أهمية المهارة والإحكام.</p>
+            </article>
+
+            <article class="lesson">
+                <h3>٤. العبادة</h3>
+                <p>نكثر من ذكر الله والتسبيح والرجوع إليه.</p>
+            </article>
+
+            <article class="lesson">
+                <h3>٥. شكر النعم</h3>
+                <p>نستخدم ما أنعم الله به علينا في الخير.</p>
+            </article>
+
+            <article class="lesson">
+                <h3>٦. المسؤولية</h3>
+                <p>المنصب أمانة، ويجب استعماله بالعدل والإصلاح.</p>
+            </article>
+
+        </section>
+
+        <section class="video-box" id="video">
+            <h2>🎬 شاهد قصة داود عليه السلام</h2>
+
+            <p>
+                اضغط للبحث عن مقاطع تتناول قصة داود عليه السلام.
+            </p>
+
+            <a class="btn btn-primary" href="https://www.youtube.com/results?search_query=قصة+داود+عليه+السلام"
+                target="_blank" rel="noopener noreferrer">
+                ▶ البحث عن القصة في يوتيوب
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            الموسوعة الإسلامية © 2026 |
+            <span>قصص الأنبياء</span>
+        </p>
+
+        <p>المصدر الأساسي للقصة: القرآن الكريم.</p>
+    </footer>
+
+</body>
+
+</html>

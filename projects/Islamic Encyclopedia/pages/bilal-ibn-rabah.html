@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>بلال بن رباح رضي الله عنه | الموسوعة الإسلامية</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --green: #064e3b;
+            --green-light: #087f5b;
+            --gold: #d4af37;
+            --cream: #f8f5ec;
+            --text: #26352e;
+            --muted: #65736b;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.9;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #032e24, #08634a);
+            color: white;
+            padding: 25px 7% 55px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "۞";
+            position: absolute;
+            font-size: 250px;
+            color: rgba(255, 255, 255, .04);
+            left: 3%;
+            top: -65px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid rgba(255, 255, 255, .18);
+            padding-bottom: 18px;
+        }
+
+        .brand {
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        .back-link {
+            color: white;
+            border: 1px solid rgba(255, 255, 255, .4);
+            padding: 7px 15px;
+            border-radius: 25px;
+            transition: .3s;
+        }
+
+        .back-link:hover {
+            background: var(--gold);
+            color: var(--green);
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 45px auto 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .badge {
+            display: inline-block;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 5px 17px;
+            border-radius: 25px;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            font-size: clamp(30px, 5vw, 48px);
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #e2eee8;
+            font-size: 17px;
+        }
+
+        .symbol {
+            width: 110px;
+            height: 110px;
+            margin: 25px auto 0;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 40px;
+            background: rgba(255, 255, 255, .05);
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: 35px auto 60px;
+        }
+
+        .intro {
+            background: white;
+            border-right: 5px solid var(--gold);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .04);
+            margin-bottom: 25px;
+        }
+
+        .intro h2 {
+            color: var(--green);
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            color: var(--green);
+            font-size: 25px;
+            margin: 38px 0 20px;
+            padding-right: 14px;
+            border-right: 4px solid var(--gold);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            border-radius: 13px;
+            border: 1px solid #e8e5da;
+            box-shadow: 0 5px 16px rgba(0, 0, 0, .035);
+            transition: transform .25s, box-shadow .25s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+        }
+
+        .card h3 {
+            color: var(--green-light);
+            margin-bottom: 9px;
+            font-size: 19px;
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        .timeline {
+            border-right: 3px solid var(--gold);
+            margin-right: 10px;
+            padding-right: 24px;
+        }
+
+        .timeline-item {
+            position: relative;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, .04);
+        }
+
+        .timeline-item::before {
+            content: "";
+            width: 13px;
+            height: 13px;
+            background: var(--green-light);
+            border: 3px solid var(--cream);
+            border-radius: 50%;
+            position: absolute;
+            right: -34px;
+            top: 25px;
+        }
+
+        .timeline-item h3 {
+            color: var(--green);
+            margin-bottom: 5px;
+        }
+
+        .quote {
+            background: #e8f2ec;
+            border-radius: 12px;
+            padding: 22px;
+            margin-top: 20px;
+            border-right: 4px solid var(--green-light);
+        }
+
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .video-icon {
+            font-size: 30px;
+        }
+
+        .video-link {
+            display: inline-block;
+            align-self: flex-start;
+            background: #b91c1c;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 7px;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        .video-link:hover {
+            background: #7f1d1d;
+        }
+
+        .sources {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 35px;
+        }
+
+        .sources h2 {
+            color: var(--green);
+            margin-bottom: 12px;
+        }
+
+        .sources li {
+            margin: 8px 25px 8px 0;
+        }
+
+        .note {
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            background: #032e24;
+            color: #e2eee8;
+            padding: 25px 15px;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 20px 5% 40px;
+            }
+
+            .hero-content {
+                margin-top: 30px;
+            }
+
+            .container {
+                width: 92%;
+            }
+
+            .intro,
+            .card,
+            .sources {
+                padding: 18px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <nav class="topbar">
+            <div class="brand">الموسوعة الإسلامية</div>
+
+            <a class="back-link" href="seerah-companions.html">
+                ← العودة إلى الصحابة
+            </a>
+        </nav>
+
+        <div class="hero-content">
+
+            <span class="badge">مؤذن الرسول ﷺ</span>
+
+            <h1>بلال بن رباح رضي الله عنه</h1>
+
+            <p>
+                الصحابي الجليل، ومؤذن النبي ﷺ، الذي ضرب مثالًا عظيمًا
+                في الصبر والثبات على الإيمان.
+            </p>
+
+            <div class="symbol">۞</div>
+
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <section class="intro">
+
+            <h2>من هو بلال بن رباح؟</h2>
+
+            <p>
+                بلال بن رباح الحبشي رضي الله عنه من الصحابة المعروفين،
+                وهو من السابقين إلى الإسلام. تعرض للتعذيب في مكة بسبب
+                إيمانه، لكنه ثبت على التوحيد ولم يتراجع عن دينه.
+            </p>
+
+            <p>
+                اشتراه أبو بكر الصديق رضي الله عنه وأعتقه، ثم أصبح بلال
+                من أقرب أصحاب النبي ﷺ، واشتهر بأنه مؤذن الرسول ﷺ،
+                فكان صوته يرفع الأذان للصلاة في المجتمع الإسلامي الأول.
+            </p>
+
+        </section>
+
+        <h2 class="section-title">بطاقة تعريفية</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>الاسم</h3>
+                <p>بلال بن رباح رضي الله عنه.</p>
+            </article>
+
+            <article class="card">
+                <h3>الكنية</h3>
+                <p>أبو عبد الله، على ما تذكره كتب التراجم.</p>
+            </article>
+
+            <article class="card">
+                <h3>الأصل</h3>
+                <p>حبشي الأصل، وكان من موالي بني جمح قبل عتقه.</p>
+            </article>
+
+            <article class="card">
+                <h3>أشهر ألقابه</h3>
+                <p>مؤذن الرسول ﷺ.</p>
+            </article>
+
+            <article class="card">
+                <h3>من فضائله</h3>
+                <p>من السابقين إلى الإسلام، وعُرف بالصبر والثبات.</p>
+            </article>
+
+            <article class="card">
+                <h3>وفاته</h3>
+                <p>توفي في بلاد الشام، وتختلف أقوال المؤرخين في سنة وفاته.</p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">ابتلاؤه وثباته على الإسلام</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>التعذيب في مكة</h3>
+                <p>
+                    تعرض بلال رضي الله عنه للتعذيب على يد أمية بن خلف
+                    بسبب إسلامه، وكان يُعذّب في حر مكة ليترك دينه.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>الثبات على التوحيد</h3>
+                <p>
+                    رغم شدة العذاب، ظل متمسكًا بإيمانه بالله تعالى،
+                    وأصبح موقفه مثالًا مشهورًا للصبر والثبات.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>عتقه على يد أبي بكر</h3>
+                <p>
+                    اشترى أبو بكر الصديق رضي الله عنه بلالًا وأعتقه،
+                    فكان ذلك سببًا في نجاته من الرق والتعذيب.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">محطات من حياته</h2>
+
+        <section class="timeline">
+
+            <article class="timeline-item">
+                <h3>1. الدخول في الإسلام</h3>
+                <p>
+                    كان بلال رضي الله عنه من أوائل الذين آمنوا بالنبي ﷺ،
+                    وتحمل بسبب إسلامه أذى شديدًا في مكة.
+                </p>
+            </article>
+
+            <article class="timeline-item">
+                <h3>2. الصبر على التعذيب</h3>
+                <p>
+                    واجه التعذيب بثبات، وأصبح من أشهر الأمثلة على
+                    الصبر في سبيل العقيدة.
+                </p>
+            </article>
+
+            <article class="timeline-item">
+                <h3>3. الهجرة إلى المدينة</h3>
+                <p>
+                    هاجر إلى المدينة، وعاش في المجتمع الإسلامي الجديد،
+                    مشاركًا في حياة المسلمين وأحداثها.
+                </p>
+            </article>
+
+            <article class="timeline-item">
+                <h3>4. الأذان للصلاة</h3>
+                <p>
+                    اختاره النبي ﷺ للأذان، فأصبح صوته مرتبطًا بنداء
+                    المسلمين إلى الصلاة، وهي من أشهر محطات سيرته.
+                </p>
+            </article>
+
+            <article class="timeline-item">
+                <h3>5. بعد وفاة النبي ﷺ</h3>
+                <p>
+                    تذكر كتب التراجم أنه قلّ أذانه بعد وفاة النبي ﷺ،
+                    وأنه انتقل إلى بلاد الشام، مع اختلاف الروايات
+                    في تفاصيل ذلك.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">من أبرز صفاته</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>الصبر</h3>
+                <p>
+                    تحمل أذى شديدًا في مكة، ولم يجعل التعذيب سببًا
+                    في التخلي عن إيمانه.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>الثبات</h3>
+                <p>
+                    تمسك بالتوحيد رغم الضغوط، فكانت سيرته مثالًا
+                    على قوة الإيمان.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>التواضع</h3>
+                <p>
+                    كان من أصحاب النبي ﷺ، وتُظهر سيرته أن قيمة الإنسان
+                    في إيمانه وعمله، لا في أصله أو لونه.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>خدمة الإسلام</h3>
+                <p>
+                    أدّى دورًا مهمًا في الأذان، الذي يجمع المسلمين
+                    على الصلاة ويذكّرهم بعبادة الله.
+                </p>
+            </article>
+
+        </section>
+
+        <section class="quote">
+
+            <h3>ماذا نتعلم من سيرته؟</h3>
+
+            <p>
+                نتعلم من سيرة بلال رضي الله عنه الصبر عند الشدائد،
+                والثبات على الحق، وعدم الحكم على الناس بأصولهم أو ألوانهم،
+                وأن الكرامة الحقيقية تقوم على الإيمان والعمل الصالح.
+            </p>
+
+        </section>
+
+        <h2 class="section-title">شاهد وتعلّم</h2>
+
+        <section class="cards">
+
+            <article class="card video-card">
+                <div class="video-icon">▶️</div>
+
+                <h3>قصة إسلام بلال بن رباح</h3>
+
+                <p>
+                    تعرّف على بداية إسلامه وما واجهه من ابتلاء.
+                </p>
+
+                <a class="video-link" href="https://www.youtube.com/results?search_query=قصة+إسلام+بلال+بن+رباح"
+                    target="_blank" rel="noopener noreferrer">
+                    مشاهدة نتائج الفيديوهات
+                </a>
+            </article>
+
+            <article class="card video-card">
+                <div class="video-icon">▶️</div>
+
+                <h3>قصة صبر بلال على التعذيب</h3>
+
+                <p>
+                    تعرّف على ما تذكره كتب السيرة عن ثباته في مكة.
+                </p>
+
+                <a class="video-link"
+                    href="https://www.youtube.com/results?search_query=بلال+بن+رباح+الصبر+على+التعذيب+السيرة+النبوية"
+                    target="_blank" rel="noopener noreferrer">
+                    مشاهدة نتائج الفيديوهات
+                </a>
+            </article>
+
+            <article class="card video-card">
+                <div class="video-icon">▶️</div>
+
+                <h3>بلال مؤذن الرسول ﷺ</h3>
+
+                <p>
+                    تعرّف على مكانة الأذان ودور بلال رضي الله عنه.
+                </p>
+
+                <a class="video-link" href="https://www.youtube.com/results?search_query=بلال+بن+رباح+مؤذن+الرسول"
+                    target="_blank" rel="noopener noreferrer">
+                    مشاهدة نتائج الفيديوهات
+                </a>
+            </article>
+
+        </section>
+
+        <section class="sources">
+
+            <h2>المصادر والمراجع</h2>
+
+            <ul>
+                <li>صحيح البخاري: مناقب بلال بن رباح رضي الله عنه.</li>
+                <li>صحيح مسلم: فضائل الصحابة رضي الله عنهم.</li>
+                <li>السيرة النبوية لابن هشام.</li>
+                <li>سير أعلام النبلاء، للإمام الذهبي.</li>
+                <li>الإصابة في تمييز الصحابة، للحافظ ابن حجر العسقلاني.</li>
+            </ul>
+
+            <p class="note">
+                ملاحظة: روابط الفيديو تفتح نتائج بحث يوتيوب، وليست روابط
+                لفيديوهات محددة تم التحقق من محتواها.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>الموسوعة الإسلامية | <span>سير الصحابة رضي الله عنهم</span></p>
+        <p>نسأل الله العلم النافع والعمل الصالح.</p>
+    </footer>
+
+</body>
+
+</html>

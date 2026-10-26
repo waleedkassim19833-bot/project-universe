@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#061a17">
+
+    <title>قصة إسحاق عليه السلام | الموسوعة الإسلامية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #061a17;
+            --gold: #e9b85c;
+            --gold-light: #ffda91;
+            --muted: #c4d2ca;
+            --border: #28765b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--bg);
+            color: #f7f1e4;
+            line-height: 1.9;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header {
+            background: #041812;
+            border-bottom: 1px solid var(--gold);
+            padding: 15px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 19px;
+            font-weight: 800;
+        }
+
+        .back-btn {
+            border: 1px solid var(--gold);
+            border-radius: 25px;
+            padding: 7px 18px;
+            font-size: 13px;
+        }
+
+        .back-btn:hover {
+            background: var(--gold);
+            color: #061a17;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 65px 20px;
+            background:
+                radial-gradient(ellipse at top, #174c3b, transparent 70%),
+                linear-gradient(180deg, #092b23, var(--bg));
+            border-bottom: 1px solid var(--border);
+        }
+
+        .badge {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            border-radius: 25px;
+            padding: 3px 18px;
+            color: var(--gold-light);
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            color: var(--gold);
+            font-size: clamp(28px, 5vw, 43px);
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: var(--muted);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border: 1px solid var(--gold);
+            border-radius: 25px;
+            font-weight: 700;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: #172019;
+        }
+
+        .container {
+            width: min(1050px, 90%);
+            margin: 30px auto;
+        }
+
+        .section-title {
+            color: var(--gold);
+            font-size: 23px;
+            margin-bottom: 18px;
+        }
+
+        .intro,
+        .story-card,
+        .verse,
+        .lesson,
+        .video-box {
+            background: linear-gradient(135deg, #0b3027, #071f1a);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
+
+        .intro {
+            padding: 22px;
+            margin-bottom: 35px;
+        }
+
+        .intro h2 {
+            color: var(--gold-light);
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .intro p,
+        .story-card p {
+            color: var(--muted);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-bottom: 35px;
+        }
+
+        .story-card {
+            padding: 22px;
+            transition: 0.3s;
+        }
+
+        .story-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .story-card h3 {
+            color: var(--gold);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .number {
+            display: inline-flex;
+            width: 34px;
+            height: 34px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--gold);
+            margin-left: 8px;
+            color: var(--gold-light);
+        }
+
+        .verse {
+            padding: 20px;
+            margin-top: 15px;
+            text-align: center;
+            border-color: #9a7538;
+        }
+
+        .verse p {
+            color: var(--gold-light);
+            font-size: 17px;
+            line-height: 2.2;
+        }
+
+        .verse small {
+            display: block;
+            color: var(--gold);
+            margin-top: 8px;
+        }
+
+        .lessons {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-bottom: 35px;
+        }
+
+        .lesson {
+            padding: 15px;
+        }
+
+        .lesson h3 {
+            color: var(--gold);
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .lesson p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .video-box {
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .video-box h2 {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .video-box p {
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            background: #04130f;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        @media (max-width: 650px) {
+
+            .story-grid,
+            .lessons {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 12px 5%;
+            }
+
+            .hero {
+                padding: 45px 18px;
+            }
+
+            .container {
+                width: 92%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a class="logo" href="../index.html">☪ الموسوعة الإسلامية</a>
+
+        <a class="back-btn" href="prophets.html">
+            ← العودة إلى الأنبياء
+        </a>
+    </header>
+
+    <section class="hero">
+        <span class="badge">قصص الأنبياء</span>
+
+        <h1>قصة إسحاق عليه السلام</h1>
+
+        <p>
+            نبي كريم من ذرية إبراهيم عليه السلام،
+            بشّر الله به أباه وأمه، وجعله من عباده الصالحين،
+            وبارك في ذريته وجعل فيهم النبوة والكتاب.
+        </p>
+
+        <div class="buttons">
+            <a href="#story" class="btn btn-primary">↓ اقرأ القصة</a>
+            <a href="#video" class="btn">▶ شاهد القصة</a>
+        </div>
+    </section>
+
+    <main class="container" id="story">
+
+        <section class="intro">
+            <h2>من هو إسحاق عليه السلام؟</h2>
+
+            <p>
+                إسحاق عليه السلام نبي من أنبياء الله، وهو ابن إبراهيم
+                عليه السلام من زوجته سارة، وأخو إسماعيل عليه السلام
+                من أبيه. بشّر الله إبراهيم وسارة بإسحاق، ثم بشّرهما
+                بيعقوب من بعده. وذكره القرآن ضمن الأنبياء الصالحين
+                الذين أنعم الله عليهم بالنبوة والبركة.
+            </p>
+        </section>
+
+        <h2 class="section-title">📖 أحداث قصة إسحاق عليه السلام</h2>
+
+        <section class="story-grid">
+
+            <article class="story-card">
+                <h3><span class="number">١</span> بشارة الملائكة</h3>
+
+                <p>
+                    جاءت ملائكة الله إلى إبراهيم عليه السلام،
+                    وبشّرته بإسحاق، وكانت هذه البشارة فرحًا عظيمًا
+                    بعد أن تقدّم به العمر وزوجته سارة.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ وَبَشَّرْنَاهُ بِإِسْحَاقَ نَبِيًّا مِّنَ الصَّالِحِينَ ﴾
+                    </p>
+                    <small>سورة الصافات، الآية 112</small>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <h3><span class="number">٢</span> بشارة سارة</h3>
+
+                <p>
+                    تعجبت سارة من البشارة بالولد مع كبر سنها،
+                    فأخبرتها الملائكة أن أمر الله لا يعجزه شيء،
+                    وأن هذه البشارة من رحمة الله وبركته.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ قَالَتْ يَا وَيْلَتَى أَأَلِدُ وَأَنَا عَجُوزٌ
+                        وَهَذَا بَعْلِي شَيْخًا إِنَّ هَذَا لَشَيْءٌ عَجِيبٌ ﴾
+                    </p>
+                    <small>سورة هود، الآية 72</small>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <h3><span class="number">٣</span> نبي من الصالحين</h3>
+
+                <p>
+                    اصطفى الله إسحاق عليه السلام وجعله نبيًا صالحًا،
+                    وذكره في القرآن ضمن عباده الذين أنعم عليهم
+                    بالهداية والعمل الصالح.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ وَوَهَبْنَا لَهُ إِسْحَاقَ وَيَعْقُوبَ
+                        كُلًّا هَدَيْنَا ﴾
+                    </p>
+                    <small>سورة الأنعام، الآية 84</small>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <h3><span class="number">٤</span> البشارة بيعقوب</h3>
+
+                <p>
+                    بشّر الله إبراهيم وسارة بيعقوب من بعد إسحاق،
+                    وبيّن القرآن أن هذه الذرية كانت من فضل الله
+                    ورحمته، وأنه سبحانه يهب لمن يشاء ما يشاء.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ فَبَشَّرْنَاهَا بِإِسْحَاقَ
+                        وَمِن وَرَاءِ إِسْحَاقَ يَعْقُوبَ ﴾
+                    </p>
+                    <small>سورة هود، الآية 71</small>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <h3><span class="number">٥</span> البركة في ذريته</h3>
+
+                <p>
+                    جعل الله في ذرية إبراهيم وإسحاق البركة،
+                    وذكر القرآن أن الله بارك على إبراهيم وعلى إسحاق،
+                    وأن من ذريتهما محسنًا وظالمًا لنفسه.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ وَبَارَكْنَا عَلَيْهِ وَعَلَى إِسْحَاقَ
+                        وَمِن ذُرِّيَّتِهِمَا مُحْسِنٌ وَظَالِمٌ لِّنَفْسِهِ مُبِينٌ ﴾
+                    </p>
+                    <small>سورة الصافات، الآية 113</small>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <h3><span class="number">٦</span> ذكره في القرآن</h3>
+
+                <p>
+                    ذكر الله إسحاق عليه السلام في مواضع متعددة من القرآن،
+                    وأثنى عليه ضمن الأنبياء الذين هداهم الله واختارهم
+                    لعبادته ودعوة الناس إلى الحق.
+                </p>
+
+                <div class="verse">
+                    <p>
+                        ﴿ وَاذْكُرْ عِبَادَنَا إِبْرَاهِيمَ
+                        وَإِسْحَاقَ وَيَعْقُوبَ أُولِي الْأَيْدِي وَالْأَبْصَارِ ﴾
+                    </p>
+                    <small>سورة ص، الآية 45</small>
+                </div>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">💡 الدروس المستفادة</h2>
+
+        <section class="lessons">
+
+            <article class="lesson">
+                <h3>١. قدرة الله</h3>
+                <p>الله سبحانه قادر على كل شيء، ولا يعجزه أمر.</p>
+            </article>
+
+            <article class="lesson">
+                <h3>٢. رحمة الله</h3>
+                <p>قد يأتي الفرج والرزق من حيث لا يتوقع الإنسان.</p>
+            </article>
+
+            <article class="lesson">
+                <h3>٣. الإيمان بوعد الله</h3>
+                <p>نثق بوعد الله وحكمته حتى لو لم نفهم كل الأسباب.</p>
+            </article>
+
+            <article class="lesson">
+                <h3>٤. فضل النبوة</h3>
+                <p>النبوة اصطفاء من الله ورحمة يهدي بها عباده.</p>
+            </article>
+
+            <article class="lesson">
+                <h3>٥. شكر النعمة</h3>
+                <p>نتعلم أن نشكر الله على نعمه وفضله علينا.</p>
+            </article>
+
+            <article class="lesson">
+                <h3>٦. صلاح الذرية</h3>
+                <p>من الخير أن يدعو الإنسان الله بصلاح أبنائه وذريته.</p>
+            </article>
+
+        </section>
+
+        <section class="video-box" id="video">
+            <h2>🎬 شاهد قصة إسحاق عليه السلام</h2>
+
+            <p>
+                اضغط على الزر للبحث عن مقاطع تتناول قصة إسحاق عليه السلام.
+            </p>
+
+            <a class="btn btn-primary" href="https://www.youtube.com/results?search_query=قصة+إسحاق+عليه+السلام"
+                target="_blank" rel="noopener noreferrer">
+                ▶ البحث عن القصة في يوتيوب
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            الموسوعة الإسلامية © 2026 |
+            <span>قصص الأنبياء</span>
+        </p>
+
+        <p>المصدر الأساسي للقصة: القرآن الكريم.</p>
+    </footer>
+
+</body>
+
+</html>

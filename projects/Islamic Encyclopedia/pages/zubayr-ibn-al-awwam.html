@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="سيرة الزبير بن العوام رضي الله عنه، حواري رسول الله ﷺ وأحد العشرة المبشرين بالجنة.">
+    <title>الزبير بن العوام رضي الله عنه | الموسوعة الإسلامية</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        :root {
+            --green: #063c2d;
+            --green-light: #126348;
+            --gold: #d8b66a;
+            --cream: #f7f1e4;
+            --ink: #29392f;
+            --white: #fffdf8;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            line-height: 2;
+        }
+
+        .hero {
+            padding: 60px 20px 70px;
+            text-align: center;
+            color: #fff8e8;
+            background:
+                radial-gradient(ellipse at top, #197254 0%, transparent 65%),
+                linear-gradient(145deg, #031e18, #07523b 55%, #031e18);
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .symbol {
+            width: 110px;
+            height: 110px;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 20px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            box-shadow: 0 0 0 8px #d8b66a17;
+            color: #f3d58b;
+            font-size: 24px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            color: #f3d58b;
+            font-size: clamp(30px, 5vw, 48px);
+        }
+
+        .hero p {
+            max-width: 760px;
+            margin: 12px auto;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 6px 18px;
+            border: 1px solid #d8b66a90;
+            border-radius: 30px;
+            color: #f3d58b;
+        }
+
+        .container {
+            width: min(1000px, 92%);
+            margin: 30px auto 55px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 9px 18px;
+            color: white;
+            background: var(--green);
+            border-radius: 9px;
+            text-decoration: none;
+        }
+
+        .stats,
+        .values,
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 15px;
+        }
+
+        .stat {
+            padding: 18px;
+            text-align: center;
+            background: white;
+            border: 1px solid #e4d5ad;
+            border-radius: 14px;
+        }
+
+        .stat strong {
+            display: block;
+            color: var(--green-light);
+            font-size: 18px;
+        }
+
+        .stat span {
+            color: #68766d;
+            font-size: 13px;
+        }
+
+        .card {
+            margin: 22px 0;
+            padding: clamp(20px, 4vw, 32px);
+            background: var(--white);
+            border: 1px solid #e7ddc7;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px #173b2810;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            color: var(--green);
+            border-bottom: 2px solid #d8b66a80;
+            font-size: clamp(21px, 3vw, 26px);
+        }
+
+        .note {
+            margin: 18px 0;
+            padding: 16px 18px;
+            background: #e9f2e9;
+            border-right: 4px solid var(--green-light);
+            border-radius: 10px;
+        }
+
+        .quote {
+            margin: 18px 0;
+            padding: 20px;
+            background: #f5efdf;
+            border-right: 4px solid var(--gold);
+            border-radius: 9px;
+        }
+
+        .value {
+            padding: 18px;
+            background: #f6f1e5;
+            border-bottom: 3px solid var(--gold);
+            border-radius: 12px;
+        }
+
+        .value h3 {
+            color: var(--green);
+        }
+
+        .timeline {
+            padding-right: 23px;
+            border-right: 3px solid var(--gold);
+        }
+
+        .event {
+            position: relative;
+            margin: 22px 0;
+        }
+
+        .event::before {
+            content: "";
+            position: absolute;
+            top: 12px;
+            right: -31px;
+            width: 13px;
+            height: 13px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            background: var(--green-light);
+        }
+
+        .event h3 {
+            color: var(--green-light);
+        }
+
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-height: 185px;
+            padding: 20px;
+            color: #fff8e8;
+            text-decoration: none;
+            background: linear-gradient(145deg, #063c2d, #126348);
+            border: 1px solid var(--gold);
+            border-radius: 14px;
+            transition: transform .2s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .play {
+            display: grid;
+            place-items: center;
+            width: 45px;
+            height: 45px;
+            margin-bottom: 10px;
+            color: var(--green);
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        .video-card h3 {
+            color: #f3d58b;
+        }
+
+        .video-card p {
+            margin-top: auto;
+            font-size: 13px;
+        }
+
+        footer {
+            padding: 25px 15px;
+            text-align: center;
+            color: #f3dfad;
+            background: #052b20;
+            border-top: 4px solid var(--gold);
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 45px 18px;
+            }
+
+            .card {
+                padding: 20px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="symbol" aria-hidden="true">حواري<br>الرسول</div>
+        <h1>الزبير بن العوام</h1>
+        <p>رضي الله عنه وأرضاه</p>
+        <p>
+            صحابي جليل، وابن عمة رسول الله ﷺ، وأحد العشرة المبشرين بالجنة،
+            واشتهر بلقب حواري رسول الله ﷺ.
+        </p>
+        <span class="badge">السيرة • الفضائل • المواقف</span>
+    </header>
+
+    <main class="container">
+
+        <a class="back" href="seerah-companions.html">← العودة إلى صفحة الصحابة</a>
+
+        <section class="stats">
+            <div class="stat">
+                <strong>الزبير بن العوام</strong>
+                <span>اسمه ونسبه</span>
+            </div>
+            <div class="stat">
+                <strong>أبو عبد الله</strong>
+                <span>كنيته</span>
+            </div>
+            <div class="stat">
+                <strong>حواري الرسول ﷺ</strong>
+                <span>لقبه المشهور</span>
+            </div>
+            <div class="stat">
+                <strong>أحد العشرة</strong>
+                <span>المبشرين بالجنة</span>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>1. من هو الزبير بن العوام رضي الله عنه؟</h2>
+            <p>
+                هو الزبير بن العوام بن خويلد الأسدي القرشي رضي الله عنه،
+                من أصحاب رسول الله ﷺ، ومن السابقين إلى الإسلام.
+                وهو ابن صفية بنت عبد المطلب، عمة النبي ﷺ.
+            </p>
+            <p>
+                عُرف بالشجاعة والثبات، وكان من الشخصيات البارزة
+                في تاريخ المسلمين الأوائل.
+            </p>
+            <div class="note">
+                <strong>لماذا سُمّي حواري رسول الله ﷺ؟</strong>
+                ورد في صحيح البخاري أن النبي ﷺ قال:
+                «إن لكل نبي حواريًّا، وإن حواريَّ الزبير».
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>2. إسلامه وهجرته</h2>
+            <p>
+                كان الزبير رضي الله عنه من السابقين إلى الإسلام في مكة،
+                وتحمل ما واجهه المسلمون الأوائل من صعوبات بسبب تمسكهم بدينهم.
+            </p>
+            <p>
+                وهاجر إلى الحبشة، ثم إلى المدينة المنورة،
+                وشارك في بناء المجتمع الإسلامي في عهد النبي ﷺ.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>3. شجاعته ومواقفه</h2>
+            <p>
+                عُرف الزبير رضي الله عنه بالشجاعة والإقدام،
+                وشارك في عدد من الأحداث والغزوات في العهد النبوي.
+            </p>
+            <p>
+                وتذكر كتب السيرة مواقفه في نصرة المسلمين والدفاع عنهم،
+                وتُظهر سيرته أهمية الثبات وتحمل المسؤولية في الأوقات الصعبة.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>4. فضائله ومكانته</h2>
+            <p>
+                من أبرز فضائل الزبير رضي الله عنه شهادة النبي ﷺ له
+                بأنه حواريه، وهي منزلة تدل على مكانته وخصوصية قربه منه.
+            </p>
+            <div class="quote">
+                قال رسول الله ﷺ:
+                <br>
+                <strong>«إن لكل نبي حواريًّا، وإن حواريَّ الزبير».</strong>
+                <br>
+                <small>رواه البخاري.</small>
+            </div>
+            <p>
+                كما أنه أحد العشرة الذين وردت البشارة لهم بالجنة
+                في الحديث المشهور.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>5. أبرز محطات حياته</h2>
+            <div class="timeline">
+                <div class="event">
+                    <h3>الإسلام المبكر</h3>
+                    <p>كان من السابقين إلى الإسلام في مكة.</p>
+                </div>
+                <div class="event">
+                    <h3>الهجرة</h3>
+                    <p>هاجر إلى الحبشة ثم إلى المدينة المنورة.</p>
+                </div>
+                <div class="event">
+                    <h3>العهد النبوي</h3>
+                    <p>شارك في أحداث مهمة من تاريخ المسلمين الأوائل.</p>
+                </div>
+                <div class="event">
+                    <h3>أحداث الفتنة</h3>
+                    <p>
+                        توفي سنة 36 هـ بعد خروجه من أحداث وقعة الجمل.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>6. صفاته والدروس المستفادة</h2>
+            <div class="values">
+                <div class="value">
+                    <h3>الشجاعة</h3>
+                    <p>الثبات عند الشدائد وتحمل المسؤولية.</p>
+                </div>
+                <div class="value">
+                    <h3>الوفاء</h3>
+                    <p>الحرص على نصرة الحق والوفاء للمبادئ.</p>
+                </div>
+                <div class="value">
+                    <h3>الثبات</h3>
+                    <p>الصبر على الصعوبات في سبيل الدين.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>7. شاهد سيرة الزبير بن العوام</h2>
+            <p>
+                اختر الموضوع الذي تريد مشاهدته. الروابط تفتح نتائج
+                البحث في يوتيوب، وليست مقاطع محددة تم التحقق منها.
+            </p>
+
+            <div class="video-grid">
+
+                <a class="video-card" href="https://www.youtube.com/results?search_query=سيرة+الزبير+بن+العوام"
+                    target="_blank" rel="noopener noreferrer">
+                    <span class="play">▶</span>
+                    <h3>السيرة الكاملة للزبير</h3>
+                    <p>مشاهدة النتائج على يوتيوب ←</p>
+                </a>
+
+                <a class="video-card"
+                    href="https://www.youtube.com/results?search_query=حواري+رسول+الله+الزبير+بن+العوام" target="_blank"
+                    rel="noopener noreferrer">
+                    <span class="play">▶</span>
+                    <h3>لماذا لُقّب بحواري الرسول؟</h3>
+                    <p>مشاهدة النتائج على يوتيوب ←</p>
+                </a>
+
+                <a class="video-card"
+                    href="https://www.youtube.com/results?search_query=الزبير+بن+العوام+العشرة+المبشرين+بالجنة"
+                    target="_blank" rel="noopener noreferrer">
+                    <span class="play">▶</span>
+                    <h3>فضائله والبشارة بالجنة</h3>
+                    <p>مشاهدة النتائج على يوتيوب ←</p>
+                </a>
+
+                <a class="video-card"
+                    href="https://www.youtube.com/results?search_query=الزبير+بن+العوام+في+السيرة+النبوية"
+                    target="_blank" rel="noopener noreferrer">
+                    <span class="play">▶</span>
+                    <h3>مواقفه في السيرة النبوية</h3>
+                    <p>مشاهدة النتائج على يوتيوب ←</p>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>8. مصادر للتوسع والتحقق</h2>
+            <ul>
+                <li>صحيح البخاري: فضائل أصحاب النبي ﷺ.</li>
+                <li>صحيح مسلم: كتاب فضائل الصحابة.</li>
+                <li>سير أعلام النبلاء للإمام الذهبي.</li>
+                <li>البداية والنهاية لابن كثير.</li>
+            </ul>
+            <p>
+                ينبغي التحقق من الروايات التاريخية قبل إضافتها إلى الموسوعة،
+                مع ذكر المصدر كلما أمكن.
+            </p>
+        </section>
+
+        <a class="back" href="seerah-companions.html">← العودة إلى صفحة الصحابة</a>
+
+    </main>
+
+    <footer>
+        <p>الموسوعة الإسلامية — سيرة الصحابة رضي الله عنهم</p>
+        <p>نسأل الله أن ينفع بهذا العمل.</p>
+    </footer>
+
+</body>
+
+</html>

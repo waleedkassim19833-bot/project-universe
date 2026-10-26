@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>زينب بنت جحش رضي الله عنها | الموسوعة الإسلامية</title>
+
+    <style>
+        :root {
+            --green: #075c46;
+            --dark-green: #064333;
+            --gold: #c9a44c;
+            --cream: #fbf8ef;
+            --text: #26352e;
+            --muted: #66756d;
+            --border: #e7dfca;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.9;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .top-bar {
+            background: var(--dark-green);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--green), #0b7355);
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .symbol {
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 18px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 35px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        header h1 {
+            font-size: clamp(25px, 5vw, 38px);
+            margin-bottom: 12px;
+        }
+
+        header p {
+            max-width: 750px;
+            margin: auto;
+            color: #f4edda;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: 30px auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            background: var(--green);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+        }
+
+        .intro {
+            background: white;
+            border-right: 5px solid var(--gold);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: var(--green);
+            font-size: 25px;
+            margin: 35px 0 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .card h3 {
+            color: var(--green);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .timeline {
+            border-right: 3px solid var(--gold);
+            padding-right: 22px;
+        }
+
+        .event {
+            position: relative;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            border: 1px solid var(--border);
+        }
+
+        .event::before {
+            content: "";
+            position: absolute;
+            right: -30px;
+            top: 26px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: var(--gold);
+            border: 3px solid var(--cream);
+        }
+
+        .event h3 {
+            color: var(--green);
+            margin-bottom: 8px;
+        }
+
+        .note {
+            background: #f2eddb;
+            border-right: 4px solid var(--gold);
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .video-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            background: white;
+            padding: 18px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        .video-card h3 {
+            color: var(--green);
+            font-size: 17px;
+        }
+
+        .video-link {
+            display: inline-block;
+            background: #a52a2a;
+            color: white;
+            padding: 9px 15px;
+            border-radius: 7px;
+            white-space: nowrap;
+        }
+
+        .sources {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .sources ul {
+            padding-right: 22px;
+        }
+
+        .sources li {
+            margin-bottom: 9px;
+        }
+
+        footer {
+            background: var(--dark-green);
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 45px;
+        }
+
+        footer p {
+            color: #e8e2d0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 40px 15px;
+            }
+
+            .intro,
+            .card,
+            .sources {
+                padding: 18px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        الموسوعة الإسلامية | سير أمهات المؤمنين
+    </div>
+
+    <header>
+        <div class="symbol">ز</div>
+
+        <h1>زينب بنت جحش رضي الله عنها</h1>
+
+        <p>
+            أم المؤمنين، زوج النبي ﷺ، ومن النساء اللاتي ورد ذكرهن
+            في القرآن الكريم في سياق أحكام الأسرة والتبني.
+        </p>
+    </header>
+
+    <main class="container">
+
+        <a class="back-link" href="wives-of-prophet.html">
+            ← العودة إلى صفحة زوجات النبي ﷺ
+        </a>
+
+        <section class="intro">
+            <h2 style="color: var(--green); margin-bottom: 12px;">
+                نبذة عن أم المؤمنين زينب بنت جحش
+            </h2>
+
+            <p>
+                زينب بنت جحش الأسدية رضي الله عنها هي إحدى زوجات
+                النبي محمد ﷺ وأمهات المؤمنين. كانت ابنة عمة النبي ﷺ،
+                أميمة بنت عبد المطلب.
+            </p>
+
+            <p style="margin-top: 12px;">
+                تزوجت أولًا زيد بن حارثة رضي الله عنه، ثم انتهى
+                زواجهما بالطلاق. وبعد ذلك تزوجها رسول الله ﷺ بأمر
+                من الله تعالى، وورد ذكر هذه الحادثة في سورة الأحزاب،
+                في سياق بيان إبطال عادة التبني التي كانت معروفة
+                في الجاهلية.
+            </p>
+
+            <p style="margin-top: 12px;">
+                وعُرفت زينب رضي الله عنها بالعبادة والصدقة،
+                وكانت تعمل بيدها وتتصدق بما تكسبه.
+            </p>
+        </section>
+
+        <h2 class="section-title">📌 معلومات أساسية</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>الاسم والنسب</h3>
+                <p>
+                    زينب بنت جحش بن رئاب الأسدية رضي الله عنها.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>صلة القرابة بالنبي ﷺ</h3>
+                <p>
+                    كانت ابنة عمة رسول الله ﷺ،
+                    أميمة بنت عبد المطلب.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>مكانتها</h3>
+                <p>
+                    زوجة النبي ﷺ وإحدى أمهات المؤمنين.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>زوجها الأول</h3>
+                <p>
+                    زيد بن حارثة رضي الله عنه،
+                    الذي كان يُعرف قبل إبطال التبني بزيد بن محمد.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>أبرز صفاتها</h3>
+                <p>
+                    العبادة، والصدقة، والعمل باليد،
+                    والحرص على مساعدة المحتاجين.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>وفاتها</h3>
+                <p>
+                    توفيت رضي الله عنها سنة 20 هـ على المشهور،
+                    في خلافة عمر بن الخطاب رضي الله عنه.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">📜 محطات من حياتها</h2>
+
+        <section class="timeline">
+
+            <article class="event">
+                <h3>1. نشأتها وقرابتها بالنبي ﷺ</h3>
+                <p>
+                    تنتمي زينب رضي الله عنها إلى بني أسد،
+                    وكانت قريبة للنبي ﷺ من جهة أمهات آبائه؛
+                    فأمها أميمة بنت عبد المطلب، عمة رسول الله ﷺ.
+                </p>
+            </article>
+
+            <article class="event">
+                <h3>2. زواجها من زيد بن حارثة</h3>
+                <p>
+                    تزوجت زينب رضي الله عنها زيد بن حارثة رضي الله عنه،
+                    وكان النبي ﷺ قد تبناه قبل نزول الحكم الذي أبطل
+                    نسبة المتبنّى إلى غير أبيه.
+                </p>
+            </article>
+
+            <article class="event">
+                <h3>3. انتهاء زواجها الأول</h3>
+                <p>
+                    انتهى زواج زينب من زيد بالطلاق.
+                    وبعد انقضاء عدتها، جاء زواجها من النبي ﷺ
+                    ضمن الأحكام التي بيّنت الفرق بين الابن الحقيقي
+                    والمتبنّى.
+                </p>
+            </article>
+
+            <article class="event">
+                <h3>4. زواجها من النبي ﷺ</h3>
+                <p>
+                    تزوجها رسول الله ﷺ بأمر من الله تعالى،
+                    وورد ذكر ذلك في سورة الأحزاب.
+                </p>
+
+                <p style="margin-top: 12px;">
+                    قال تعالى:
+                </p>
+
+                <p style="margin-top: 8px; color: var(--green);">
+                    <strong>
+                        ﴿فَلَمَّا قَضَىٰ زَيْدٌ مِّنْهَا وَطَرًا
+                        زَوَّجْنَاكَهَا﴾
+                    </strong>
+                </p>
+
+                <p>[الأحزاب: 37]</p>
+            </article>
+
+            <article class="event">
+                <h3>5. العبادة والصدقة</h3>
+                <p>
+                    اشتهرت زينب رضي الله عنها بكثرة العبادة والصدقة،
+                    وكانت تعمل بيدها وتتصدق بما تحصل عليه.
+                    وتذكر كتب الحديث فضلها في البذل ومساعدة المحتاجين.
+                </p>
+            </article>
+
+            <article class="event">
+                <h3>6. وفاتها</h3>
+                <p>
+                    توفيت زينب رضي الله عنها في المدينة المنورة
+                    سنة 20 هـ على المشهور، وكانت أولى زوجات النبي ﷺ
+                    وفاةً بعده بحسب القول المشهور في كتب التراجم.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">⭐ أبرز صفاتها</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>العبادة</h3>
+                <p>
+                    عُرفت بالحرص على الطاعة والعمل الصالح.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>الصدقة</h3>
+                <p>
+                    كانت تتصدق وتساعد المحتاجين،
+                    واشتهرت بالبذل والعطاء.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>العمل والكسب</h3>
+                <p>
+                    كانت تعمل بيدها، ثم تنفق مما تكسبه
+                    في وجوه الخير.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>مكانتها في القرآن</h3>
+                <p>
+                    ورد ذكر زواجها من النبي ﷺ في سورة الأحزاب،
+                    في سياق بيان حكم التبني.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">💡 دروس نتعلمها من سيرتها</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>1. قيمة الصدقة</h3>
+                <p>
+                    نتعلم أن الإنفاق على المحتاجين من الأعمال
+                    التي تقوي التكافل والرحمة في المجتمع.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>2. العمل النافع</h3>
+                <p>
+                    العمل والكسب الحلال طريقان للإنسان
+                    ليعتمد على نفسه ويساعد غيره.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>3. الالتزام بأحكام الله</h3>
+                <p>
+                    توضح سيرتها أهمية قبول الأحكام الشرعية
+                    وفهمها في ضوء سياقها الصحيح.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>4. إبطال العادات الخاطئة</h3>
+                <p>
+                    تعلمنا آيات سورة الأحزاب أن بعض العادات
+                    الاجتماعية تحتاج إلى تصحيح وفق الحق والعدل.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">🎥 مواد مرئية للتعلم</h2>
+
+        <div class="video-card">
+            <div>
+                <h3>السيرة الكاملة لزينب بنت جحش</h3>
+                <p>للبحث عن محاضرات تتناول حياتها وسيرتها.</p>
+            </div>
+
+            <a class="video-link"
+                href="https://www.youtube.com/results?search_query=السيرة+الكاملة+زينب+بنت+جحش+أم+المؤمنين"
+                target="_blank" rel="noopener noreferrer">
+                مشاهدة النتائج
+            </a>
+        </div>
+
+        <div class="video-card">
+            <div>
+                <h3>قصة زواج زينب بنت جحش في سورة الأحزاب</h3>
+                <p>لفهم سياق الآيات والأحكام المتعلقة بالتبني.</p>
+            </div>
+
+            <a class="video-link"
+                href="https://www.youtube.com/results?search_query=تفسير+سورة+الأحزاب+زواج+زينب+بنت+جحش" target="_blank"
+                rel="noopener noreferrer">
+                مشاهدة النتائج
+            </a>
+        </div>
+
+        <div class="video-card">
+            <div>
+                <h3>صدقة زينب بنت جحش رضي الله عنها</h3>
+                <p>للتعرف على ما ورد في المصادر عن عبادتها وإحسانها.</p>
+            </div>
+
+            <a class="video-link" href="https://www.youtube.com/results?search_query=زينب+بنت+جحش+الصدقة+والعبادة"
+                target="_blank" rel="noopener noreferrer">
+                مشاهدة النتائج
+            </a>
+        </div>
+
+        <div class="note">
+            <strong>تنبيه:</strong>
+            الأزرار تفتح نتائج بحث في يوتيوب، وليست روابط إلى مقاطع
+            محددة جرى التحقق منها.
+        </div>
+
+        <h2 class="section-title">📚 المصادر والمراجع</h2>
+
+        <section class="sources">
+            <ul>
+                <li>القرآن الكريم، سورة الأحزاب، الآيات 4–5 والآية 37.</li>
+                <li>صحيح البخاري، كتاب التفسير، تفسير سورة الأحزاب.</li>
+                <li>صحيح مسلم، كتاب فضائل الصحابة.</li>
+                <li>سير أعلام النبلاء، للإمام الذهبي.</li>
+                <li>الإصابة في تمييز الصحابة، للحافظ ابن حجر العسقلاني.</li>
+                <li>الطبقات الكبرى، لابن سعد.</li>
+            </ul>
+
+            <p style="margin-top: 15px; color: var(--muted); font-size: 14px;">
+                ملاحظة: التواريخ وبعض التفاصيل التاريخية قد تختلف
+                بين كتب التراجم، لذا يُرجع إلى المصادر عند التوسع في الدراسة.
+            </p>
+        </section>
+
+        <div style="text-align: center; margin-top: 35px;">
+            <a class="back-link" href="wives-of-prophet.html">
+                ← العودة إلى زوجات النبي ﷺ
+            </a>
+        </div>
+
+    </main>
+
+    <footer>
+        <h3>الموسوعة الإسلامية</h3>
+        <p>سير أمهات المؤمنين ومعلومات إسلامية منظمة.</p>
+        <p style="margin-top: 8px;">© الموسوعة الإسلامية</p>
+    </footer>
+
+</body>
+
+</html>

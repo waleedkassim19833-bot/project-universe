@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071c1a">
+
+    <title>قصة إدريس عليه السلام | الموسوعة الإسلامية</title>
+
+    <style>
+        :root {
+            --background: #071c1a;
+            --surface: #102c28;
+            --surface-light: #173a34;
+            --gold: #e5c477;
+            --gold-light: #f6e5b5;
+            --text: #f6f4ed;
+            --muted: #c4d1ca;
+            --border: rgba(229, 196, 119, 0.22);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .topbar {
+            padding: 16px 6%;
+            background: #091f1c;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .back-link {
+            padding: 7px 15px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--muted);
+        }
+
+        .back-link:hover {
+            color: var(--gold);
+            background: var(--surface);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 75px 20px;
+            background:
+                radial-gradient(ellipse at top,
+                    rgba(38, 117, 101, 0.4),
+                    transparent 70%),
+                linear-gradient(135deg, #102f29, #071c1a);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 4px 18px;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            color: var(--gold);
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            color: var(--gold-light);
+            font-size: clamp(32px, 6vw, 50px);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 22px;
+            border-radius: 11px;
+            font-weight: bold;
+            transition: 0.25s;
+        }
+
+        .button-primary {
+            background: var(--gold);
+            color: #172720;
+        }
+
+        .button-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            border: 1px solid var(--border);
+            color: var(--gold-light);
+        }
+
+        .button-secondary:hover {
+            background: var(--surface-light);
+        }
+
+        .container {
+            max-width: 1050px;
+            width: 92%;
+            margin: 35px auto 65px;
+        }
+
+        .intro {
+            padding: 25px;
+            background: var(--surface-light);
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            margin-bottom: 30px;
+        }
+
+        .intro h2 {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            color: var(--muted);
+        }
+
+        .section-title {
+            color: var(--gold-light);
+            font-size: 27px;
+            margin: 40px 0 20px;
+            padding-right: 14px;
+            border-right: 4px solid var(--gold);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            padding: 24px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 17px;
+        }
+
+        .card h3 {
+            color: var(--gold);
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        .number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 11px;
+            background: rgba(229, 196, 119, 0.12);
+            color: var(--gold);
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .verse {
+            padding: 20px;
+            margin-top: 15px;
+            background: rgba(229, 196, 119, 0.07);
+            border-right: 4px solid var(--gold);
+            border-radius: 12px;
+            color: var(--gold-light);
+            font-size: 18px;
+        }
+
+        .reference {
+            display: block;
+            margin-top: 10px;
+            color: var(--gold);
+            font-size: 14px;
+        }
+
+        .notice {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(38, 117, 101, 0.12);
+            border: 1px solid rgba(38, 117, 101, 0.4);
+            border-radius: 12px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .lessons {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .lesson {
+            padding: 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--muted);
+        }
+
+        .lesson strong {
+            color: var(--gold);
+        }
+
+        .video-card {
+            margin-top: 25px;
+            padding: 28px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            text-align: center;
+        }
+
+        .video-card h2 {
+            color: var(--gold-light);
+            margin-bottom: 10px;
+        }
+
+        .video-card p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .sources {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+
+        .sources li {
+            padding: 15px 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--muted);
+        }
+
+        .sources strong {
+            color: var(--gold);
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        @media (max-width: 650px) {
+
+            .grid,
+            .lessons {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 55px 18px;
+            }
+
+            .card,
+            .intro,
+            .video-card {
+                padding: 19px;
+            }
+
+            .section-title {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <nav class="nav">
+
+            <a class="logo" href="../index.html">
+                ✦ الموسوعة الإسلامية
+            </a>
+
+            <a class="back-link" href="prophets.html">
+                ← العودة إلى الأنبياء
+            </a>
+
+        </nav>
+    </header>
+
+    <section class="hero">
+
+        <span class="eyebrow">قصص الأنبياء</span>
+
+        <h1>قصة إدريس عليه السلام</h1>
+
+        <p>
+            نبي كريم وصفه الله تعالى بالصدق والنبوة،
+            وذكر في القرآن أنه رفعه مكانًا عليًا.
+            نتعرف في هذه الصفحة على ما ثبت عنه في القرآن الكريم.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#story" class="button button-primary">
+                اقرأ القصة ↓
+            </a>
+
+            <a href="#video" class="button button-secondary">
+                🎬 شاهد فيديو عن إدريس
+            </a>
+
+        </div>
+
+    </section>
+
+    <main class="container">
+
+        <section class="intro">
+
+            <h2>من هو إدريس عليه السلام؟</h2>
+
+            <p>
+                إدريس عليه السلام نبي من أنبياء الله تعالى.
+                وصفه القرآن بأنه صِدّيق ونبي، وأخبر أن الله رفعه
+                مكانًا عليًا. ولا يذكر القرآن تفاصيل كثيرة عن
+                أحداث حياته، لذلك نعرض هنا المعلومات التي ثبتت
+                في القرآن، دون الجزم بتفاصيل لا دليل ثابت عليها.
+            </p>
+
+        </section>
+
+        <section id="story">
+
+            <h2 class="section-title">📖 ما الذي نعرفه عن إدريس؟</h2>
+
+            <div class="grid">
+
+                <article class="card">
+
+                    <span class="number">١</span>
+
+                    <h3>نبي صادق</h3>
+
+                    <p>
+                        أثنى الله تعالى على إدريس عليه السلام
+                        بالصدق، وهي صفة عظيمة تدل على صدق القول
+                        والعمل والوفاء بالحق.
+                    </p>
+
+                    <div class="verse">
+
+                        ﴿وَاذْكُرْ فِي الْكِتَابِ إِدْرِيسَ
+                        إِنَّهُ كَانَ صِدِّيقًا نَبِيًّا﴾
+
+                        <span class="reference">
+                            سورة مريم، الآية 56
+                        </span>
+
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <span class="number">٢</span>
+
+                    <h3>رفع الله مكانته</h3>
+
+                    <p>
+                        أخبر الله تعالى أنه رفع إدريس عليه السلام
+                        مكانًا عليًا. أما التفاصيل المتعلقة بكيفية
+                        هذا الرفع ومعناه الدقيق، فلا نجزم فيها
+                        بما لم يثبت بدليل صحيح.
+                    </p>
+
+                    <div class="verse">
+
+                        ﴿وَرَفَعْنَاهُ مَكَانًا عَلِيًّا﴾
+
+                        <span class="reference">
+                            سورة مريم، الآية 57
+                        </span>
+
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <span class="number">٣</span>
+
+                    <h3>من عباد الله الصالحين</h3>
+
+                    <p>
+                        ذكر الله إدريس عليه السلام في سياق الحديث
+                        عن أنبياء اصطفاهم وفضّلهم، وجعلهم من عباده
+                        الذين أنعم عليهم بالهداية والنبوة.
+                    </p>
+
+                    <div class="verse">
+
+                        ﴿أُولَٰئِكَ الَّذِينَ أَنْعَمَ اللَّهُ
+                        عَلَيْهِمْ مِنَ النَّبِيِّينَ﴾
+
+                        <span class="reference">
+                            سورة مريم، الآية 58
+                        </span>
+
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <span class="number">٤</span>
+
+                    <h3>من الصابرين والصالحين</h3>
+
+                    <p>
+                        ورد ذكر إدريس عليه السلام في سورة الأنبياء
+                        ضمن مجموعة من الأنبياء الذين أثنى الله
+                        عليهم، وأخبر أنه أدخلهم في رحمته؛ لأنهم
+                        كانوا من الصالحين.
+                    </p>
+
+                    <div class="verse">
+
+                        ﴿وَإِسْمَاعِيلَ وَإِدْرِيسَ وَذَا الْكِفْلِ
+                        كُلٌّ مِنَ الصَّابِرِينَ﴾
+
+                        <span class="reference">
+                            سورة الأنبياء، الآية 85
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <div class="notice">
+
+                معلومة مهمة: لا يقدم القرآن تفاصيل كثيرة عن حياة
+                إدريس عليه السلام، لذلك لا ننسب إليه أحداثًا
+                أو حكايات محددة دون التحقق من صحتها.
+
+            </div>
+
+        </section>
+
+        <section id="lessons">
+
+            <h2 class="section-title">💡 الدروس المستفادة</h2>
+
+            <div class="lessons">
+
+                <div class="lesson">
+                    <strong>١. الصدق:</strong>
+                    الصدق صفة عظيمة أثنى الله بها على نبيه إدريس.
+                </div>
+
+                <div class="lesson">
+                    <strong>٢. الصلاح:</strong>
+                    ينبغي للإنسان أن يسعى إلى طاعة الله والعمل الصالح.
+                </div>
+
+                <div class="lesson">
+                    <strong>٣. الصبر:</strong>
+                    الصبر من الصفات التي أثنى الله بها على إدريس
+                    عليه السلام.
+                </div>
+
+                <div class="lesson">
+                    <strong>٤. احترام الدليل:</strong>
+                    نتعلم ألا نجزم بتفاصيل دينية لا نملك دليلًا صحيحًا عليها.
+                </div>
+
+                <div class="lesson">
+                    <strong>٥. الاقتداء بالأنبياء:</strong>
+                    نتعلم من صفاتهم ما يعيننا على تحسين أخلاقنا وأعمالنا.
+                </div>
+
+                <div class="lesson">
+                    <strong>٦. التأمل في القرآن:</strong>
+                    نتعلم أن نرجع إلى القرآن لمعرفة ما أخبرنا الله به.
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="video" class="video-card">
+
+            <h2>🎬 شاهد قصة إدريس عليه السلام</h2>
+
+            <p>
+                اضغط على الزر للبحث عن مقاطع تتناول قصة
+                إدريس عليه السلام على يوتيوب.
+            </p>
+
+            <a class="button button-primary"
+                href="https://www.youtube.com/results?search_query=قصة+النبي+إدريس+عليه+السلام" target="_blank"
+                rel="noopener noreferrer">
+
+                ▶ البحث عن قصة إدريس على يوتيوب
+
+            </a>
+
+            <div class="notice">
+
+                هذا زر بحث مباشر، وليس رابطًا لفيديو محدد.
+                اختر مقطعًا مناسبًا وتحقق من محتواه ومصادره.
+
+            </div>
+
+        </section>
+
+        <section id="sources">
+
+            <h2 class="section-title">📚 المصادر القرآنية</h2>
+
+            <ul class="sources">
+
+                <li>
+                    <strong>سورة مريم، الآيات 56–57:</strong>
+                    وصف إدريس عليه السلام بالصدق والنبوة وذكر رفعه.
+                </li>
+
+                <li>
+                    <strong>سورة مريم، الآية 58:</strong>
+                    ذكر الأنبياء الذين أنعم الله عليهم.
+                </li>
+
+                <li>
+                    <strong>سورة الأنبياء، الآيات 85–86:</strong>
+                    ذكر إدريس ضمن الصابرين، وبيان أنه من الصالحين
+                    الذين أدخلهم الله في رحمته.
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            <span>✦ الموسوعة الإسلامية</span>
+            — قصص الأنبياء والدروس المستفادة
+        </p>
+
+        <p>
+            اللهم علّمنا ما ينفعنا وانفعنا بما علّمتنا.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

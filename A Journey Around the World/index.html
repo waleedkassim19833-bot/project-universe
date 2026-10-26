@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ماذا يحدث بعد أن تضغط Enter؟</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <canvas id="bg"></canvas>
+  <canvas id="fx"></canvas>
+  <div id="wipe"></div>
+
+  <main id="deck">
+
+    <!-- 1 الغلاف -->
+    <section class="slide cover" data-accent="#3DF5C0">
+      <div class="copy">
+        <h1 data-split>ماذا يحدث بعد أن تضغط Enter؟</h1>
+        <div class="urlbar" dir="ltr" aria-hidden="true">
+          <span class="dot"></span><span class="proto">https://</span><span class="typed">my-site.pages.dev</span>
+        </div>
+        <p class="lead">رحلة رابط واحد عبر العالم، في ثلث ثانية.</p>
+        <button class="cta pulse" data-go="next" type="button">ابدأ الرحلة</button>
+        <p class="hint">السهم الأيسر للتقدّم · F لملء الشاشة · أدر الكرة بإصبعك</p>
+      </div>
+      <canvas class="globe noswipe" id="g1" aria-hidden="true"></canvas>
+    </section>
+
+    <!-- 2 الرحلة -->
+    <section class="slide" data-accent="#3DF5C0" hidden>
+      <h2 data-split>رحلة ٠٫٣ ثانية</h2>
+      <div class="journey" id="journey">
+        <div class="jline"><i class="jfill" id="jfill"></i></div>
+        <div class="packet" id="packet"></div>
+        <div class="stations">
+          <div class="st"><b>🌐</b>
+            <h3>المتصفح</h3><small>0 ms</small>
+          </div>
+          <div class="st"><b>🔎</b>
+            <h3>DNS</h3><small>20 ms</small>
+          </div>
+          <div class="st"><b>🔒</b>
+            <h3>TLS</h3><small>80 ms</small>
+          </div>
+          <div class="st"><b>☁️</b>
+            <h3>الخادم</h3><small>160 ms</small>
+          </div>
+          <div class="st"><b>🖥️</b>
+            <h3>العرض</h3><small>300 ms</small>
+          </div>
+        </div>
+      </div>
+      <div class="jcap">
+        <div class="clock" dir="ltr"><span id="jms">0</span> ms</div>
+        <p id="jtext">اضغط الزر وراقب الرحلة محطة بعد محطة.</p>
+      </div>
+      <button class="cta pulse" id="jgo" type="button">⏎ Enter</button>
+    </section>
+
+    <!-- 3 DNS -->
+    <section class="slide" data-accent="#FF6B81" hidden>
+      <h2 data-split>DNS: دليل هاتف الإنترنت</h2>
+      <p class="lead">الحاسوب لا يفهم الأسماء، يفهم الأرقام. اكتب اسم أي موقع وشاهد كيف يُسأل عنه.</p>
+      <form id="dnsForm" class="dnsbar" dir="ltr">
+        <input id="dnsIn" value="my-site.pages.dev" aria-label="اسم النطاق" autocomplete="off" spellcheck="false">
+        <button class="cta sm" type="submit">Lookup</button>
+      </form>
+      <div class="chips noswipe" id="dnsChips"></div>
+      <div class="term" id="dnsOut" aria-live="polite"></div>
+    </section>
+
+    <!-- 4 TLS -->
+    <section class="slide" data-accent="#8EC5FF" hidden>
+      <h2 data-split>TLS: مصافحة سرية في أربع خطوات</h2>
+      <div class="tls">
+        <div class="tlsh"><span>المتصفح</span><span>الخادم</span></div>
+        <div class="tlslog" id="tlsLog"></div>
+      </div>
+      <div class="actions">
+        <button class="cta" id="tlsGo" type="button">الخطوة الأولى</button>
+        <div class="lockbox" id="lockbox">
+          <span class="lockico">🔒</span>
+          <div>
+            <p class="plain" dir="ltr">password=1234</p>
+            <p class="ciph" dir="ltr" id="cipher">····</p>
+          </div>
+          <small>هذا ما يراه المتجسس على الشبكة</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 HTTP -->
+    <section class="slide" data-accent="#FFD166" hidden>
+      <h2 data-split>HTTP: سؤال وجواب</h2>
+      <p class="lead">المتصفح يسأل، والخادم يجيب برقم يلخّص الحال. جرّب الأرقام.</p>
+      <div class="chips noswipe" id="codeChips"></div>
+      <div class="httpgrid">
+        <div class="term" id="httpTerm" dir="ltr"></div>
+        <div class="verdict" id="verdict">
+          <span class="vico" id="vico">✅</span>
+          <b class="vnum" id="vnum" dir="ltr">200</b>
+          <h3 id="vtitle"></h3>
+          <p id="vtext"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 CDN -->
+    <section class="slide" data-accent="#FFD166" hidden>
+      <h2 data-split>لماذا CDN؟ لأن للمسافة ثمنًا</h2>
+      <div class="cdn">
+        <div class="cdnl">
+          <p class="lead">خادمك الأصلي في فرجينيا. اختر أين يجلس الزائر، وأدر الكرة بإصبعك.</p>
+          <div class="chips" id="cityChips"></div>
+          <div class="race2">
+            <div class="lane"><span>خادم واحد بعيد</span>
+              <div class="track"><i class="coral" id="barOrigin"></i></div><b dir="ltr"><span id="msOrigin">0</span>
+                ms</b>
+            </div>
+            <div class="lane"><span>CDN: أقرب نقطة</span>
+              <div class="track"><i class="mint" id="barEdge"></i></div><b dir="ltr"><span id="msEdge">0</span> ms</b>
+            </div>
+          </div>
+          <p class="note" id="cdnNote"></p>
+        </div>
+        <canvas class="globe noswipe" id="g2" aria-hidden="true"></canvas>
+      </div>
+    </section>
+
+    <!-- 7 الطبقات -->
+    <section class="slide" data-accent="#8EC5FF" hidden>
+      <h2 data-split>ثم يرسم المتصفح: ثلاث طبقات</h2>
+      <div class="seg noswipe" id="layerSeg">
+        <button data-l="1" class="on" type="button">HTML</button>
+        <button data-l="2" type="button">+ CSS</button>
+        <button data-l="3" type="button">+ JavaScript</button>
+      </div>
+      <div class="layers">
+        <div class="browser">
+          <div class="bhead"><i></i><i></i><i></i></div>
+          <div class="mock" id="mock" data-layer="1">
+            <div class="avatar">صورة</div>
+            <h4>سارة، مطوّرة مواقع</h4>
+            <p>أبني مواقعي بالذكاء الاصطناعي وأنشرها برابط.</p>
+            <button id="likeBtn" type="button">أعجبني <span id="likeN">0</span></button>
+          </div>
+        </div>
+        <p class="lcap" id="lcap"></p>
+      </div>
+    </section>
+
+    <!-- 8 السباق -->
+    <section class="slide" data-accent="#FF6B81" hidden>
+      <h2 data-split>سباق التحميل: كم تزن صفحتك؟</h2>
+      <div class="ctrl noswipe">
+        <label>وزن الصفحة <b dir="ltr"><span id="mb">5</span> MB</b></label>
+        <input type="range" id="mbR" min="0.5" max="10" step="0.5" value="5" aria-label="وزن الصفحة">
+        <label class="chk"><input type="checkbox" id="compress"> ضغط الصور (توفير ٧٠٪)</label>
+      </div>
+      <div class="race2" id="raceLanes"></div>
+      <p class="note" id="raceSum"></p>
+      <button class="cta" id="raceGo" type="button">ابدأ السباق</button>
+    </section>
+
+    <!-- 9 من الفكرة إلى الرابط -->
+    <section class="slide" data-accent="#3DF5C0" hidden>
+      <h2 data-split>من الفكرة إلى الرابط</h2>
+      <div class="journey smooth" id="pipe">
+        <div class="jline"><i class="jfill" id="pfill"></i></div>
+        <div class="stations">
+          <div class="st"><b>💡</b>
+            <h3>فكرة</h3><small>جملة واحدة</small>
+          </div>
+          <div class="st"><b>🤖</b>
+            <h3>الذكاء الاصطناعي</h3><small>يكتب الكود</small>
+          </div>
+          <div class="st"><b>📁</b>
+            <h3>ملفات</h3><small>ثلاثة فقط</small>
+          </div>
+          <div class="st"><b>☁️</b>
+            <h3>Cloudflare</h3><small>ينشر</small>
+          </div>
+          <div class="st"><b>🔗</b>
+            <h3>رابط</h3><small>تشاركه</small>
+          </div>
+        </div>
+      </div>
+      <div class="deploy">
+        <div class="term" id="depLog" dir="ltr"></div>
+        <div class="side">
+          <div class="result" id="depRes"><small>رابطك الجاهز</small><b dir="ltr">—</b></div>
+          <button class="cta" id="depGo" type="button">انشر الآن</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 الاختبار -->
+    <section class="slide" data-accent="#3DF5C0" hidden>
+      <h2 data-split>اختبر ما فهمته</h2>
+      <div class="quiz noswipe" id="quiz"></div>
+    </section>
+
+    <!-- 11 الختام -->
+    <section class="slide closing" data-accent="#3DF5C0" hidden>
+      <div class="rings norv"><i></i><i></i><i></i></div>
+      <h1><span id="big" dir="ltr">0.30</span><small>ثانية</small></h1>
+      <p class="lead">هذا كل ما يلزم ليصل موقعك من خادم بعيد إلى شاشة أي إنسان.</p>
+      <div class="recap"><span>DNS</span><span>TLS</span><span>HTTP</span><span>CDN</span><span>HTML · CSS · JS</span>
+      </div>
+      <dl class="links">
+        <dt>رابط هذا العرض</dt>
+        <dd dir="ltr">your-name.pages.dev</dd>
+        <dt>رابط معرض أعمالي</dt>
+        <dd dir="ltr">your-portfolio.pages.dev</dd>
+      </dl>
+      <button class="cta" data-go="first" type="button">أعد العرض من البداية</button>
+    </section>
+
+  </main>
+
+  <div class="meta">
+    <span id="counter" dir="ltr">1 / 11</span>
+    <button id="fs" type="button" aria-label="ملء الشاشة">ملء الشاشة</button>
+  </div>
+  <nav class="nav" aria-label="التنقل بين الشرائح">
+    <button id="prev" type="button" aria-label="الشريحة السابقة">›</button>
+    <button id="next" type="button" aria-label="الشريحة التالية">‹</button>
+  </nav>
+  <div class="bar" aria-hidden="true"><i></i></div>
+
+  <script src="slides.js"></script>
+</body>
+
+</html>

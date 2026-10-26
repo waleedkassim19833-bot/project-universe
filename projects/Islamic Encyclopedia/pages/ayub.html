@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#061a17">
+
+    <title>قصة أيوب عليه السلام | الموسوعة الإسلامية</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #061a17;
+            --gold: #e9b85c;
+            --gold-light: #ffda91;
+            --muted: #c4d2ca;
+            --border: #28765b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--bg);
+            color: #f7f1e4;
+            line-height: 1.9;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header {
+            background: #041812;
+            border-bottom: 1px solid var(--gold);
+            padding: 15px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 19px;
+            font-weight: 800;
+        }
+
+        .back-btn {
+            border: 1px solid var(--gold);
+            border-radius: 25px;
+            padding: 7px 18px;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: var(--gold);
+            color: var(--bg);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 65px 20px;
+            background:
+                radial-gradient(ellipse at top, #174c3b, transparent 70%),
+                linear-gradient(180deg, #092b23, var(--bg));
+            border-bottom: 1px solid var(--border);
+        }
+
+        .badge {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            border-radius: 25px;
+            padding: 3px 18px;
+            color: var(--gold-light);
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            color: var(--gold);
+            font-size: clamp(28px, 5vw, 43px);
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: var(--muted);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border: 1px solid var(--gold);
+            border-radius: 25px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: #172019;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .container {
+            width: min(1050px, 90%);
+            margin: 30px auto;
+        }
+
+        .section-title {
+            color: var(--gold);
+            font-size: 23px;
+            margin-bottom: 18px;
+        }
+
+        .intro,
+        .story-card,
+        .verse,
+        .lesson,
+        .video-box {
+            background: linear-gradient(135deg, #0b3027, #071f1a);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+        }
+
+        .intro {
+            padding: 22px;
+            margin-bottom: 35px;
+        }
+
+        .intro h2 {
+            color: var(--gold-light);
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .intro p,
+        .story-card p {
+            color: var(--muted);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-bottom: 35px;
+        }
+
+        .story-card {
+            padding: 22px;
+            transition: 0.3s;
+        }
+
+        .story-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .story-card h3 {
+            color: var(--gold);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .number {
+            display: inline-flex;
+            width: 34px;
+            height: 34px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--gold);
+            margin-left: 8px;
+            color: var(--gold-light);
+        }
+
+        .verse {
+            padding: 20px;
+            margin-top: 15px;
+            text-align: center;
+            border-color: #9a7538;
+        }
+
+        .verse p {
+            color: var(--gold-light);
+            font-size: 17px;
+            line-height: 2.2;
+        }
+
+        .verse small {
+            display: block;
+            color: var(--gold);
+            margin-top: 8px;
+        }
+
+        .lessons {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-bottom: 35px;
+        }
+
+        .lesson {
+            padding: 15px;
+        }
+
+        .lesson h3 {
+            color: var(--gold);
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .lesson p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .video-box {
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .video-box h2 {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .video-box p {
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            background: #04130f;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        @media (max-width: 650px) {
+            .story-grid,
+            .lessons {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 12px 5%;
+            }
+
+            .hero {
+                padding: 45px 18px;
+            }
+
+            .container {
+                width: 92%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a class="logo" href="../index.html">☪ الموسوعة الإسلامية</a>
+
+    <a class="back-btn" href="prophets.html">
+        ← العودة إلى الأنبياء
+    </a>
+</header>
+
+<section class="hero">
+    <span class="badge">قصص الأنبياء</span>
+
+    <h1>قصة أيوب عليه السلام</h1>
+
+    <p>
+        نبي كريم ضرب المثل في الصبر والإنابة إلى الله،
+        فدعا ربه في وقت الشدة، فرحمه الله وكشف عنه الضر.
+    </p>
+
+    <div class="buttons">
+        <a href="#story" class="btn btn-primary">↓ اقرأ القصة</a>
+        <a href="#video" class="btn">▶ شاهد القصة</a>
+    </div>
+</section>
+
+<main class="container" id="story">
+
+    <section class="intro">
+        <h2>من هو أيوب عليه السلام؟</h2>
+
+        <p>
+            أيوب عليه السلام نبي من أنبياء الله، أثنى الله عليه
+            في القرآن ووصفه بالصبر. ابتلاه الله بالضر، فلجأ إليه
+            بالدعاء والإنابة، فاستجاب الله له وكشف ما به من ضر،
+            وجعل قصته مثالًا في الصبر وحسن الظن بالله.
+        </p>
+    </section>
+
+    <h2 class="section-title">📖 أحداث قصة أيوب عليه السلام</h2>
+
+    <section class="story-grid">
+
+        <article class="story-card">
+            <h3><span class="number">١</span> الابتلاء والصبر</h3>
+
+            <p>
+                ابتلى الله أيوب عليه السلام بالضر، فكان صابرًا
+                محتسبًا، ولم يقطع صلته بربه، بل ظل راجيًا رحمته.
+                والقرآن يذكر ابتلاءه دون أن يحدد كل تفاصيله.
+            </p>
+
+            <div class="verse">
+                <p>
+                    ﴿ إِنَّا وَجَدْنَاهُ صَابِرًا نِّعْمَ الْعَبْدُ
+                    إِنَّهُ أَوَّابٌ ﴾
+                </p>
+                <small>سورة ص، الآية 44</small>
+            </div>
+        </article>
+
+        <article class="story-card">
+            <h3><span class="number">٢</span> الدعاء والتضرع</h3>
+
+            <p>
+                توجه أيوب عليه السلام إلى الله بالدعاء،
+                وذكر ما أصابه من الضر، مع اعترافه برحمة الله
+                وأنه أرحم الراحمين.
+            </p>
+
+            <div class="verse">
+                <p>
+                    ﴿ أَنِّي مَسَّنِيَ الضُّرُّ وَأَنتَ أَرْحَمُ الرَّاحِمِينَ ﴾
+                </p>
+                <small>سورة الأنبياء، الآية 83</small>
+            </div>
+        </article>
+
+        <article class="story-card">
+            <h3><span class="number">٣</span> استجابة الله</h3>
+
+            <p>
+                استجاب الله دعاء أيوب عليه السلام،
+                فكشف عنه الضر، وأمره أن يضرب برجله الأرض،
+                فخرج له ماء يغتسل منه ويشرب.
+            </p>
+
+            <div class="verse">
+                <p>
+                    ﴿ فَاسْتَجَبْنَا لَهُ فَكَشَفْنَا مَا بِهِ مِن ضُرٍّ
+                    وَآتَيْنَاهُ أَهْلَهُ وَمِثْلَهُم مَّعَهُمْ
+                    رَحْمَةً مِّنْ عِندِنَا ﴾
+                </p>
+                <small>سورة الأنبياء، الآية 84</small>
+            </div>
+        </article>
+
+        <article class="story-card">
+            <h3><span class="number">٤</span> رحمة الله وفرجه</h3>
+
+            <p>
+                رفع الله عن أيوب عليه السلام ما أصابه،
+                وأعاد عليه فضله ورحمته. وفي قصته تذكير بأن
+                الشدة لا تدوم، وأن الفرج بيد الله وحده.
+            </p>
+
+            <div class="verse">
+                <p>
+                    ﴿ ارْكُضْ بِرِجْلِكَ هَٰذَا مُغْتَسَلٌ بَارِدٌ وَشَرَابٌ ﴾
+                </p>
+                <small>سورة ص، الآية 42</small>
+            </div>
+        </article>
+
+        <article class="story-card">
+            <h3><span class="number">٥</span> الوفاء بالنذر</h3>
+
+            <p>
+                أقسم أيوب عليه السلام في أمر يتعلق بأهله،
+                فأرشده الله إلى طريقة يبر بها بقسمه من غير
+                أن يوقع الأذى، وكانت في ذلك رحمة وتيسير.
+            </p>
+
+            <div class="verse">
+                <p>
+                    ﴿ وَخُذْ بِيَدِكَ ضِغْثًا فَاضْرِب بِّهِ
+                    وَلَا تَحْنَثْ ﴾
+                </p>
+                <small>سورة ص، الآية 44</small>
+            </div>
+        </article>
+
+        <article class="story-card">
+            <h3><span class="number">٦</span> الثناء عليه</h3>
+
+            <p>
+                أثنى الله على أيوب عليه السلام ووصفه بالصبر
+                والإنابة، لتبقى قصته درسًا للمؤمنين في الصبر
+                والرجوع إلى الله في كل الأحوال.
+            </p>
+
+            <div class="verse">
+                <p>
+                    ﴿ وَاذْكُرْ عَبْدَنَا أَيُّوبَ إِذْ نَادَىٰ رَبَّهُ
+                    أَنِّي مَسَّنِيَ الشَّيْطَانُ بِنُصْبٍ وَعَذَابٍ ﴾
+                </p>
+                <small>سورة ص، الآية 41</small>
+            </div>
+        </article>
+
+    </section>
+
+    <h2 class="section-title">💡 الدروس المستفادة</h2>
+
+    <section class="lessons">
+
+        <article class="lesson">
+            <h3>١. الصبر عند الشدة</h3>
+            <p>نصبر على الابتلاء ونحتسب الأجر عند الله.</p>
+        </article>
+
+        <article class="lesson">
+            <h3>٢. الدعاء</h3>
+            <p>نلجأ إلى الله في أوقات الضيق ونطلب منه الفرج.</p>
+        </article>
+
+        <article class="lesson">
+            <h3>٣. حسن الظن بالله</h3>
+            <p>نثق برحمة الله وحكمته حتى في أصعب الظروف.</p>
+        </article>
+
+        <article class="lesson">
+            <h3>٤. الشكر بعد الفرج</h3>
+            <p>نشكر الله على نعمه بعد زوال الشدة.</p>
+        </article>
+
+        <article class="lesson">
+            <h3>٥. الإنابة إلى الله</h3>
+            <p>نكثر من الرجوع إلى الله والتوبة والاستغفار.</p>
+        </article>
+
+        <article class="lesson">
+            <h3>٦. رحمة الله</h3>
+            <p>رحمة الله واسعة، وهو سبحانه أرحم الراحمين.</p>
+        </article>
+
+    </section>
+
+    <section class="video-box" id="video">
+        <h2>🎬 شاهد قصة أيوب عليه السلام</h2>
+
+        <p>
+            اضغط للبحث عن مقاطع تتناول قصة أيوب عليه السلام.
+        </p>
+
+        <a
+            class="btn btn-primary"
+            href="https://www.youtube.com/results?search_query=قصة+أيوب+عليه+السلام"
+            target="_blank"
+            rel="noopener noreferrer">
+            ▶ البحث عن القصة في يوتيوب
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        الموسوعة الإسلامية © 2026 |
+        <span>قصص الأنبياء</span>
+    </p>
+
+    <p>المصدر الأساسي للقصة: القرآن الكريم.</p>
+</footer>
+
+</body>
+</html>

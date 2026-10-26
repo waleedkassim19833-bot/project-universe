@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071c1a">
+
+    <title>قصة صالح عليه السلام | الموسوعة الإسلامية</title>
+
+    <style>
+        :root {
+            --background: #071c1a;
+            --surface: #102c28;
+            --surface-light: #173a34;
+            --gold: #e5c477;
+            --gold-light: #f6e5b5;
+            --text: #f6f4ed;
+            --muted: #c4d1ca;
+            --border: rgba(229, 196, 119, 0.22);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .topbar {
+            background: #091f1c;
+            border-bottom: 1px solid var(--border);
+            padding: 16px 6%;
+        }
+
+        .nav {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .back-link {
+            color: var(--muted);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 7px 15px;
+        }
+
+        .back-link:hover {
+            color: var(--gold);
+            background: var(--surface);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 75px 20px;
+            background:
+                radial-gradient(
+                    ellipse at top,
+                    rgba(38, 117, 101, 0.4),
+                    transparent 70%
+                ),
+                linear-gradient(135deg, #102f29, #071c1a);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--gold);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 4px 18px;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            color: var(--gold-light);
+            font-size: clamp(32px, 6vw, 50px);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: auto;
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 11px 22px;
+            border-radius: 11px;
+            font-weight: bold;
+            transition: 0.25s;
+        }
+
+        .button-primary {
+            background: var(--gold);
+            color: #172720;
+        }
+
+        .button-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            border: 1px solid var(--border);
+            color: var(--gold-light);
+        }
+
+        .button-secondary:hover {
+            background: var(--surface-light);
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 92%;
+            margin: 35px auto 65px;
+        }
+
+        .intro {
+            background: var(--surface-light);
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .intro h2 {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            color: var(--muted);
+        }
+
+        .section-title {
+            color: var(--gold-light);
+            font-size: 27px;
+            margin: 40px 0 20px;
+            padding-right: 14px;
+            border-right: 4px solid var(--gold);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            padding: 24px;
+        }
+
+        .card h3 {
+            color: var(--gold);
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        .number {
+            display: inline-flex;
+            width: 38px;
+            height: 38px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 11px;
+            background: rgba(229, 196, 119, 0.12);
+            color: var(--gold);
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .verse {
+            background: rgba(229, 196, 119, 0.07);
+            border-right: 4px solid var(--gold);
+            border-radius: 12px;
+            padding: 18px;
+            margin-top: 15px;
+            color: var(--gold-light);
+            font-size: 17px;
+        }
+
+        .reference {
+            display: block;
+            color: var(--gold);
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .notice {
+            background: rgba(38, 117, 101, 0.12);
+            border: 1px solid rgba(38, 117, 101, 0.4);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 20px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .lessons {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .lesson {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            color: var(--muted);
+        }
+
+        .lesson strong {
+            color: var(--gold);
+        }
+
+        .video-card {
+            margin-top: 30px;
+            padding: 28px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            text-align: center;
+        }
+
+        .video-card h2 {
+            color: var(--gold-light);
+            margin-bottom: 10px;
+        }
+
+        .video-card p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .sources {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+
+        .sources li {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 15px 20px;
+            color: var(--muted);
+        }
+
+        .sources strong {
+            color: var(--gold);
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        @media (max-width: 650px) {
+            .grid,
+            .lessons {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 55px 18px;
+            }
+
+            .card,
+            .intro,
+            .video-card {
+                padding: 19px;
+            }
+
+            .section-title {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <nav class="nav">
+            <a href="../index.html" class="logo">
+                ✦ الموسوعة الإسلامية
+            </a>
+
+            <a href="prophets.html" class="back-link">
+                ← العودة إلى الأنبياء
+            </a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <span class="eyebrow">قصص الأنبياء</span>
+
+        <h1>قصة صالح عليه السلام</h1>
+
+        <p>
+            نبي الله صالح عليه السلام، الذي أرسله الله إلى قوم ثمود،
+            فدعاهم إلى عبادة الله وحده، وأيّده الله بآية الناقة،
+            لكنهم عصوا أمر ربهم، فكانت عاقبتهم الهلاك.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#story" class="button button-primary">
+                اقرأ القصة ↓
+            </a>
+
+            <a href="#video" class="button button-secondary">
+                🎬 شاهد القصة
+            </a>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <section class="intro">
+            <h2>من هو صالح عليه السلام؟</h2>
+
+            <p>
+                صالح عليه السلام نبي من أنبياء الله، أرسله إلى قوم ثمود.
+                وكان قوم ثمود يسكنون في منطقة اشتهرت بنحت البيوت في الجبال.
+                دعاهم صالح إلى توحيد الله، وذكّرهم بنعمه، وحذّرهم من الفساد
+                في الأرض، لكن بعضهم استكبروا ورفضوا دعوته.
+            </p>
+        </section>
+
+        <section id="story">
+
+            <h2 class="section-title">📖 أحداث قصة صالح عليه السلام</h2>
+
+            <div class="grid">
+
+                <article class="card">
+                    <span class="number">١</span>
+
+                    <h3>دعوة قوم ثمود</h3>
+
+                    <p>
+                        أرسل الله صالحًا عليه السلام إلى قوم ثمود،
+                        فدعاهم إلى عبادة الله وحده، وذكّرهم بأنه
+                        خلقهم من الأرض ومكّن لهم فيها.
+                    </p>
+
+                    <div class="verse">
+                        ﴿وَإِلَىٰ ثَمُودَ أَخَاهُمْ صَالِحًا قَالَ
+                        يَا قَوْمِ اعْبُدُوا اللَّهَ مَا لَكُمْ
+                        مِنْ إِلَٰهٍ غَيْرُهُ﴾
+
+                        <span class="reference">
+                            سورة الأعراف، الآية 73
+                        </span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <span class="number">٢</span>
+
+                    <h3>تذكيرهم بنعم الله</h3>
+
+                    <p>
+                        ذكّر صالح عليه السلام قومه بأن الله جعلهم
+                        خلفاء من بعد عاد، ومكّن لهم في الأرض،
+                        وأمرهم أن يشكروا النعم وألا يفسدوا فيها.
+                    </p>
+
+                    <div class="verse">
+                        ﴿هُوَ أَنْشَأَكُمْ مِنَ الْأَرْضِ
+                        وَاسْتَعْمَرَكُمْ فِيهَا﴾
+
+                        <span class="reference">
+                            سورة هود، الآية 61
+                        </span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <span class="number">٣</span>
+
+                    <h3>ناقة الله آية لقوم ثمود</h3>
+
+                    <p>
+                        جعل الله الناقة آية لقوم ثمود، وأمرهم صالح
+                        عليه السلام أن يتركوها تأكل في أرض الله،
+                        وحذّرهم من إيذائها أو الاعتداء عليها.
+                    </p>
+
+                    <div class="verse">
+                        ﴿هَٰذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً
+                        فَذَرُوهَا تَأْكُلْ فِي أَرْضِ اللَّهِ﴾
+
+                        <span class="reference">
+                            سورة الأعراف، الآية 73
+                        </span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <span class="number">٤</span>
+
+                    <h3>عقر الناقة</h3>
+
+                    <p>
+                        عصى بعض قوم ثمود أمر الله، وعقروا الناقة،
+                        وتحدوا صالحًا عليه السلام، فحذّرهم من
+                        نزول العذاب بعد ذلك.
+                    </p>
+
+                    <div class="verse">
+                        ﴿فَعَقَرُوا النَّاقَةَ وَعَتَوْا عَنْ
+                        أَمْرِ رَبِّهِمْ﴾
+
+                        <span class="reference">
+                            سورة الأعراف، الآية 77
+                        </span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <span class="number">٥</span>
+
+                    <h3>التحذير من العذاب</h3>
+
+                    <p>
+                        بعد عقر الناقة، أمهلهم الله مدة محددة،
+                        ثم جاءهم أمر الله بسبب تكذيبهم وطغيانهم.
+                    </p>
+
+                    <div class="verse">
+                        ﴿فَقَالَ تَمَتَّعُوا فِي دَارِكُمْ
+                        ثَلَاثَةَ أَيَّامٍ﴾
+
+                        <span class="reference">
+                            سورة هود، الآية 65
+                        </span>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <span class="number">٦</span>
+
+                    <h3>هلاك المكذبين ونجاة صالح</h3>
+
+                    <p>
+                        جاء العذاب بقوم ثمود، فنجّى الله صالحًا
+                        والذين آمنوا معه برحمته، وأخذ الذين ظلموا
+                        الصيحة فأصبحوا في ديارهم جاثمين.
+                    </p>
+
+                    <div class="verse">
+                        ﴿وَأَخَذَ الَّذِينَ ظَلَمُوا الصَّيْحَةُ
+                        فَأَصْبَحُوا فِي دِيَارِهِمْ جَاثِمِينَ﴾
+
+                        <span class="reference">
+                            سورة هود، الآية 67
+                        </span>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="lessons">
+
+            <h2 class="section-title">💡 الدروس المستفادة</h2>
+
+            <div class="lessons">
+
+                <div class="lesson">
+                    <strong>١. التوحيد:</strong>
+                    عبادة الله وحده هي أساس دعوة الأنبياء.
+                </div>
+
+                <div class="lesson">
+                    <strong>٢. شكر النعم:</strong>
+                    ينبغي شكر الله على نعمه وعدم استعمالها في الفساد.
+                </div>
+
+                <div class="lesson">
+                    <strong>٣. عدم الاستكبار:</strong>
+                    رفض الحق بسبب الكبر من أسباب الخسران.
+                </div>
+
+                <div class="lesson">
+                    <strong>٤. احترام آيات الله:</strong>
+                    لا يجوز التعدي على ما أمر الله باحترامه.
+                </div>
+
+                <div class="lesson">
+                    <strong>٥. عاقبة الظلم:</strong>
+                    تبيّن القصة خطورة التكذيب والطغيان.
+                </div>
+
+                <div class="lesson">
+                    <strong>٦. الاقتداء بالأنبياء:</strong>
+                    نتعلم من صالح عليه السلام الثبات على الدعوة إلى الحق.
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="video" class="video-card">
+
+            <h2>🎬 شاهد قصة صالح عليه السلام</h2>
+
+            <p>
+                اضغط على الزر للبحث عن قصة صالح عليه السلام
+                وقوم ثمود على يوتيوب.
+            </p>
+
+            <a
+                class="button button-primary"
+                href="https://www.youtube.com/results?search_query=قصة+صالح+عليه+السلام+قوم+ثمود"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                ▶ البحث عن قصة صالح على يوتيوب
+
+            </a>
+
+            <div class="notice">
+                هذا رابط بحث مباشر، وليس رابطًا لفيديو محدد.
+                اختر المقطع الذي يناسبك.
+            </div>
+
+        </section>
+
+        <section id="sources">
+
+            <h2 class="section-title">📚 المصادر القرآنية</h2>
+
+            <ul class="sources">
+
+                <li>
+                    <strong>سورة الأعراف، الآيات 73–79:</strong>
+                    دعوة صالح، والناقة، وعقرها، وعاقبة قوم ثمود.
+                </li>
+
+                <li>
+                    <strong>سورة هود، الآيات 61–68:</strong>
+                    دعوة ثمود، والناقة، والتحذير، والعذاب.
+                </li>
+
+                <li>
+                    <strong>سورة الشعراء، الآيات 141–159:</strong>
+                    دعوة صالح لقوم ثمود وحوارهم معه.
+                </li>
+
+                <li>
+                    <strong>سورة الشمس، الآيات 11–15:</strong>
+                    طغيان ثمود وعقر الناقة.
+                </li>
+
+                <li>
+                    <strong>سورة القمر، الآيات 23–31:</strong>
+                    تكذيب ثمود وعقر الناقة والعذاب.
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            <span>✦ الموسوعة الإسلامية</span>
+            — قصص الأنبياء والدروس المستفادة
+        </p>
+
+        <p>اللهم علّمنا ما ينفعنا وانفعنا بما علّمتنا.</p>
+    </footer>
+
+</body>
+</html>

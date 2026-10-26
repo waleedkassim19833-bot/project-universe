@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="سيرة علي بن أبي طالب رضي الله عنه، رابع الخلفاء الراشدين، وفضائله وحياته ومواقفه.">
+
+    <title>علي بن أبي طالب رضي الله عنه | الموسوعة الإسلامية</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        :root {
+            --green: #063c2d;
+            --green-light: #126348;
+            --gold: #d8b66a;
+            --cream: #f7f1e4;
+            --ink: #29392f;
+            --white: #fffdf8;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            line-height: 2;
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 65px 20px 75px;
+            text-align: center;
+            color: #fff8e8;
+            background:
+                radial-gradient(ellipse at 50% 0%, #197254 0%, transparent 65%),
+                linear-gradient(145deg, #031e18, #07523b 55%, #031e18);
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .hero::before {
+            content: "۞     ۞     ۞     ۞     ۞";
+            position: absolute;
+            top: 12px;
+            left: 0;
+            right: 0;
+            color: #d8b66a35;
+            font-size: 30px;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .hero-symbol {
+            width: 115px;
+            height: 115px;
+            display: grid;
+            place-items: center;
+            margin: 10px auto 22px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            box-shadow: 0 0 0 8px #d8b66a17, 0 0 40px #d8b66a30;
+            color: #f3d58b;
+            font-size: 27px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            color: #f3d58b;
+            font-size: clamp(30px, 5vw, 52px);
+        }
+
+        .hero .blessing {
+            margin: 8px 0 18px;
+            font-size: 19px;
+        }
+
+        .hero-description {
+            max-width: 760px;
+            margin: auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 7px 20px;
+            color: #f3d58b;
+            border: 1px solid #d8b66a90;
+            border-radius: 30px;
+            font-size: 14px;
+        }
+
+        .container {
+            width: min(1050px, 92%);
+            margin: 32px auto 60px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 22px;
+            padding: 9px 19px;
+            border-radius: 9px;
+            background: var(--green);
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background: var(--green-light);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            padding: 20px 14px;
+            text-align: center;
+            background: white;
+            border: 1px solid #e4d5ad;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px #182e2010;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: var(--green-light);
+            font-size: 18px;
+        }
+
+        .stat-card span {
+            color: #68766d;
+            font-size: 13px;
+        }
+
+        .content-card {
+            margin: 23px 0;
+            padding: clamp(20px, 4vw, 34px);
+            background: var(--white);
+            border: 1px solid #e7ddc7;
+            border-radius: 17px;
+            box-shadow: 0 8px 25px #173b2810;
+        }
+
+        .content-card h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-bottom: 11px;
+            color: var(--green);
+            border-bottom: 2px solid #d8b66a80;
+            font-size: clamp(21px, 3vw, 27px);
+        }
+
+        .content-card h3 {
+            color: var(--green-light);
+        }
+
+        .content-card p {
+            margin: 12px 0;
+        }
+
+        .note-box {
+            margin: 20px 0;
+            padding: 17px 20px;
+            background: #e9f2e9;
+            border: 1px solid #c9dfcd;
+            border-right: 4px solid var(--green-light);
+            border-radius: 10px;
+        }
+
+        .quote-box {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f5efdf;
+            border-right: 4px solid var(--gold);
+            border-radius: 9px;
+        }
+
+        .quote-box strong {
+            color: var(--green);
+            font-size: 18px;
+        }
+
+        .timeline {
+            padding-right: 23px;
+            border-right: 3px solid var(--gold);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 23px 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            top: 12px;
+            right: -31px;
+            width: 13px;
+            height: 13px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            background: var(--green-light);
+        }
+
+        .timeline-item h3 {
+            margin-bottom: 5px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 15px;
+        }
+
+        .value-card {
+            padding: 20px;
+            background: #f6f1e5;
+            border-radius: 13px;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .value-card h3 {
+            margin-top: 0;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 17px;
+        }
+
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-height: 195px;
+            padding: 22px;
+            color: #fff8e8;
+            text-decoration: none;
+            background:
+                radial-gradient(circle at top left, #23775a, transparent 65%),
+                linear-gradient(145deg, #063c2d, #0d6247);
+            border: 1px solid var(--gold);
+            border-radius: 15px;
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 26px #063c2d25;
+        }
+
+        .play-icon {
+            display: grid;
+            place-items: center;
+            width: 49px;
+            height: 49px;
+            margin-bottom: 13px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--green);
+            font-size: 21px;
+        }
+
+        .video-card h3 {
+            margin: 0 0 9px;
+            color: #f3d58b;
+            font-size: 17px;
+        }
+
+        .video-card p {
+            margin-top: auto;
+            color: #fff8e8;
+            font-size: 13px;
+        }
+
+        .video-warning {
+            margin-top: 20px;
+            padding: 13px 16px;
+            border-radius: 9px;
+            background: #f5efdf;
+            font-size: 13px;
+        }
+
+        .sources-list {
+            padding-right: 22px;
+        }
+
+        .sources-list li {
+            margin: 8px 0;
+        }
+
+        footer {
+            padding: 28px 15px;
+            text-align: center;
+            color: #f3dfad;
+            background: #052b20;
+            border-top: 4px solid var(--gold);
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 50px 18px 55px;
+            }
+
+            .content-card {
+                padding: 20px 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+
+            <div class="hero-symbol" aria-hidden="true">رابع<br>الخلفاء</div>
+
+            <h1>علي بن أبي طالب</h1>
+
+            <p class="blessing">رضي الله عنه وأرضاه</p>
+
+            <p class="hero-description">
+                ابن عم رسول الله ﷺ، وزوج فاطمة رضي الله عنها،
+                ومن السابقين إلى الإسلام، ورابع الخلفاء الراشدين.
+            </p>
+
+            <span class="hero-badge">
+                السيرة • الفضائل • الخلافة • المواقف
+            </span>
+
+        </div>
+    </header>
+
+    <main class="container">
+
+        <a class="back-button" href="seerah-companions.html">
+            ← العودة إلى صفحة الصحابة
+        </a>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <strong>علي بن أبي طالب</strong>
+                <span>اسمه ونسبه</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>أبو الحسن</strong>
+                <span>كنيته المشهورة</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>أبو تراب</strong>
+                <span>كنية أطلقها عليه النبي ﷺ</span>
+            </div>
+
+            <div class="stat-card">
+                <strong>الخليفة الرابع</strong>
+                <span>من الخلفاء الراشدين</span>
+            </div>
+
+        </section>
+
+        <section class="content-card">
+            <h2>1. من هو علي بن أبي طالب رضي الله عنه؟</h2>
+
+            <p>
+                هو علي بن أبي طالب بن عبد المطلب الهاشمي القرشي،
+                ابن عم النبي محمد ﷺ، ومن أهل بيته، ومن كبار الصحابة.
+            </p>
+
+            <p>
+                نشأ في بيت قريب من بيت النبوة، وكان من أوائل من أسلموا،
+                وعُرف بالعلم والشجاعة والفصاحة، وتولى الخلافة بعد مقتل
+                عثمان بن عفان رضي الله عنه.
+            </p>
+
+            <div class="note-box">
+                <strong>معلومة مهمة:</strong>
+                علي رضي الله عنه أحد العشرة المبشرين بالجنة،
+                وهو زوج فاطمة بنت النبي ﷺ وأبو الحسن والحسين رضي الله عنهما.
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>2. نشأته وإسلامه</h2>
+
+            <p>
+                نشأ علي رضي الله عنه في مكة، وكان قريبًا من النبي ﷺ
+                منذ صغره. وتذكر كتب السيرة أنه كان من أوائل من دخلوا
+                الإسلام، وقد اختلفت الروايات في ترتيب السابقين إليه
+                بحسب الفئات والأعمار.
+            </p>
+
+            <p>
+                ارتبطت بدايات حياته الإسلامية بالتعلم من النبي ﷺ
+                وملازمته، ثم أصبح من أصحابه الذين شاركوا في أحداث
+                مهمة من تاريخ الدعوة.
+            </p>
+        </section>
+
+        <section class="content-card">
+            <h2>3. موقفه ليلة الهجرة</h2>
+
+            <p>
+                تذكر كتب السيرة أن عليًا رضي الله عنه نام في فراش
+                النبي ﷺ ليلة الهجرة، حين خرج النبي ﷺ من مكة متجهًا
+                إلى المدينة.
+            </p>
+
+            <p>
+                كما تولى رد الأمانات التي كانت عند النبي ﷺ إلى أصحابها،
+                ثم هاجر إلى المدينة.
+            </p>
+
+            <div class="note-box">
+                <strong>درس من الموقف:</strong>
+                الوفاء بالأمانة من الأخلاق العظيمة، حتى في الظروف الصعبة.
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>4. زواجه من فاطمة رضي الله عنها</h2>
+
+            <p>
+                تزوج علي بن أبي طالب رضي الله عنه فاطمة بنت رسول الله ﷺ،
+                وأنجب منها الحسن والحسين وزينب وأم كلثوم رضي الله عنهم.
+            </p>
+
+            <p>
+                وكان لعلي وفاطمة رضي الله عنهما مكانة معروفة في حياة
+                النبي ﷺ، وهما من أهل بيته.
+            </p>
+        </section>
+
+        <section class="content-card">
+            <h2>5. علمه وفضائله</h2>
+
+            <p>
+                عُرف علي رضي الله عنه بالعلم والفهم والقضاء،
+                ووردت أحاديث صحيحة في فضله ومكانته.
+            </p>
+
+            <div class="quote-box">
+                قال النبي ﷺ لعلي رضي الله عنه يوم خيبر:
+                <br>
+                <strong>
+                    «لَأُعْطِيَنَّ الرَّايَةَ غَدًا رَجُلًا يُحِبُّ اللَّهَ وَرَسُولَهُ،
+                    وَيُحِبُّهُ اللَّهُ وَرَسُولُهُ».
+                </strong>
+                <br>
+                <small>رواه البخاري ومسلم بألفاظ متقاربة.</small>
+            </div>
+
+            <p>
+                وكان علي رضي الله عنه من الشخصيات البارزة في تاريخ
+                الإسلام، وله مواقف عديدة في العلم والشجاعة والقضاء.
+            </p>
+        </section>
+
+        <section class="content-card">
+            <h2>6. شجاعته ومشاركته في الأحداث</h2>
+
+            <p>
+                شارك علي رضي الله عنه في أحداث مهمة في العهد النبوي،
+                ومنها غزوة بدر وأحد والخندق وخيبر.
+            </p>
+
+            <p>
+                واشتهر بشجاعته وثباته، لكن عند دراسة أحداث السيرة
+                ينبغي الرجوع إلى الروايات الموثوقة، والتمييز بين
+                الوقائع الثابتة والتفاصيل التي تختلف فيها المصادر.
+            </p>
+        </section>
+
+        <section class="content-card">
+            <h2>7. توليه الخلافة</h2>
+
+            <p>
+                تولى علي رضي الله عنه الخلافة سنة 35 هـ بعد مقتل
+                عثمان بن عفان رضي الله عنه، في مرحلة شديدة الاضطراب
+                من تاريخ المسلمين.
+            </p>
+
+            <p>
+                واجهت خلافته تحديات سياسية كبيرة، ووقعت في عهده
+                أحداث مؤلمة، منها وقعتا الجمل وصفين، وما ارتبط
+                بهما من خلافات بين المسلمين.
+            </p>
+
+            <div class="note-box">
+                <strong>عند قراءة هذه المرحلة:</strong>
+                ينبغي التعامل مع الأحداث التاريخية بإنصاف،
+                والرجوع إلى المصادر الموثوقة، وتجنب نشر الروايات
+                الضعيفة أو إثارة العداوة بين المسلمين.
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>8. أبرز محطات حياته</h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <h3>النشأة في مكة</h3>
+                    <p>نشأ في بيت بني هاشم وكان قريبًا من النبي ﷺ.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>الإسلام المبكر</h3>
+                    <p>كان من أوائل من أسلموا في بداية الدعوة.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>الهجرة إلى المدينة</h3>
+                    <p>أسهم في رد الأمانات ثم هاجر إلى المدينة.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>الحياة في العهد النبوي</h3>
+                    <p>شارك في أحداث مهمة، وتزوج فاطمة رضي الله عنها.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>الخلافة الراشدة</h3>
+                    <p>تولى الخلافة سنة 35 هـ وسط اضطرابات سياسية كبيرة.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>وفاته</h3>
+                    <p>توفي سنة 40 هـ بعد أن ضُرب في الكوفة.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>9. صفاته والدروس المستفادة</h2>
+
+            <div class="values-grid">
+
+                <div class="value-card">
+                    <h3>العلم</h3>
+                    <p>طلب العلم وفهم الدين والحرص على معرفة الحق.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>الشجاعة</h3>
+                    <p>الثبات عند الشدائد وتحمل المسؤولية.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>الأمانة</h3>
+                    <p>المحافظة على حقوق الناس وأداء الأمانات.</p>
+                </div>
+
+                <div class="value-card">
+                    <h3>الحكمة</h3>
+                    <p>التثبت من الأخبار والتعامل مع الخلافات بعلم وإنصاف.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>10. وفاة علي بن أبي طالب رضي الله عنه</h2>
+
+            <p>
+                ضُرب علي رضي الله عنه في الكوفة سنة 40 هـ،
+                وتوفي متأثرًا بجراحه. وكان مقتله من الأحداث
+                المؤلمة في تاريخ المسلمين.
+            </p>
+
+            <p>
+                بقيت سيرته جزءًا مهمًا من تاريخ الإسلام،
+                لما ارتبط بها من العلم والشجاعة والقرابة من النبي ﷺ
+                والخلافة الراشدة.
+            </p>
+        </section>
+
+        <section class="content-card" id="ali-videos">
+            <h2>🎬 شاهد سيرة علي بن أبي طالب رضي الله عنه</h2>
+
+            <p>
+                اختر الموضوع الذي تريد مشاهدته. الروابط التالية
+                تفتح نتائج البحث في يوتيوب.
+            </p>
+
+            <div class="video-grid">
+
+                <a class="video-card"
+                    href="https://www.youtube.com/results?search_query=سيرة+علي+بن+أبي+طالب+رضي+الله+عنه"
+                    target="_blank" rel="noopener noreferrer">
+
+                    <span class="play-icon">▶</span>
+                    <h3>السيرة الكاملة لعلي بن أبي طالب</h3>
+                    <p>مشاهدة النتائج على يوتيوب ←</p>
+
+                </a>
+
+                <a class="video-card" href="https://www.youtube.com/results?search_query=علي+بن+أبي+طالب+وليلة+الهجرة"
+                    target="_blank" rel="noopener noreferrer">
+
+                    <span class="play-icon">▶</span>
+                    <h3>موقفه ليلة الهجرة</h3>
+                    <p>مشاهدة النتائج على يوتيوب ←</p>
+
+                </a>
+
+                <a class="video-card"
+                    href="https://www.youtube.com/results?search_query=فضائل+علي+بن+أبي+طالب+أحاديث+صحيحة"
+                    target="_blank" rel="noopener noreferrer">
+
+                    <span class="play-icon">▶</span>
+                    <h3>فضائله في الأحاديث الصحيحة</h3>
+                    <p>مشاهدة النتائج على يوتيوب ←</p>
+
+                </a>
+
+                <a class="video-card"
+                    href="https://www.youtube.com/results?search_query=خلافة+علي+بن+أبي+طالب+تاريخ+إسلامي"
+                    target="_blank" rel="noopener noreferrer">
+
+                    <span class="play-icon">▶</span>
+                    <h3>خلافته وأحداث عصره</h3>
+                    <p>مشاهدة النتائج على يوتيوب ←</p>
+
+                </a>
+
+            </div>
+
+            <div class="video-warning">
+                <strong>تنبيه:</strong>
+                هذه روابط بحث وليست فيديوهات محددة تم التحقق منها.
+                ينبغي مراجعة محتوى الفيديو ومصادر الروايات قبل اعتمادها.
+            </div>
+        </section>
+
+        <section class="content-card">
+            <h2>11. مصادر للتوسع والتحقق</h2>
+
+            <ul class="sources-list">
+                <li>صحيح البخاري: فضائل أصحاب النبي ﷺ ومناقب علي رضي الله عنه.</li>
+                <li>صحيح مسلم: كتاب فضائل الصحابة.</li>
+                <li>سير أعلام النبلاء للإمام الذهبي.</li>
+                <li>البداية والنهاية لابن كثير.</li>
+            </ul>
+
+            <p>
+                عند إضافة أحاديث أو روايات تاريخية تفصيلية،
+                ينبغي توثيق النص والمصدر والتحقق من صحة الرواية
+                كلما أمكن.
+            </p>
+        </section>
+
+        <a class="back-button" href="seerah-companions.html">
+            ← العودة إلى صفحة الصحابة
+        </a>
+
+    </main>
+
+    <footer>
+        <p>الموسوعة الإسلامية — سيرة الصحابة رضي الله عنهم</p>
+        <p>نسأل الله أن ينفع بهذا العمل، وأن يجعله خالصًا لوجهه الكريم.</p>
+    </footer>
+
+</body>
+
+</html>

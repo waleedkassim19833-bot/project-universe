@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عائشة بنت أبي بكر الصديق رضي الله عنهما | الموسوعة الإسلامية</title>
+
+    <style>
+        :root {
+            --green: #075c46;
+            --dark-green: #064333;
+            --gold: #c9a44c;
+            --cream: #fbf8ef;
+            --white: #ffffff;
+            --text: #26352e;
+            --muted: #66756d;
+            --border: #e7dfca;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.9;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .top-bar {
+            background: var(--dark-green);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--green), #0b7355);
+            color: white;
+            padding: 55px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .symbol {
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 18px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 35px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        header h1 {
+            font-size: clamp(25px, 5vw, 38px);
+            margin-bottom: 12px;
+        }
+
+        header p {
+            max-width: 750px;
+            margin: auto;
+            color: #f4edda;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: 30px auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            background: var(--green);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+        }
+
+        .intro {
+            background: white;
+            border-right: 5px solid var(--gold);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: var(--green);
+            font-size: 25px;
+            margin: 35px 0 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .card h3 {
+            color: var(--green);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .timeline {
+            border-right: 3px solid var(--gold);
+            padding-right: 22px;
+        }
+
+        .event {
+            position: relative;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            border: 1px solid var(--border);
+        }
+
+        .event::before {
+            content: "";
+            position: absolute;
+            right: -30px;
+            top: 26px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: var(--gold);
+            border: 3px solid var(--cream);
+        }
+
+        .event h3 {
+            color: var(--green);
+            margin-bottom: 8px;
+        }
+
+        .note {
+            background: #f2eddb;
+            border-right: 4px solid var(--gold);
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .video-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            background: white;
+            padding: 18px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        .video-card h3 {
+            color: var(--green);
+            font-size: 17px;
+        }
+
+        .video-link {
+            display: inline-block;
+            background: #a52a2a;
+            color: white;
+            padding: 9px 15px;
+            border-radius: 7px;
+            white-space: nowrap;
+        }
+
+        .sources {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .sources ul {
+            padding-right: 22px;
+        }
+
+        .sources li {
+            margin-bottom: 9px;
+        }
+
+        footer {
+            background: var(--dark-green);
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 45px;
+        }
+
+        footer p {
+            color: #e8e2d0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 40px 15px;
+            }
+
+            .intro,
+            .card,
+            .sources {
+                padding: 18px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        الموسوعة الإسلامية | سير أعلام الإسلام
+    </div>
+
+    <header>
+        <div class="symbol">ع</div>
+        <h1>عائشة بنت أبي بكر الصديق رضي الله عنهما</h1>
+        <p>
+            أم المؤمنين، زوج النبي محمد ﷺ، ومن أعلم نساء الأمة،
+            وراوية لكثير من أحاديث رسول الله ﷺ.
+        </p>
+    </header>
+
+    <main class="container">
+
+        <a class="back-link" href="wives-of-prophet.html">
+            ← العودة إلى صفحة زوجات النبي ﷺ
+        </a>
+
+        <section class="intro">
+            <h2 style="color: var(--green); margin-bottom: 12px;">
+                نبذة عن أم المؤمنين عائشة رضي الله عنها
+            </h2>
+
+            <p>
+                عائشة بنت أبي بكر الصديق رضي الله عنهما هي إحدى زوجات
+                النبي محمد ﷺ، ومن أمهات المؤمنين. نشأت في بيت أبي بكر
+                الصديق، صاحب رسول الله ﷺ وأول الخلفاء الراشدين.
+            </p>
+
+            <p style="margin-top: 12px;">
+                عُرفت رضي الله عنها بالعلم والذكاء وقوة الحفظ،
+                وكانت مرجعًا للصحابة والتابعين في مسائل دينية كثيرة،
+                ونقلت عن النبي ﷺ أحاديث عديدة في العبادة والأخلاق
+                والحياة الأسرية وغيرها.
+            </p>
+        </section>
+
+        <h2 class="section-title">📌 معلومات أساسية</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>الاسم والنسب</h3>
+                <p>
+                    عائشة بنت أبي بكر عبد الله بن أبي قحافة التيمية القرشية.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>الكنية</h3>
+                <p>
+                    أم عبد الله، وهي كنية اشتهرت بها.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>اللقب</h3>
+                <p>
+                    أم المؤمنين، زوج رسول الله محمد ﷺ.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>والدها</h3>
+                <p>
+                    أبو بكر الصديق رضي الله عنه، أول الخلفاء الراشدين
+                    وأحد أقرب أصحاب النبي ﷺ.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>مكانتها العلمية</h3>
+                <p>
+                    من أشهر العالمات في صدر الإسلام، وروت عددًا كبيرًا
+                    من أحاديث رسول الله ﷺ.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>وفاتها</h3>
+                <p>
+                    توفيت رضي الله عنها سنة 58 هـ على المشهور،
+                    ودُفنت في البقيع بالمدينة المنورة.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">📜 محطات من حياتها</h2>
+
+        <section class="timeline">
+
+            <article class="event">
+                <h3>1. النشأة في بيت أبي بكر الصديق</h3>
+                <p>
+                    نشأت عائشة رضي الله عنها في أسرة أبي بكر الصديق،
+                    الذي كان من أوائل المؤمنين برسالة النبي ﷺ،
+                    وكان قريبًا منه ومناصرًا له.
+                </p>
+            </article>
+
+            <article class="event">
+                <h3>2. زواجها من النبي ﷺ</h3>
+                <p>
+                    تزوجها رسول الله ﷺ، وأصبحت من أمهات المؤمنين.
+                    وقد عاشت في بيته وتعلمت منه مباشرة، فنقلت للأمة
+                    جانبًا مهمًا من سنته وهديه في الحياة اليومية.
+                </p>
+            </article>
+
+            <article class="event">
+                <h3>3. الهجرة إلى المدينة</h3>
+                <p>
+                    عاشت في المدينة المنورة، وشهدت مرحلة مهمة من
+                    تاريخ الإسلام، وتعلمت من النبي ﷺ في زمن نزول الوحي
+                    وتكوين المجتمع الإسلامي.
+                </p>
+            </article>
+
+            <article class="event">
+                <h3>4. حادثة الإفك</h3>
+                <p>
+                    تعرضت رضي الله عنها لاتهام باطل في حادثة الإفك،
+                    فأنزل الله تعالى آيات في سورة النور تبرئها
+                    وتبين خطورة نشر الاتهامات دون بينة.
+                </p>
+
+                <p style="margin-top: 10px;">
+                    قال تعالى:
+                    <strong>
+                        ﴿إِنَّ الَّذِينَ جَاءُوا بِالْإِفْكِ عُصْبَةٌ مِنْكُمْ﴾
+                    </strong>
+                    [النور: 11].
+                </p>
+            </article>
+
+            <article class="event">
+                <h3>5. تعليم المسلمين</h3>
+                <p>
+                    بعد وفاة النبي ﷺ، استمر الصحابة والتابعون في
+                    الاستفادة من علمها. وكانت تُسأل عن الحديث والفقه
+                    وأحكام العبادة، وتوضح ما تعلمته من رسول الله ﷺ.
+                </p>
+            </article>
+
+            <article class="event">
+                <h3>6. وفاتها</h3>
+                <p>
+                    توفيت رضي الله عنها في المدينة المنورة سنة 58 هـ
+                    على المشهور، ودُفنت في مقبرة البقيع.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">⭐ مكانتها وفضائلها</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>العلم والرواية</h3>
+                <p>
+                    كانت من أبرز من نقلوا سنة النبي ﷺ، وأسهمت رواياتها
+                    في معرفة أحكام الدين وتفاصيل حياة الرسول ﷺ.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>الفهم والفقه</h3>
+                <p>
+                    عُرفت بقدرتها على فهم المسائل وشرحها،
+                    وكان بعض الصحابة يرجعون إليها في مسائل علمية.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>القدوة في طلب العلم</h3>
+                <p>
+                    تقدم سيرتها مثالًا على أهمية التعلم والسؤال
+                    وحفظ العلم ونقله بأمانة.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>البراءة في القرآن</h3>
+                <p>
+                    نزلت آيات من سورة النور في حادثة الإفك،
+                    وفيها دروس عظيمة حول التثبت وحفظ الأعراض.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">💡 دروس نتعلمها من سيرتها</h2>
+
+        <section class="cards">
+
+            <article class="card">
+                <h3>1. أهمية العلم</h3>
+                <p>
+                    نتعلم أن العلم يحتاج إلى حفظ وفهم وسؤال،
+                    وأن الإنسان يستطيع أن ينفع الآخرين بما يتعلمه.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>2. التثبت من الأخبار</h3>
+                <p>
+                    تعلمنا حادثة الإفك ألا ننشر خبرًا عن الآخرين
+                    قبل التأكد من صحته، وألا نشارك في الظلم أو التشهير.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>3. نقل الأمانة</h3>
+                <p>
+                    نقل الحديث يحتاج إلى الدقة والأمانة،
+                    وعدم نسبة الكلام إلى النبي ﷺ دون علم.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>4. الاستمرار في التعلم</h3>
+                <p>
+                    يظل طلب العلم نافعًا في جميع مراحل الحياة،
+                    ويمكن للإنسان أن يكون سببًا في تعليم أجيال بعده.
+                </p>
+            </article>
+
+        </section>
+
+        <h2 class="section-title">🎥 مواد مرئية للتعلم</h2>
+
+        <div class="video-card">
+            <div>
+                <h3>السيرة الكاملة لعائشة رضي الله عنها</h3>
+                <p>للبحث عن محاضرات تتناول حياتها ومكانتها.</p>
+            </div>
+
+            <a class="video-link" href="https://www.youtube.com/results?search_query=السيرة+الكاملة+لعائشة+أم+المؤمنين"
+                target="_blank" rel="noopener noreferrer">
+                مشاهدة النتائج
+            </a>
+        </div>
+
+        <div class="video-card">
+            <div>
+                <h3>علم عائشة رضي الله عنها وروايتها للحديث</h3>
+                <p>للتعرف على دورها في نقل السنة النبوية.</p>
+            </div>
+
+            <a class="video-link"
+                href="https://www.youtube.com/results?search_query=علم+عائشة+أم+المؤمنين+وروايتها+للحديث"
+                target="_blank" rel="noopener noreferrer">
+                مشاهدة النتائج
+            </a>
+        </div>
+
+        <div class="video-card">
+            <div>
+                <h3>حادثة الإفك وتفسير آيات سورة النور</h3>
+                <p>لفهم الحادثة والدروس المستفادة منها.</p>
+            </div>
+
+            <a class="video-link" href="https://www.youtube.com/results?search_query=حادثة+الإفك+تفسير+سورة+النور"
+                target="_blank" rel="noopener noreferrer">
+                مشاهدة النتائج
+            </a>
+        </div>
+
+        <div class="note">
+            <strong>تنبيه:</strong>
+            هذه الأزرار تفتح نتائج بحث في يوتيوب، وليست روابط
+            إلى مقاطع محددة جرى التحقق منها.
+        </div>
+
+        <h2 class="section-title">📚 المصادر والمراجع</h2>
+
+        <section class="sources">
+            <ul>
+                <li>القرآن الكريم، سورة النور، الآيات المتعلقة بحادثة الإفك.</li>
+                <li>صحيح البخاري، أبواب مناقب أصحاب النبي ﷺ ومناقب عائشة رضي الله عنها.</li>
+                <li>صحيح مسلم، كتاب فضائل الصحابة.</li>
+                <li>سير أعلام النبلاء، للإمام الذهبي.</li>
+                <li>الإصابة في تمييز الصحابة، للحافظ ابن حجر العسقلاني.</li>
+            </ul>
+
+            <p style="margin-top: 15px; color: var(--muted); font-size: 14px;">
+                ملاحظة: قد تختلف بعض التفاصيل التاريخية بين كتب التراجم،
+                لذلك ينبغي الرجوع إلى المصادر عند دراسة المسائل المختلف فيها.
+            </p>
+        </section>
+
+        <div style="text-align: center; margin-top: 35px;">
+            <a class="back-link" href="wives-of-prophet.html">
+                ← العودة إلى زوجات النبي ﷺ
+            </a>
+        </div>
+
+    </main>
+
+    <footer>
+        <h3>الموسوعة الإسلامية</h3>
+        <p>نسعى إلى تقديم سيرة الشخصيات الإسلامية بصورة واضحة ومنظمة.</p>
+        <p style="margin-top: 8px;">© الموسوعة الإسلامية</p>
+    </footer>
+
+</body>
+
+</html>

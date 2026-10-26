@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="سيرة عبد الرحمن بن عوف رضي الله عنه، الصحابي الجليل وأحد العشرة المبشرين بالجنة.">
+    <title>عبد الرحمن بن عوف رضي الله عنه | الموسوعة الإسلامية</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        :root {
+            --green: #063c2d;
+            --green-light: #126348;
+            --gold: #d8b66a;
+            --cream: #f7f1e4;
+            --ink: #29392f;
+            --white: #fffdf8;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            line-height: 2;
+        }
+
+        .hero {
+            padding: 60px 20px 70px;
+            text-align: center;
+            color: #fff8e8;
+            background:
+                radial-gradient(ellipse at top, #197254 0%, transparent 65%),
+                linear-gradient(145deg, #031e18, #07523b 55%, #031e18);
+            border-bottom: 5px solid var(--gold);
+        }
+
+        .symbol {
+            width: 110px;
+            height: 110px;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 20px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            box-shadow: 0 0 0 8px #d8b66a17;
+            color: #f3d58b;
+            font-size: 23px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            color: #f3d58b;
+            font-size: clamp(29px, 5vw, 48px);
+        }
+
+        .hero p {
+            max-width: 760px;
+            margin: 12px auto;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 6px 18px;
+            border: 1px solid #d8b66a90;
+            border-radius: 30px;
+            color: #f3d58b;
+        }
+
+        .container {
+            width: min(1000px, 92%);
+            margin: 30px auto 55px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 9px 18px;
+            color: white;
+            background: var(--green);
+            border-radius: 9px;
+            text-decoration: none;
+        }
+
+        .stats,
+        .values,
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 15px;
+        }
+
+        .stat {
+            padding: 18px;
+            text-align: center;
+            background: white;
+            border: 1px solid #e4d5ad;
+            border-radius: 14px;
+        }
+
+        .stat strong {
+            display: block;
+            color: var(--green-light);
+            font-size: 18px;
+        }
+
+        .stat span {
+            color: #68766d;
+            font-size: 13px;
+        }
+
+        .card {
+            margin: 22px 0;
+            padding: clamp(20px, 4vw, 32px);
+            background: var(--white);
+            border: 1px solid #e7ddc7;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px #173b2810;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            color: var(--green);
+            border-bottom: 2px solid #d8b66a80;
+            font-size: clamp(21px, 3vw, 26px);
+        }
+
+        .note {
+            margin: 18px 0;
+            padding: 16px 18px;
+            background: #e9f2e9;
+            border-right: 4px solid var(--green-light);
+            border-radius: 10px;
+        }
+
+        .quote {
+            margin: 18px 0;
+            padding: 20px;
+            background: #f5efdf;
+            border-right: 4px solid var(--gold);
+            border-radius: 9px;
+        }
+
+        .value {
+            padding: 18px;
+            background: #f6f1e5;
+            border-bottom: 3px solid var(--gold);
+            border-radius: 12px;
+        }
+
+        .value h3 {
+            color: var(--green);
+        }
+
+        .timeline {
+            padding-right: 23px;
+            border-right: 3px solid var(--gold);
+        }
+
+        .event {
+            position: relative;
+            margin: 22px 0;
+        }
+
+        .event::before {
+            content: "";
+            position: absolute;
+            top: 12px;
+            right: -31px;
+            width: 13px;
+            height: 13px;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            background: var(--green-light);
+        }
+
+        .event h3 {
+            color: var(--green-light);
+        }
+
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-height: 185px;
+            padding: 20px;
+            color: #fff8e8;
+            text-decoration: none;
+            background: linear-gradient(145deg, #063c2d, #126348);
+            border: 1px solid var(--gold);
+            border-radius: 14px;
+            transition: transform .2s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .play {
+            display: grid;
+            place-items: center;
+            width: 45px;
+            height: 45px;
+            margin-bottom: 10px;
+            color: var(--green);
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        .video-card h3 {
+            color: #f3d58b;
+        }
+
+        .video-card p {
+            margin-top: auto;
+            font-size: 13px;
+        }
+
+        footer {
+            padding: 25px 15px;
+            text-align: center;
+            color: #f3dfad;
+            background: #052b20;
+            border-top: 4px solid var(--gold);
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 45px 18px;
+            }
+
+            .card {
+                padding: 20px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="symbol" aria-hidden="true">عبد الرحمن</div>
+        <h1>عبد الرحمن بن عوف</h1>
+        <p>رضي الله عنه وأرضاه</p>
+        <p>
+            صحابي جليل، وأحد العشرة المبشرين بالجنة،
+            ومن السابقين إلى الإسلام، عُرف بالتجارة والكرم
+            وكثرة الإنفاق في سبيل الله.
+        </p>
+        <span class="badge">السيرة • الفضائل • التجارة • الإنفاق</span>
+    </header>
+
+    <main class="container">
+
+        <a class="back" href="seerah-companions.html">← العودة إلى صفحة الصحابة</a>
+
+        <section class="stats">
+            <div class="stat">
+                <strong>عبد الرحمن بن عوف</strong>
+                <span>اسمه</span>
+            </div>
+            <div class="stat">
+                <strong>أبو محمد</strong>
+                <span>كنيته المشهورة</span>
+            </div>
+            <div class="stat">
+                <strong>أحد العشرة</strong>
+                <span>المبشرين بالجنة</span>
+            </div>
+            <div class="stat">
+                <strong>من السابقين</strong>
+                <span>إلى الإسلام</span>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>1. من هو عبد الرحمن بن عوف؟</h2>
+            <p>
+                هو عبد الرحمن بن عوف الزهري القرشي رضي الله عنه،
+                من أصحاب رسول الله ﷺ، ومن السابقين إلى الإسلام.
+                عُرف بحسن التجارة والكرم وبذل المال في وجوه الخير.
+            </p>
+            <div class="note">
+                عبد الرحمن بن عوف رضي الله عنه أحد العشرة الذين
+                بُشّروا بالجنة في الحديث المشهور.
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>2. إسلامه وهجرته</h2>
+            <p>
+                أسلم عبد الرحمن رضي الله عنه في مكة في بداية الدعوة،
+                وكان من المسلمين الذين تحملوا الصعوبات بسبب تمسكهم بدينهم.
+            </p>
+            <p>
+                هاجر إلى الحبشة، ثم هاجر إلى المدينة المنورة،
+                وبدأ هناك حياة جديدة بعد أن ترك وراءه كثيرًا من ماله.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>3. بداية التجارة في المدينة</h2>
+            <p>
+                آخى النبي ﷺ بين عبد الرحمن بن عوف وسعد بن الربيع
+                رضي الله عنهما بعد الهجرة. وعرض سعد على عبد الرحمن
+                أن يشاركه ماله، لكن عبد الرحمن اختار أن يبدأ العمل
+                والتجارة بنفسه.
+            </p>
+            <div class="quote">
+                ومن أشهر ما ورد في قصته أنه قال:
+                <br>
+                <strong>«دلوني على السوق».</strong>
+                <br>
+                <small>وردت القصة في صحيح البخاري ضمن أخبار المؤاخاة.</small>
+            </div>
+            <p>
+                وتوضح هذه القصة أهمية السعي والعمل والاستفادة من الفرص
+                المتاحة لبناء حياة مستقرة.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>4. كرمه وإنفاقه</h2>
+            <p>
+                اشتهر عبد الرحمن رضي الله عنه بكثرة الإنفاق في سبيل الله،
+                وكان يسخر جزءًا من ماله لمساعدة المسلمين والمحتاجين.
+            </p>
+            <p>
+                وقد نقلت كتب التراجم أخبارًا متعددة عن سخائه وصدقته،
+                ومساهمته في تجهيز المسلمين وتلبية حاجاتهم.
+            </p>
+            <div class="note">
+                من الدروس المستفادة من سيرته: النجاح في العمل والتجارة
+                يمكن أن يجتمع مع الكرم والإنفاق وخدمة المجتمع.
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>5. فضائله ومكانته</h2>
+            <p>
+                كان عبد الرحمن بن عوف رضي الله عنه من كبار الصحابة،
+                وله مكانة معروفة بين المسلمين، وهو أحد العشرة المبشرين بالجنة.
+            </p>
+            <p>
+                كما شارك في أحداث مهمة من تاريخ الإسلام،
+                وعُرف بالثقة والأمانة وبذل المال في وجوه الخير.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>6. أبرز محطات حياته</h2>
+            <div class="timeline">
+                <div class="event">
+                    <h3>الإسلام المبكر</h3>
+                    <p>كان من السابقين إلى الإسلام في مكة.</p>
+                </div>
+                <div class="event">
+                    <h3>الهجرة</h3>
+                    <p>هاجر في سبيل دينه إلى المدينة بعد مرحلة الهجرة.</p>
+                </div>
+                <div class="event">
+                    <h3>التجارة في المدينة</h3>
+                    <p>بدأ عمله التجاري وسعى إلى كسب رزقه بجهده.</p>
+                </div>
+                <div class="event">
+                    <h3>الإنفاق في سبيل الله</h3>
+                    <p>اشتهر ببذل المال ومساعدة المسلمين.</p>
+                </div>
+                <div class="event">
+                    <h3>وفاته</h3>
+                    <p>توفي رضي الله عنه سنة 32 هـ على المشهور.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>7. صفاته والدروس المستفادة</h2>
+            <div class="values">
+                <div class="value">
+                    <h3>السعي والعمل</h3>
+                    <p>الاعتماد على النفس وبذل الجهد في طلب الرزق.</p>
+                </div>
+                <div class="value">
+                    <h3>الأمانة</h3>
+                    <p>الحرص على التعامل الصادق في التجارة والمعاملات.</p>
+                </div>
+                <div class="value">
+                    <h3>الكرم</h3>
+                    <p>استخدام المال في مساعدة المحتاجين ونفع المجتمع.</p>
+                </div>
+                <div class="value">
+                    <h3>التوازن</h3>
+                    <p>الجمع بين العمل للدنيا والإنفاق في وجوه الخير.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>8. شاهد سيرة عبد الرحمن بن عوف</h2>
+            <p>
+                اختر الموضوع الذي تريد مشاهدته. الروابط تفتح نتائج
+                البحث في يوتيوب، وليست مقاطع محددة تم التحقق منها.
+            </p>
+
+            <div class="video-grid">
+
+                <a class="video-card" href="https://www.youtube.com/results?search_query=سيرة+عبد+الرحمن+بن+عوف"
+                    target="_blank" rel="noopener noreferrer">
+                    <span class="play">▶</span>
+                    <h3>السيرة الكاملة لعبد الرحمن بن عوف</h3>
+                    <p>مشاهدة النتائج على يوتيوب ←</p>
+                </a>
+
+                <a class="video-card"
+                    href="https://www.youtube.com/results?search_query=عبد+الرحمن+بن+عوف+دلوني+على+السوق"
+                    target="_blank" rel="noopener noreferrer">
+                    <span class="play">▶</span>
+                    <h3>قصة «دلوني على السوق»</h3>
+                    <p>مشاهدة النتائج على يوتيوب ←</p>
+                </a>
+
+                <a class="video-card" href="https://www.youtube.com/results?search_query=كرم+عبد+الرحمن+بن+عوف+وإنفاقه"
+                    target="_blank" rel="noopener noreferrer">
+                    <span class="play">▶</span>
+                    <h3>كرمه وإنفاقه في سبيل الله</h3>
+                    <p>مشاهدة النتائج على يوتيوب ←</p>
+                </a>
+
+                <a class="video-card"
+                    href="https://www.youtube.com/results?search_query=العشرة+المبشرون+بالجنة+عبد+الرحمن+بن+عوف"
+                    target="_blank" rel="noopener noreferrer">
+                    <span class="play">▶</span>
+                    <h3>فضائله ومكانته بين الصحابة</h3>
+                    <p>مشاهدة النتائج على يوتيوب ←</p>
+                </a>
+
+            </div>
+
+            <div class="note">
+                <strong>تنبيه:</strong>
+                هذه روابط بحث وليست مقاطع محددة تم التحقق منها.
+                يُفضّل التأكد من محتوى الفيديو ومصادر الروايات قبل اعتمادها.
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>9. مصادر للتوسع والتحقق</h2>
+            <ul>
+                <li>صحيح البخاري: أخبار المؤاخاة وفضائل الصحابة.</li>
+                <li>صحيح مسلم: كتاب فضائل الصحابة.</li>
+                <li>سير أعلام النبلاء للإمام الذهبي.</li>
+                <li>البداية والنهاية لابن كثير.</li>
+            </ul>
+            <p>
+                ينبغي التحقق من الروايات التاريخية قبل نشرها في الموسوعة،
+                مع ذكر المصدر كلما أمكن.
+            </p>
+        </section>
+
+        <a class="back" href="seerah-companions.html">← العودة إلى صفحة الصحابة</a>
+
+    </main>
+
+    <footer>
+        <p>الموسوعة الإسلامية — سيرة الصحابة رضي الله عنهم</p>
+        <p>نسأل الله أن ينفع بهذا العمل.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071c1a">
+
+    <title>قصة هود عليه السلام | الموسوعة الإسلامية</title>
+
+    <style>
+        :root {
+            --background: #071c1a;
+            --surface: #102c28;
+            --surface-light: #173a34;
+            --gold: #e5c477;
+            --gold-light: #f6e5b5;
+            --text: #f6f4ed;
+            --muted: #c4d1ca;
+            --border: rgba(229, 196, 119, 0.22);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 2;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .topbar {
+            background: #091f1c;
+            border-bottom: 1px solid var(--border);
+            padding: 16px 6%;
+        }
+
+        .nav {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .back-link {
+            color: var(--muted);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 7px 15px;
+        }
+
+        .back-link:hover {
+            color: var(--gold);
+            background: var(--surface);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 75px 20px;
+            background:
+                radial-gradient(ellipse at top,
+                    rgba(38, 117, 101, 0.4),
+                    transparent 70%),
+                linear-gradient(135deg, #102f29, #071c1a);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--gold);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 4px 18px;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            color: var(--gold-light);
+            font-size: clamp(32px, 6vw, 50px);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: auto;
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 11px 22px;
+            border-radius: 11px;
+            font-weight: bold;
+            transition: 0.25s;
+        }
+
+        .button-primary {
+            background: var(--gold);
+            color: #172720;
+        }
+
+        .button-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            border: 1px solid var(--border);
+            color: var(--gold-light);
+        }
+
+        .button-secondary:hover {
+            background: var(--surface-light);
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 92%;
+            margin: 35px auto 65px;
+        }
+
+        .intro {
+            background: var(--surface-light);
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .intro h2 {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            color: var(--muted);
+        }
+
+        .section-title {
+            color: var(--gold-light);
+            font-size: 27px;
+            margin: 40px 0 20px;
+            padding-right: 14px;
+            border-right: 4px solid var(--gold);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            padding: 24px;
+        }
+
+        .card h3 {
+            color: var(--gold);
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        .number {
+            display: inline-flex;
+            width: 38px;
+            height: 38px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 11px;
+            background: rgba(229, 196, 119, 0.12);
+            color: var(--gold);
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .verse {
+            background: rgba(229, 196, 119, 0.07);
+            border-right: 4px solid var(--gold);
+            border-radius: 12px;
+            padding: 18px;
+            margin-top: 15px;
+            color: var(--gold-light);
+            font-size: 17px;
+        }
+
+        .reference {
+            display: block;
+            color: var(--gold);
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .notice {
+            background: rgba(38, 117, 101, 0.12);
+            border: 1px solid rgba(38, 117, 101, 0.4);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 20px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .lessons {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .lesson {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            color: var(--muted);
+        }
+
+        .lesson strong {
+            color: var(--gold);
+        }
+
+        .video-card {
+            margin-top: 30px;
+            padding: 28px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 17px;
+            text-align: center;
+        }
+
+        .video-card h2 {
+            color: var(--gold-light);
+            margin-bottom: 10px;
+        }
+
+        .video-card p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .sources {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+
+        .sources li {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 15px 20px;
+            color: var(--muted);
+        }
+
+        .sources strong {
+            color: var(--gold);
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        @media (max-width: 650px) {
+
+            .grid,
+            .lessons {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 55px 18px;
+            }
+
+            .card,
+            .intro,
+            .video-card {
+                padding: 19px;
+            }
+
+            .section-title {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <nav class="nav">
+
+            <a href="../index.html" class="logo">
+                ✦ الموسوعة الإسلامية
+            </a>
+
+            <a href="prophets.html" class="back-link">
+                ← العودة إلى الأنبياء
+            </a>
+
+        </nav>
+    </header>
+
+    <section class="hero">
+
+        <span class="eyebrow">قصص الأنبياء</span>
+
+        <h1>قصة هود عليه السلام</h1>
+
+        <p>
+            نبي الله هود عليه السلام، الذي أرسله الله إلى قوم عاد،
+            فدعاهم إلى عبادة الله وحده، وحذّرهم من الكبر والطغيان،
+            لكنهم أصرّوا على التكذيب، فأهلكهم الله بريح شديدة.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#story" class="button button-primary">
+                اقرأ القصة ↓
+            </a>
+
+            <a href="#video" class="button button-secondary">
+                🎬 شاهد القصة
+            </a>
+
+        </div>
+
+    </section>
+
+    <main class="container">
+
+        <section class="intro">
+
+            <h2>من هو هود عليه السلام؟</h2>
+
+            <p>
+                هود عليه السلام نبي من أنبياء الله، أرسله إلى قوم عاد.
+                دعاهم إلى توحيد الله وترك عبادة ما لا ينفعهم ولا يضرهم.
+                وكان قوم عاد أصحاب قوة، لكنهم اغتروا بقوتهم وتكبروا
+                عن الحق، فذكّرهم هود بنعم الله وحذّرهم من عاقبة التكذيب.
+            </p>
+
+        </section>
+
+        <section id="story">
+
+            <h2 class="section-title">📖 أحداث قصة هود عليه السلام</h2>
+
+            <div class="grid">
+
+                <article class="card">
+
+                    <span class="number">١</span>
+
+                    <h3>دعوة قوم عاد</h3>
+
+                    <p>
+                        أرسل الله هودًا عليه السلام إلى قوم عاد،
+                        فدعاهم إلى عبادة الله وحده، وبيّن لهم أنه
+                        لا يستحق العبادة إلا الله سبحانه وتعالى.
+                    </p>
+
+                    <div class="verse">
+                        ﴿وَإِلَىٰ عَادٍ أَخَاهُمْ هُودًا قَالَ
+                        يَا قَوْمِ اعْبُدُوا اللَّهَ مَا لَكُمْ
+                        مِنْ إِلَٰهٍ غَيْرُهُ﴾
+
+                        <span class="reference">
+                            سورة الأعراف، الآية 65
+                        </span>
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <span class="number">٢</span>
+
+                    <h3>تذكيرهم بنعم الله</h3>
+
+                    <p>
+                        ذكّر هود عليه السلام قومه بأن الله جعلهم
+                        خلفاء من بعد قوم نوح، وزادهم في الخلق قوة،
+                        ودعاهم إلى شكر الله وعدم نسيان نعمه.
+                    </p>
+
+                    <div class="verse">
+                        ﴿وَاذْكُرُوا إِذْ جَعَلَكُمْ خُلَفَاءَ
+                        مِنْ بَعْدِ قَوْمِ نُوحٍ وَزَادَكُمْ
+                        فِي الْخَلْقِ بَسْطَةً﴾
+
+                        <span class="reference">
+                            سورة الأعراف، الآية 69
+                        </span>
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <span class="number">٣</span>
+
+                    <h3>تكذيب قوم عاد</h3>
+
+                    <p>
+                        رفض كثير من قوم عاد دعوة هود عليه السلام،
+                        وتمسكوا بما كان عليه آباؤهم، ولم يستجيبوا
+                        للتحذير من عاقبة الشرك والتكذيب.
+                    </p>
+
+                    <div class="verse">
+                        ﴿قَالُوا أَجِئْتَنَا لِنَعْبُدَ اللَّهَ
+                        وَحْدَهُ وَنَذَرَ مَا كَانَ يَعْبُدُ آبَاؤُنَا﴾
+
+                        <span class="reference">
+                            سورة الأعراف، الآية 70
+                        </span>
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <span class="number">٤</span>
+
+                    <h3>توكل هود على الله</h3>
+
+                    <p>
+                        أعلن هود عليه السلام براءته من شرك قومه،
+                        وتوكل على الله، وأكد أنه لا يخاف ما يعبدون
+                        من دون الله، وأن أمره كله بيد الله.
+                    </p>
+
+                    <div class="verse">
+                        ﴿إِنِّي أَشْهَدُ اللَّهَ وَاشْهَدُوا
+                        أَنِّي بَرِيءٌ مِمَّا تُشْرِكُونَ﴾
+
+                        <span class="reference">
+                            سورة هود، الآية 54
+                        </span>
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <span class="number">٥</span>
+
+                    <h3>الريح الشديدة</h3>
+
+                    <p>
+                        لما أصرّ قوم عاد على التكذيب، أرسل الله
+                        عليهم ريحًا شديدة مدمرة، فكانت عقابًا لهم
+                        بسبب كفرهم وطغيانهم.
+                    </p>
+
+                    <div class="verse">
+                        ﴿وَأَمَّا عَادٌ فَأُهْلِكُوا بِرِيحٍ صَرْصَرٍ عَاتِيَةٍ﴾
+
+                        <span class="reference">
+                            سورة الحاقة، الآية 6
+                        </span>
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <span class="number">٦</span>
+
+                    <h3>نجاة هود والمؤمنين</h3>
+
+                    <p>
+                        أنجى الله هودًا عليه السلام والذين آمنوا معه
+                        برحمة منه، بينما أصاب العذاب قوم عاد الذين
+                        كذبوا بآيات الله.
+                    </p>
+
+                    <div class="verse">
+                        ﴿وَلَمَّا جَاءَ أَمْرُنَا نَجَّيْنَا هُودًا
+                        وَالَّذِينَ آمَنُوا مَعَهُ بِرَحْمَةٍ مِنَّا﴾
+
+                        <span class="reference">
+                            سورة هود، الآية 58
+                        </span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="lessons">
+
+            <h2 class="section-title">💡 الدروس المستفادة</h2>
+
+            <div class="lessons">
+
+                <div class="lesson">
+                    <strong>١. التوحيد:</strong>
+                    العبادة حق لله وحده، ولا يجوز صرفها لغيره.
+                </div>
+
+                <div class="lesson">
+                    <strong>٢. شكر النعم:</strong>
+                    القوة والمال وسائر النعم تستوجب الشكر لا الكبر.
+                </div>
+
+                <div class="lesson">
+                    <strong>٣. خطر الغرور:</strong>
+                    لا ينبغي للإنسان أن يغتر بقوته أو مكانته.
+                </div>
+
+                <div class="lesson">
+                    <strong>٤. الصبر في الدعوة:</strong>
+                    نتعلم الثبات على الحق والصبر عند مواجهة الرفض.
+                </div>
+
+                <div class="lesson">
+                    <strong>٥. التوكل على الله:</strong>
+                    المؤمن يعتمد على الله مع التزامه بالحق.
+                </div>
+
+                <div class="lesson">
+                    <strong>٦. عاقبة التكذيب:</strong>
+                    تذكرنا القصة بأن الظلم والطغيان لهما عواقب وخيمة.
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="video" class="video-card">
+
+            <h2>🎬 شاهد قصة هود عليه السلام</h2>
+
+            <p>
+                اضغط على الزر لعرض مقاطع قصة هود عليه السلام
+                على يوتيوب.
+            </p>
+
+            <a class="button button-primary"
+                href="https://www.youtube.com/results?search_query=قصة+هود+عليه+السلام+قوم+عاد" target="_blank"
+                rel="noopener noreferrer">
+
+                ▶ البحث عن قصة هود على يوتيوب
+
+            </a>
+
+            <div class="notice">
+                هذا الزر يفتح نتائج البحث على يوتيوب، وليس فيديو محددًا.
+                اختر المقطع الذي يناسبك.
+            </div>
+
+        </section>
+
+        <section id="sources">
+
+            <h2 class="section-title">📚 المصادر القرآنية</h2>
+
+            <ul class="sources">
+
+                <li>
+                    <strong>سورة الأعراف، الآيات 65–72:</strong>
+                    دعوة هود لقوم عاد، والحوار معهم، ونجاة هود والمؤمنين.
+                </li>
+
+                <li>
+                    <strong>سورة هود، الآيات 50–60:</strong>
+                    دعوة هود وتوكله على الله وعاقبة قومه.
+                </li>
+
+                <li>
+                    <strong>سورة الشعراء، الآيات 123–140:</strong>
+                    دعوة هود لقوم عاد وتذكيرهم بنعم الله.
+                </li>
+
+                <li>
+                    <strong>سورة الحاقة، الآيات 6–8:</strong>
+                    الريح التي أهلكت عادًا.
+                </li>
+
+                <li>
+                    <strong>سورة الأحقاف، الآيات 21–26:</strong>
+                    إنذار هود لقومه وما حلّ بهم.
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            <span>✦ الموسوعة الإسلامية</span>
+            — قصص الأنبياء والدروس المستفادة
+        </p>
+
+        <p>اللهم علّمنا ما ينفعنا وانفعنا بما علّمتنا.</p>
+    </footer>
+
+</body>
+
+</html>
