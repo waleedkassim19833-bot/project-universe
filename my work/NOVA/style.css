@@ -1,0 +1,2661 @@
+/* =========================================================
+   NOVA — FUTURE MOBILITY
+   CINEMATIC UI / GRAPHIC DESIGN / ANIMATION
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #050505;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+    --black: #050505;
+    --black-2: #090909;
+    --white: #ffffff;
+    --gray: #9b9b9b;
+    --gray-dark: #1a1a1a;
+    --blue: #65d9ff;
+    --blue-light: #b9f0ff;
+    --blue-dark: #146b8c;
+    --line: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #020202;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+.loader-content {
+    width: min(420px, 80%);
+    text-align: center;
+}
+
+.loader-logo {
+    font-size: clamp(42px, 8vw, 90px);
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    margin-left: 0.35em;
+
+    color: #fff;
+
+    text-shadow:
+        0 0 20px rgba(101, 217, 255, 0.4),
+        0 0 60px rgba(101, 217, 255, 0.15);
+}
+
+.loader-line {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 35px 0 20px;
+    overflow: hidden;
+}
+
+.loader-line span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: var(--blue);
+    animation: loaderProgress 2s ease forwards;
+    box-shadow: 0 0 15px var(--blue);
+}
+
+.loader-content p {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 0.35em;
+}
+
+@keyframes loaderProgress {
+    to {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+#main {
+    position: relative;
+    background: var(--black);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 30px 5vw;
+
+    transition:
+        background 0.4s ease,
+        backdrop-filter 0.4s ease,
+        padding 0.4s ease;
+}
+
+.navbar.scrolled {
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    background: rgba(5, 5, 5, 0.78);
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid var(--line);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    position: relative;
+
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    color: #aaa;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--blue);
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    background: transparent;
+}
+
+.menu-button span {
+    display: block;
+
+    width: 25px;
+    height: 1px;
+
+    margin: 6px auto;
+
+    background: #fff;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 70% 50%,
+            rgba(35, 116, 145, 0.18),
+            transparent 30%),
+        #050505;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            rgba(5, 5, 5, 0.98) 0%,
+            rgba(5, 5, 5, 0.75) 35%,
+            rgba(5, 5, 5, 0.15) 75%,
+            rgba(5, 5, 5, 0.95) 100%);
+
+    z-index: 1;
+}
+
+.hero-background::before {
+    content: "";
+
+    position: absolute;
+    width: 800px;
+    height: 800px;
+
+    right: -250px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(101, 217, 255, 0.13),
+            transparent 65%);
+
+    filter: blur(20px);
+
+    animation: heroPulse 5s ease-in-out infinite;
+}
+
+@keyframes heroPulse {
+
+    0%,
+    100% {
+        transform: translateY(-50%) scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translateY(-50%) scale(1.15);
+        opacity: 1;
+    }
+}
+
+.hero-glow {
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    right: 18%;
+    top: 55%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: rgba(101, 217, 255, 0.08);
+
+    filter: blur(100px);
+
+    animation: glowMove 6s ease-in-out infinite;
+}
+
+@keyframes glowMove {
+
+    0%,
+    100% {
+        transform: translateY(-50%) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-50%) translateX(-50px);
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+
+    width: min(600px, 90%);
+
+    margin-left: 8vw;
+
+    animation: heroContentIn 1.5s ease 1.8s both;
+}
+
+@keyframes heroContentIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-kicker {
+    color: var(--blue);
+
+    font-size: 10px;
+    letter-spacing: 0.35em;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 120px);
+    line-height: 0.9;
+
+    font-weight: 700;
+    letter-spacing: -0.06em;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.75);
+
+    margin-left: 0.05em;
+}
+
+.hero-description {
+    width: min(420px, 100%);
+
+    margin-top: 35px;
+
+    color: #888;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+
+    margin-top: 35px;
+
+    padding: 16px 25px;
+
+    background: #fff;
+    color: #050505;
+
+    font-size: 10px;
+    letter-spacing: 0.18em;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.hero-button span {
+    font-size: 18px;
+}
+
+.hero-button:hover {
+    transform: translateX(8px);
+    background: var(--blue);
+}
+
+
+/* =========================================================
+   FUTURISTIC CAR
+========================================================= */
+
+.hero-car {
+    /* display: none; */
+    position: absolute;
+
+    z-index: 4;
+
+    width: min(800px, 60vw);
+    height: 400px;
+
+    right: 4%;
+    top: 55%;
+
+    transform: translateY(-50%);
+
+    animation: carEntrance 2s cubic-bezier(.16, 1, .3, 1) 1.4s both;
+}
+
+@keyframes carEntrance {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(-50%) translateX(150px) scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(-50%) translateX(0) scale(1);
+    }
+}
+
+.car-body {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 75%;
+    height: 34%;
+
+    transform:
+        translate(-50%, -30%) skewX(-8deg);
+
+    border-radius:
+        55% 15% 20% 20% / 70% 50% 35% 35%;
+
+    background:
+        linear-gradient(120deg,
+            #111 0%,
+            #303030 35%,
+            #080808 70%,
+            #1a1a1a 100%);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.8),
+        0 0 70px rgba(101, 217, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.car-body::before {
+    content: "";
+
+    position: absolute;
+
+    width: 45%;
+    height: 45%;
+
+    top: -32%;
+    left: 22%;
+
+    transform: skewX(12deg);
+
+    border-radius: 80% 20% 0 0;
+
+    background:
+        linear-gradient(135deg,
+            #111,
+            #26323a);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+}
+
+.car-window {
+    position: absolute;
+
+    width: 32%;
+    height: 35%;
+
+    top: -18%;
+    left: 30%;
+
+    transform: skewX(12deg);
+
+    background:
+        linear-gradient(135deg,
+            rgba(105, 215, 255, 0.45),
+            rgba(10, 30, 38, 0.9));
+
+    clip-path: polygon(10% 100%,
+            25% 0,
+            90% 0,
+            100% 100%);
+
+    border:
+        1px solid rgba(150, 230, 255, 0.35);
+}
+
+.car-side {
+    position: absolute;
+
+    width: 60%;
+    height: 1px;
+
+    top: 50%;
+    left: 10%;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            var(--blue),
+            transparent);
+
+    box-shadow:
+        0 0 12px var(--blue);
+}
+
+.car-light {
+    position: absolute;
+
+    z-index: 10;
+
+    width: 130px;
+    height: 5px;
+
+    background: #dffaff;
+
+    box-shadow:
+        0 0 10px #fff,
+        0 0 30px var(--blue),
+        0 0 70px var(--blue);
+
+    border-radius: 50%;
+
+    top: 47%;
+}
+
+.car-light-left {
+    left: 8%;
+    transform: rotate(-8deg);
+}
+
+.car-light-right {
+    right: 8%;
+    transform: rotate(8deg);
+}
+
+.car-wheel {
+    position: absolute;
+
+    width: 75px;
+    height: 75px;
+
+    bottom: -25px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            #333 0 18%,
+            #090909 19% 42%,
+            #1f1f1f 43% 47%,
+            #050505 48% 100%);
+
+    border: 3px solid #171717;
+
+    box-shadow:
+        inset 0 0 10px #000,
+        0 10px 30px #000;
+}
+
+.car-wheel-left {
+    left: 15%;
+}
+
+.car-wheel-right {
+    right: 15%;
+}
+
+
+/* =========================================================
+   HERO BOTTOM
+========================================================= */
+
+.hero-bottom {
+    position: absolute;
+
+    z-index: 10;
+
+    bottom: 30px;
+    left: 5vw;
+    right: 5vw;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #555;
+
+    font-size: 9px;
+    letter-spacing: 0.25em;
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+.section {
+    position: relative;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    padding: 150px 8vw;
+
+    overflow: hidden;
+
+    background: var(--black);
+}
+
+.section-number {
+    position: absolute;
+
+    top: 60px;
+    right: 7vw;
+
+    color: #333;
+
+    font-size: 10px;
+    letter-spacing: 0.3em;
+}
+
+.section-heading {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 80px;
+}
+
+.section-heading p {
+    color: var(--blue);
+
+    font-size: 10px;
+    letter-spacing: 0.3em;
+
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    max-width: 800px;
+
+    font-size: clamp(50px, 7vw, 100px);
+    line-height: 0.9;
+
+    letter-spacing: -0.06em;
+}
+
+.section-heading h2 span {
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================================
+   VEHICLE
+========================================================= */
+
+.vehicle-section {
+    background:
+        radial-gradient(circle at 75% 50%,
+            rgba(101, 217, 255, 0.07),
+            transparent 35%),
+        #050505;
+}
+
+.vehicle-content {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+.vehicle-visual {
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vehicle-orbit {
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    border: 1px solid rgba(101, 217, 255, 0.25);
+
+    border-radius: 50%;
+
+    transform: rotateX(65deg);
+
+    box-shadow:
+        0 0 50px rgba(101, 217, 255, 0.05);
+
+    animation:
+        orbitSpin 8s linear infinite;
+}
+
+@keyframes orbitSpin {
+    to {
+        transform:
+            rotateX(65deg) rotateZ(360deg);
+    }
+}
+
+.vehicle-glow {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(101, 217, 255, 0.1);
+
+    filter: blur(80px);
+}
+
+.vehicle-shape {
+    position: relative;
+    z-index: 2;
+
+    width: 300px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50% 20% 40% 30%;
+
+    background:
+        linear-gradient(135deg,
+            #222,
+            #050505);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 40px 80px #000,
+        0 0 80px rgba(101, 217, 255, 0.1);
+
+    color: #fff;
+
+    font-size: 32px;
+    letter-spacing: 0.3em;
+}
+
+.vehicle-text {
+    color: #888;
+
+    font-size: 15px;
+    line-height: 2;
+}
+
+.outline-button {
+    margin-top: 30px;
+
+    padding: 15px 20px;
+
+    background: transparent;
+
+    color: #fff;
+
+    border: 1px solid var(--line);
+
+    font-size: 9px;
+    letter-spacing: 0.2em;
+
+    transition:
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.outline-button:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+
+/* =========================================================
+   PERFORMANCE
+========================================================= */
+
+.performance-section {
+    background: #080808;
+}
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.stat-card {
+    min-height: 260px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 40px;
+
+    border-right: 1px solid var(--line);
+
+    transition:
+        background 0.4s ease,
+        transform 0.4s ease;
+}
+
+.stat-card:last-child {
+    border-right: 0;
+}
+
+.stat-card:hover {
+    background:
+        radial-gradient(circle at center,
+            rgba(101, 217, 255, 0.08),
+            transparent 70%);
+
+    transform: translateY(-8px);
+}
+
+.stat-value {
+    font-size: clamp(55px, 7vw, 95px);
+    font-weight: 300;
+    line-height: 0.9;
+
+    color: #fff;
+}
+
+.stat-unit {
+    margin-top: 8px;
+
+    color: var(--blue);
+
+    font-size: 11px;
+    letter-spacing: 0.2em;
+}
+
+.stat-card p {
+    margin-top: 35px;
+
+    color: #555;
+
+    font-size: 9px;
+    letter-spacing: 0.2em;
+}
+
+
+/* =========================================================
+   TECHNOLOGY
+========================================================= */
+
+.technology-section {
+    background:
+        radial-gradient(circle at 50% 50%,
+            rgba(20, 107, 140, 0.08),
+            transparent 45%),
+        #050505;
+}
+
+.technology-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 1px;
+
+    background: var(--line);
+
+    border: 1px solid var(--line);
+}
+
+.tech-card {
+    position: relative;
+
+    min-height: 250px;
+
+    padding: 45px;
+
+    text-align: left;
+
+    background: #070707;
+
+    color: #fff;
+
+    transition:
+        background 0.5s ease,
+        transform 0.4s ease;
+}
+
+.tech-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(circle at 0 0,
+            rgba(101, 217, 255, 0.12),
+            transparent 50%);
+
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+}
+
+.tech-card:hover {
+    background: #0d0d0d;
+}
+
+.tech-card:hover::before {
+    opacity: 1;
+}
+
+.tech-icon {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    margin-bottom: 50px;
+
+    color: var(--blue);
+
+    font-size: 35px;
+}
+
+.tech-card strong {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    font-size: 16px;
+    letter-spacing: 0.1em;
+}
+
+.tech-card small {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    margin-top: 12px;
+
+    color: #666;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   DESIGN
+========================================================= */
+
+.design-section {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(135deg,
+            #050505 0%,
+            #0a1114 50%,
+            #050505 100%);
+}
+
+.design-content {
+    max-width: 900px;
+}
+
+.design-content>p:first-child {
+    color: var(--blue);
+
+    font-size: 10px;
+    letter-spacing: 0.3em;
+
+    margin-bottom: 25px;
+}
+
+.design-content h2 {
+    font-size: clamp(60px, 10vw, 150px);
+    line-height: 0.85;
+    letter-spacing: -0.07em;
+}
+
+.design-content h2 span {
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
+}
+
+.design-description {
+    max-width: 450px;
+
+    margin-top: 40px;
+
+    color: #777;
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.design-button {
+    margin-top: 35px;
+
+    padding: 17px 25px;
+
+    background: var(--blue);
+    color: #050505;
+
+    font-size: 9px;
+    letter-spacing: 0.2em;
+
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.design-button:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 40px rgba(101, 217, 255, 0.25);
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background: #020202;
+}
+
+.final-glow {
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(101, 217, 255, 0.12),
+            transparent 65%);
+
+    filter: blur(30px);
+
+    animation:
+        finalGlow 5s ease-in-out infinite;
+}
+
+@keyframes finalGlow {
+
+    0%,
+    100% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.final-section p {
+    position: relative;
+    z-index: 2;
+
+    color: var(--blue);
+
+    font-size: 10px;
+    letter-spacing: 0.35em;
+}
+
+.final-section h2 {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 25px;
+
+    font-size: clamp(70px, 12vw, 180px);
+    line-height: 0.8;
+
+    letter-spacing: -0.07em;
+}
+
+.final-section h2 span {
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
+}
+
+.final-button {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 50px;
+
+    padding: 18px 30px;
+
+    background: #fff;
+    color: #050505;
+
+    font-size: 9px;
+    letter-spacing: 0.2em;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.final-button:hover {
+    background: var(--blue);
+    transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 5000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background: rgba(0, 0, 0, 0.8);
+
+    backdrop-filter: blur(20px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    position: relative;
+
+    width: min(600px, 100%);
+
+    padding: 60px;
+
+    background:
+        linear-gradient(135deg,
+            #111,
+            #070707);
+
+    border: 1px solid var(--line);
+
+    box-shadow:
+        0 30px 100px rgba(0, 0, 0, 0.8);
+
+    transform: translateY(30px) scale(0.95);
+
+    transition:
+        transform 0.5s cubic-bezier(.16, 1, .3, 1);
+}
+
+.modal.active .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.modal-close {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    width: 35px;
+    height: 35px;
+
+    background: transparent;
+
+    color: #fff;
+
+    font-size: 25px;
+}
+
+.modal-content>p {
+    color: var(--blue);
+
+    font-size: 9px;
+    letter-spacing: 0.25em;
+}
+
+.modal-content h2 {
+    margin-top: 15px;
+
+    font-size: 45px;
+}
+
+.modal-content #modalDescription {
+    margin-top: 25px;
+
+    color: #888;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 30px 6vw;
+
+    border-top: 1px solid var(--line);
+
+    background: #030303;
+
+    color: #555;
+
+    font-size: 8px;
+    letter-spacing: 0.2em;
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.section,
+.final-section {
+    opacity: 0;
+    transform: translateY(40px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s cubic-bezier(.16, 1, .3, 1);
+}
+
+.section.visible,
+.final-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 22px 6vw;
+    }
+
+    .nav-links {
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+
+        width: min(330px, 85vw);
+        height: 100vh;
+
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        padding: 50px;
+
+        background: rgba(5, 5, 5, 0.98);
+
+        transition: right 0.5s ease;
+
+        border-left: 1px solid var(--line);
+    }
+
+    .nav-links.open {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .menu-button {
+        display: block;
+        position: relative;
+        z-index: 100;
+    }
+
+    .hero {
+        align-items: flex-end;
+        padding-bottom: 120px;
+    }
+
+    .hero-content {
+        margin-left: 6vw;
+    }
+
+    .hero-car {
+        width: 90vw;
+        height: 300px;
+
+        right: -15%;
+        top: 45%;
+
+        opacity: 0.75;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 14vw, 85px);
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .vehicle-content {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicle-text {
+        max-width: 500px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-card:nth-child(2) {
+        border-right: 0;
+    }
+
+    .stat-card:nth-child(1),
+    .stat-card:nth-child(2) {
+        border-bottom: 1px solid var(--line);
+    }
+
+    .technology-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 110px 6vw;
+    }
+
+    .section-number {
+        top: 30px;
+        right: 6vw;
+    }
+
+    .section-heading {
+        margin-bottom: 50px;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(45px, 14vw, 70px);
+    }
+
+    .hero-bottom span:nth-child(2) {
+        display: none;
+    }
+
+    .hero-bottom {
+        font-size: 7px;
+    }
+
+    .hero-car {
+        top: 37%;
+        right: -30%;
+    }
+
+    .car-body {
+        width: 85%;
+    }
+
+    .vehicle-visual {
+        min-height: 350px;
+    }
+
+    .vehicle-orbit {
+        width: 280px;
+        height: 280px;
+    }
+
+    .vehicle-shape {
+        width: 210px;
+        height: 130px;
+        font-size: 22px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        min-height: 190px;
+
+        border-right: 0;
+
+        border-bottom: 1px solid var(--line);
+    }
+
+    .stat-card:last-child {
+        border-bottom: 0;
+    }
+
+    .tech-card {
+        min-height: 210px;
+        padding: 30px;
+    }
+
+    .design-content h2 {
+        font-size: clamp(55px, 16vw, 90px);
+    }
+
+    .modal-content {
+        padding: 45px 25px;
+    }
+
+    .modal-content h2 {
+        font-size: 32px;
+    }
+}
+
+/* =========================================
+   NOVA — CINEMATIC HERO REVEAL
+========================================= */
+
+/* المشهد الأساسي */
+.hero {
+    overflow: hidden;
+}
+
+/* طبقة سينمائية فوق المشهد */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+
+    background:
+        radial-gradient(circle at 50% 55%,
+            transparent 0%,
+            rgba(0, 0, 0, 0.08) 35%,
+            rgba(0, 0, 0, 0.72) 100%);
+
+    pointer-events: none;
+
+    animation: cinematicFade 2.8s ease forwards;
+}
+
+
+/* السيارة تبدأ من الظلام */
+.hero-car {
+    opacity: 0;
+
+    transform:
+        translateY(80px) scale(0.92);
+
+    filter:
+        brightness(0.15) blur(4px);
+
+    animation:
+        carCinematicReveal 2.2s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+}
+
+
+/* جسم السيارة يضيء تدريجيًا */
+.car-body {
+    animation:
+        carLightReveal 2.5s ease 1.2s forwards;
+}
+
+
+/* الضوء الأمامي */
+.car-light {
+    animation:
+        headLightReveal 1.4s ease 2s forwards;
+}
+
+
+/* النص يدخل بعد السيارة */
+.hero-content {
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    filter: blur(8px);
+
+    animation:
+        contentCinematicReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards;
+}
+
+
+/* الزر يدخل في النهاية */
+#exploreButton {
+    opacity: 0;
+
+    transform:
+        translateY(20px) scale(0.96);
+
+    animation:
+        buttonCinematicReveal 1s cubic-bezier(0.16, 1, 0.3, 1) 2.5s forwards;
+}
+
+
+/* الخط السفلي */
+.hero-bottom {
+    opacity: 0;
+
+    animation:
+        bottomReveal 1s ease 2.8s forwards;
+}
+
+
+/* =========================================
+   KEYFRAMES
+========================================= */
+
+@keyframes cinematicFade {
+
+    0% {
+        opacity: 1;
+    }
+
+    65% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+
+@keyframes carCinematicReveal {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(100px) scale(0.88);
+
+        filter:
+            brightness(0.05) blur(10px);
+    }
+
+    45% {
+
+        opacity: 1;
+
+        transform:
+            translateY(20px) scale(0.96);
+
+        filter:
+            brightness(0.55) blur(2px);
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0) scale(1);
+
+        filter:
+            brightness(1) blur(0);
+    }
+
+}
+
+
+@keyframes carLightReveal {
+
+    0% {
+        filter: brightness(0.15);
+    }
+
+    50% {
+        filter: brightness(0.55);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+
+}
+
+
+@keyframes headLightReveal {
+
+    0% {
+        opacity: 0;
+        filter: brightness(0);
+    }
+
+    50% {
+        opacity: 0.5;
+        filter: brightness(3);
+    }
+
+    100% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+
+}
+
+
+@keyframes contentCinematicReveal {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(45px);
+
+        filter: blur(10px);
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        filter: blur(0);
+    }
+
+}
+
+
+@keyframes buttonCinematicReveal {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px) scale(0.94);
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0) scale(1);
+    }
+
+}
+
+
+@keyframes bottomReveal {
+
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   EXTRA CINEMATIC LIGHT
+========================================= */
+
+.hero-glow {
+    animation:
+        heroGlowPulse 5s ease-in-out infinite;
+}
+
+
+@keyframes heroGlowPulse {
+
+    0% {
+        transform: scale(0.95);
+        opacity: 0.45;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 0.75;
+    }
+
+    100% {
+        transform: scale(0.95);
+        opacity: 0.45;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .hero-car {
+        transform:
+            translateY(60px) scale(0.88);
+    }
+
+}
+
+/* =========================================
+   TECHNOLOGY CINEMATIC INTERACTION
+========================================= */
+
+.tech-card {
+    transition:
+        transform 0.45s ease,
+        opacity 0.45s ease,
+        border-color 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+
+/* البطاقة المختارة */
+
+.tech-card.tech-selected {
+    transform:
+        translateY(-10px) scale(1.03);
+
+    border-color: rgba(0, 217, 255, 0.75);
+
+    box-shadow:
+        0 0 35px rgba(0, 217, 255, 0.18);
+}
+
+
+/* باقي البطاقات تهدأ */
+
+.tech-scene-active .tech-card:not(.tech-selected) {
+    opacity: 0.45;
+    transform: scale(0.97);
+}
+
+
+/* المشهد نفسه */
+
+.tech-scene-active {
+    animation:
+        technologyScenePulse 0.9s ease;
+}
+
+
+@keyframes technologyScenePulse {
+
+    0% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+
+    45% {
+        transform: scale(1.015);
+        filter: brightness(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+
+}
+
+
+/* الضوء الذي يمر على الشاشة */
+
+.tech-pulse {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9998;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(0, 217, 255, 0.18),
+            transparent 45%);
+
+    opacity: 0;
+
+    transform: scale(0.6);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.tech-pulse.active {
+    opacity: 1;
+    transform: scale(1.4);
+}
+
+/* =========================================
+   NOVA — PARTICLE MORPH EFFECT
+========================================= */
+
+.nova-particles {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10002;
+
+    pointer-events: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+/* كل Particle */
+
+.nova-particle {
+
+    position: absolute;
+
+    width: var(--size);
+
+    height: var(--size);
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    opacity: 0;
+
+    transform:
+        translate(0, 0) scale(0.2);
+
+    box-shadow:
+        0 0 8px rgba(0, 217, 255, 0.9),
+        0 0 20px rgba(0, 217, 255, 0.35);
+
+}
+
+
+/* بداية الانفجار */
+
+.nova-particles.active .nova-particle {
+
+    animation:
+        particleExplosion 1.1s cubic-bezier(0.16, 1, 0.3, 1) var(--delay) forwards;
+
+}
+
+
+@keyframes particleExplosion {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(0, 0) scale(0.2);
+
+    }
+
+    15% {
+
+        opacity: 1;
+
+        transform:
+            translate(0, 0) scale(1);
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(var(--x), var(--y)) scale(0);
+
+    }
+
+}
+
+/* =========================================
+   NOVA — SCENE TRANSITION
+========================================= */
+
+.nova-transitioning::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10001;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(0, 217, 255, 0.12),
+            rgba(0, 0, 0, 0.85) 70%);
+
+    opacity: 0;
+
+    animation:
+        novaSceneTransition 1.4s ease forwards;
+
+}
+
+
+@keyframes novaSceneTransition {
+
+    0% {
+        opacity: 0;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+/* =========================================
+   NOVA — CINEMATIC SCENE TRANSITION
+========================================= */
+
+.nova-cinematic-transition {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10050;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at center,
+            rgba(0, 217, 255, 0.08),
+            #000 55%);
+
+    opacity: 0;
+
+    transform: scale(0.8);
+
+    transition:
+        opacity 0.8s ease,
+        transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+
+.nova-cinematic-transition.active {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+}
+
+
+.nova-cinematic-transition.exit {
+
+    opacity: 0;
+
+    transform: scale(1.15);
+
+}
+
+
+.nova-transition-logo {
+
+    font-size: clamp(32px, 6vw, 80px);
+
+    font-weight: 700;
+
+    letter-spacing: 0.45em;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 20px rgba(0, 217, 255, 0.8),
+        0 0 60px rgba(0, 217, 255, 0.35);
+
+    transform: scale(0.7);
+
+    opacity: 0;
+
+    transition:
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.6s ease;
+
+}
+
+
+.nova-cinematic-transition.active .nova-transition-logo {
+
+    transform: scale(1);
+
+    opacity: 1;
+
+}
+
+/* =========================================
+   NOVA — LANGUAGE SWITCH
+========================================= */
+
+.language-button {
+    position: relative;
+
+    margin-left: 24px;
+    padding: 8px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 2px;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.language-button:hover {
+    background: rgba(0, 217, 255, 0.08);
+
+    border-color: rgba(0, 217, 255, 0.8);
+
+    box-shadow:
+        0 0 18px rgba(0, 217, 255, 0.18);
+
+    transform: translateY(-2px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .language-button {
+        margin-left: auto;
+        margin-right: 12px;
+    }
+
+}
+
+/* =========================================
+   NOVA — LANGUAGE TRANSITION
+========================================= */
+
+body {
+    transition:
+        opacity 0.25s ease,
+        direction 0s;
+}
+
+body.language-changing {
+    opacity: 0.35;
+}
+
+
+/* الخط العربي */
+
+html[lang="ar"] body {
+    font-family:
+        "Tahoma",
+        "Arial",
+        sans-serif;
+}
+
+
+/* تحسين العناوين العربية */
+
+html[lang="ar"] .hero-content,
+html[lang="ar"] .section-content,
+html[lang="ar"] .final-content {
+    text-align: right;
+}
+
+
+/* زر اللغة في RTL */
+
+html[dir="rtl"] .language-button {
+    margin-left: 0;
+    margin-right: 24px;
+}
+
+
+@media (max-width: 900px) {
+
+    html[dir="rtl"] .language-button {
+        margin-right: 0;
+        margin-left: 12px;
+    }
+
+}
+
+/* =========================================
+   LUXURY CARS COLLECTION
+========================================= */
+
+.luxury-cars {
+    padding: 140px 7vw;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(30, 90, 150, 0.12), transparent 45%),
+        #050505;
+    position: relative;
+    overflow: hidden;
+}
+
+.luxury-header {
+    max-width: 900px;
+    margin-bottom: 80px;
+}
+
+.luxury-header span {
+    color: #6aaeff;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.luxury-header h2 {
+    margin: 20px 0;
+    font-size: clamp(55px, 8vw, 120px);
+    line-height: 0.9;
+    letter-spacing: -5px;
+}
+
+.luxury-header h2 em {
+    font-style: normal;
+    color: #777;
+}
+
+.luxury-header p {
+    color: #888;
+    font-size: 17px;
+    max-width: 500px;
+}
+
+.luxury-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.luxury-card {
+    position: relative;
+    background: #0b0b0b;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    transition: transform 0.5s ease, border-color 0.5s ease;
+}
+
+.luxury-card:hover {
+    transform: translateY(-12px);
+    border-color: rgba(100, 170, 255, 0.4);
+}
+
+.luxury-image {
+    height: 420px;
+    overflow: hidden;
+    background: #080808;
+}
+
+.luxury-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(15%) contrast(1.05);
+    transition: transform 1s ease, filter 1s ease;
+}
+
+.luxury-card:hover .luxury-image img {
+    transform: scale(1.08);
+    filter: grayscale(0%) contrast(1.1);
+}
+
+.luxury-info {
+    padding: 28px;
+}
+
+.luxury-info span {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #6aaeff;
+}
+
+.luxury-info h3 {
+    margin: 8px 0 12px;
+    font-size: 32px;
+    letter-spacing: -1px;
+}
+
+.luxury-info p {
+    color: #777;
+    margin-bottom: 22px;
+}
+
+.luxury-info button {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.luxury-info button:hover {
+    background: white;
+    color: black;
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .luxury-cars {
+        padding: 90px 6vw;
+    }
+
+    .luxury-header h2 {
+        font-size: 58px;
+        letter-spacing: -3px;
+    }
+
+    .luxury-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .luxury-image {
+        height: 300px;
+    }
+}
+
+/* =========================================
+   CINEMATIC CULLINAN — ADDITION ONLY
+========================================= */
+
+.cinematic-cullinan {
+    position: fixed;
+    inset: 0;
+    z-index: 9990;
+    pointer-events: none;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at center 70%,
+            rgba(20, 70, 110, 0.35),
+            rgba(0, 0, 0, 0.96) 65%);
+
+    animation: cullinanScene 6s ease forwards;
+}
+
+
+/* أرضية المشهد */
+.cinematic-floor {
+    position: absolute;
+    left: -10%;
+    right: -10%;
+    bottom: 12%;
+    height: 2px;
+
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(100, 190, 255, 0.8),
+            transparent);
+
+    box-shadow:
+        0 0 25px rgba(80, 180, 255, 0.7),
+        0 0 80px rgba(40, 120, 220, 0.35);
+
+    opacity: 0;
+
+    animation: floorReveal 2s ease 0.8s forwards;
+}
+
+
+/* الضوء الذي يكشف السيارة */
+.cinematic-light {
+    position: absolute;
+    width: 35vw;
+    height: 120vh;
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%) rotate(12deg);
+
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(120, 200, 255, 0.18),
+            transparent);
+
+    filter: blur(18px);
+    opacity: 0;
+
+    animation: cinematicLight 3.5s ease 0.5s forwards;
+}
+
+
+/* السيارة */
+.cinematic-car {
+    position: absolute;
+
+    width: min(850px, 72vw);
+
+    left: 50%;
+    bottom: 16%;
+
+    transform:
+        translateX(-50%) translateY(45vh) scale(0.28);
+
+    opacity: 0;
+
+    filter:
+        brightness(0.25) contrast(1.25) blur(5px) drop-shadow(0 0 30px rgba(50, 150, 255, 0.15));
+
+    animation: cullinanArrival 4.8s cubic-bezier(.16, .85, .25, 1) 0.7s forwards;
+}
+
+
+.cinematic-car img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    object-fit: contain;
+
+    mix-blend-mode: screen;
+}
+
+
+/* اسم السيارة */
+.cinematic-label {
+    position: absolute;
+
+    left: 7vw;
+    bottom: 10vh;
+
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    animation: labelReveal 1s ease 3.5s forwards;
+}
+
+
+.cinematic-label span {
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: #65baff;
+}
+
+
+.cinematic-label strong {
+    margin-top: 8px;
+
+    font-size: clamp(30px, 5vw, 70px);
+    letter-spacing: -2px;
+
+    color: white;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes cullinanArrival {
+
+    0% {
+        opacity: 0;
+        transform:
+            translateX(-50%) translateY(45vh) scale(0.28);
+
+        filter:
+            brightness(0.15) contrast(1.4) blur(12px);
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    72% {
+        transform:
+            translateX(-50%) translateY(4vh) scale(0.92);
+
+        filter:
+            brightness(0.75) contrast(1.3) blur(2px);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateX(-50%) translateY(0) scale(1);
+
+        filter:
+            brightness(1) contrast(1.12) blur(0);
+    }
+}
+
+
+@keyframes cinematicLight {
+
+    0% {
+        opacity: 0;
+        transform:
+            translate(-100%, -50%) rotate(12deg);
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.35;
+        transform:
+            translate(20%, -50%) rotate(12deg);
+    }
+}
+
+
+@keyframes floorReveal {
+
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+
+@keyframes labelReveal {
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* المشهد يختفي بعد النهاية */
+@keyframes cullinanScene {
+
+    0% {
+        opacity: 1;
+    }
+
+    78% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+/* الجوال */
+@media (max-width: 700px) {
+
+    .cinematic-car {
+        width: 105vw;
+        bottom: 23%;
+    }
+
+    .cinematic-label {
+        left: 6vw;
+        bottom: 8vh;
+    }
+
+    .cinematic-label strong {
+        font-size: 42px;
+    }
+}
